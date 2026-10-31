@@ -1,0 +1,556 @@
+/* Phase 4 storyboard stills — shared stage, approved Frame C language.
+   Fonts are local copies of the app's @fontsource packages (no network). */
+@import url(fonts.css);
+
+:root {
+  --clay: #c94820;
+  --clay-deep: #a93a18;
+  --thread: #c4562e;
+  --edge-path: #cf795d;
+  --ink: #171717;
+  --ink-stage: #1c1714;
+  --muted: #606060;
+  --subtle: #858585;
+  --paper: #f5f1ea;
+  --paper-ui: #fbfaf7;
+  --line: #e7e5e2;
+}
+html,
+body {
+  margin: 0;
+  background: #1c1714;
+}
+body {
+  width: 1440px;
+  height: 1000px;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+.stage {
+  position: relative;
+  width: 1440px;
+  height: 1000px;
+  overflow: hidden;
+  background: #efebe3 url(../../../design/assets/textures/paper.jpg) center / cover;
+  font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+}
+.abs {
+  position: absolute;
+}
+.clay {
+  background-image: url(../../../design/assets/textures/stone-clay.jpg);
+  background-size: 600px;
+}
+.char {
+  background-image: url(../../../design/assets/textures/stone-char.jpg);
+  background-size: 600px;
+}
+.sand {
+  background-image: url(../../../design/assets/textures/stone-sand.jpg);
+  background-size: 600px;
+}
+.hatch {
+  background-image: url(../../../design/assets/textures/hatch-sand.jpg);
+  background-size: 520px;
+}
+.halftone {
+  background-image: url(../../../design/assets/textures/halftone-ochre.jpg);
+  background-size: 700px;
+}
+.cm-dots {
+  background-color: #fbfaf7;
+  background-image: radial-gradient(circle, #ddd8cf 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Window light (Frame C): five soft bands at -24deg, soft-light over paper. */
+.light {
+  position: absolute;
+  left: -200px;
+  top: -300px;
+  width: 1900px;
+  height: 1600px;
+  transform: rotate(-24deg);
+  display: flex;
+  gap: 70px;
+  padding-left: 520px;
+  filter: blur(26px);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+.light > i {
+  display: block;
+  width: 90px;
+  height: 100%;
+  background: rgba(255, 226, 180, 0.9);
+}
+.light > i:nth-child(even) {
+  width: 130px;
+}
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 90% at 70% 30%,
+    rgba(255, 236, 210, 0) 55%,
+    rgba(70, 45, 25, 0.16) 100%
+  );
+  pointer-events: none;
+}
+
+/* Editorial type */
+.word {
+  position: absolute;
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink-stage);
+}
+.word em {
+  font-style: italic;
+  color: var(--clay-deep);
+}
+.wordmark {
+  font-family: 'Instrument Serif', Georgia, serif;
+  line-height: 1;
+  color: var(--ink-stage);
+}
+.wordmark em {
+  font-style: italic;
+  color: var(--clay-deep);
+}
+
+/* App window (rebuilt UI, laid out at 1x then scaled) */
+.win {
+  position: absolute;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e7e5e2;
+  background: #fbfaf7;
+  box-shadow:
+    0 3px 10px rgba(20, 16, 12, 0.08),
+    0 40px 90px rgba(40, 24, 10, 0.28);
+}
+.win-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.toolbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 44px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-bottom: 1px solid #eeeae3;
+  font-size: 12px;
+}
+.seg {
+  display: flex;
+  padding: 2px;
+  border-radius: 8px;
+  background: #f5f1ea;
+}
+.seg span {
+  padding: 4px 11px;
+  color: #606060;
+}
+.seg span.on {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(20, 16, 12, 0.08);
+  font-weight: 500;
+  color: #171717;
+}
+.tb-field {
+  height: 28px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e4ded4;
+  border-radius: 8px;
+  background: #fff;
+  color: #858585;
+}
+.tb-btn {
+  height: 28px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #e4ded4;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #3a352f;
+}
+.tb-sq {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e4ded4;
+  border-radius: 8px;
+  background: #fff;
+}
+.crumbs {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 11.5px;
+  color: #606060;
+  z-index: 3;
+}
+.crumbs span {
+  padding: 2px 6px;
+}
+.crumbs span.cur {
+  font-weight: 600;
+  color: #171717;
+}
+
+/* Case Map chips — values from src/features/matters/components/case-map.css */
+.world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.edges {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+}
+.edge {
+  fill: none;
+  stroke: #d9d5cd;
+  stroke-width: 1.25;
+}
+.edge.on {
+  stroke: var(--edge-path);
+  stroke-width: 1.6;
+}
+.matter {
+  position: absolute;
+  width: 264px;
+  height: 64px;
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid #ecdcd0;
+  border-radius: 9px;
+  background: #fdf9f5;
+  box-shadow: 0 2px 5px rgba(35, 30, 25, 0.07);
+}
+.matter .eyebrow {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--clay);
+}
+.matter .name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #171717;
+}
+.matter .case {
+  font-size: 11px;
+  color: #858585;
+}
+.cat {
+  position: absolute;
+  width: 224px;
+  height: 40px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #d9d6d0;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(35, 30, 25, 0.07);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #171717;
+}
+.cat.left {
+  flex-direction: row-reverse;
+}
+.cat.open {
+  border-color: var(--clay);
+  background: #fdf7f4;
+}
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 34px;
+  height: 24px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #f2efe9;
+  color: #606060;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+.node {
+  position: absolute;
+  width: 264px;
+  height: 52px;
+  padding: 6px 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dedbd5;
+  border-radius: 8px;
+  background: #fff;
+}
+.node.left {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.node.open {
+  border-color: #e2a48f;
+}
+.node.sel {
+  border-color: var(--clay);
+  background: #fdf7f4;
+  box-shadow: 0 0 0 2px rgba(201, 72, 32, 0.12);
+}
+.node .dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 999px;
+  background: #a5483f;
+}
+.node .txt {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+.node .meta {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #858585;
+}
+.node .label {
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: #171717;
+}
+.node .ncount {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1px;
+  padding: 1px 4px 1px 6px;
+  border-radius: 999px;
+  background: #f5f1ea;
+  font-size: 10px;
+  font-weight: 600;
+  color: #606060;
+}
+
+/* Floating review panel — floating-review-panel.css / source-evidence.tsx */
+.panel {
+  position: absolute;
+  width: 320px;
+  transform-origin: 0 0;
+  border: 1px solid #e7e5e2;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fbfaf8;
+  box-shadow:
+    0 18px 48px rgba(20, 16, 12, 0.22),
+    0 3px 10px rgba(20, 16, 12, 0.08);
+}
+.panel .ph {
+  min-height: 44px;
+  padding: 0 10px 0 16px;
+  display: flex;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #1d1d1d;
+}
+.panel .ph span {
+  margin-right: auto;
+}
+.panel .pb {
+  padding: 10px 16px 0;
+}
+.panel .title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #171717;
+}
+.panel .desc {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #606060;
+}
+.chip-red {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f4e4e1;
+  color: #a5483f;
+  font-size: 11px;
+  font-weight: 600;
+}
+.src {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3f1ed;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.src .sh {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.src .fn {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #171717;
+}
+.src .pg {
+  flex: none;
+  font-size: 11px;
+  color: #606060;
+}
+.src p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #3f3a36;
+}
+.pf {
+  padding: 12px 14px;
+  border-top: 1px solid #d7d7d7;
+  background: #fff;
+}
+.btn-verify {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #2c6e49;
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  border: 1px solid #245c3c;
+}
+.btn-open {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #e4ded4;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #3a352f;
+}
+
+/* Motion-system devices */
+.thread {
+  fill: none;
+  stroke: var(--thread);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+.pencil {
+  stroke: #2b2522;
+  stroke-width: 1.4;
+  fill: none;
+  opacity: 0.6;
+}
+.frame-mark {
+  stroke: #1c1714;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: square;
+}
+
+/* Review slate: identifies the still; not part of the proposed artwork. */
+.slate {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  padding: 5px 9px;
+  border-radius: 4px;
+  background: rgba(28, 23, 20, 0.78);
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f6f1e8;
+  z-index: 50;
+}
+.qual {
+  position: absolute;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(251, 250, 247, 0.92);
+  border: 1px solid #e4ded4;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3a352f;
+  box-shadow: 0 2px 6px rgba(20, 16, 12, 0.08);
+}
+.placeholder-tag {
+  position: absolute;
+  padding: 6px 10px;
+  border: 1.5px dashed rgba(255, 248, 240, 0.85);
+  border-radius: 6px;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 248, 240, 0.95);
+  background: rgba(28, 23, 20, 0.45);
+}

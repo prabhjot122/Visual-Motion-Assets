@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440, height=1000">
+  <title>LawVriksh graphics track — section 7, 46.40–49.62 s</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
+    :root { --clay: #c94820; }
+
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #171717; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+    #light { overflow: hidden; }
+    #bands { position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; transform: rotate(-24deg); }
+    #bands i { display: block; width: 90px; height: 100%; background: rgba(255, 226, 180, 0.9); }
+    #bands i:nth-child(even) { width: 130px; }
+    #vignette { background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); }
+    .clay { background-image: url(assets/textures/stone-clay.jpg); background-size: 600px; }
+    .slab { position: absolute; left: 0; top: -40px; width: 1900px; height: 1080px; clip-path: polygon(114px 0, 100% 0, calc(100% - 80px) 100%, 0 100%); }
+
+    .word { position: absolute; left: 0; top: 0; font-family: 'Newsreader', serif; font-weight: 400; line-height: 1; letter-spacing: -0.035em; color: #1c1714; white-space: nowrap; }
+    .word em { font-style: italic; color: #a93a18; }
+    .mask { position: absolute; overflow: hidden; }
+
+    /* Document viewer (rebuilt from d13 / the verified Notice Analysis run) */
+    #viewer { position: absolute; left: 40px; top: 240px; width: 860px; height: 820px; overflow: hidden; border-radius: 16px; background: #f1eee9; border: 1px solid #e7e5e2; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); }
+    .vbar { position: absolute; left: 0; right: 0; top: 0; height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 18px; background: #fff; border-bottom: 1px solid #eeeae3; font-size: 13px; font-weight: 600; color: #171717; z-index: 2; }
+    #strip { position: absolute; left: 18px; top: 0; width: 825px; }
+    .page { position: absolute; left: 0; width: 825px; height: 1167px; background: #fff no-repeat 0 0 / 100% auto; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .hl { position: absolute; transform-origin: 0 50%; }
+
+    /* Insights side panel */
+    #ins { position: absolute; left: 0; top: 0; width: 340px; height: 492px; transform-origin: 0 0; background: #fff; border: 1px solid #e7e5e2; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); font-size: 12.5px; color: #171717; }
+    .tabs { display: flex; gap: 14px; align-items: center; padding: 12px 14px; border-bottom: 1px solid #eeeae3; font-size: 12px; color: #606060; background: #fff; position: relative; z-index: 2; }
+    .tabs .on { padding: 4px 10px; border: 1px solid var(--clay); border-radius: 8px; background: #fbe9e1; color: var(--clay); font-weight: 600; }
+    .k { font-size: 9.5px; font-weight: 600; letter-spacing: 0.1em; color: #858585; }
+    #tpl { margin: 6px 0 8px; padding: 9px 12px; border-radius: 8px; border: 1px dashed #dcd6cc; font-weight: 600; display: flex; justify-content: space-between; color: #9a9a9a; }
+    #tpl.on { background: #fbe3d8; border: 1px solid #f1c3ad; color: #171717; }
+    #tpl-head { position: relative; z-index: 2; background: #fff; padding: 12px 14px 4px; }
+    #list { position: absolute; left: 0; top: 0; width: 340px; }
+    .res { padding: 12px 14px; border-top: 1px solid #eeeae3; background: #fff; }
+    .res.sel { background: #fffaf0; }
+    .res .lab { display: flex; justify-content: space-between; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .res .lab i { font-style: normal; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 7px; }
+    .q { padding: 10px 12px; border-radius: 8px; background: #f3f1ed; font-family: 'Newsreader', serif; font-style: italic; font-size: 14px; line-height: 1.45; color: #2a2622; }
+    .pg { margin-top: 8px; font-size: 11px; font-weight: 600; color: var(--clay); text-decoration: underline; }
+    #fields { position: absolute; left: 0; top: 0; width: 250px; transform-origin: 0 0; padding: 12px; box-sizing: border-box; background: #fff; border: 1px solid #e7e5e2; border-radius: 14px; box-shadow: 0 14px 36px rgba(20,16,12,0.18); font-size: 12px; color: #3a352f; }
+    #fields div { display: flex; gap: 10px; padding: 5px 4px; }
+    #fields div span:first-child { color: #6b6b6b; font-size: 11px; width: 16px; }
+    #fields .sel { background: #fdf3e0; border-radius: 6px; font-weight: 600; color: #171717; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="section-7" data-start="0" data-width="1440" data-height="1000" data-fps="30" data-duration="3.2333">
+    <div class="layer" id="light"><div id="bands"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="layer" id="stage">
+      <div class="clay" id="arc" style="position:absolute; left:0; top:-40px; width:230px; height:170px; clip-path: path('M0 0 H230 V170 H140 A100 100 0 0 0 40 70 H0 Z')"></div>
+      <div class="mask" id="ins-mask" style="left:40px; top:2px; width:900px; height:236px"><div class="word" id="ins-word" style="left:6px; top:8px; font-size:200px">Insights<em>.</em></div></div>
+      <div id="viewer">
+        <div class="vbar">Document<span style="font-weight:400; color:#6b6b6b">· Notice invoking arbitration — 14 Mar 2026.pdf</span><span style="flex:1"></span><span style="font-weight:500; color:#606060" id="pageno">1 / 2</span></div>
+        <div id="strip">
+          <div class="page" id="p1" style="top:0; background-image:url(assets/docs/arora-notice-page1.png)"></div>
+          <div class="page" id="p2" style="top:1185px; background-image:url(assets/docs/arora-notice-page2.png)"></div>
+        </div>
+      </div>
+      <div id="fields">
+        <div style="font-size:10px; letter-spacing:0.1em; font-weight:700; color:#6b6b6b; padding-bottom:8px">NOTICE ANALYSIS · 6 RESULTS</div>
+      </div>
+      <div id="ins">
+        <div class="tabs"><span>Ask</span><span class="on">Insights</span><span>Compliance</span><span>Notes</span></div>
+        <div id="tpl-head"><div class="k">INSIGHT TEMPLATE</div><div id="tpl"><span id="tpl-name">Choose a template</span><span id="tpl-tick" style="color:#c94820">✓</span></div></div>
+        <div id="list-wrap" style="position:absolute; left:0; right:0; bottom:0; overflow:hidden"><div id="list"></div></div>
+      </div>
+      <svg class="layer" id="ink" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <g id="leaders" fill="none" stroke-width="1.6"></g>
+        <path id="thread" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+        <path id="focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <div class="layer" id="slab-layer"><div class="slab clay" id="slab"></div></div>
+    <div class="layer" id="vignette"></div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/section7.js';
+    window.__timelines['section-7'] = timeline;
+  </script>
+</body>
+</html>

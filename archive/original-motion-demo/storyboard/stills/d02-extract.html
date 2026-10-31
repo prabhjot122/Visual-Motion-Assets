@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D2 · Facts extracted</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/marks.js"></script>
+<style>
+  .surface { position:absolute; left:160px; top:150px; width:1120px; height:650px; border-radius:0 0 18px 18px; background:#fbfaf7; border:1px solid #e7e5e2; border-top:0; box-shadow:0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); }
+  .page { position:absolute; top:236px; width:170px; height:240px; background:#fff no-repeat 0 0 / 100% 100%; box-shadow:0 2px 4px rgba(40,24,10,0.12), 0 16px 34px rgba(40,24,10,0.20); }
+  .hl { position:absolute; background:rgba(201,72,32,0.26); border-bottom:1.6px solid var(--clay); }
+  .group { position:absolute; top:200px; text-align:center; font-family:'Newsreader',serif; font-style:italic; font-size:19px; color:#3a352f; }
+  .fact { position:absolute; top:530px; width:206px; padding:12px 14px 12px 18px; background:#fbf8f2; border:1px solid #e4ddd1; box-shadow:0 10px 24px rgba(40,24,10,0.16); }
+  .fact::before { content:''; position:absolute; left:-7px; top:22px; width:10px; height:10px; border-radius:999px; border:2px solid #2b2522; background:#efebe3; }
+  .fact.conflict::before { border-color:var(--thread); background:var(--thread); }
+  .fact .k { font-size:12.5px; color:#6a625a; }
+  .fact .v { margin-top:4px; font-family:'Newsreader',serif; font-weight:500; font-size:23.5px; line-height:1.1; letter-spacing:-0.01em; color:#1c1714; white-space:nowrap; }
+  .fact .src { display:inline-block; margin-top:9px; padding:2px 8px; border-radius:999px; background:#f2efe9; font-size:11px; font-weight:500; color:#606060; }
+</style>
+</head>
+<body>
+<!-- D2 · 27.17–28.70 s · "LawVriksh important facts extract karega"
+     Pure motion graphics (user direction, 22 Oct). The docked documents deal
+     their source pages out into five columns. A clay scan passes each page and
+     stops on the exact source line (real line boxes, measured from the PDFs);
+     the highlight lifts off, drops along a pencil leader and unfolds into a
+     paper fact tag that keeps its source page (Lovio L-C: the detail you read
+     becomes the next composition). Real seed values. The two conflicting
+     amounts carry clay dots; nothing is resolved. The thread runs on through
+     the tags and exits right, where the char slab enters (28.56). -->
+<div class="stage" id="stage">
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wordmark abs" style="right:40px; top:36px; font-size:30px">Law<em>Vriksh</em></div>
+  <div class="surface"></div>
+
+  <div class="group" style="left:215px; width:388px">Development Agreement</div>
+  <div class="group" style="left:651px; width:388px">Notice invoking arbitration</div>
+  <div class="group" style="left:1087px; width:170px">Interim order</div>
+  <div id="pages"></div>
+  <div id="facts"></div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
+    <g filter="url(#pencil)" class="pencil" id="leaders"></g>
+    <path class="thread" d="M160 150 H 1280"/>
+    <path class="thread" id="run"/>
+    <path class="frame-mark" id="focal"/>
+  </svg>
+  <div class="vignette"></div>
+  <div class="slate">D2 · 27.17–28.70 s · facts extracted (motion graphics) · proposal</div>
+</div>
+<script>
+  // Source line boxes in raster px (1100-wide renders), measured with PyMuPDF from public/dummy-docs.
+  const F = [
+    { img: 'arora-agreement-page1', box: [118.3, 173.6, 559.6, 199.5], k: 'Date of agreement', v: '3 February 2023', src: 'Agreement · p1' },
+    { img: 'arora-agreement-page2', box: [118.3, 158.8, 839.8, 184.7], k: 'Total consideration', v: 'Rs. 4,60,00,000', src: 'Agreement · p2' },
+    { img: 'arora-notice-page1', box: [118.3, 735.3, 883.9, 761.2], k: 'Date of possession', v: '22 February 2023', src: 'Notice · p1' },
+    { img: 'arora-notice-page2', box: [118.3, 549.6, 569.4, 575.5], k: 'Amount outstanding', v: 'Rs. 2,30,00,000', src: 'Notice · p2', conflict: true },
+    { img: 'arora-order-page1', box: [118.3, 646.7, 839.3, 672.5], k: 'Amount outstanding', v: 'Rs. 1,15,00,000', src: 'Order · p1', conflict: true },
+  ];
+  const K = 170 / 1100, X0 = 215, STEP = 218;
+  let pages = '', facts = '', leaders = '';
+  F.forEach((f, i) => {
+    const x = X0 + i * STEP, [a, b, c, d] = f.box;
+    pages += `<div class="page" style="left:${x}px; background-image:url(../assets/${f.img}.png)"><div class="hl" id="hl${i}" style="left:${a * K}px; top:${b * K - 1}px; width:${(c - a) * K}px; height:${(d - b) * K + 2}px"></div></div>`;
+    facts += `<div class="fact${f.conflict ? ' conflict' : ''}" id="f${i}" style="left:${x - 6}px"><div class="k">${f.k}</div><div class="v">${f.v}</div><div class="src">${f.src}</div></div>`;
+  });
+  document.getElementById('pages').innerHTML = pages;
+  document.getElementById('facts').innerHTML = facts;
+  // Leaders leave each highlight into the page's own left margin and drop to the tag's pin: never across text.
+  F.forEach((f, i) => {
+    const h = Marks.rect('#hl' + i), t = Marks.rect('#f' + i), x = t.left - 2, pin = t.top + 27;
+    leaders += `<path d="M${h.left + 2} ${(h.top + h.bottom) / 2} H ${x + 6} Q ${x} ${(h.top + h.bottom) / 2}, ${x} ${(h.top + h.bottom) / 2 + 8} V ${pin - 7}"/>`;
+  });
+  document.getElementById('leaders').innerHTML = leaders;
+  // The tags hang on one straight thread: it drops from the line at the left, runs under them and exits right toward the slab.
+  let d = 'M 196 150 V 630 Q 196 670, 236 670 L 1460 670', ticks = '';
+  F.forEach((_, i) => { const t = Marks.rect('#f' + i), cx = (t.left + t.right) / 2; ticks += `<path class="thread" d="M${cx} ${t.bottom} V 670"/><circle cx="${cx}" cy="670" r="4.5" fill="#c4562e"/>`; });
+  document.getElementById('run').setAttribute('d', d);
+  document.getElementById('run').insertAdjacentHTML('afterend', ticks);
+  document.getElementById('focal').setAttribute('d', Marks.corners('#f3', 10, 16));
+</script>
+</body>
+</html>

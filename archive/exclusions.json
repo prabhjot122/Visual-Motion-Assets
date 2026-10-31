@@ -1,0 +1,14 @@
+{
+  "reason": "curated portable creative library, not complete application backup",
+  "excluded": [
+    "application source/config, secrets and account login runbooks",
+    "raw influencer takes and voice masters",
+    "full Harvey/Lovio original videos: retain source identity and compact reference evidence only",
+    "models, virtualenv, node_modules, hidden render caches and frame snapshots",
+    "generation-job responses, service URLs, machine sessions and temporary logs",
+    "assembly assets, rendered strips, analysis audio and intermediate exports",
+    "rejected reel-reshoot compositor video",
+    "old influencer layout screenshots"
+  ],
+  "historical_build_limit": "Full old-film rerender requires excluded original input media and runtime/app dependencies. Selected prepared scenes are inspectable; no blanket rebuild claim."
+}

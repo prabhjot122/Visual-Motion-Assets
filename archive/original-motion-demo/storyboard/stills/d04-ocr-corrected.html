@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S09b · OCR word corrected</title>
+<link rel="stylesheet" href="lib/stage.css">
+<style>
+  .editor { position:absolute; width:620px; transform-origin:0 0; background:#fff; border:1px solid #e7e5e2; border-radius:16px; overflow:hidden; box-shadow:0 22px 60px rgba(20,16,12,0.24), 0 3px 10px rgba(20,16,12,0.08); }
+  .tabs { display:flex; gap:20px; padding:0 18px; height:46px; align-items:flex-end; border-bottom:1px solid #eeeae3; font-size:12.5px; color:#606060; }
+  .tabs span { padding-bottom:12px; }
+  .tabs span.on { color:#171717; font-weight:500; border-bottom:2px solid #171717; }
+  .etb { display:flex; align-items:center; gap:12px; margin:12px 14px; padding:8px 12px; border:1px solid #eeeae3; border-radius:10px; font-size:11px; color:#858585; }
+  .etb b { font-weight:600; color:#3a352f; }
+  .doc { padding:6px 24px 22px; font-size:13px; color:#171717; }
+  table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:12.5px; }
+  td { border:1px solid #dcd8d0; padding:9px 10px; vertical-align:top; line-height:1.45; }
+  td:first-child { width:46px; } td:nth-child(3), td:nth-child(4) { width:86px; }
+  .margin { margin-top:16px; line-height:1.6; font-size:13px; }
+  .margin b { font-weight:600; }
+  #word-parties { text-decoration: underline; text-decoration-color: #d65248; text-decoration-thickness: 1.5px; text-underline-offset: 3px; background: rgba(239,140,90,0.18); border-radius:2px; padding:0 1px; }
+</style>
+</head>
+<body>
+<!-- D4 · 30.30–31.00 s · end of "unclear text highlight karta hai"
+     Result of the separate OCR review: the single word brlies is edited to
+     Parties in Extracted text and saved; the word keeps its original source
+     span, so the thread still ties it to the same box on the scan. The scan
+     recedes left as the editor comes forward (same thread, same box). -->
+<div class="stage" id="stage">
+  <div class="abs char" style="left:1220px; top:-40px; width:300px; height:1080px; clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%)"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <div class="abs" id="scan" style="left:-560px; top:-430px; width:1200px; height:1977px; background:#fff url(../assets/sc2051-page2.png) 0 0 / 1200px 1977px; box-shadow: 0 30px 80px rgba(40,24,10,0.30); transform: rotate(-1.2deg); transform-origin: 900px 900px">
+    <div class="abs" style="left:946px; top:886px; width:98px; height:44px; background:rgba(239,140,90,0.30); border:2px solid rgba(201,72,32,0.85); border-radius:3px"></div>
+  </div>
+  <div class="vignette"></div>
+
+  <div class="editor" id="editor" style="left:690px; top:230px; transform:scale(1.18)">
+    <div class="tabs"><span>Issues</span><span class="on">Extracted text</span></div>
+    <div class="etb"><b>B</b><b>H₂</b><span style="flex:1"></span><span id="saved">Saved</span><span>Restore OCR text</span></div>
+    <div class="doc">
+      <table>
+        <tr><td>5.</td><td>Note Sheet</td><td></td><td>NS1–</td></tr>
+        <tr><td>6.</td><td>Synopsis and List of Dates</td><td>B–I</td><td></td></tr>
+        <tr><td>7.</td><td>Writ Petition with Affidavit</td><td>1–38</td><td></td></tr>
+        <tr><td>8.</td><td>APPENDIX — Sections 109, 110, 120B, 292, 375, 376 &amp; 377 of Indian Penal Code</td><td>39–49</td><td></td></tr>
+      </table>
+      <p class="margin"><b>Handwritten margin note (OCR; review required):</b> -Memas <span id="word-parties">Parties</span> -Facts; -GROUNDS-; 86 PRAYERS</p>
+    </div>
+  </div>
+
+  <div class="qual" style="left:690px; top:180px">Separate example · supplied Supreme Court scan · edited word keeps its source link</div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread"/>
+    <g id="focal" class="frame-mark"></g>
+  </svg>
+  <div class="slate">D4 · 30.30–31.00 s · brlies → Parties, saved · proposal</div>
+</div>
+<script>
+  const w = document.getElementById('word-parties').getBoundingClientRect();
+  const P = 10, L = 14, x0 = w.left - P, y0 = w.top - P, x1 = w.right + P, y1 = w.bottom + P;
+  document.getElementById('focal').innerHTML = `<path d="M${x0} ${y0 + L}V${y0}H${x0 + L}M${x1 - L} ${y0}H${x1}V${y0 + L}M${x1} ${y1 - L}V${y1}H${x1 - L}M${x0 + L} ${y1}H${x0}V${y1 - L}"/>`;
+  // Box on the (slightly rotated) scan, measured from the element.
+  const box = document.querySelector('#scan > div').getBoundingClientRect();
+  document.getElementById('thread').setAttribute('d',
+    `M${box.right + 4} ${box.top + box.height / 2} C ${box.right + 160} ${box.top + box.height / 2 + 40}, ${w.left - 40} ${w.bottom + 120}, ${(w.left + w.right) / 2} ${w.bottom + 4}`);
+</script>
+</body>
+</html>

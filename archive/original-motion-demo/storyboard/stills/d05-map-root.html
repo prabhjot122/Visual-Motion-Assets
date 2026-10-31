@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S10 · Case Map default</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/casemap.js"></script>
+</head>
+<body>
+<!-- D5 · 31.00–33.13 s · "aur poore case ki mapping banata hai"
+     Step 1 of the required Case Map progression: the default collapsed map.
+     The char slab (Arif Jafar context) is leaving left;
+     the clay thread that held the OCR box hands off to the matter chip. -->
+<div class="stage" id="stage">
+  <div class="abs char" id="slab-exit" style="left:-150px; top:-40px; width:210px; height:1080px; clip-path: polygon(0 0, 100% 0, 62% 100%, 0 100%)"></div>
+  <div class="abs clay" id="stone-corner" style="left:1210px; top:118px; width:260px; height:200px; clip-path: path('M0 200 V60 A60 60 0 0 1 60 0 H260 V200 Z')"></div>
+  <div class="abs char" style="left:1150px; top:150px; width:44px; height:44px; border-radius:999px"></div>
+  <div class="abs hatch" style="left:1380px; top:420px; width:80px; height:600px"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+
+  <svg class="abs" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g filter="url(#pencil)" class="pencil"><line x1="0" y1="300" x2="1440" y2="300"/><line x1="150" y1="0" x2="150" y2="1000"/><line x1="0" y1="980" x2="1100" y2="0"/></g>
+  </svg>
+
+  <div class="win" id="map-window" style="left:150px; top:300px; width:1360px; height:760px">
+    <div class="win-inner" id="map-inner" style="transform:scale(1.08)"></div>
+  </div>
+
+  <!-- Overlay geometry: thread arriving from the previous shot and the focal frame on the matter chip -->
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread" d="M-20 892 C 300 892, 520 760, 720 620"/>
+    <circle cx="720" cy="620" r="4.5" fill="var(--thread)"/>
+    <g id="focal" class="frame-mark"></g>
+  </svg>
+
+  <!-- Cursor resting toward Conflicts: the next action -->
+  <svg class="abs" id="cursor" width="22" height="30" viewBox="0 0 22 30" style="left:262px; top:790px"><path d="M2 2 L2 24 L8 18 L12 28 L16 26 L12 16 L20 16 Z" fill="#171717" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+
+  <div class="word" style="left:56px; top:40px; font-size:236px">Mapped<em>.</em></div>
+  <div class="wordmark abs" style="right:40px; top:36px; font-size:30px">Law<em>Vriksh</em></div>
+  <div class="slate">D5 · 31.00–33.13 s · Case Map default (collapsed) · proposal</div>
+</div>
+<script>
+  const inner = document.getElementById('map-inner');
+  const world = CaseMap.chrome(inner, { w: 1204, h: 815, crumbs: ['Arora v. Meridian Estates Pvt. Ltd.'] });
+  CaseMap.renderMap(world, { path: [], ox: 602, oy: 300, k: 1 });
+  // Focal frame: corner marks 12 px outside the matter chip, in stage pixels.
+  const m = CaseMap.box([], 'matter'), s = 1.08, wx = 150, wy = 300 + 44 * s;
+  const x0 = wx + (602 + m.x) * s - 12, y0 = wy + (300 + m.y) * s - 12, x1 = x0 + m.w * s + 24, y1 = y0 + m.h * s + 24, L = 18;
+  document.getElementById('focal').innerHTML =
+    `<path d="M${x0} ${y0 + L}V${y0}H${x0 + L}M${x1 - L} ${y0}H${x1}V${y0 + L}M${x1} ${y1 - L}V${y1}H${x1 - L}M${x0 + L} ${y1}H${x0}V${y1 - L}"/>`;
+  document.getElementById('thread').setAttribute('d', `M-20 892 C 300 892, 560 ${y1 + 60}, ${(x0 + x1) / 2} ${y1 - 12}`);
+  document.querySelector('#overlay circle').setAttribute('cx', (x0 + x1) / 2);
+  document.querySelector('#overlay circle').setAttribute('cy', y1 - 12);
+</script>
+</body>
+</html>

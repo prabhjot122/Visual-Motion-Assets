@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>LawVriksh reel v3 — Hearing Prep</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    /* Rebuilt from the app's Hearing Prep page (src/features/hearing-prep, hearing-preparation.css; computed styles in
+       motion-demo/screenshots/hearing/styles.json), drawn at 2.1× for a phone screen. Copy is the Arora brief as the app shows it. */
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    @font-face { font-family: 'Geist Mono'; src: url(assets/fonts/geist-mono.woff2) format('woff2'); font-weight: 100 900; }
+    :root { --ink: #171717; --muted: #606060; --line: #e5e5e5; --soft: #fbfaf7; --clay: #c94820;
+      --blocker: #a5483f; --blocker-ink: #8c1f14; --blocker-bg: #f8e6e3; --review: #9a6628; --review-ink: #92400e; --review-bg: #f7edda;
+      --done: #2e7d46; --done-bg: #e3f2e7; --court: #6d4aa0; --court-bg: #ece4f5; --doc: #2e5fa3; --doc-bg: #eaf3f9; --lawyer: #2e7d46; --lawyer-bg: #dcfce7; }
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: var(--ink); }
+    * { box-sizing: border-box; }
+    .abs { position: absolute; }
+
+    /* the app window */
+    #win { position: absolute; left: 36px; top: 40px; width: 1008px; height: 1880px; border-radius: 30px; background: #fff; border: 1px solid #e7e1d8; box-shadow: 0 4px 12px rgba(20,16,12,0.08), 0 40px 100px rgba(40,24,10,0.22); overflow: hidden; }
+    #bar { position: absolute; left: 0; top: 0; width: 100%; height: 108px; display: flex; align-items: center; gap: 14px; padding: 0 34px; border-bottom: 2px solid #f0eeea; background: #fff; z-index: 5; font-size: 25px; color: #3a3530; }
+    #bar .sep { color: #b3aca4; }
+    #bar .sp { flex: 1; }
+    #needs { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border: 2px solid #b47872; border-radius: 16px; color: var(--blocker-ink); font-weight: 600; font-size: 25px; background: #fff; transform-origin: 50% 50%; }
+    #ticker { position: absolute; left: 0; top: 108px; width: 100%; height: 96px; display: flex; align-items: center; gap: 12px; padding: 0 34px; background: #fff; border-bottom: 2px solid #f4f2ee; z-index: 5; }
+    #ticker .ti { width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-family: 'Geist Mono', monospace; font-size: 21px; color: #9b9188; background: var(--soft); border: 2px solid #d8d0c5; flex: none; }
+    #ticker .ti.on { color: #fff; background: var(--clay); border-color: var(--clay); }
+    #ticker .lab { margin-left: 12px; font-size: 27px; font-weight: 600; color: #4f4540; white-space: nowrap; }
+    #scroll { position: absolute; left: 0; top: 204px; width: 100%; }
+    #sheet { position: absolute; left: 0; top: 0; width: 100%; padding: 40px 56px 600px; }
+    .sec { margin-bottom: 120px; }
+    .eyebrow { font-size: 21px; font-weight: 680; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .h2 { margin: 6px 0 26px; font-size: 54px; font-weight: 630; line-height: 1.15; letter-spacing: -0.01em; }
+    .title { margin: 10px 0 18px; font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: 100px; line-height: 1.02; letter-spacing: -0.015em; }
+    .title span { display: inline-block; }
+    .row { display: flex; align-items: center; gap: 16px; }
+    .num { font-size: 31px; font-weight: 640; letter-spacing: 0.02em; }
+    .sub { font-size: 27px; color: var(--muted); margin-top: 6px; }
+    .attn { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 8px; background: var(--blocker-bg); color: var(--blocker-ink); font-size: 23px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 40px; margin-top: 34px; padding-top: 32px; border-top: 2px solid var(--line); }
+    .meta small { display: block; font-size: 20px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .meta b { display: block; margin-top: 6px; font-size: 30px; font-weight: 500; line-height: 1.3; }
+    .qual { margin-top: 26px; font-size: 22px; color: var(--muted); }
+    .count { display: inline-flex; align-items: center; height: 58px; padding: 0 26px; border-radius: 999px; font-size: 26px; font-weight: 620; background: var(--review-bg); color: var(--review-ink); border: 2px solid rgba(154,102,40,0.35); margin-top: 26px; }
+    .p { font-size: 31px; line-height: 1.5; margin: 0 0 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 0 30px; }
+    .chip { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 20px 0 16px; border-radius: 999px; font-size: 24px; font-weight: 520; border: 2px solid; white-space: nowrap; }
+    .chip i { font-style: normal; color: var(--muted); }
+    .chip svg { width: 24px; height: 24px; flex: none; }
+    .k-court { background: var(--court-bg); border-color: rgba(109,74,160,0.28); } .k-court svg { color: var(--court); }
+    .k-doc { background: var(--doc-bg); border-color: rgba(46,95,163,0.28); } .k-doc svg { color: var(--doc); }
+    .k-lawyer { background: var(--lawyer-bg); border-color: rgba(46,125,70,0.28); }
+    .weak { background: var(--soft); border: 2px solid var(--line); border-left: 7px solid var(--blocker); border-radius: 0 22px 22px 0; padding: 30px 34px; }
+    .tag { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 999px; font-size: 23px; font-weight: 620; }
+    .t-crit { background: var(--blocker-bg); color: var(--blocker-ink); }
+    .t-part { background: var(--review-bg); color: var(--review-ink); }
+    .t-sup { background: var(--done-bg); color: var(--done); }
+    .weak .stmt { font-size: 34px; line-height: 1.45; margin: 18px 0 10px; font-weight: 520; }
+    .amt { position: relative; white-space: nowrap; }
+    .amt u { position: absolute; left: -4px; right: -4px; bottom: 2px; height: 16px; background: rgba(201,72,32,0.22); transform-origin: 0 50%; text-decoration: none; }
+    .how { margin-top: 20px; padding: 20px 24px; border-left: 5px solid var(--done); background: #eef7f0; border-radius: 0 14px 14px 0; font-size: 28px; }
+    .how small { display: block; font-size: 20px; font-weight: 680; letter-spacing: 0.1em; color: var(--done); margin-bottom: 6px; }
+    .snap h3 { font-size: 22px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+    .check-group { border: 2px solid var(--line); border-radius: 22px; overflow: hidden; margin-top: 10px; }
+    .cg-head { display: flex; justify-content: space-between; padding: 18px 26px 6px; font-size: 21px; font-weight: 680; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .check { display: flex; gap: 20px; align-items: flex-start; padding: 14px 26px 18px; font-size: 29px; line-height: 1.4; }
+    .check .box { width: 34px; height: 34px; border: 2.5px solid #b9b2a9; border-radius: 8px; flex: none; margin-top: 4px; background: #fff; }
+    .progress { display: flex; align-items: center; gap: 18px; padding: 20px 26px; font-size: 25px; color: var(--muted); border-top: 2px solid var(--line); }
+    .progress .bar { width: 200px; height: 8px; border-radius: 8px; background: #eeeae4; }
+    .verdict { border: 2px solid #d2b6b3; border-radius: 28px; overflow: hidden; }
+    .v-head { display: flex; gap: 26px; padding: 34px 38px; background: var(--blocker-bg); }
+    .v-icon { width: 80px; height: 80px; border-radius: 22px; background: var(--soft); display: grid; place-items: center; color: var(--muted); flex: none; }
+    .v-head small { font-size: 22px; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .v-head strong { display: block; font-size: 42px; font-weight: 650; margin-top: 4px; }
+    .v-head p { margin: 8px 0 0; font-size: 28px; color: #3f3f3f; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--line); }
+    .stat { padding: 28px 30px; } .stat + .stat { border-left: 2px solid var(--line); }
+    .stat strong { display: block; font-size: 50px; font-weight: 680; line-height: 1.1; }
+    .stat span { display: block; font-size: 27px; font-weight: 600; margin-top: 6px; }
+    .stat small { display: block; font-size: 22px; color: var(--muted); margin-top: 2px; }
+    .s-b strong { color: var(--blocker); } .s-r strong { color: var(--review); } .s-d strong { color: var(--done); }
+    .next { padding: 24px 32px; border-top: 2px solid var(--line); font-size: 27px; line-height: 1.45; }
+    .arg { display: flex; gap: 26px; background: var(--soft); border: 2px solid var(--line); border-radius: 26px; padding: 32px 34px; margin-bottom: 22px; }
+    .badge { width: 50px; height: 50px; border-radius: 14px; background: var(--ink); color: var(--soft); display: grid; place-items: center; font-size: 27px; font-weight: 700; flex: none; }
+    .arg .hd { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .arg h4 { margin: 0; font-size: 31px; font-weight: 650; }
+    .arg p { margin: 12px 0 18px; font-size: 31px; line-height: 1.45; font-weight: 520; }
+    .opp { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+    .opp > div { padding: 26px 26px; font-size: 27px; line-height: 1.45; border-radius: 6px; }
+    .opp small { display: block; font-size: 19px; font-weight: 680; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+    .o-them { background: #fbeeec; border-left: 6px solid var(--blocker); } .o-them small { color: var(--blocker-ink); }
+    .o-you { background: #eef7f0; border-left: 6px solid var(--done); } .o-you small { color: var(--done); }
+    /* the Preparation Review panel, opened from "Needs Review" */
+    #panel { position: absolute; right: 0; top: 108px; width: 760px; height: 1772px; background: #fff; border-left: 2px solid var(--line); box-shadow: -30px 0 80px rgba(20,16,12,0.16); padding: 40px 44px; z-index: 6; }
+    #panel .h2 { font-size: 46px; }
+    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 10px 0 34px; }
+    .tile { border-radius: 20px; padding: 22px 24px; border: 2px solid; }
+    .tile strong { display: block; font-size: 46px; font-weight: 680; } .tile span { font-size: 24px; font-weight: 600; }
+    .tl-b { background: var(--blocker-bg); border-color: rgba(165,72,63,0.25); } .tl-b strong { color: var(--blocker); }
+    .tl-r { background: var(--review-bg); border-color: rgba(154,102,40,0.25); } .tl-r strong { color: var(--review); }
+    .tl-d { background: var(--done-bg); border-color: rgba(46,125,70,0.25); } .tl-d strong { color: var(--done); }
+    .item { border: 2px solid var(--line); border-radius: 20px; padding: 24px 28px; }
+    .item .lbl { font-size: 23px; font-weight: 650; color: var(--review-ink); margin-bottom: 8px; }
+    .item p { margin: 0; font-size: 29px; line-height: 1.4; font-weight: 560; }
+    .item a { display: inline-block; margin-top: 14px; font-size: 24px; color: var(--doc); }
+    .compl { display: flex; gap: 18px; align-items: flex-start; margin-top: 18px; padding: 24px 26px; border-radius: 20px; background: #eef7f0; font-size: 28px; line-height: 1.4; }
+    .compl svg { width: 40px; height: 40px; flex: none; color: var(--done); }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="reel-hear" data-start="0" data-width="1080" data-height="1920" data-fps="30" data-duration="14.2000">
+    <div id="win">
+      <div id="bar"><span>Arora v. Meridian Estates Pvt. Ltd.</span><span class="sep">/</span><span>Hearing Prep</span><span class="sp"></span>
+        <span id="needs"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17v.5"/></svg>Needs Review</span></div>
+      <div id="ticker"></div>
+      <div id="scroll"><div id="sheet">
+        <section class="sec" id="sec-01">
+          <div class="eyebrow">Hearing brief</div>
+          <div class="title" id="title">Arora v. Meridian Estates Pvt. Ltd.</div>
+          <div class="row"><span class="num">ARB.P. 428/2026</span><span class="sp" style="flex:1"></span><span class="attn" id="attn">ⓘ Needs attention</span></div>
+          <div class="sub">Demo listing — verify against court record · Petitioner</div>
+          <div class="meta" id="meta">
+            <div><small>Hearing date</small><b>Wed, 28 Oct 2026</b></div>
+            <div><small>Court &amp; courtroom</small><b>Delhi High Court</b></div>
+            <div><small>Current stage</small><b>Demo listing — verify against court record</b></div>
+            <div><small>Last hearing</small><b>18 Jul 2026</b></div>
+          </div>
+          <div class="qual" id="qual">28 Oct 2026 is a presentation-only demo date — not a court listing</div>
+          <div class="count" id="count1">1 to review</div>
+        </section>
+        <section class="sec" id="sec-02">
+          <div class="eyebrow">Readiness</div><div class="h2">Preparation verdict</div>
+          <div class="verdict" id="verdict">
+            <div class="v-head"><div class="v-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 8v5M12 16v.5"/></svg></div>
+              <div><small>Preparation status</small><strong>Needs attention</strong><p>0 required items must be resolved before the hearing.</p></div></div>
+            <div class="stats"><div class="stat s-b"><strong>0</strong><span>Blockers</span><small>Required standards not met</small></div><div class="stat s-r"><strong>1</strong><span>To review</span><small>Advisory points and gaps</small></div><div class="stat s-d"><strong>0</strong><span>Completed</span><small>Checks already satisfied</small></div></div>
+            <div class="next"><b>Next:</b> Verify the hearing date against the court record, then review the amount discrepancy and obtain the latest order sheet.</div>
+          </div>
+        </section>
+        <section class="sec snap" id="sec-03">
+          <div class="eyebrow">Matter record</div><div class="h2">Case snapshot</div>
+          <h3>Current stage</h3>
+          <p class="p" id="stage">Interim protection pending arbitration</p>
+          <div class="chips"><span class="chip k-court" id="c-stage">COURT Order of 18 Jul 2026 <i>p. 2</i></span></div>
+          <h3>Latest development</h3>
+          <p class="p" id="latest">The 18 July order records limited interim protection. Later proceedings are not included in the selected corpus.</p>
+          <div class="chips"><span class="chip k-court" id="c-latest">COURT Order of 18 Jul 2026 <i>p. 2</i></span></div>
+        </section>
+        <section class="sec" id="sec-04">
+          <div class="eyebrow">Relevant record</div><div class="h2">Relevant Previous Proceedings</div>
+          <p class="p" id="pp1">Paragraph 5 restrains creation of third-party interests until the next date of hearing.</p>
+          <div class="chips"><span class="chip k-court" id="c-pp1">COURT Order of 18 Jul 2026 <i>p. 2</i></span></div>
+          <p class="p" id="pp2">Paragraph 6 directs the respondent to file an affidavit of bookings, allotments and receipts within four weeks.</p>
+          <div class="chips"><span class="chip k-court" id="c-pp2">COURT Order of 18 Jul 2026 <i>p. 2</i></span></div>
+        </section>
+        <section class="sec" id="sec-05">
+          <div class="eyebrow">0 of 4 done</div><div class="h2">Preparation checklist</div>
+          <div class="check-group"><div class="cg-head"><span>Hearing-specific</span><span>0/2</span></div>
+            <div class="check" data-fly="0"><span class="box"></span><span>Compare the notice and interim-order amounts; retain the unresolved discrepancy.</span></div>
+            <div class="check" data-fly="1"><span class="box"></span><span>Review clause 9.2 and obtain supporting records of the paid tranches.</span></div></div>
+          <div class="check-group"><div class="cg-head"><span>Added by you</span><span>0/1</span></div>
+            <div class="check" data-fly="2"><span class="box"></span><span>Obtain the latest order sheet and confirm the current listing.</span></div></div>
+          <div class="check-group"><div class="cg-head"><span>Court-required</span><span>0/1</span></div>
+            <div class="check" data-fly="3"><span class="box"></span><span>Check the affidavit direction in paragraph 6 against the case file.</span></div>
+            <div class="progress" id="prog"><span class="bar"></span><span>0 of 4 done</span></div></div>
+        </section>
+        <section class="sec" id="sec-06">
+          <div class="eyebrow">Supported propositions</div><div class="h2">Main Arguments</div>
+          <div class="arg" id="arg1"><span class="badge">1</span><div><div class="hd"><h4>Payment condition</h4><span class="tag t-part" id="tag1">Partly supported</span></div>
+            <p>The claimant relies on clause 9.2; the respondent contends that payment depended on a commencement certificate. This remains disputed.</p>
+            <div class="chips" style="margin:0"><span class="chip k-doc">DOC Development Agreement — 03 Feb 2023 <i>p. 2</i></span><span class="chip k-doc">DOC Notice invoking arbitration <i>p. 2</i></span></div></div></div>
+          <div class="arg" id="arg2"><span class="badge">2</span><div><div class="hd"><h4>Interim protection</h4><span class="tag t-sup" id="tag2">Supported by the record</span></div>
+            <p>Review the existing restraint and affidavit direction in paragraphs 5 and 6 of the July order.</p>
+            <div class="chips" style="margin:0"><span class="chip k-court">COURT Order of 18 Jul 2026 <i>p. 2</i></span></div></div></div>
+          <div class="eyebrow" style="margin-top:30px">Expected opposition</div>
+          <div class="opp"><div class="o-them" id="opp1"><small>Raised by the other side</small>The respondent says the third tranche was contingent on a commencement certificate.</div>
+            <div class="o-you" id="opp2"><small>Your answer</small>Compare the contention with the payment schedule; no final determination is recorded here.</div></div>
+        </section>
+        <section class="sec" id="sec-07">
+          <div class="eyebrow">Private — for you only</div><div class="h2">Weak Points</div>
+          <div class="weak" id="weak"><span class="tag t-crit">Critical</span>
+            <div class="stmt">The notice states <span class="amt">Rs. 2,30,00,000/-<u id="u1"></u></span> while the order records <span class="amt">Rs. 1,15,00,000/-<u id="u2"></u></span>.</div>
+            <div class="sub">The two source statements have not been reconciled.</div>
+            <div class="how"><small>HOW TO ADDRESS IT</small>→ Review both records and confirm instructions.</div>
+            <div class="chips" style="margin:22px 0 0"><span class="chip k-doc">DOC Notice invoking arbitration <i>p. 2</i></span><span class="chip k-court">COURT Order of 18 Jul 2026 <i>p. 1</i></span></div></div>
+        </section>
+      </div></div>
+      <div id="panel">
+        <div class="eyebrow">Readiness</div><div class="h2">Preparation Review</div>
+        <div class="tiles"><div class="tile tl-b"><strong>0</strong><span>Blockers</span></div><div class="tile tl-r"><strong>1</strong><span>Need review</span></div><div class="tile tl-d"><strong>0</strong><span>Completed</span></div></div>
+        <div class="eyebrow">Preparation · Arguments and the brief</div>
+        <div class="item" id="p-item" style="margin-top:14px"><div class="lbl">To review</div><p>Reconcile the notice and order amounts before settling the position.</p><a>Review the source documents →</a></div>
+        <div class="eyebrow" style="margin-top:36px">Documents needing attention</div>
+        <div class="compl" id="compl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-6.5"/></svg><span>No confirmed compliance issues in the checked documents.</span></div>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/hearing.js';
+    window.__timelines['reel-hear'] = timeline;
+  </script>
+</body>
+</html>

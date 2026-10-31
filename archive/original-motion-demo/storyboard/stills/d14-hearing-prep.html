@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S04b · Hearing Prep insert</title>
+<link rel="stylesheet" href="lib/stage.css">
+<style>
+  .brief { position:absolute; width:760px; transform-origin:0 0; padding:30px 34px 28px; background:#fff; border:1px solid #e7e5e2; border-radius:16px; box-shadow:0 22px 60px rgba(20,16,12,0.24), 0 3px 10px rgba(20,16,12,0.08); }
+  .eye { font-size:10.5px; font-weight:600; letter-spacing:0.12em; color:#606060; }
+  .bt { margin:6px 0 10px; font-family:'Newsreader',serif; font-style:italic; font-weight:500; font-size:44px; line-height:1.05; letter-spacing:-0.01em; color:#171717; }
+  .meta { display:flex; align-items:center; gap:12px; }
+  .caseno { font-size:13px; font-weight:600; letter-spacing:0.06em; color:#3a352f; }
+  .attn { margin-left:auto; padding:4px 9px; border-radius:4px; background:#f6e3df; color:#b2402c; font-size:10.5px; font-weight:600; letter-spacing:0.06em; }
+  .sub { margin-top:4px; font-size:12.5px; color:#606060; }
+  .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; margin-top:22px; padding-top:18px; border-top:1px solid #eeeae3; }
+  .k { font-size:9.5px; font-weight:600; letter-spacing:0.1em; color:#858585; margin-bottom:6px; }
+  .v { font-size:13px; color:#171717; line-height:1.4; }
+  #hearing-date { outline:2px solid transparent; }
+  .review { position:absolute; width:300px; transform-origin:0 0; padding:18px; background:#fbfaf8; border:1px solid #e7e5e2; border-radius:16px; box-shadow:0 18px 48px rgba(20,16,12,0.22); }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin:10px 0 14px; }
+  .tile { padding:8px; border-radius:8px; font-size:11px; color:#3a352f; }
+  .tile b { display:block; font-size:18px; font-weight:600; }
+  .item { padding:12px; border:1px solid #e7e5e2; border-radius:10px; background:#fff; font-size:12.5px; line-height:1.45; color:#171717; }
+  .tag { display:inline-block; padding:5px 12px; border-radius:999px; background:var(--ink-stage); color:#f6f1e8; font-size:14px; font-weight:600; letter-spacing:0.02em; }
+</style>
+</head>
+<body>
+<!-- D14 · 49.62–51.42 s · inside "aapko ek complex case handle karna hai"
+     Visual-only supporting insert, not narrated. One readable saved state:
+     Hearing Prep Basic info with the Needs Review panel open (capture 13).
+     28 Oct 2026 is a presentation-only demo date, never a court listing.
+     The matter chip from S04a has become the brief title; the clay thread
+     points at the one open review item (amounts not reconciled). -->
+<div class="stage" id="stage">
+  <div class="abs sand" style="left:-40px; top:760px; width:420px; height:420px; clip-path: path('M0 420 V140 A140 140 0 0 1 140 0 H420 V420 Z')"></div>
+  <div class="abs clay" style="left:1180px; top:-30px; width:300px; height:150px"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+  <svg class="abs" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g filter="url(#pencil)" class="pencil"><line x1="0" y1="300" x2="1440" y2="300"/><line x1="80" y1="0" x2="80" y2="1000"/></g>
+  </svg>
+
+  <div class="abs" style="left:80px; top:236px"><span class="tag" id="label">Hearing Prep</span></div>
+
+  <div class="brief" id="brief" style="left:80px; top:300px; transform:scale(1.25)">
+    <div class="eye">HEARING BRIEF</div>
+    <div class="bt">Arora v. Meridian Estates Pvt. Ltd.</div>
+    <div class="meta"><span class="caseno">ARB.P. 428/2026</span><span class="attn">⚠ NEEDS ATTENTION</span></div>
+    <div class="sub">Demo listing — verify against court record · Petitioner</div>
+    <div class="grid">
+      <div><div class="k">HEARING DATE</div><div class="v" id="hearing-date">Wed, 28 Oct 2026</div></div>
+      <div><div class="k">COURT &amp; COURTROOM</div><div class="v">Delhi High Court</div></div>
+      <div><div class="k">CURRENT STAGE</div><div class="v">Demo listing — verify against court record</div></div>
+      <div><div class="k">LAST HEARING</div><div class="v">18 Jul 2026</div></div>
+    </div>
+  </div>
+  <div class="qual" id="date-qual" style="left:80px; top:600px; border-color:#e0b9a6; color:#8d3515">28 Oct 2026 is a presentation-only demo date — not a court listing</div>
+
+  <div class="review" id="review" style="left:1062px; top:396px; transform:scale(1.2)">
+    <div class="eye">READINESS</div>
+    <div style="font-size:16px; font-weight:600; margin-top:4px">Preparation Review</div>
+    <div class="tiles">
+      <div class="tile" style="background:#f6e3df"><b style="color:#b2402c">0</b>Blockers</div>
+      <div class="tile" style="background:#f6ecd9"><b style="color:#9a6a1a">1</b>Need review</div>
+      <div class="tile" style="background:#e3f2e6"><b style="color:#2e7d46">0</b>Completed</div>
+    </div>
+    <div class="item" id="review-item"><div style="font-size:11px; color:#b2402c; margin-bottom:4px">To review</div>Reconcile the notice and order amounts before settling the position.</div>
+  </div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread"/>
+    <g id="focal" class="frame-mark"></g>
+  </svg>
+  <div class="wordmark abs" style="right:40px; top:36px; font-size:30px; color:#fbf4ec">Law<em style="color:#fbf4ec">Vriksh</em></div>
+  <div class="slate">D14 · 49.62–51.42 s · Hearing Prep, visual-only insert · proposal</div>
+</div>
+<script>
+  const it = document.getElementById('review-item').getBoundingClientRect();
+  const P = 12, L = 18, x0 = it.left - P, y0 = it.top - P, x1 = it.right + P, y1 = it.bottom + P;
+  document.getElementById('focal').innerHTML = `<path d="M${x0} ${y0 + L}V${y0}H${x0 + L}M${x1 - L} ${y0}H${x1}V${y0 + L}M${x1} ${y1 - L}V${y1}H${x1 - L}M${x0 + L} ${y1}H${x0}V${y1 - L}"/>`;
+  const at = document.querySelector('.attn').getBoundingClientRect();
+  document.getElementById('thread').setAttribute('d',
+    `M${at.right + 6} ${at.top + at.height / 2} C ${at.right + 160} ${at.top + at.height / 2}, ${x0 - 160} ${(y0 + y1) / 2}, ${x0 - 4} ${(y0 + y1) / 2}`);
+  const b = document.getElementById('brief').getBoundingClientRect();
+  document.getElementById('date-qual').style.top = b.bottom + 16 + 'px';
+</script>
+</body>
+</html>

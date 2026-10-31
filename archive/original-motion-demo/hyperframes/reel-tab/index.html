@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>LawVriksh web cut — Tabular review</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #171717; }
+    * { box-sizing: border-box; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+    #film { overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; }
+    #cam { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; transform-origin: 0 0; }
+
+    /* The Tabular review window, rebuilt from the local app captures (screenshots/28–32), laid out at 1x then scaled */
+    #win { position: absolute; left: 0; top: 0; width: 1560px; transform-origin: 0 0; background: #fff; border: 1px solid #e7e5e2; border-radius: 16px; overflow: hidden; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.24); }
+    .tb { height: 50px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-bottom: 1px solid #eeeae3; font-size: 13px; color: #3a352f; }
+    .btn { height: 32px; padding: 0 12px; display: flex; align-items: center; gap: 6px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; font-weight: 500; }
+    .tb .sp { flex: 1; }
+    #run { height: 32px; padding: 0 12px; display: flex; align-items: center; gap: 8px; border: 1px solid #f1c3ad; border-radius: 8px; background: #fdf4f0; color: #b2402c; font-weight: 600; }
+    #run i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px dotted #c94820; }
+    table { border-collapse: collapse; table-layout: fixed; width: 1560px; font-size: 13px; }
+    th { height: 40px; text-align: left; font-weight: 600; color: #3a352f; padding: 0 12px; border-bottom: 1px solid #eeeae3; border-right: 1px solid #f1eee9; white-space: nowrap; }
+    th .ic { display: inline-block; width: 12px; height: 12px; margin-right: 8px; border: 1.5px solid #c94820; border-radius: 3px; vertical-align: -1px; }
+    td { height: 36px; padding: 0 12px; border-bottom: 1px solid #f1eee9; border-right: 1px solid #f1eee9; white-space: nowrap; overflow: hidden; position: relative; color: #171717; }
+    td.n { width: 36px; color: #858585; text-align: center; padding: 0; }
+    .doc { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; padding: 4px 8px; border: 1px solid #ece8e1; border-radius: 6px; background: #fbfaf8; font-size: 12.5px; overflow: hidden; }
+    .doc img { width: 12px; height: 14px; flex: none; }
+    .doc span { overflow: hidden; text-overflow: ellipsis; }
+    .tag { display: inline-block; padding: 2px 7px; border-radius: 5px; font-size: 11px; font-weight: 600; }
+    .val { display: inline-block; max-width: calc(100% - 20px); overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+    .val.nf { color: #6b6b6b; }
+    .cite { display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px; margin-left: 4px; border-radius: 50%; background: #fbe3d8; color: #b2402c; font-size: 8.5px; font-weight: 700; vertical-align: 4px; }
+    .dot { position: absolute; right: 10px; top: 15px; width: 7px; height: 7px; border-radius: 50%; }
+    .warn { position: absolute; right: 22px; top: 11px; color: #c9820f; font-size: 11px; }
+    .skel { position: absolute; left: 12px; right: 12px; top: 14px; height: 9px; border-radius: 5px; background: linear-gradient(90deg, #efede9, #e6e2dc, #efede9); }
+    .cell { position: relative; display: block; }
+    #lift { position: absolute; left: 0; top: 0; border-radius: 10px; box-shadow: 0 18px 46px rgba(40,24,10,0.22), 0 0 0 1.5px #c4562e; background: transparent; opacity: 0; }
+    #reelcam { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; transform-origin: 0 0; }
+  #captions { display: none !important; }
+  #lawyer { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="reel-tab" data-start="0" data-width="1080" data-height="1920" data-fps="30" data-duration="1.5667">
+    <div id="reelcam"><div class="layer" id="film">
+      <div id="cam">
+        <div id="win">
+          <div class="tb"><span class="btn">+ Add column</span><span class="btn">Add document</span><span class="btn">Templates ⌄</span><span class="btn">History ⌄</span><span class="sp"></span><span id="run"><i></i><b id="runtext">Filling 0 of 84</b></span><span class="btn">Export</span><span class="btn">Save as template</span></div>
+          <table id="table"><colgroup><col style="width:36px"><col style="width:250px"><col style="width:170px"><col style="width:170px"><col style="width:260px"><col style="width:210px"><col style="width:180px"><col style="width:284px"></colgroup>
+            <thead><tr><th></th><th>Document</th><th><i class="ic"></i>Document Type</th><th><i class="ic"></i>Document Date</th><th><i class="ic"></i>Parties</th><th><i class="ic"></i>Amount Claimed</th><th><i class="ic"></i>Court</th><th><i class="ic"></i>Key Fact</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <div id="lift"></div>
+      </div>
+    </div>
+    </div>
+    <div class="layer" id="captions"></div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/shot.js';
+    window.__timelines['reel-tab'] = timeline;
+  </script>
+</body>
+</html>

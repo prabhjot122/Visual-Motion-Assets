@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D6 · Conflicts selected</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/casemap.js"></script>
+</head>
+<body>
+<!-- D6 · 33.24–34.40 s · "Agar different documents mein conflicting facts hain"
+     Step 2: Conflicts clicked. The app frames Conflicts + its new column
+     (caseMapFocusBounds); the camera interpolates to that framing. The focal
+     marks resize from the matter chip to the new column. The on-path edge is
+     the clay thread and leaves the window toward the matter, off-frame right. -->
+<div class="stage" id="stage">
+  <div class="abs clay" id="slab-left" style="left:-60px; top:560px; width:260px; height:520px; clip-path: path('M0 0 H120 A140 140 0 0 1 260 140 V520 H0 Z')"></div>
+  <div class="abs char" style="left:980px; top:52px; width:46px; height:46px; border-radius:999px"></div>
+  <div class="abs sand" style="left:1060px; top:-30px; width:220px; height:120px"></div>
+  <div class="abs halftone" style="left:-20px; top:30px; width:180px; height:64px"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+  <svg class="abs" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g filter="url(#pencil)" class="pencil"><line x1="0" y1="150" x2="1440" y2="150"/><line x1="120" y1="0" x2="120" y2="1000"/><line x1="380" y1="1000" x2="1440" y2="40"/></g>
+  </svg>
+
+  <div class="win" id="map-window" style="left:120px; top:150px; width:1400px; height:900px">
+    <div class="win-inner" id="map-inner" style="transform:scale(1.45)"></div>
+  </div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread"/>
+    <g id="focal" class="frame-mark"></g>
+    <circle id="click-ring" r="22" fill="none" stroke="var(--clay)" stroke-width="2" opacity="0.55"/>
+  </svg>
+  <svg class="abs" id="cursor" width="22" height="30" viewBox="0 0 22 30"><path d="M2 2 L2 24 L8 18 L12 28 L16 26 L12 16 L20 16 Z" fill="#171717" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+
+  <div class="wordmark abs" style="right:40px; top:36px; font-size:30px">Law<em>Vriksh</em></div>
+  <div class="slate">D6 · 33.24–34.40 s · Conflicts selected · proposal</div>
+</div>
+<script>
+  const S = 1.45, WX = 120, WY = 150 + 44 * S, OX = 960, OY = 222, path = ['conflicts'];
+  const world = CaseMap.chrome(document.getElementById('map-inner'), { w: 966, h: 620, crumbs: ['Arora v. Meridian Estates Pvt. Ltd.', 'Conflicts'] });
+  CaseMap.renderMap(world, { path, ox: OX, oy: OY, k: 1 });
+  const sx = (x) => WX + (OX + x) * S, sy = (y) => WY + (OY + y) * S;
+  const a = CaseMap.box(path, 'amount'), d = CaseMap.box(path, 'duedate'), c = CaseMap.box(path, 'conflicts');
+  const x0 = sx(a.x) - 14, y0 = sy(a.y) - 14, x1 = sx(a.x + a.w) + 14, y1 = sy(d.y + d.h) + 14, L = 22;
+  document.getElementById('focal').innerHTML = `<path d="M${x0} ${y0 + L}V${y0}H${x0 + L}M${x1 - L} ${y0}H${x1}V${y0 + L}M${x1} ${y1 - L}V${y1}H${x1 - L}M${x0 + L} ${y1}H${x0}V${y1 - L}"/>`;
+  // The on-path edge continues past the window edge as the overlay thread.
+  const cx = sx(c.x + 70), cy = sy(c.y + c.h / 2);
+  const ring = document.getElementById('click-ring'); ring.setAttribute('cx', cx); ring.setAttribute('cy', cy);
+  Object.assign(document.getElementById('cursor').style, { left: cx - 2 + 'px', top: cy - 2 + 'px' });
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>O4 · Every detail, by hand</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/paper3d.js"></script>
+<script src="lib/marks.js"></script>
+<style>
+  .sheet { position:absolute; background:#fbf8f2; box-shadow: 0 2px 4px rgba(40,24,10,0.12), 0 40px 90px rgba(40,24,10,0.28); }
+  .row { position:absolute; height:7px; border-radius:1px; background:#b9b1a5; }
+  .scene { position:absolute; inset:0; perspective:1400px; perspective-origin:50% 30%; }
+  .field { position:absolute; left:-300px; top:420px; width:2200px; height:1200px; transform-style:preserve-3d; transform: rotateX(70deg) rotateZ(-12deg); }
+</style>
+</head>
+<body>
+<!-- O3→O4 · 2.92–6.60 s · "handwritten notes hote hain, aur ek ek detail manually verify karni padti hai"
+     The entry sheet tips up to face camera; pencil handwriting draws itself
+     into its margins (O3, 2.92–4.03, abstract strokes). Then the focal corner
+     marks hop line by line, leaving pencil ticks — slow, one at a time
+     (4.33–6.31). Behind, the field of stacks stays in view: the ticks are a
+     tiny fraction of the pages still waiting. Rhythm is deliberately
+     plodding; the clay thread in O6 is its fast, continuous answer. -->
+<div class="stage" id="stage">
+  <div class="scene"><div class="field" id="field"></div></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <div class="sheet" id="sheet" style="left:420px; top:70px; width:600px; height:780px; transform:rotate(-5deg)"></div>
+  <div class="abs sand" id="note-slip" style="left:930px; top:120px; width:230px; height:200px; transform:rotate(7deg); box-shadow:0 18px 40px rgba(40,24,10,0.28)"></div>
+
+  <svg class="abs" id="pencil-layer" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter>
+    <g filter="url(#pencil)" stroke="#2b2522" stroke-width="2.2" fill="none" stroke-linecap="round" id="hand" opacity="0.82"></g>
+    <g filter="url(#pencil)" stroke="#2b2522" stroke-width="1.4" fill="none" stroke-dasharray="3 6" opacity="0.55" id="hops"></g>
+    <g class="frame-mark" id="focal"></g>
+  </svg>
+
+  <div class="word" style="left:40px; top:700px; font-size:230px">Manually<em>.</em></div>
+  <div class="vignette"></div>
+  <div class="slate">O3–O4 · 2.92–6.93 s · notes → manual verification (concept) · proposal</div>
+</div>
+<script>
+  // Background field: the volume from O2, now receding.
+  const field = document.getElementById('field');
+  [[0, 0, 520], [360, 60, 380], [1500, 40, 600], [1860, 120, 300], [120, 520, 260], [1640, 560, 440]].forEach(([x, y, h], i) =>
+    Paper3D.stack(field, { x, y, w: 300, d: 390, h, rot: (i % 3) * 3 - 3, seed: 30 + i }));
+
+  // Entry sheet: abstract rows (no legible invented text).
+  const sheet = document.getElementById('sheet');
+  const rows = [];
+  let s = 7; const rnd = () => ((s = (s * 9301 + 49297) % 233280) / 233280);
+  for (let i = 0; i < 26; i++) {
+    const r = document.createElement('i');
+    r.className = 'row';
+    const w = i === 0 ? 260 : 300 + rnd() * 160;
+    Object.assign(r.style, { left: '70px', top: 70 + i * 26 + 'px', width: w + 'px', background: i === 0 ? '#3a352f' : '#b9b1a5', height: i === 0 ? '10px' : '7px' });
+    sheet.appendChild(r); rows.push(r);
+  }
+
+  // Handwriting: loose pencil loops in the margins and on the slip.
+  const loops = (x, y, w, n, amp = 7) => {
+    let d = `M${x} ${y}`;
+    for (let i = 0; i < n; i++) { const cx = x + (i + 0.5) * (w / n); d += ` q ${w / n / 2} ${-amp * (1 + (i % 3) / 2)} ${w / n} ${(i % 2 ? 1 : -1) * 2}`; }
+    return `<path d="${d}"/>`;
+  };
+  const sr = sheet.getBoundingClientRect();
+  document.getElementById('hand').innerHTML =
+    loops(962, 182, 150, 6, 9) + loops(958, 222, 165, 7, 9) + loops(966, 262, 120, 5, 9) +
+    `<ellipse cx="${sr.left + 330}" cy="${sr.top + 300}" rx="150" ry="22" transform="rotate(-6 ${sr.left + 330} ${sr.top + 300})"/>` +
+    `<path d="M${sr.left + 40} ${sr.top + 520} l 0 120 M${sr.left + 30} ${sr.top + 640} l 10 14 l 10 -14"/>`;
+
+  // Manual verification: ticks on four lines, marks on the fifth, a dotted trail of hops.
+  const ticked = [3, 5, 8, 11], current = 13;
+  let hand = document.getElementById('hand').innerHTML, hops = '';
+  let prev = null;
+  [...ticked, current].forEach((i) => {
+    const b = rows[i].getBoundingClientRect();
+    const pt = { x: b.left - 26, y: (b.top + b.bottom) / 2 };
+    if (i !== current) hand += `<path d="M${pt.x - 9} ${pt.y - 2} l 6 7 l 12 -16"/>`;
+    if (prev) hops += `<path d="M${prev.x} ${prev.y} Q ${prev.x - 60} ${(prev.y + pt.y) / 2}, ${pt.x} ${pt.y}"/>`;
+    prev = pt;
+  });
+  document.getElementById('hand').innerHTML = hand;
+  document.getElementById('hops').innerHTML = hops;
+  document.getElementById('focal').innerHTML = `<path d="${Marks.corners(rows[current], 10, 16)}"/>`;
+</script>
+</body>
+</html>

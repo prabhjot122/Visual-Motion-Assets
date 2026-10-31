@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440, height=1000">
+  <title>LawVriksh web cut — section 3</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); font-style: italic; }
+    :root { --clay: #c94820; --thread: #c4562e; --edge-path: #cf795d; }
+
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #171717; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+    #light { overflow: hidden; }
+    #bands { position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; transform: rotate(-24deg); }
+    #bands i { display: block; width: 90px; height: 100%; background: rgba(255, 226, 180, 0.9); }
+    #bands i:nth-child(even) { width: 130px; }
+    #vignette { background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); }
+
+    .clay { background-image: url(assets/textures/stone-clay.jpg); background-size: 600px; }
+    .char { background-image: url(assets/textures/stone-char.jpg); background-size: 600px; }
+    .sand { background-image: url(assets/textures/stone-sand.jpg); background-size: 600px; }
+    .hatch { background-image: url(assets/textures/hatch-sand.jpg); background-size: 520px; }
+    .halftone { background-image: url(assets/textures/halftone-ochre.jpg); background-size: 700px; }
+    .deco { position: absolute; left: 0; top: 0; }
+    #slab { position: absolute; left: 0; top: -40px; width: 1900px; height: 1080px; clip-path: polygon(114px 0, 100% 0, calc(100% - 80px) 100%, 0 100%); }
+
+    .word { position: absolute; left: 0; top: 0; font-family: 'Newsreader', serif; font-weight: 400; line-height: 1; letter-spacing: -0.035em; color: #1c1714; white-space: nowrap; }
+    .word em { font-style: italic; color: #a93a18; }
+    .mask { position: absolute; overflow: hidden; }
+    .wordmark { font-family: 'Instrument Serif', serif; line-height: 1; color: #1c1714; white-space: nowrap; }
+    .wordmark .v { font-style: italic; color: #a93a18; }
+    .stone { position: absolute; left: 0; top: 0; }
+    .stone > i { position: absolute; display: block; }
+    .stone > b { position: absolute; font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; font-size: 48px; line-height: 1; color: rgba(255,248,240,0.92); }
+
+    /* Case Map (values from case-map.css, as in the approved stills) */
+    .cm-dots { background-color: #fbfaf7; background-image: radial-gradient(circle, #ddd8cf 1px, transparent 1px); background-size: 22px 22px; }
+    .win { position: absolute; left: 0; top: 0; border-radius: 18px; overflow: hidden; border: 1px solid #e7e5e2; background: #fbfaf7; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); }
+    .win-inner { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    .toolbar { position: absolute; left: 0; top: 0; height: 44px; padding: 0 12px; box-sizing: border-box; display: flex; align-items: center; gap: 8px; background: #fff; border-bottom: 1px solid #eeeae3; font-size: 12px; }
+    .seg { display: flex; padding: 2px; border-radius: 8px; background: #f5f1ea; }
+    .seg span { padding: 4px 11px; color: #606060; }
+    .seg span.on { border-radius: 6px; background: #fff; box-shadow: 0 1px 2px rgba(20,16,12,0.08); font-weight: 500; color: #171717; }
+    .tb-field { height: 28px; padding: 0 9px; box-sizing: border-box; display: flex; align-items: center; gap: 6px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; color: #858585; }
+    .tb-btn { height: 28px; padding: 0 10px; box-sizing: border-box; display: flex; align-items: center; gap: 5px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; font-size: 12.5px; font-weight: 500; color: #3a352f; }
+    .tb-sq { width: 28px; height: 28px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; flex: none; }
+    .crumbs { position: absolute; left: 12px; top: 10px; display: flex; align-items: center; gap: 2px; font-size: 11.5px; color: #606060; z-index: 3; white-space: nowrap; }
+    .crumbs span { padding: 2px 6px; }
+    .crumbs span.cur { font-weight: 600; color: #171717; }
+    .world { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    .edges { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; }
+    .edge { fill: none; stroke: #d9d5cd; stroke-width: 1.25; }
+    .edge.on { stroke: var(--edge-path); stroke-width: 1.6; }
+    .matter { position: absolute; width: 264px; height: 64px; padding: 0 14px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 2px; border: 1px solid #ecdcd0; border-radius: 9px; background: #fdf9f5; box-shadow: 0 2px 5px rgba(35,30,25,0.07); }
+    .matter .eyebrow { font-size: 9.5px; font-weight: 600; letter-spacing: 0.08em; color: var(--clay); }
+    .matter .name { font-size: 12.5px; font-weight: 600; color: #171717; }
+    .matter .case { font-size: 11px; color: #858585; }
+    .cat { position: absolute; width: 224px; height: 40px; padding: 0 12px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid #d9d6d0; border-radius: 9px; background: #fff; box-shadow: 0 2px 5px rgba(35,30,25,0.07); font-size: 12.5px; font-weight: 600; color: #171717; }
+    .cat.left { flex-direction: row-reverse; }
+    .cat.open { border-color: var(--clay); background: #fdf7f4; }
+    .count { display: inline-flex; align-items: center; justify-content: center; gap: 2px; min-width: 34px; height: 24px; padding: 2px 6px; box-sizing: border-box; border-radius: 999px; background: #f2efe9; color: #606060; font-size: 10.5px; font-weight: 600; }
+    .node { position: absolute; width: 264px; height: 52px; padding: 6px 9px; box-sizing: border-box; display: flex; align-items: center; gap: 8px; border: 1px solid #dedbd5; border-radius: 8px; background: #fff; }
+    .node.left { flex-direction: row-reverse; text-align: right; }
+    .node.open { border-color: #e2a48f; }
+    .node.sel { border-color: var(--clay); background: #fdf7f4; box-shadow: 0 0 0 2px rgba(201,72,32,0.12); }
+    .node .dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 999px; background: #a5483f; }
+    .node .txt { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 2px; }
+    .node .meta { font-size: 9.5px; font-weight: 600; letter-spacing: 0.02em; color: #858585; }
+    .node .label { font-size: 11.5px; line-height: 1.3; color: #171717; }
+    .node .ncount { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 1px; padding: 1px 4px 1px 6px; border-radius: 999px; background: #f5f1ea; font-size: 10px; font-weight: 600; color: #606060; }
+
+    /* Floating review panels (floating-review-panel.css / source-evidence.tsx, via the stills) */
+    .panel { position: absolute; left: 0; top: 0; width: 320px; transform-origin: 0 0; border: 1px solid #e7e5e2; border-radius: 16px; overflow: hidden; background: #fbfaf8; box-shadow: 0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); }
+    .panel .ph { min-height: 44px; padding: 0 10px 0 16px; display: flex; align-items: center; font-size: 12.5px; font-weight: 500; color: #1d1d1d; }
+    .panel .ph span { margin-right: auto; }
+    .panel .pb { padding: 10px 16px 0; }
+    .panel .title { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4; color: #171717; }
+    .panel .desc { margin: 0; font-size: 12.5px; line-height: 1.5; color: #606060; }
+    .chip-red { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #f4e4e1; color: #a5483f; font-size: 11px; font-weight: 600; }
+    .src { padding: 12px; border-radius: 8px; background: #f3f1ed; display: flex; flex-direction: column; gap: 8px; }
+    .src .sh { display: flex; align-items: center; gap: 8px; min-width: 0; }
+    .src .fn { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.5px; font-weight: 500; color: #171717; }
+    .src .pg { flex: none; font-size: 11px; color: #606060; }
+    .src p { margin: 0; font-size: 12.5px; line-height: 1.5; color: #3f3a36; }
+    .pf { padding: 12px 14px; border-top: 1px solid #d7d7d7; background: #fff; }
+    .btn-verify { width: 100%; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: #2c6e49; color: #fff; font-size: 12.5px; font-weight: 600; border: 1px solid #245c3c; box-sizing: border-box; }
+    .btn-open { width: 100%; height: 32px; display: flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; font-size: 12.5px; font-weight: 500; color: #3a352f; box-sizing: border-box; }
+    .qual { position: absolute; left: 0; top: 0; padding: 4px 9px; border-radius: 999px; background: rgba(251,250,247,0.92); border: 1px solid #e4ded4; font-size: 12px; font-weight: 500; color: #3a352f; box-shadow: 0 2px 6px rgba(20,16,12,0.08); white-space: nowrap; }
+
+    /* D9 source preview (existing PDF pane, opened from the source card) */
+    #preview { width: 580px; height: 800px; border-radius: 16px; background: #e9e6e1; transform-origin: 0 0; }
+    #preview .bar { position: absolute; left: 0; top: 0; right: 0; height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; background: #fff; border-bottom: 1px solid #eeeae3; font-size: 12.5px; font-weight: 500; color: #171717; z-index: 2; }
+    #page { position: absolute; left: -55px; top: -106px; width: 682px; height: 965px; background: #fff url(assets/docs/arora-order-page1.png) 0 0 / 682px 965px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    #page .hl { position: absolute; background: rgba(239,140,90,0.32); transform-origin: 0 50%; }
+  
+    /* Web cut: replaced by the caption stream and its transitions */
+    #words, #slab-layer { display: none !important; }
+    #film { overflow: hidden; }
+    #bug { display: none !important; } /* the frame label carries the brand; no corner mark popping in and out between parts */
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="web-s3" data-start="0" data-width="1440" data-height="1000" data-fps="30" data-duration="10.3">
+    <div class="layer" id="film">
+    <div class="layer" id="decor"></div>
+    <div class="layer" id="light"><div id="bands"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <svg class="layer" id="guides" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+      <defs><filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter></defs>
+      <g id="guide-g" filter="url(#pencil)" fill="none" stroke="#2b2522" stroke-width="1.4"></g>
+    </svg>
+    <div class="layer" id="words"></div>
+    <div class="layer" id="stones"></div>
+    <div class="layer" id="ui">
+      <div class="win" id="map-window"><div class="win-inner" id="map-inner"></div></div>
+      <div class="win" id="preview">
+        <div class="bar"><svg width="13" height="13" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#d65248"/><path d="M14 2v6h6" fill="#f6b1aa"/></svg>Interim order under Section 9 — 18 Jul 2026.pdf<span style="color:#858585; font-weight:400; margin-left:6px">p. 1</span></div>
+        <div id="page"><div class="hl" id="hl-1"></div><div class="hl" id="hl-2"></div></div>
+      </div>
+      <div class="panel" id="panel-conflict"></div>
+      <div class="panel" id="panel-fact"></div>
+      <div class="qual" id="verify-note">Verify fact opens review · nothing is approved</div>
+    </div>
+    <svg class="layer" id="ink" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+      <path id="thread" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+      <circle id="thread-dot" r="0" fill="#c4562e"/>
+      <path id="focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+      <circle id="click-ring" r="0" fill="none" stroke="#c94820" stroke-width="2"/>
+    </svg>
+    <svg id="cursor" width="22" height="30" viewBox="0 0 22 30" style="position:absolute; left:0; top:0"><path d="M2 2 L2 24 L8 18 L12 28 L16 26 L12 16 L20 16 Z" fill="#171717" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <div class="layer" id="type"><div class="wordmark" id="bug" style="position:absolute; right:40px; top:0; font-size:30px">Law<span class="v">Vriksh</span></div></div>
+    <div class="layer" id="slab-layer"><div class="char" id="slab"></div></div>
+    <div class="layer" id="vignette"></div>
+    </div>
+    <div class="layer" id="captions"></div>
+  </div>
+  <script src="assets/lib/casemap.js"></script>
+  <script src="assets/lib/panels.js"></script>
+  <script type="module">
+    import { timeline } from './src/web.js';
+    window.__timelines['web-s3'] = timeline;
+  </script>
+</body>
+</html>

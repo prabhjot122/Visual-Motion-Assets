@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>B1 · LawVriksh</title>
+<link rel="stylesheet" href="lib/stage.css">
+</head>
+<body>
+<!-- B1 · 9.37–14.41 s · "Recently, I came across this platform called LawVriksh,
+     aur honestly iska concept kaafi easy hai"
+     The only content on the canvas is the brand. The single point left by O6
+     travels along the desk as the clay thread (9.37–10.4), becomes the ground
+     line of the tree's roots, climbs the trunk node and draws the three clay
+     circuit branches (10.4–11.1); the dark tree fills upward from the roots
+     (11.0–11.36). On "LawVriksh" (11.36) the wordmark sets letter by letter
+     beneath it. Hold with slow drift; one window-light band crosses (12.6).
+     Stone fragments from the problem pages exit at the frame edges (Harvey H-E). -->
+<div class="stage" id="stage">
+  <div class="abs clay" style="left:-90px; top:820px; width:170px; height:120px; transform:rotate(-14deg)"></div>
+  <div class="abs char" style="left:1350px; top:-40px; width:140px; height:110px; transform:rotate(18deg)"></div>
+  <div class="abs hatch" style="left:1380px; top:690px; width:110px; height:46px; transform:rotate(-8deg)"></div>
+  <div class="abs sand" style="left:-60px; top:60px; width:120px; height:70px; transform:rotate(9deg)"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+
+  <img id="mark" src="../../design/assets/lawvriksh-mark.png" alt="" style="position:absolute; left:530px; top:100px; width:380px; height:370px">
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <!-- Ground line: the thread continues the roots' horizon to the frame edges -->
+    <path class="thread" d="M-20 431 H 560 M 880 431 H 1460" />
+    <!-- Node rings: where the thread entered the mark's circuit -->
+    <g fill="none" stroke="var(--thread)" stroke-width="1.6" opacity="0.6">
+      <circle cx="717.7" cy="373.4" r="17"/><circle cx="717.7" cy="228" r="15"/><circle cx="675" cy="257" r="13"/><circle cx="761.5" cy="257" r="13"/>
+    </g>
+  </svg>
+
+  <div class="wordmark abs" id="wordmark" style="left:0; width:1440px; top:500px; text-align:center; font-size:176px; letter-spacing:-0.01em">Law<em>Vriksh</em></div>
+  <div class="slate">B1 · 9.37–14.41 s · dedicated brand moment · proposal</div>
+</div>
+</body>
+</html>

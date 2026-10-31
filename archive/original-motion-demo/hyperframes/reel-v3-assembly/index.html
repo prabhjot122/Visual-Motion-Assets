@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>LawVriksh reel v3</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; }
+    .shot { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; display: none; }
+    .shot video { position: absolute; left: 0; top: 0; display: block; }
+    .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; transform-origin: 540px 900px; }
+    .top { position: absolute; left: 0; top: 0; width: 1080px; height: 1000px; overflow: hidden; transform-origin: 540px 500px; }
+    .bottom { position: absolute; left: 0; top: 1000px; width: 1080px; height: 920px; overflow: hidden; background: #2a2420; }
+    .pan { position: absolute; left: var(--x); top: var(--y); transform-origin: 540px 440px; }
+    .gfx { width: 1080px; height: 1920px; }
+    .face-P { width: 1080px; height: 1936px; }
+    .full.punch video { top: var(--y); }
+    .face-L { width: 1636px; height: 920px; }
+    .native { width: 1440px; height: 1000px; transform-origin: 0 0; }
+    /* the seam between graphic and face: a paper edge casting a soft shadow onto her panel */
+    .seam { position: absolute; left: 0; top: 994px; width: 1080px; height: 8px; background: #efebe3 url(assets/textures/paper.jpg) center / 1080px; box-shadow: 0 6px 18px rgba(20,14,10,0.38); }
+    #caps { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
+    .cap { position: absolute; left: 60px; width: 960px; text-align: center; font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 66px; line-height: 1.12; letter-spacing: -0.01em; color: #fff;
+           -webkit-text-stroke: 10px #1c1714; paint-order: stroke fill; text-shadow: 0 4px 14px rgba(20,14,10,0.45); display: none; transform-origin: 50% 50%; }
+    .cap span { display: inline-block; padding: 0 12px 4px; margin: 0 1px; border-radius: 14px; }
+    .cap span.on { background: #c4562e; -webkit-text-stroke: 0; text-shadow: none; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="reel-v3-assembly" data-start="0" data-width="1080" data-height="1920" data-fps="30" data-duration="85.1000">
+    <div id="shots">
+      <div class="shot face" id="shot-1"><div class="full punch" style="--y:-8px"><video class="clip face face-P" src="assets/sr/P-00.mp4" data-start="0.000000" data-duration="1.033333" data-media-start="0.150333" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-2"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="0.983333" data-duration="1.866633" data-media-start="0.000000" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-3"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="2.816633" data-duration="1.300033" data-media-start="1.816667" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-4"><div class="top"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="4.083333" data-duration="2.566633" data-media-start="3.083333" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:0px; --y:-440px"><video class="clip face face-P" src="assets/sr/P-01.mp4" data-start="4.083333" data-duration="2.566633" data-media-start="0.149667" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot face" id="shot-5"><div class="full punch" style="--y:-8px"><video class="clip face face-P" src="assets/sr/P-01.mp4" data-start="6.616633" data-duration="2.533333" data-media-start="2.639633" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-6"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="9.116633" data-duration="2.066733" data-media-start="5.616667" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-7"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="11.150033" data-duration="0.999933" data-media-start="7.650000" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-8"><div class="top"><video class="clip gfx" src="assets/strips/s3.mp4" data-start="12.116633" data-duration="0.800033" data-media-start="0.000000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:0px; --y:-440px"><video class="clip face face-P" src="assets/sr/P-02.mp4" data-start="12.116633" data-duration="0.800033" data-media-start="0.150300" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot split" id="shot-9"><div class="top"><video class="clip gfx" src="assets/strips/s4.mp4" data-start="12.883333" data-duration="0.933333" data-media-start="0.000000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:0px; --y:-440px"><video class="clip face face-P" src="assets/sr/P-02.mp4" data-start="12.883333" data-duration="0.933333" data-media-start="0.917000" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot split" id="shot-10"><div class="top"><video class="clip gfx" src="assets/strips/s5.mp4" data-start="13.783333" data-duration="0.700033" data-media-start="0.000000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:0px; --y:-440px"><video class="clip face face-P" src="assets/sr/P-02.mp4" data-start="13.783333" data-duration="0.700033" data-media-start="1.817000" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot broll" id="shot-11"><div class="full"><video class="clip gfx" src="assets/office.mp4" data-start="14.450033" data-duration="1.166633" data-media-start="0.133333" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-12"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="15.583333" data-duration="2.500033" data-media-start="8.616667" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-13"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="18.050033" data-duration="1.333333" data-media-start="11.083333" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-14"><div class="top"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="19.350033" data-duration="1.099933" data-media-start="12.383333" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-00.mp4" data-start="19.350033" data-duration="1.099933" data-media-start="0.149700" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-15"><div class="full"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="20.416633" data-duration="0.733333" data-media-start="13.450000" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-16"><div class="top"><video class="clip gfx" src="assets/strips/opening.mp4" data-start="21.116633" data-duration="3.333333" data-media-start="14.150000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-00.mp4" data-start="21.116633" data-duration="0.500033" data-media-start="1.916300" muted playsinline></video><video class="clip face face-L" src="assets/sr/L-00.mp4" data-start="21.583333" data-duration="2.866633" data-media-start="2.436333" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot split" id="shot-17"><div class="top"><video class="clip gfx" src="assets/strips/s2.mp4" data-start="24.416633" data-duration="2.833333" data-media-start="0.000000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-00.mp4" data-start="24.416633" data-duration="2.833333" data-media-start="5.537967" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-18"><div class="full"><video class="clip gfx" src="assets/strips/s2.mp4" data-start="27.216633" data-duration="2.733333" data-media-start="2.783333" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-19"><div class="full"><video class="clip gfx" src="assets/strips/s2.mp4" data-start="29.916633" data-duration="1.566733" data-media-start="5.483333" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-20"><div class="full"><video class="clip gfx" src="assets/strips/s3.mp4" data-start="31.450033" data-duration="2.099933" data-media-start="0.750000" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-21"><div class="top"><video class="clip gfx" src="assets/strips/s3.mp4" data-start="33.516633" data-duration="2.500033" data-media-start="2.816667" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-01.mp4" data-start="33.516633" data-duration="2.500033" data-media-start="0.149967" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-22"><div class="full"><video class="clip gfx" src="assets/strips/tab.mp4" data-start="35.983333" data-duration="1.600033" data-media-start="0.000000" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-23"><div class="full"><video class="clip gfx" src="assets/strips/s3.mp4" data-start="37.550033" data-duration="1.499933" data-media-start="5.283333" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-24"><div class="full"><video class="clip gfx" src="assets/strips/s4.mp4" data-start="39.016633" data-duration="3.533333" data-media-start="0.883333" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-25"><div class="top"><video class="clip gfx" src="assets/strips/hear.mp4" data-start="42.516633" data-duration="3.566733" data-media-start="0.000000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-02.mp4" data-start="42.516633" data-duration="3.566733" data-media-start="0.149633" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-26"><div class="full"><video class="clip gfx" src="assets/strips/hear.mp4" data-start="46.050033" data-duration="1.133333" data-media-start="3.516667" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-27"><div class="full"><video class="clip gfx" src="assets/strips/hear.mp4" data-start="47.150033" data-duration="0.999933" data-media-start="4.616667" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-28"><div class="full"><video class="clip gfx" src="assets/strips/hear.mp4" data-start="48.116633" data-duration="3.600033" data-media-start="5.583333" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-29"><div class="top"><video class="clip gfx" src="assets/strips/hear.mp4" data-start="51.683333" data-duration="2.333333" data-media-start="9.150000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-03.mp4" data-start="51.683333" data-duration="0.300000" data-media-start="0.150333" muted playsinline></video><video class="clip face face-L" src="assets/sr/L-03.mp4" data-start="51.950000" data-duration="2.066667" data-media-start="0.440333" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-30"><div class="full"><video class="clip gfx" src="assets/strips/hear.mp4" data-start="53.983333" data-duration="2.766633" data-media-start="11.450000" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-31"><div class="full"><video class="clip gfx" src="assets/strips/s5.mp4" data-start="56.716633" data-duration="2.366733" data-media-start="0.650000" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-32"><div class="full"><video class="clip gfx" src="assets/strips/s6.mp4" data-start="59.050033" data-duration="1.533333" data-media-start="0.000000" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-33"><div class="top"><video class="clip gfx" src="assets/strips/s7.mp4" data-start="60.550033" data-duration="1.966633" data-media-start="0.000000" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-04.mp4" data-start="60.550033" data-duration="1.966633" data-media-start="0.150367" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-34"><div class="full"><video class="clip gfx" src="assets/strips/s7.mp4" data-start="62.483333" data-duration="3.500033" data-media-start="1.916667" muted playsinline></video></div></div>
+      <div class="shot face" id="shot-35"><div class="full punch" style="--y:-8px"><video class="clip face face-P" src="assets/sr/P-03.mp4" data-start="65.950033" data-duration="1.666633" data-media-start="0.149700" muted playsinline></video><video class="clip face face-P" src="assets/sr/P-03.mp4" data-start="67.583333" data-duration="2.266633" data-media-start="1.836333" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-36"><div class="full"><video class="clip gfx" src="assets/strips/s9.mp4" data-start="69.816633" data-duration="2.700033" data-media-start="0.000000" muted playsinline></video></div></div>
+      <div class="shot face" id="shot-37"><div class="full punch" style="--y:-8px"><video class="clip face face-P" src="assets/sr/P-04.mp4" data-start="72.483333" data-duration="1.600033" data-media-start="0.150000" muted playsinline></video></div></div>
+      <div class="shot face" id="shot-38"><div class="full punch" style="--y:-8px"><video class="clip face face-P" src="assets/sr/P-04.mp4" data-start="74.050033" data-duration="3.399933" data-media-start="1.806700" muted playsinline></video></div></div>
+      <div class="shot graphic" id="shot-39"><div class="full"><video class="clip gfx" src="assets/strips/cta.mp4" data-start="77.416633" data-duration="3.033333" data-media-start="0.000000" muted playsinline></video></div></div>
+      <div class="shot split" id="shot-40"><div class="top"><video class="clip gfx" src="assets/strips/cta.mp4" data-start="80.416633" data-duration="3.200033" data-media-start="2.983333" muted playsinline></video></div><div class="bottom"><div class="pan" style="--x:-440px; --y:0px"><video class="clip face face-L" src="assets/sr/L-05.mp4" data-start="80.416633" data-duration="1.033367" data-media-start="0.149633" muted playsinline></video><video class="clip face face-L" src="assets/sr/L-05.mp4" data-start="81.416667" data-duration="2.200000" data-media-start="1.226333" muted playsinline></video></div></div><div class="seam"></div></div>
+      <div class="shot graphic" id="shot-41"><div class="full"><video class="clip gfx" src="assets/strips/s10.mp4" data-start="83.583333" data-duration="1.533333" data-media-start="0.000000" muted playsinline></video></div></div>
+    </div>
+    <div id="caps"></div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/reel.js';
+    window.__timelines['reel-v3-assembly'] = timeline;
+  </script>
+</body>
+</html>

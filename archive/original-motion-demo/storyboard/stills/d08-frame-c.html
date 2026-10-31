@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S13 · Frame C (approved)</title>
+<style>html,body{margin:0;width:1440px;height:1000px;overflow:hidden;background:#1c1714}iframe{border:0;width:1440px;height:1000px;display:block}</style>
+</head>
+<body>
+<!-- S13 · 35.44–36.62 s · "toh you can compare them"
+     The approved Frame C, unchanged, rendered from design/frame-c.html. -->
+<iframe src="../../design/frame-c.html?noscale" title="Frame C"></iframe>
+<script>
+  // Frame C requests Google Fonts; the offline renderer supplies the same
+  // families from the local @fontsource copies instead.
+  const frame = document.querySelector('iframe');
+  frame.addEventListener('load', () => {
+    const link = frame.contentDocument.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = new URL('lib/fonts.css', location.href).href;
+    frame.contentDocument.head.appendChild(link);
+  });
+</script>
+</body>
+</html>

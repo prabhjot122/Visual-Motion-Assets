@@ -1,0 +1,42 @@
+[
+  {
+    "source_relative_path": "reel-v3/music/1-code-unknown.mp3",
+    "sha256": "a2a3ee1831ab517905c79303de41f2c8a92995964e294bdefb1250e8ef68fadd",
+    "duration_seconds": 167.52325,
+    "codec": "mp3",
+    "sample_rate": "44100",
+    "channels": 2,
+    "audio_included": false,
+    "rights": "exact source URL and license evidence not present in inspected project files; do not infer redistribution rights"
+  },
+  {
+    "source_relative_path": "reel-v3/music/2-exit-the-simulation.mp3",
+    "sha256": "7e4ec51cf2ff3d1505382c13eed857fd6c64aaec7ae6d8139d30c7c5d72c6d23",
+    "duration_seconds": 131.552625,
+    "codec": "mp3",
+    "sample_rate": "44100",
+    "channels": 2,
+    "audio_included": false,
+    "rights": "exact source URL and license evidence not present in inspected project files; do not infer redistribution rights"
+  },
+  {
+    "source_relative_path": "reel-v3/music/3-the-technology-corporate.mp3",
+    "sha256": "de42fb1c0f6b8b24cf54281ae2e3d798dea304f4caceac20e14665e39810ea23",
+    "duration_seconds": 134.4,
+    "codec": "mp3",
+    "sample_rate": "44100",
+    "channels": 2,
+    "audio_included": false,
+    "rights": "exact source URL and license evidence not present in inspected project files; do not infer redistribution rights"
+  },
+  {
+    "source_relative_path": "reel-v3/music/4-downtempo-explainer.mp3",
+    "sha256": "2e42afba94f86518a3d0432f7e655d18406394bf6085b4dea85e3e7f3edf97bc",
+    "duration_seconds": 106.944,
+    "codec": "mp3",
+    "sample_rate": "48000",
+    "channels": 2,
+    "audio_included": false,
+    "rights": "exact source URL and license evidence not present in inspected project files; do not infer redistribution rights"
+  }
+]

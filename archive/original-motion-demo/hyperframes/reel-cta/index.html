@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>LawVriksh reel v3 — CTA</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #171717; }
+    .abs { position: absolute; }
+    .label { font-size: 30px; font-weight: 600; letter-spacing: 0.02em; color: #5f5850; }
+    .card { background: #fff; border: 1px solid #e7e1d8; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 30px 70px rgba(40,24,10,0.20); }
+    .wm { font-family: 'Newsreader', serif; font-weight: 500; letter-spacing: -0.02em; }
+    .wm i { font-style: italic; color: #a93a18; }
+    #pill { left: 110px; top: 340px; width: 860px; height: 116px; border-radius: 58px; transform-origin: 50% 50%; }
+    #typed { left: 216px; top: 362px; font-size: 56px; line-height: 72px; white-space: pre; }
+    #caret { left: 0; top: 374px; width: 4px; height: 50px; background: #c94820; }
+    #result { left: 110px; top: 500px; width: 860px; height: 250px; border-radius: 28px; display: flex; align-items: center; gap: 34px; padding: 0 48px; box-sizing: border-box; }
+    #result img { width: 150px; height: 150px; object-fit: contain; }
+    #result .wm { font-size: 92px; }
+    #comment { left: 110px; top: 330px; width: 860px; height: 150px; border-radius: 30px; display: flex; align-items: center; gap: 28px; padding: 0 36px; box-sizing: border-box; }
+    #comment .av { width: 84px; height: 84px; border-radius: 50%; background: url(assets/textures/stone-sand.jpg) center / 300px; flex: none; }
+    #comment .lines { display: flex; flex-direction: column; gap: 12px; }
+    #comment .who { width: 180px; height: 16px; border-radius: 8px; background: #e6e0d6; }
+    #law { font-size: 64px; font-weight: 800; letter-spacing: 0.06em; line-height: 1; }
+    #dm { left: 250px; top: 560px; width: 720px; border-radius: 34px 34px 8px 34px; background: #c4562e; color: #fff; padding: 30px 38px; box-sizing: border-box; display: flex; align-items: center; gap: 26px; }
+    #dm .from { width: 92px; height: 92px; border-radius: 50%; background: #fbf8f2; display: grid; place-items: center; flex: none; }
+    #dm .from img { width: 70px; height: 70px; object-fit: contain; }
+    #dm .t1 { font-size: 26px; font-weight: 600; opacity: 0.85; }
+    #dm .t2 { font-size: 44px; font-weight: 700; line-height: 1.1; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="reel-cta" data-start="0" data-width="1080" data-height="1920" data-fps="30" data-duration="6.1667">
+    <div id="partA" class="abs" style="left:0;top:0;width:1080px;height:1000px">
+      <div id="labelA" class="abs label" style="left:110px;top:282px">Search on Google</div>
+      <div id="pill" class="abs card">
+        <svg class="abs" style="left:34px;top:30px" width="56" height="56" viewBox="0 0 56 56"><circle cx="24" cy="24" r="15" fill="none" stroke="#171717" stroke-width="5"/><path d="M35 35 L48 48" stroke="#171717" stroke-width="6" stroke-linecap="round"/></svg>
+      </div>
+      <div id="typed" class="abs wm"></div>
+      <div id="caret" class="abs"></div>
+      <div id="result" class="abs card"><img src="assets/brand/lawvriksh-mark.png" alt=""><div class="wm">Law<i>Vriksh</i></div></div>
+    </div>
+    <div id="partB" class="abs" style="left:0;top:0;width:1080px;height:1000px">
+      <div id="labelB" class="abs label" style="left:110px;top:272px">Comment</div>
+      <div id="comment" class="abs card"><div class="av"></div><div class="lines"><div class="who"></div><div id="law"></div></div></div>
+      <div id="dm" class="abs"><div class="from"><img src="assets/brand/lawvriksh-mark.png" alt=""></div><div><div class="t1">LawVriksh · in your DMs</div><div class="t2">Here are the details</div></div></div>
+    </div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/cta.js';
+    window.__timelines['reel-cta'] = timeline;
+  </script>
+</body>
+</html>

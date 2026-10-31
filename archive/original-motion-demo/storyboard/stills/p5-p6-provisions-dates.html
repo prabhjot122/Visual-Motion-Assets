@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>P5–P6 · Provisions and scattered dates</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/marks.js"></script>
+<style>
+  .page { position:absolute; background:#fff no-repeat 0 0 / 100% auto; box-shadow:0 20px 50px rgba(40,24,10,0.26); }
+  .tablet { position:absolute; padding:14px 20px 12px; color:#fbf4ec; box-shadow:0 18px 40px rgba(40,24,10,0.32); }
+  .tablet b { display:block; font-family:'Newsreader',serif; font-weight:500; font-size:44px; line-height:1; letter-spacing:-0.02em; }
+  .tablet span { font-size:12.5px; letter-spacing:0.02em; opacity:0.85; }
+  .tag { position:absolute; padding:9px 14px 8px; background:#fbf8f2; border:1px solid #e4ddd1; box-shadow:0 10px 24px rgba(40,24,10,0.18); font-family:'Newsreader',serif; font-size:28px; line-height:1; color:#1c1714; white-space:nowrap; }
+  .tag::before { content:''; position:absolute; left:-7px; top:50%; width:10px; height:10px; margin-top:-5px; border-radius:999px; border:2px solid #2b2522; background:#efebe3; }
+  .tag small { font-family:'Figtree'; font-size:12px; color:#858585; margin-left:8px; }
+</style>
+</head>
+<body>
+<!-- P5 · 20.83–21.76 s · "legal provisions": three stone tablets drop in
+     (Section 9, 11, 21 — Arbitration and Conciliation Act, 1996, as cited in
+     the notice and order) and pencil lines pin each to its document.
+     P6 · 22.16–24.43 s · "aur poore case ki timeline manage karni hai": the
+     twelve real source dates peel off as paper tags at different depths and
+     scales. A ruled pencil axis tries to draw beneath them but stays empty;
+     the line connecting the tags knots back on itself. Hold 23.4–24.2.
+     At 24.43 the tangle tightens into a straight clay line that becomes the
+     edge of the first product window (upload, 24.78). -->
+<div class="stage" id="stage">
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="word" style="left:30px; top:330px; font-size:330px; color:transparent; -webkit-text-stroke:1.6px rgba(28,23,20,0.55)">Timeline<em style="color:transparent; -webkit-text-stroke:1.6px rgba(169,58,24,0.8)">.</em></div>
+
+  <!-- Pages pulled back into depth -->
+  <div class="page" style="left:120px; top:70px; width:190px; height:269px; background-image:url(../assets/arora-notice-page2.png); transform:rotate(-6deg)"></div>
+  <div class="page" style="left:610px; top:40px; width:170px; height:240px; background-image:url(../assets/arora-agreement-page2.png); transform:rotate(3deg)"></div>
+  <div class="page" style="left:1120px; top:80px; width:190px; height:269px; background-image:url(../assets/arora-order-page1.png); transform:rotate(7deg)"></div>
+
+  <!-- Provision tablets -->
+  <div class="tablet char" id="t-21" style="left:330px; top:250px; transform:rotate(-3deg)"><b>Section 21</b><span>Arbitration and Conciliation Act, 1996</span></div>
+  <div class="tablet clay" id="t-9" style="left:820px; top:230px; transform:rotate(2deg)"><b>Section 9</b><span>interim protection</span></div>
+  <div class="tablet sand" id="t-11" style="left:600px; top:330px; transform:rotate(-1deg); color:#1c1714"><b>Section 11</b><span>appointment of arbitrator</span></div>
+
+  <!-- Scattered real dates (chronology entries), different depths -->
+  <div class="tag" id="d1" style="left:120px; top:520px; transform:rotate(-6deg) scale(1.15)">3 Feb 2023</div>
+  <div class="tag" id="d2" style="left:1080px; top:470px; transform:rotate(5deg) scale(0.9)">14 Mar 2026</div>
+  <div class="tag" id="d3" style="left:560px; top:600px; transform:rotate(-2deg) scale(1.3)">15 Jan 2024</div>
+  <div class="tag" id="d4" style="left:880px; top:690px; transform:rotate(8deg)">22 Feb 2023</div>
+  <div class="tag" id="d5" style="left:300px; top:700px; transform:rotate(3deg) scale(0.85)">18 Jul 2026</div>
+  <div class="tag" id="d6" style="left:1180px; top:620px; transform:rotate(-7deg) scale(1.05)">30 Jun 2024</div>
+  <div class="tag" id="d7" style="left:760px; top:520px; transform:rotate(4deg) scale(0.8)">9 Feb 2023</div>
+  <div class="tag" id="d8" style="left:40px; top:820px; transform:rotate(-4deg) scale(0.95)">12 Sep 2026</div>
+  <div class="tag" id="d9" style="left:420px; top:450px; transform:rotate(6deg) scale(0.75)">29 Jul 2024</div>
+  <div class="tag" id="d10" style="left:1010px; top:820px; transform:rotate(-3deg) scale(0.9)">15 Aug 2026<small>calculated</small></div>
+  <div class="tag" id="d11" style="left:640px; top:770px; transform:rotate(-8deg) scale(0.8)">6 Apr 2023</div>
+  <div class="tag" id="d12" style="left:1250px; top:380px; transform:rotate(9deg) scale(0.7)">4 Jul 2024</div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g filter="url(#pencil)" class="pencil" id="pins"></g>
+    <g filter="url(#pencil)" stroke="#2b2522" stroke-width="1.6" fill="none" opacity="0.7" id="knot"></g>
+    <g filter="url(#pencil)" stroke="#2b2522" stroke-width="1.4" fill="none" opacity="0.5" id="axis"><line x1="80" y1="950" x2="1360" y2="950"/></g>
+  </svg>
+  <div class="vignette"></div>
+  <div class="slate">P5–P6 · 20.83–24.78 s · provisions → scattered dates (concept) · proposal</div>
+</div>
+<script>
+  const c = (id) => { const b = Marks.rect('#' + id); return { x: b.left + 2, y: (b.top + b.bottom) / 2 }; };
+  // Pins from tablets up to the pages they come from (notice, order).
+  const pin = (id, x, y) => { const b = Marks.rect('#' + id); return `<path d="M${(b.left + b.right) / 2} ${b.top} L ${x} ${y}"/>`; };
+  document.getElementById('pins').innerHTML = pin('t-21', 220, 320) + pin('t-9', 1190, 330) + pin('t-11', 220, 330);
+  // The knotted line through the tags in chronological order: it doubles back across the frame.
+  const order = ['d1', 'd7', 'd4', 'd11', 'd3', 'd6', 'd12', 'd9', 'd2', 'd5', 'd10', 'd8'];
+  let d = '';
+  order.forEach((id, i) => {
+    const p = c(id);
+    if (!i) { d = `M${p.x} ${p.y}`; return; }
+    const q = c(order[i - 1]);
+    d += ` C ${q.x + 140} ${q.y - 120}, ${p.x - 160} ${p.y + 140}, ${p.x} ${p.y}`;
+  });
+  document.getElementById('knot').innerHTML = `<path d="${d}"/>`;
+  // Empty ruled axis: ticks with nothing on them.
+  let ticks = '';
+  for (let x = 120; x <= 1320; x += 100) ticks += `<line x1="${x}" y1="942" x2="${x}" y2="958"/>`;
+  document.getElementById('axis').innerHTML += ticks;
+</script>
+</body>
+</html>

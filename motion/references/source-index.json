@@ -1,0 +1,24 @@
+[
+  {
+    "id": "harvey",
+    "source_filename": "harvey-reference-original.mp4",
+    "source_sha256": "673b71bb7483b0d5636e7995cae6ab28e38741bb0984adc39716456005de0a8f",
+    "duration_seconds": 60.041667,
+    "width": 1280,
+    "height": 720,
+    "frame_rate": "24/1",
+    "included": "contact sheets and written analysis only",
+    "full_video_distribution": "not included; not granted a reuse or redistribution license"
+  },
+  {
+    "id": "lovio",
+    "source_filename": "lovio-reference-original.mp4",
+    "source_sha256": "0af6b59fc01b79a84490e41e75837cce1cb60964cb0ba2709c2727dc1c00aacd",
+    "duration_seconds": 53.0,
+    "width": 1920,
+    "height": 1080,
+    "frame_rate": "30/1",
+    "included": "contact sheets and written analysis only",
+    "full_video_distribution": "not included; not granted a reuse or redistribution license"
+  }
+]

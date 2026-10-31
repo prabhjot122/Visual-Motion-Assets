@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>P4 · Conflicting facts</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/marks.js"></script>
+<style>
+  .page { position:absolute; background:#fff no-repeat 0 0 / 100% auto; box-shadow:0 2px 4px rgba(40,24,10,0.12), 0 36px 80px rgba(40,24,10,0.30); }
+  .plabel { position:absolute; font-family:'Newsreader',serif; font-style:italic; font-size:22px; color:#3a352f; }
+  .amt { position:absolute; font-family:'Newsreader',serif; font-weight:500; font-size:104px; line-height:1; letter-spacing:-0.03em; white-space:nowrap; }
+  .hl { position:absolute; background:rgba(201,72,32,0.22); border-bottom:2px solid var(--clay); }
+</style>
+</head>
+<body>
+<!-- P3→P4 · 18.49–20.83 s · "Multiple documents, conflicting facts"
+     P3 (18.49): the case opened in P2 settles into three real source pages
+     standing in depth — Development Agreement, Notice invoking arbitration,
+     Interim order (raster = the documents themselves; not app UI).
+     P4 (19.62): the two figures lift off their exact lines — notice p2 and
+     order p1 — grow to display size and slide into each other. Where they
+     meet, a clay fracture opens; the 2 : 1 stones rise beneath them for the
+     first time (they return in Frame C at 35 s). Real values, unresolved. -->
+<div class="stage" id="stage">
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <div class="page" id="pg-agreement" style="left:540px; top:30px; width:360px; height:509px; background-image:url(../assets/arora-agreement-page2.png); transform:rotate(2deg); filter:brightness(0.97) saturate(0.9); opacity:0.92"></div>
+  <div class="plabel" style="left:560px; top:548px; opacity:0.7">Agreement · 3 Feb 2023</div>
+
+  <div class="page" id="pg-notice" style="left:-60px; top:110px; width:460px; height:651px; background-image:url(../assets/arora-notice-page2.png); transform:rotate(-4deg)">
+    <div class="hl" id="hl-notice" style="left:49px; top:229px; width:188px; height:11px"></div>
+  </div>
+  <div class="plabel" style="left:40px; top:64px">Notice · page 2</div>
+
+  <div class="page" id="pg-order" style="left:1010px; top:130px; width:460px; height:651px; background-image:url(../assets/arora-order-page1.png); transform:rotate(5deg)">
+    <div class="hl" id="hl-order" style="left:49px; top:270px; width:295px; height:11px"></div>
+  </div>
+  <div class="plabel" style="left:1050px; top:84px">Interim order · page 1</div>
+
+  <!-- 2 : 1 stones under the two figures -->
+  <div class="abs clay" style="left:250px; top:800px; width:150px; height:220px"></div>
+  <div class="abs clay" style="left:250px; top:770px; width:190px; height:30px; clip-path: polygon(0 30px, 150px 30px, 190px 0, 40px 0); filter:brightness(1.28)"></div>
+  <div class="abs clay" style="left:400px; top:770px; width:40px; height:250px; clip-path: polygon(0 30px, 40px 0, 40px 250px, 0 250px); filter:brightness(0.58)"></div>
+  <div class="abs char" style="left:920px; top:910px; width:150px; height:110px"></div>
+  <div class="abs char" style="left:920px; top:880px; width:190px; height:30px; clip-path: polygon(0 30px, 150px 30px, 190px 0, 40px 0); filter:brightness(1.7)"></div>
+
+  <div class="amt" id="amt-a" style="left:150px; top:620px; color:#1c1714">Rs. 2,30,00,000</div>
+  <div class="amt" id="amt-b" style="left:640px; top:722px; color:#1c1714">Rs. 1,15,00,000</div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g filter="url(#pencil)" class="pencil" id="leaders"></g>
+    <path id="fracture" fill="none" stroke="var(--clay)" stroke-width="3" stroke-linejoin="miter"/>
+  </svg>
+  <div class="vignette"></div>
+  <div class="slate">P3–P4 · 18.49–20.83 s · multiple documents → conflicting facts (concept) · proposal</div>
+</div>
+<script>
+  const a = Marks.rect('#amt-a'), b = Marks.rect('#amt-b'), hn = Marks.rect('#hl-notice'), ho = Marks.rect('#hl-order');
+  document.getElementById('leaders').innerHTML =
+    `<path d="M${hn.right} ${hn.bottom} C ${hn.right + 80} ${hn.bottom + 120}, ${a.left + 160} ${a.top - 120}, ${a.left + 200} ${a.top + 6}"/>` +
+    `<path d="M${ho.left} ${ho.bottom} C ${ho.left - 120} ${ho.bottom + 160}, ${b.right - 120} ${b.top - 140}, ${b.right - 160} ${b.top + 6}"/>`;
+  // Fracture where the two figures overlap.
+  const x = (a.right + b.left) / 2 + 10, y0 = a.top - 30, y1 = b.bottom + 30;
+  let d = `M${x} ${y0}`;
+  for (let i = 1, n = 9; i <= n; i++) d += ` L ${x + (i % 2 ? 16 : -14)} ${y0 + ((y1 - y0) * i) / n}`;
+  document.getElementById('fracture').setAttribute('d', d);
+</script>
+</body>
+</html>

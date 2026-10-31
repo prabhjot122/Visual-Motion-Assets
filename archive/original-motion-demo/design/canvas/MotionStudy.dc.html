@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Motion study — conflict beat</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#8d3515}a:hover{color:#a93a18}
+.paper{background-image:url(/_blob/6d303f926450c22070f3efb8dfd36dff);background-size:cover}
+.clay{background-image:url(/_blob/53e784f53afc99e471c208bd97532ae9);background-size:600px}
+.char{background-image:url(/_blob/b8eb28fd34cca721e5d7aa1d0407618a);background-size:600px}
+.sand{background-image:url(/_blob/e181a2536582a8482cc20aa1d029817c);background-size:600px}
+.hatch{background-image:url(/_blob/32612ae2f97e136ebe27b0ced24e6901);background-size:520px}
+.halftone{background-image:url(/_blob/6301bb6c6fc4468175b2870315d90e7e);background-size:700px}
+.cm-dots{background-color:#fbfaf7;background-image:radial-gradient(circle,#ddd8cf 1px,transparent 1px);background-size:22px 22px}
+.ms-btn{height:40px;padding:0 16px;border:1px solid #d9d0c2;border-radius:8px;background:#ffffff;color:#1c1714;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer}
+.ms-btn:hover{background:#f6f2eb}
+.ms-range{flex:1;accent-color:#c94820;height:40px}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1080px; position: relative; background: #1c1714; font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif; color: #171717">
+
+<!-- ======================= FRAME 1440x1000 ======================= -->
+<div class="paper" style="position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; overflow: hidden; background-color: #efebe3">
+<div style="position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; transform-origin: 1220px 560px; transform: scale({{v.cam}})">
+
+  <!-- Collage slabs -->
+  <div class="sand" style="position: absolute; left: -20px; top: -20px; width: 190px; height: 110px; opacity: {{v.sandO}}; transform: {{v.sandT}}"></div>
+  <div class="halftone" style="position: absolute; left: 0; top: 214px; width: 128px; height: 64px; transform: {{v.htT}}"></div>
+  <div class="clay" style="position: absolute; left: 920px; top: -40px; width: 240px; height: 190px; clip-path: path('M0 0 H240 V190 H130 A110 110 0 0 0 20 80 H0 Z'); transform: {{v.clayT}}"></div>
+  <div class="char" style="position: absolute; left: 930px; top: 196px; width: 52px; height: 52px; border-radius: 999px; transform: {{v.dotT}}"></div>
+  <div class="hatch" style="position: absolute; left: -20px; top: 380px; width: 64px; height: 640px; transform: {{v.hatchT}}"></div>
+
+  <!-- Stone columns A (rises first) -->
+  <div style="position: absolute; left: 1080px; top: 842px; width: 150px; height: 200px; transform: translateY({{v.colAY}}px)">
+    <div class="clay" style="position: absolute; left: 0; top: 30px; width: 110px; height: 170px"></div>
+    <div class="clay" style="position: absolute; left: 0; top: 0; width: 146px; height: 30px; clip-path: polygon(0 30px, 110px 30px, 146px 0, 36px 0); filter: brightness(1.28)"></div>
+    <div class="clay" style="position: absolute; left: 110px; top: 0; width: 36px; height: 200px; clip-path: polygon(0 30px, 36px 0, 36px 200px, 0 200px); filter: brightness(0.58)"></div>
+    <div style="position: absolute; left: 14px; top: 58px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: rgba(255,248,240,0.92)">A</div>
+  </div>
+  <!-- Stone column B, exactly half the visible height -->
+  <div style="position: absolute; left: 1250px; top: 912px; width: 150px; height: 130px; transform: translateY({{v.colBY}}px)">
+    <div class="char" style="position: absolute; left: 0; top: 30px; width: 110px; height: 100px"></div>
+    <div class="char" style="position: absolute; left: 0; top: 0; width: 146px; height: 30px; clip-path: polygon(0 30px, 110px 30px, 146px 0, 36px 0); filter: brightness(1.7)"></div>
+    <div class="char" style="position: absolute; left: 110px; top: 0; width: 36px; height: 130px; clip-path: polygon(0 30px, 36px 0, 36px 130px, 0 130px); filter: brightness(0.7)"></div>
+    <div style="position: absolute; left: 14px; top: 40px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: rgba(255,248,240,0.9)">B</div>
+  </div>
+
+  <!-- Window light drifting across the paper -->
+  <div style="position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; opacity: {{v.lightO}}; transform: rotate(-24deg) translateX({{v.lightX}}px); display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; pointer-events: none">
+    <div style="width: 90px; height: 100%; background: rgba(255,226,180,0.9)"></div>
+    <div style="width: 130px; height: 100%; background: rgba(255,226,180,0.9)"></div>
+    <div style="width: 90px; height: 100%; background: rgba(255,226,180,0.9)"></div>
+    <div style="width: 130px; height: 100%; background: rgba(255,226,180,0.9)"></div>
+    <div style="width: 90px; height: 100%; background: rgba(255,226,180,0.9)"></div>
+  </div>
+  <div style="position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); pointer-events: none"></div>
+
+  <!-- Pencil guides draw on -->
+  <svg width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true" style="position: absolute; left: 0; top: 0; pointer-events: none">
+    <filter id="pencilM"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"></feDisplacementMap></filter>
+    <g filter="url(#pencilM)" stroke="#2b2522" stroke-width="1.3" opacity="0.55" fill="none" stroke-dasharray="1 1">
+      <line x1="60" y1="0" x2="60" y2="1000" pathLength="1" stroke-dashoffset="{{v.penD}}"></line>
+      <line x1="0" y1="290" x2="1440" y2="290" pathLength="1" stroke-dashoffset="{{v.penD}}"></line>
+      <line x1="1004" y1="0" x2="1004" y2="1000" pathLength="1" stroke-dashoffset="{{v.penD}}"></line>
+      <line x1="0" y1="930" x2="980" y2="0" pathLength="1" stroke-dashoffset="{{v.penD}}"></line>
+    </g>
+  </svg>
+
+  <!-- Big word -->
+  <div style="position: absolute; left: 50px; top: 22px; opacity: {{v.wordO}}; transform: translateY({{v.wordY}}px); font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 236px; line-height: 1; letter-spacing: -0.035em; color: #1c1714">Compare<em style="font-style: italic; color: #a93a18">.</em></div>
+
+  <!-- Rebuilt Case Map window -->
+  <div style="position: absolute; left: 60px; top: 290px; width: 1020px; height: 740px; border-radius: 18px; overflow: hidden; border: 1px solid #e7e5e2; background: #fbfaf7; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); opacity: {{v.winO}}; transform-origin: 50% 100%; transform: translateY({{v.winY}}px) scale({{v.winS}})">
+    <div style="position: absolute; left: 0; top: 0; width: 680px; height: 494px; transform: scale(1.5); transform-origin: 0 0">
+      <div style="position: absolute; left: 0; top: 0; width: 680px; height: 44px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; gap: 8px; background: #ffffff; border-bottom: 1px solid #eeeae3">
+        <div style="display: flex; padding: 2px; border-radius: 8px; background: #f5f1ea">
+          <span style="padding: 4px 11px; border-radius: 6px; background: #ffffff; box-shadow: 0 1px 2px rgba(20,16,12,0.08); font-size: 12px; font-weight: 500; color: #171717">Map</span>
+          <span style="padding: 4px 11px; font-size: 12px; color: #606060">Facts</span>
+        </div>
+        <div style="width: 236px; height: 28px; box-sizing: border-box; padding: 0 9px; display: flex; align-items: center; gap: 6px; border: 1px solid #e4ded4; border-radius: 8px; background: #ffffff; font-size: 12px; color: #858585">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          Search the map…
+        </div>
+        <div style="height: 28px; box-sizing: border-box; padding: 0 10px; display: flex; align-items: center; gap: 5px; border: 1px solid #e4ded4; border-radius: 8px; background: #ffffff; font-size: 12.5px; font-weight: 500; color: #3a352f">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3a352f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5M12 11v6M9 14h6"></path></svg>
+          Add fact
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 11px; color: #858585">
+          <span style="width: 7px; height: 7px; border-radius: 999px; background: #2e7d46"></span>Live
+        </div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 28px; height: 28px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 1px solid #e4ded4; border-radius: 8px; background: #ffffff">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3a352f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+        </div>
+        <div style="width: 28px; height: 28px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 1px solid #e4ded4; border-radius: 8px; background: #ffffff">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3a352f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg>
+        </div>
+      </div>
+
+      <div class="cm-dots" style="position: absolute; left: 0; top: 44px; width: 680px; height: 450px">
+        <div style="position: absolute; left: 12px; top: 10px; display: flex; align-items: center; gap: 2px; font-size: 11.5px; color: #606060">
+          <span style="padding: 2px 6px">Arora v. Meridian Estates Pvt. Ltd.</span>
+          <span style="display: flex; align-items: center; gap: 2px; opacity: {{v.crumbO}}">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#858585" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+            <span style="padding: 2px 6px">Conflicts</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#858585" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+            <span style="padding: 2px 6px; font-weight: 600; color: #171717">Amount outstanding</span>
+          </span>
+        </div>
+
+        <svg width="760" height="450" viewBox="0 0 760 450" aria-hidden="true" style="position: absolute; left: 0; top: 0; overflow: visible">
+          <path d="M284 146 C322 146, 322 177, 360 177" fill="none" stroke="#d9d5cd" stroke-width="1.25" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="{{v.edgeAB}}"></path>
+          <path d="M284 208 C322 208, 322 177, 360 177" fill="none" stroke="#d9d5cd" stroke-width="1.25" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="{{v.edgeAB}}"></path>
+          <path d="M624 239 C662 239, 662 200, 700 200" fill="none" stroke="#d9d5cd" stroke-width="1.25" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="{{v.edgeT}}"></path>
+          <path d="M624 177 C662 177, 662 200, 700 200" fill="none" stroke="#cf795d" stroke-width="1.6" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="{{v.edgeClay}}"></path>
+        </svg>
+
+        <div style="position: absolute; left: 20px; top: 120px; width: 264px; height: 52px; box-sizing: border-box; padding: 6px 9px; display: flex; flex-direction: row-reverse; align-items: center; gap: 8px; border: 1px solid #dedbd5; border-radius: 8px; background: #ffffff; text-align: right; opacity: {{v.vAO}}; transform: translateX({{v.vAX}}px)">
+          <span style="width: 7px; height: 7px; flex: 0 0 7px; border-radius: 999px; background: #a5483f"></span>
+          <span style="display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 2px">
+            <span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.02em; color: #858585">Contradicted</span>
+            <span style="font-size: 11.5px; line-height: 1.3; color: #171717">Version A</span>
+          </span>
+        </div>
+        <div style="position: absolute; left: 20px; top: 182px; width: 264px; height: 52px; box-sizing: border-box; padding: 6px 9px; display: flex; flex-direction: row-reverse; align-items: center; gap: 8px; border: 1px solid #dedbd5; border-radius: 8px; background: #ffffff; text-align: right; opacity: {{v.vBO}}; transform: translateX({{v.vBX}}px)">
+          <span style="width: 7px; height: 7px; flex: 0 0 7px; border-radius: 999px; background: #a5483f"></span>
+          <span style="display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 2px">
+            <span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.02em; color: #858585">Contradicted</span>
+            <span style="font-size: 11.5px; line-height: 1.3; color: #171717">Version B</span>
+          </span>
+        </div>
+        <div style="position: absolute; left: 360px; top: 151px; width: 264px; height: 52px; box-sizing: border-box; padding: 6px 9px; display: flex; flex-direction: row-reverse; align-items: center; gap: 8px; border: 1px solid {{v.amtBorder}}; border-radius: 8px; background: {{v.amtBg}}; box-shadow: 0 0 0 2px rgba(201,72,32,{{v.amtRing}}); text-align: right">
+          <span style="width: 7px; height: 7px; flex: 0 0 7px; border-radius: 999px; background: #a5483f"></span>
+          <span style="display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 2px">
+            <span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.02em; color: #858585">Contradicted</span>
+            <span style="font-size: 11.5px; line-height: 1.3; color: #171717">Amount outstanding</span>
+          </span>
+          <span style="display: inline-flex; flex: 0 0 auto; align-items: center; gap: 1px; padding: 1px 4px 1px 6px; border-radius: 999px; background: #f5f1ea; font-size: 10px; font-weight: 600; color: #606060">2<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: rotate(180deg)"><path d="m9 6 6 6-6 6"></path></svg></span>
+        </div>
+        <div style="position: absolute; left: 360px; top: 213px; width: 264px; height: 52px; box-sizing: border-box; padding: 6px 9px; display: flex; flex-direction: row-reverse; align-items: center; gap: 8px; border: 1px solid #dedbd5; border-radius: 8px; background: #ffffff; text-align: right">
+          <span style="width: 7px; height: 7px; flex: 0 0 7px; border-radius: 999px; background: #a5483f"></span>
+          <span style="display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 2px">
+            <span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.02em; color: #858585">Contradicted</span>
+            <span style="font-size: 11.5px; line-height: 1.3; color: #171717">Third-tranche due date (agreement calculation)</span>
+          </span>
+          <span style="display: inline-flex; flex: 0 0 auto; align-items: center; gap: 1px; padding: 1px 4px 1px 6px; border-radius: 999px; background: #f5f1ea; font-size: 10px; font-weight: 600; color: #606060">2<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: rotate(180deg)"><path d="m9 6 6 6-6 6"></path></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rebuilt Conflict panel: app slide-in, then lifts toward camera -->
+  <div style="position: absolute; left: 1004px; top: 118px; width: 320px; transform-origin: 0 0; transform: translateX({{v.pX}}px) scale({{v.pS}}); opacity: {{v.pO}}; border: 1px solid #e7e5e2; border-radius: 16px; overflow: hidden; background: #fbfaf8; box-shadow: 0 {{v.shY}}px {{v.shB}}px rgba(20,16,12,{{v.shA}}), 0 3px 10px rgba(20,16,12,0.08)">
+    <div style="min-height: 44px; box-sizing: border-box; padding: 0 10px 0 16px; display: flex; align-items: center; gap: 4px">
+      <span style="margin-right: auto; font-size: 12.5px; font-weight: 500; color: #1d1d1d">Conflict</span>
+      <span style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+      </span>
+    </div>
+    <div style="padding: 10px 16px 0">
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; opacity: {{v.pTitleO}}">
+        <p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4; color: #171717">Amount outstanding</p>
+        <p style="margin: 0; font-size: 12.5px; line-height: 1.5; color: #606060">Two documents state different outstanding amounts: the arbitration notice pleads Rs. 2,30,00,000 while the Section 9 order records Rs. 1,15,00,000 as presently due.</p>
+        <div style="display: flex; gap: 6px"><span style="padding: 2px 8px; border-radius: 999px; background: #f4e4e1; color: #a5483f; font-size: 11px; font-weight: 600">Contradicted</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px; opacity: {{v.pTitleO}}">
+        <h3 style="margin: 0; font-size: 11.5px; font-weight: 600; color: #404040">Sources used in this branch</h3>
+        <span style="padding: 0 6px; border-radius: 999px; background: #f2efe9; font-size: 10.5px; font-weight: 600; color: #606060">2</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px">
+        <div style="padding: 12px; border-radius: 8px; background: #f3f1ed; display: flex; flex-direction: column; gap: 8px; opacity: {{v.c1O}}; transform: translateY({{v.c1Y}}px)">
+          <div style="display: flex; align-items: center; gap: 8px; min-width: 0">
+            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true" style="flex: none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#d65248"></path><path d="M14 2v6h6" fill="#f6b1aa"></path></svg>
+            <span style="flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.5px; font-weight: 500; color: #171717">Notice invoking arbitration — 14 Mar 2026.pdf</span>
+            <span style="flex: none; font-size: 11px; color: #606060">Page 2</span>
+          </div>
+          <p style="margin: 0; font-size: 12.5px; line-height: 1.5; color: #3f3a36">the quantum payable to the Claimant, being Rs. 2,30,00,000/- in principal together with interest;</p>
+        </div>
+        <div style="padding: 12px; border-radius: 8px; background: #f3f1ed; display: flex; flex-direction: column; gap: 8px; opacity: {{v.c2O}}; transform: translateY({{v.c2Y}}px)">
+          <div style="display: flex; align-items: center; gap: 8px; min-width: 0">
+            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true" style="flex: none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#d65248"></path><path d="M14 2v6h6" fill="#f6b1aa"></path></svg>
+            <span style="flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.5px; font-weight: 500; color: #171717">Interim order under Section 9 — 18 Jul 2026.pdf</span>
+            <span style="flex: none; font-size: 11px; color: #606060">Page 1</span>
+          </div>
+          <p style="margin: 0; font-size: 12.5px; line-height: 1.5; color: #3f3a36">For this interim application, the petitioner quantifies the amount presently due at Rs. 1,15,00,000/-.</p>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 12px 14px; border-top: 1px solid #d7d7d7; background: #ffffff; opacity: {{v.footO}}">
+      <div style="width: 100%; height: 32px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid #e4ded4; border-radius: 8px; background: #ffffff; font-size: 12.5px; font-weight: 500; color: #3a352f">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a352f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+        Open source
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; right: 40px; top: 36px; opacity: {{v.brandO}}; font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1; color: #1c1714">Law<em style="font-style: italic; color: #a93a18">Vriksh</em></div>
+</div>
+</div>
+
+<!-- ======================= CONTROLS (outside the frame) ======================= -->
+<div style="position: absolute; left: 0; top: 1000px; width: 1440px; height: 80px; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 14px; background: #f5f1ea; border-top: 1px solid #d9d0c2">
+  <button type="button" class="ms-btn" style="width: 96px" onClick="{{toggle}}">{{playLabel}}</button>
+  <button type="button" class="ms-btn" onClick="{{restart}}">Restart</button>
+  <label for="ms-scrub" style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #5a5048">Scrub</label>
+  <input id="ms-scrub" class="ms-range" type="range" min="0" max="4300" step="10" value="{{tMs}}" onChange="{{scrub}}">
+  <div style="width: 108px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #1c1714; text-align: right">{{timeLabel}}</div>
+  <div style="display: flex; gap: 6px">
+    <sc-for list="{{beats}}" as="b" hint-placeholder-count="5">
+      <button type="button" style="height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid {{b.border}}; background: {{b.bg}}; color: {{b.fg}}; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer" onClick="{{b.go}}">{{b.label}}</button>
+    </sc-for>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1080}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.last = null;
+    const tick = (now) => {
+      if (this.last == null) this.last = now;
+      const dt = Math.min(0.1, (now - this.last) / 1000);
+      this.last = now;
+      const st = this.state || {};
+      if (st.playing !== false) {
+        let t = (st.t || 0) + dt;
+        if (t > 5.4) t = 0;
+        this.setState({ t: t, playing: true });
+      }
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+  }
+  renderVals() {
+    const st = this.state || {};
+    const t = st.t || 0;
+    const playing = st.playing !== false;
+    const T = Math.min(t, 4.3);
+    const p = (a, b) => Math.max(0, Math.min(1, (T - a) / (b - a)));
+    const eo = (x) => 1 - Math.pow(1 - x, 3);
+    const eio = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+    const f = (n) => Number(n.toFixed(3));
+    const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+    const mix = (a, b, k) => {
+      const A = hex(a), B = hex(b);
+      return 'rgb(' + A.map((c, i) => Math.round(c + (B[i] - c) * k)).join(',') + ')';
+    };
+
+    const v = {};
+    // Beat 1 · stage settles (0–0.6 s)
+    v.lightO = f(eo(p(0, 0.6)));
+    v.lightX = f(-140 + 140 * (T / 4.3));
+    let k = eo(p(0, 0.55));
+    v.sandO = f(k);
+    v.sandT = 'translate(' + f(-60 * (1 - k)) + 'px,' + f(-60 * (1 - k)) + 'px)';
+    k = eo(p(0.08, 0.6)); v.htT = 'translateX(' + f(-140 * (1 - k)) + 'px)';
+    k = eo(p(0.05, 0.65)); v.clayT = 'translateY(' + f(-200 * (1 - k)) + 'px)';
+    k = eo(p(0.2, 0.7)); v.dotT = 'scale(' + f(k) + ')';
+    k = eo(p(0.1, 0.6)); v.hatchT = 'translateX(' + f(-90 * (1 - k)) + 'px)';
+    v.penD = f(1 - eo(p(0, 0.9)));
+    k = eo(p(0.15, 0.85)); v.wordO = f(k); v.wordY = f(70 * (1 - k));
+    v.brandO = f(eo(p(0.3, 0.8)));
+
+    // Beat 2 · app arrives (0.6–1.4 s)
+    k = eo(p(0.6, 1.3));
+    v.winO = f(Math.min(1, k * 1.4)); v.winY = f(90 * (1 - k)); v.winS = f(0.965 + 0.035 * k);
+    k = eo(p(0.85, 1.15)); v.vAO = f(k); v.vAX = f(-14 * (1 - k));
+    k = eo(p(0.95, 1.25)); v.vBO = f(k); v.vBX = f(-14 * (1 - k));
+    v.edgeAB = f(1 - eo(p(0.95, 1.4)));
+    v.edgeT = f(1 - eo(p(1.0, 1.45)));
+
+    // Beat 3 · select (1.4–2.2 s), 180 ms ease-out like the app
+    k = eo(p(1.45, 1.63));
+    v.amtBorder = mix('#dedbd5', '#c94820', k);
+    v.amtBg = mix('#ffffff', '#fdf7f4', k);
+    v.amtRing = f(0.12 * k);
+    v.crumbO = f(eo(p(1.45, 1.7)));
+    v.edgeClay = f(1 - eio(p(1.55, 2.1)));
+
+    // Beat 4 · panel slides in (180 ms), then lifts toward camera (2.2–3.3 s)
+    k = eo(p(2.2, 2.38)); v.pX = f(24 * (1 - k)); v.pO = f(k);
+    k = eio(p(2.4, 3.05));
+    v.pS = f(1.18 + 0.17 * k); v.shY = f(10 + 30 * k); v.shB = f(28 + 60 * k); v.shA = f(0.12 + 0.16 * k);
+    v.pTitleO = f(eo(p(2.3, 2.55)));
+    k = eo(p(2.55, 2.85)); v.c1O = f(k); v.c1Y = f(10 * (1 - k));
+    k = eo(p(2.75, 3.05)); v.c2O = f(k); v.c2Y = f(10 * (1 - k));
+    v.footO = f(eo(p(2.95, 3.2)));
+
+    // Beat 5 · verify cue (3.3–4.3 s): columns rise 2 : 1, camera eases toward the quotes
+    v.colAY = f(220 * (1 - eo(p(3.3, 3.9))));
+    v.colBY = f(160 * (1 - eo(p(3.45, 4.0))));
+    v.cam = f(1 + 0.07 * eio(p(3.3, 4.3)));
+
+    const marks = [
+      { at: 0, label: '1 Stage' },
+      { at: 0.6, label: '2 App' },
+      { at: 1.4, label: '3 Select' },
+      { at: 2.2, label: '4 Panel' },
+      { at: 3.3, label: '5 Verify' },
+    ];
+    let active = 0;
+    marks.forEach((m, i) => { if (T >= m.at) active = i; });
+    const beats = marks.map((m, i) => ({
+      label: m.label,
+      bg: i === active ? '#1c1714' : '#ffffff',
+      fg: i === active ? '#fbf6ee' : '#1c1714',
+      border: i === active ? '#1c1714' : '#d9d0c2',
+      go: () => this.setState({ t: m.at + 0.001, playing: false }),
+    }));
+
+    return {
+      v: v,
+      beats: beats,
+      tMs: Math.round(T * 1000),
+      timeLabel: T.toFixed(2) + ' / 4.30 s',
+      playLabel: playing ? 'Pause' : 'Play',
+      toggle: () => this.setState({ playing: !playing, t: t >= 4.3 && !playing ? 0 : t }),
+      restart: () => this.setState({ t: 0, playing: true }),
+      scrub: (e) => this.setState({ t: Number(e.target.value) / 1000, playing: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>

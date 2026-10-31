@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D13 · PDF Insights · Notice Analysis</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/marks.js"></script>
+<style>
+  .viewer { position:absolute; overflow:hidden; border-radius:16px; background:#f1eee9; border:1px solid #e7e5e2; box-shadow:0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); }
+  .vbar { position:absolute; left:0; right:0; top:0; height:48px; display:flex; align-items:center; gap:10px; padding:0 18px; background:#fff; border-bottom:1px solid #eeeae3; font-size:13px; font-weight:600; color:#171717; z-index:2; }
+  .page { position:absolute; background:#fff no-repeat 0 0 / 100% auto; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+  .hl { position:absolute; }
+  .ins { position:absolute; width:340px; transform-origin:0 0; background:#fff; border:1px solid #e7e5e2; border-radius:16px; overflow:hidden; box-shadow:0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); font-size:12.5px; color:#171717; }
+  .tabs { display:flex; gap:14px; align-items:center; padding:12px 14px; border-bottom:1px solid #eeeae3; font-size:12px; color:#606060; }
+  .tabs .on { padding:4px 10px; border:1px solid var(--clay); border-radius:8px; background:#fbe9e1; color:var(--clay); font-weight:600; }
+  .k { font-size:9.5px; font-weight:600; letter-spacing:0.1em; color:#858585; }
+  .tpl { margin:6px 0 8px; padding:9px 12px; border-radius:8px; background:#fbe3d8; border:1px solid #f1c3ad; font-weight:600; display:flex; justify-content:space-between; }
+  .res { padding:12px 14px; border-top:1px solid #eeeae3; }
+  .res .lab { display:flex; justify-content:space-between; font-size:10.5px; font-weight:700; letter-spacing:0.08em; margin-bottom:8px; }
+  .res .lab i { font-style:normal; display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:7px; vertical-align:0; }
+  .q { padding:10px 12px; border-radius:8px; background:#f3f1ed; font-family:'Newsreader',serif; font-style:italic; font-size:14px; line-height:1.45; color:#2a2622; }
+  .pg { margin-top:8px; font-size:11px; font-weight:600; color:var(--clay); text-decoration:underline; }
+  .fields { position:absolute; width:250px; transform-origin:0 0; padding:12px; background:#fff; border:1px solid #e7e5e2; border-radius:14px; box-shadow:0 14px 36px rgba(20,16,12,0.18); font-size:12px; color:#3a352f; }
+  .fields div { display:flex; gap:10px; padding:5px 4px; }
+  .fields div span:first-child { color:#858585; font-size:11px; width:16px; }
+  .fields .sel { background:#fdf3e0; border-radius:6px; font-weight:600; color:#171717; }
+</style>
+</head>
+<body>
+<!-- D13 · 46.40–49.62 s · "and you can also identify important points without reading manually every single page"
+     Arora · Notice invoking arbitration · Insights → Notice Analysis (verified
+     local run, ref_arora_notice; deterministic mock replay, not a live model).
+     Six results exist; this frame holds three on page 2. Each result keeps the
+     colour of its passage on the page (#f59e0b demand, #ec4899 deadline,
+     #6366f1 consequence). The selected result (Demand Made) is joined to its
+     passage by the clay thread; the others by thin leaders in their own
+     colour. Rs. 2,30,00,000 is the notice's claim — no reconciliation implied. -->
+<div class="stage" id="stage">
+  <div class="abs clay" style="left:1250px; top:-40px; width:230px; height:170px; clip-path: path('M0 0 H230 V170 H140 A100 100 0 0 0 40 70 H0 Z')"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+  <div class="word" style="left:46px; top:10px; font-size:200px">Insights<em>.</em></div>
+
+  <div class="viewer" id="viewer" style="left:40px; top:240px; width:860px; height:820px">
+    <div class="vbar">Document<span style="font-weight:400; color:#858585">· Notice invoking arbitration — 14 Mar 2026.pdf</span><span style="flex:1"></span><span style="font-weight:500; color:#606060">2 / 2</span></div>
+    <div class="page" id="page" style="left:18px; top:-205px; width:825px; height:1167px; background-image:url(../assets/arora-notice-page2.png)">
+      <div class="hl" id="hl-demand" style="left:88.7px; top:412.2px; width:338.3px; height:19.4px; background:rgba(245,158,11,0.30); border-bottom:2px solid #f59e0b"></div>
+      <div class="hl" id="hl-deadline" style="left:88.7px; top:565.4px; width:289.4px; height:19.4px; background:rgba(236,72,153,0.22); border-bottom:2px solid #ec4899"></div>
+      <div class="hl" id="hl-cons-1" style="left:466.2px; top:565.4px; width:162.9px; height:19.4px; background:rgba(99,102,241,0.22); border-bottom:2px solid #6366f1"></div>
+      <div class="hl" id="hl-cons-2" style="left:88.7px; top:586.9px; width:355.9px; height:19.4px; background:rgba(99,102,241,0.22); border-bottom:2px solid #6366f1"></div>
+    </div>
+  </div>
+
+  <div class="fields" id="fields" style="left:600px; top:770px; transform:scale(1.05)">
+    <div style="font-size:10px; letter-spacing:0.1em; font-weight:700; color:#858585; padding-bottom:8px">NOTICE ANALYSIS · 6 RESULTS</div>
+    <div><span>01</span><span>Issuing Authority</span></div>
+    <div><span>02</span><span>Recipient</span></div>
+    <div><span>03</span><span>Statutory Provision</span></div>
+    <div class="sel"><span>04</span><span>Demand Made</span></div>
+    <div><span>05</span><span>Response Deadline</span></div>
+    <div><span>06</span><span>Stated Consequence</span></div>
+  </div>
+
+  <div class="ins" id="insights" style="left:930px; top:250px; transform:scale(1.3)">
+    <div class="tabs"><span>Ask</span><span class="on">Insights</span><span>Compliance</span><span>Notes</span></div>
+    <div style="padding:12px 14px 4px"><div class="k">INSIGHT TEMPLATE</div><div class="tpl">Notice Analysis<span style="color:var(--clay)">✓</span></div></div>
+    <div class="res" id="res-demand" style="background:#fffaf0"><div class="lab"><span><i style="background:#f59e0b"></i>4 · DEMAND MADE</span><span>1</span></div><div class="q">being Rs. 2,30,00,000/- in principal together with interest;</div><div class="pg">Page 2</div></div>
+    <div class="res" id="res-deadline"><div class="lab"><span><i style="background:#ec4899"></i>5 · RESPONSE DEADLINE</span><span>1</span></div><div class="q">consent within thirty days of receipt of this notice</div><div class="pg">Page 2</div></div>
+    <div class="res" id="res-cons"><div class="lab"><span><i style="background:#6366f1"></i>6 · STATED CONSEQUENCE</span><span>1</span></div><div class="q">the Claimant shall approach the Hon'ble High Court of Delhi under Section 11 of the Act.</div><div class="pg">Page 2</div></div>
+  </div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <g id="leaders" fill="none" stroke-width="1.6"></g>
+    <path id="thread" class="thread"/>
+    <g class="frame-mark" id="focal"></g>
+  </svg>
+  <div class="slate">D13 · 46.40–49.62 s · PDF Insights · Notice Analysis (Arora notice) · proposal</div>
+</div>
+<script>
+  const R = (sel) => Marks.rect(sel), card = (sel) => Marks.edge(sel, 'left');
+  const dm = R('#hl-demand'), dl = R('#hl-deadline'), c2 = R('#hl-cons-2'), margin = R('#page').left + 676;
+  const toCard = (x, y, sel) => { const t = card(sel); return `C ${x + 120} ${y}, ${t.x - 120} ${t.y}, ${t.x} ${t.y}`; };
+  // Demand: continue its underline along the baseline to the margin, then to its card.
+  document.getElementById('thread').setAttribute('d', `M${dm.right} ${dm.bottom} H ${margin} ${toCard(margin, dm.bottom, '#res-demand')}`);
+  const gap = c2.bottom + 26;
+  document.getElementById('leaders').innerHTML =
+    // Consequence: its underline runs on to the margin.
+    `<path stroke="#6366f1" opacity="0.85" d="M${c2.right} ${c2.bottom} H ${margin} ${toCard(margin, c2.bottom, '#res-cons')}"/>` +
+    // Deadline: out through the left margin and along the blank gap below the paragraph.
+    `<path stroke="#ec4899" opacity="0.85" d="M${dl.left} ${dl.bottom} H ${dl.left - 22} V ${gap} H ${margin} ${toCard(margin, gap, '#res-deadline')}"/>`;
+  document.getElementById('focal').innerHTML = `<path d="${Marks.corners('#hl-demand', 10, 16)}"/>`;
+</script>
+</body>
+</html>

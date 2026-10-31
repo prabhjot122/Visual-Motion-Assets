@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Style frame B — Light and glass</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#8d3515}a:hover{color:#a93a18}
+.plate{background-image:url(/_blob/34051131e8c2a6d12f97648ad0cc85e9);background-size:cover;background-position:center}
+</style>
+</helmet>
+<div class="plate" style="width: 1440px; height: 1000px; position: relative; overflow: hidden; background-color: #4a382c; font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif; color: #ffffff">
+
+  <!-- Warm light falloff over the plate -->
+  <div style="position: absolute; left: 820px; top: -260px; width: 760px; height: 760px; border-radius: 50%; background: rgba(255,206,150,0.22); filter: blur(90px)"></div>
+
+  <!-- Big word, partly behind the product window -->
+  <div style="position: absolute; left: 52px; top: 8px; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 268px; line-height: 1; letter-spacing: -0.035em; color: rgba(255,250,243,0.94)">Compare.</div>
+
+  <!-- Crop guides -->
+  <div style="position: absolute; left: 440px; top: 0; width: 1px; height: 1000px; background: rgba(255,245,235,0.3)"></div>
+  <div style="position: absolute; left: 0; top: 300px; width: 1440px; height: 1px; background: rgba(255,245,235,0.3)"></div>
+  <div style="position: absolute; left: 64px; top: 300px; width: 1px; height: 700px; background: rgba(255,245,235,0.16)"></div>
+
+  <!-- Glass rim + real product window (capture 03 at 1x, bleeding right and bottom) -->
+  <div style="position: absolute; left: 428px; top: 288px; width: 1040px; height: 740px; border-radius: 24px; background: rgba(255,248,240,0.14); border: 1px solid rgba(255,248,240,0.38); backdrop-filter: blur(14px); box-shadow: 0 40px 120px rgba(20,10,4,0.5)"></div>
+  <div style="position: absolute; left: 440px; top: 300px; width: 1020px; height: 720px; border-radius: 14px; overflow: hidden; background: #fbfaf7">
+    <img src="/_blob/d8265bc82decdeffcf45e95ec9535b5d" alt="LawVriksh Case Map with Version B selected: Rs. 1,15,00,000 from the interim order, page 1, with its source quote" style="position: absolute; left: -440px; top: -115px; width: 1440px; height: 1000px; max-width: none">
+  </div>
+
+  <!-- Pulled-forward Version A card -->
+  <div style="position: absolute; left: 64px; top: 548px; width: 372px; box-sizing: border-box; background: rgba(255,255,255,0.96); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 12px; color: #171717; box-shadow: 0 30px 80px rgba(20,10,4,0.45)">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <div style="font-size: 14px; font-weight: 500; color: #404040">Version A</div>
+      <div style="flex-grow: 1"></div>
+      <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px; background: #f8e6e3; color: #8c1f14; font-size: 13px; font-weight: 500">Contradicted</span>
+    </div>
+    <div style="font-size: 42px; font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; font-variant-numeric: tabular-nums">Rs. 2,30,00,000</div>
+    <div style="background: #f3f1ed; border-radius: 10px; padding: 13px 15px; display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; align-items: flex-start; gap: 8px">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#b23a2e"></path><path d="M14 2v6h6" fill="#f3b3a8"></path></svg>
+        <div style="font-size: 14px; font-weight: 500; line-height: 1.35; flex-grow: 1">Notice invoking arbitration — 14 Mar 2026</div>
+        <div style="font-size: 13px; color: #606060; white-space: nowrap; padding-top: 1px">Page 2</div>
+      </div>
+      <div style="font-size: 15.5px; line-height: 1.5; color: #404040">the quantum payable to the Claimant, being Rs. 2,30,00,000/- in principal together with interest;</div>
+    </div>
+  </div>
+  <div style="position: absolute; left: 436px; top: 657px; width: 30px; height: 1px; background: rgba(255,248,240,0.85)"></div>
+  <div style="position: absolute; left: 461px; top: 653px; width: 9px; height: 9px; border-radius: 999px; background: #ffffff; box-shadow: 0 0 0 3px rgba(201,72,32,0.55)"></div>
+
+  <!-- Brand bug -->
+  <div style="position: absolute; right: 56px; top: 44px; font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1; color: #fbf6ee">Law<em style="font-style: italic; color: #f4a37c">Vriksh</em></div>
+
+  <sc-if value="{{showFrameLabel}}" hint-placeholder-val="{{ true }}">
+    <div style="position: absolute; left: 64px; top: 950px; padding: 5px 9px; border-radius: 4px; background: rgba(20,12,8,0.62); font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #fbf6ee">Provisional · B · background = placeholder for blurred office footage</div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showFrameLabel":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { showFrameLabel: this.props.showFrameLabel ?? true };
+  }
+}
+</script>
+</body>
+</html>

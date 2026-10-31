@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "state": {
+    "width": 1440,
+    "height": 1000,
+    "fonts": "loaded",
+    "figtree": true,
+    "newsreader": true,
+    "textLength": 872,
+    "stageWidth": 1440
+  },
+  "requestCount": 16,
+  "network": "localhost/data only",
+  "errors": [],
+  "browser": "disposable headless Edge context",
+  "scope": "active portable Frame C only; not all historical source scenes"
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D9 · Version B and its source</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/casemap.js"></script>
+<script src="lib/panels.js"></script>
+</head>
+<body>
+<!-- D9 · 36.62–38.17 s · "verify the sources"
+     Step 5: Version B selected. The Material fact panel shows Rs. 1,15,00,000
+     with its one source; the source card opens the existing PDF preview on
+     interim order page 1 with the cited passage highlighted (raster = the
+     source document itself). One clay thread runs claim → page → card.
+     Verify fact is visible and green but NOT pressed: it only navigates to
+     review. Both stones stay: the conflict remains unresolved. -->
+<div class="stage" id="stage">
+  <div class="abs sand" style="left:1180px; top:-30px; width:300px; height:150px"></div>
+  <div class="abs char" style="left:1110px; top:40px; width:50px; height:50px; border-radius:999px"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+  <svg class="abs" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g filter="url(#pencil)" class="pencil"><line x1="440" y1="0" x2="440" y2="1000"/><line x1="0" y1="250" x2="1440" y2="250"/></g>
+  </svg>
+
+  <div class="word" style="left:46px; top:24px; font-size:220px">Verify<em>.</em></div>
+
+  <!-- Stones stay in place from S13: A (clay) and B (char), 2 : 1. B is the selected version. -->
+  <div class="abs clay" style="left:1110px; top:850px; width:120px; height:180px; filter: saturate(0.7) brightness(0.92)"></div>
+  <div class="abs clay" style="left:1110px; top:820px; width:156px; height:30px; clip-path: polygon(0 30px, 120px 30px, 156px 0, 36px 0); filter: brightness(1.15) saturate(0.7)"></div>
+  <div class="abs clay" style="left:1230px; top:820px; width:36px; height:210px; clip-path: polygon(0 30px, 36px 0, 36px 210px, 0 210px); filter: brightness(0.55)"></div>
+  <div class="abs" style="left:1124px; top:866px; font-family:'Newsreader',serif; font-style:italic; font-size:48px; color:rgba(255,248,240,0.85)">A</div>
+  <div class="abs char" style="left:1290px; top:940px; width:120px; height:90px; box-shadow: 0 0 0 2px var(--clay)"></div>
+  <div class="abs char" style="left:1290px; top:910px; width:156px; height:30px; clip-path: polygon(0 30px, 120px 30px, 156px 0, 36px 0); filter: brightness(1.7)"></div>
+  <div class="abs" style="left:1304px; top:950px; font-family:'Newsreader',serif; font-style:italic; font-size:48px; color:rgba(255,248,240,0.95)">B</div>
+
+  <!-- Map window, bottom-left: Version B selected beside Version A -->
+  <div class="win" id="map-window" style="left:-40px; top:700px; width:470px; height:360px; border-radius:18px">
+    <div class="win-inner" id="map-inner" style="transform:translate(0,-55px) scale(1.25)"></div>
+  </div>
+
+  <!-- Existing PDF source preview (app pane), opened from the source card -->
+  <div class="win" id="preview" style="left:440px; top:250px; width:580px; height:800px; border-radius:16px; background:#e9e6e1">
+    <div style="position:absolute; left:0; top:0; right:0; height:44px; display:flex; align-items:center; gap:8px; padding:0 14px; background:#fff; border-bottom:1px solid #eeeae3; font-size:12.5px; font-weight:500; color:#171717; z-index:2">
+      <svg width="13" height="13" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#d65248"/><path d="M14 2v6h6" fill="#f6b1aa"/></svg>
+      Interim order under Section 9 — 18 Jul 2026.pdf<span style="color:#858585; font-weight:400; margin-left:6px">p. 1</span>
+    </div>
+    <div id="page" style="position:absolute; left:-55px; top:-106px; width:682px; height:965px; background:#fff url(../assets/arora-order-page1.png) 0 0 / 682px 965px; box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+      <!-- Cited passage, located by text search on the PDF (order p1, lines 2–3 of para 2) -->
+      <div class="abs" id="hl-1" style="left:468px; top:383px; width:37px; height:16px; background:rgba(239,140,90,0.32)"></div>
+      <div class="abs" id="hl-2" style="left:73px; top:401px; width:438px; height:16px; background:rgba(239,140,90,0.32)"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel" style="left:1036px; top:250px; transform:scale(1.28)"></div>
+  <div class="qual" id="verify-note" style="left:1036px; top:778px">Verify fact opens review · nothing is approved</div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread"/>
+    <g id="focal" class="frame-mark"></g>
+  </svg>
+
+  <div class="wordmark abs" style="right:40px; top:150px; font-size:30px">Law<em>Vriksh</em></div>
+  <div class="slate">D9 · 36.62–38.17 s · Version B → source detail (unresolved) · proposal</div>
+</div>
+<script>
+  const S = 1.25, OX = 1300, OY = 52, path = ['conflicts', 'amount', 'versionB'];
+  const world = CaseMap.chrome(document.getElementById('map-inner'), { w: 376, h: 330, crumbs: ['Arora v. Meridian Estates Pvt. Ltd.', 'Conflicts', 'Amount outstanding'] });
+  CaseMap.renderMap(world, { path, selected: 'versionB', ox: OX, oy: OY, k: 1 });
+  document.getElementById('panel').innerHTML = Panels.materialFactB();
+
+  const sx = (x) => -40 + (OX + x) * S, sy = (y) => 700 - 55 + (44 + OY + y) * S;
+  const b = CaseMap.box(path, 'versionB');
+  const bx = sx(b.x + b.w), by = sy(b.y + b.h / 2);
+  // Highlight in stage pixels: preview (300,250) + page offset (9,-106).
+  const hx0 = 440 - 55 + 73, hy = 250 - 106 + 409, hx1 = 440 - 55 + 511;
+  const card = document.getElementById('src-order').getBoundingClientRect();
+  document.getElementById('thread').setAttribute('d',
+    `M${bx + 4} ${by} C ${bx + 70} ${by}, ${hx0 - 70} ${hy + 10}, ${hx0 - 8} ${hy + 10} ` +
+    `M${hx1 + 6} ${hy + 10} C ${hx1 + 220} ${hy + 10}, ${card.left - 140} ${card.top + 30}, ${card.left} ${card.top + 30}`);
+  const x0 = hx0 - 14, y0 = 250 - 106 + 383 - 14, x1 = hx1 + 14, y1 = 250 - 106 + 417 + 14, L = 20;
+  document.getElementById('focal').innerHTML = `<path d="M${x0} ${y0 + L}V${y0}H${x0 + L}M${x1 - L} ${y0}H${x1}V${y0 + L}M${x1} ${y1 - L}V${y1}H${x1 - L}M${x0 + L} ${y1}H${x0}V${y1 - L}"/>`;
+  const p = document.getElementById('panel').getBoundingClientRect();
+  document.getElementById('verify-note').style.top = p.bottom + 14 + 'px';
+</script>
+</body>
+</html>

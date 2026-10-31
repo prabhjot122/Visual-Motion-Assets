@@ -1,0 +1,14 @@
+/* Brand defaults; no fixed canvas/layout or animation timing is imposed. */
+:root {
+  --lv-ink: #171717;
+  --lv-ink-warm: #1c1714;
+  --lv-paper: #f5f1ea;
+  --lv-surface: #fbfaf7;
+  --lv-clay: #c94820;
+  --lv-clay-dark: #a93a18;
+  --lv-thread: #c4562e;
+  --lv-on-path-edge: #cf795d;
+  --lv-font-editorial: 'Newsreader', serif;
+  --lv-font-product: 'Figtree', sans-serif;
+  --lv-font-wordmark-reference: 'Instrument Serif', serif;
+}

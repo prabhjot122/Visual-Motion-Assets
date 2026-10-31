@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D7 · Amount outstanding, Version A/B</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/casemap.js"></script>
+<script src="lib/panels.js"></script>
+</head>
+<body>
+<!-- D7 · 34.40–35.44 s · "...conflicting facts hain" (second half)
+     Steps 3–4: Amount outstanding clicked; Version A and Version B appear as
+     separate leaves, the Conflict panel slides in from the right, and the two
+     stone columns (true 2 : 1) begin to rise under the panel. Close camera,
+     toolbar above frame. Nothing is selected or resolved yet. -->
+<div class="stage" id="stage">
+  <div class="abs hatch" style="left:-20px; top:700px; width:64px; height:340px"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+
+  <div class="win" id="map-window" style="left:40px; top:-80px; width:1180px; height:1180px">
+    <div class="win-inner" id="map-inner" style="transform:scale(1.6)"></div>
+  </div>
+
+  <!-- Stones: A (clay) and B (char), heights 2 : 1, rising under the panel -->
+  <div id="stone-a">
+    <div class="abs clay" style="left:1118px; top:850px; width:120px; height:180px"></div>
+    <div class="abs clay" style="left:1118px; top:820px; width:156px; height:30px; clip-path: polygon(0 30px, 120px 30px, 156px 0, 36px 0); filter: brightness(1.28)"></div>
+    <div class="abs clay" style="left:1238px; top:820px; width:36px; height:210px; clip-path: polygon(0 30px, 36px 0, 36px 270px, 0 270px); filter: brightness(0.58)"></div>
+    <div class="abs" style="left:1132px; top:866px; font-family:'Newsreader',serif; font-style:italic; font-size:48px; color:rgba(255,248,240,0.92)">A</div>
+  </div>
+  <div id="stone-b">
+    <div class="abs char" style="left:1296px; top:940px; width:120px; height:90px"></div>
+    <div class="abs char" style="left:1296px; top:910px; width:156px; height:30px; clip-path: polygon(0 30px, 120px 30px, 156px 0, 36px 0); filter: brightness(1.7)"></div>
+    <div class="abs" style="left:1310px; top:950px; font-family:'Newsreader',serif; font-style:italic; font-size:48px; color:rgba(255,248,240,0.9)">B</div>
+  </div>
+
+  <div class="panel" id="panel" style="left:1080px; top:96px; transform:scale(1.35)"></div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+    <g id="focal" class="frame-mark"></g>
+    <g filter="url(#pencil)" class="pencil" id="leaders"></g>
+    <circle id="click-ring" r="24" fill="none" stroke="var(--clay)" stroke-width="2" opacity="0.5"/>
+  </svg>
+  <svg class="abs" id="cursor" width="22" height="30" viewBox="0 0 22 30"><path d="M2 2 L2 24 L8 18 L12 28 L16 26 L12 16 L20 16 Z" fill="#171717" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+
+  <div class="slate">D7 · 34.40–35.44 s · Amount outstanding → Version A / B · proposal</div>
+</div>
+<script>
+  const S = 1.6, WX = 40, WY = -80 + 44 * S, OX = 1270, OY = 254, path = ['conflicts', 'amount'];
+  const world = CaseMap.chrome(document.getElementById('map-inner'), { w: 738, h: 738, crumbs: ['Arora v. Meridian Estates Pvt. Ltd.', 'Conflicts', 'Amount outstanding'] });
+  CaseMap.renderMap(world, { path, selected: 'amount', ox: OX, oy: OY, k: 1 });
+  document.getElementById('panel').innerHTML = Panels.conflict();
+  const sx = (x) => WX + (OX + x) * S, sy = (y) => WY + (OY + y) * S;
+  const a = CaseMap.box(path, 'versionA'), b = CaseMap.box(path, 'versionB'), am = CaseMap.box(path, 'amount');
+  const x0 = sx(a.x) - 16, y0 = sy(a.y) - 16, x1 = sx(a.x + a.w) + 16, y1 = sy(b.y + b.h) + 16, L = 24;
+  document.getElementById('focal').innerHTML = `<path d="M${x0} ${y0 + L}V${y0}H${x0 + L}M${x1 - L} ${y0}H${x1}V${y0 + L}M${x1} ${y1 - L}V${y1}H${x1 - L}M${x0 + L} ${y1}H${x0}V${y1 - L}"/>`;
+  const cx = sx(am.x + 70), cy = sy(am.y + am.h / 2);
+  const ring = document.getElementById('click-ring');
+  ring.setAttribute('cx', cx);
+  ring.setAttribute('cy', cy);
+  Object.assign(document.getElementById('cursor').style, { left: cx - 2 + 'px', top: cy - 2 + 'px' });
+</script>
+</body>
+</html>

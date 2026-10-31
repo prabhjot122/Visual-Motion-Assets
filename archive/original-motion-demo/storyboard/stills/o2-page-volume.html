@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>O2 · Hundreds of pages</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/paper3d.js"></script>
+<style>
+  .scene { position:absolute; left:0; top:0; width:1440px; height:1000px; perspective:1700px; perspective-origin: 55% 0%; }
+  .desk { position:absolute; left:120px; top:40px; width:1600px; height:1300px; transform-style:preserve-3d; transform: translateY(170px) rotateX(64deg) rotateZ(-24deg) translateZ(-120px); }
+</style>
+</head>
+<body>
+<!-- O2 · 1.50–2.92 s · "hundreds of pages ke documents hote hain"
+     The tracked top sheet of the office file stack becomes the matte (1.50–1.85);
+     inside it the camera rises (crane) and the single sheet is revealed as the
+     top of one stack among many — page volume as tactile slabs (Harvey H-B).
+     The word sits behind the tallest stacks: depth, not a caption.
+     Pages carry abstract lines only; nothing legible is invented. -->
+<div class="stage" id="stage">
+  <div class="word" id="w-hundreds" style="left:40px; top:30px; font-size:250px; color:#1c1714">Hundreds<em>.</em></div>
+  <div class="scene"><div class="desk" id="desk"></div></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+  <div class="slate">O2 · 1.50–2.92 s · page volume (concept, no app UI) · proposal</div>
+</div>
+<script>
+  const desk = document.getElementById('desk');
+  // A field of stacks; heights vary so the crane move reads as volume.
+  const spec = [
+    [80, 140, 300, 390, 420, -4, 3], [420, 80, 300, 390, 300, 3, 5], [760, 120, 300, 390, 520, -2, 7],
+    [1100, 60, 300, 390, 240, 5, 9], [140, 600, 300, 390, 180, 2, 11], [480, 560, 300, 390, 640, -3, 13],
+    [820, 600, 300, 390, 380, 1, 15], [1160, 540, 300, 390, 460, -5, 17], [300, 1000, 300, 390, 120, 4, 19],
+    [700, 980, 300, 390, 260, -1, 21],
+  ];
+  spec.forEach(([x, y, w, d, h, rot, seed], i) => Paper3D.stack(desk, { x, y, w, d, h, rot, seed, id: 'stack-' + i }));
+  // The single sheet we entered through: a loose top page on the tallest stack, clay corner marks.
+  const s = Paper3D.stack(desk, { x: 500, y: 590, w: 300, d: 390, h: 652, rot: 4, seed: 2, id: 'entry-sheet' });
+  s.top.style.boxShadow = 'inset 0 0 0 2px #1c1714';
+</script>
+</body>
+</html>

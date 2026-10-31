@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D12 · Saved Vikram draft</title>
+<link rel="stylesheet" href="lib/stage.css">
+<script src="lib/marks.js"></script>
+<style>
+  .doc { position:absolute; width:700px; transform-origin:0 0; padding:56px 66px 40px; background:#fff; box-shadow:0 2px 4px rgba(40,24,10,0.10), 0 40px 90px rgba(40,24,10,0.28); font-family:'Times New Roman', Times, serif; color:#111; font-size:15px; line-height:1.75; }
+  .doc h2 { margin:0 0 14px; font-size:17px; font-weight:700; letter-spacing:0.02em; line-height:1.4; }
+  .doc .c { text-align:center; }
+  .y { padding:0 4px; background:#fdf3cf; border:1px solid #f2d98a; border-bottom:1.5px dashed #d9a520; border-radius:2px; }
+  .b { background:#e9f0fc; border-bottom:1.5px solid #4a78d6; }
+  .card { position:absolute; transform-origin:0 0; background:#fff; border:1px solid #e7e5e2; border-radius:14px; box-shadow:0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); font-size:12.5px; color:#171717; }
+  .card h5 { margin:0; padding:12px 14px; font-size:12.5px; font-weight:600; border-bottom:1px solid #eeeae3; }
+  .file { display:flex; align-items:center; gap:9px; padding:6px 14px; color:#3a352f; }
+  .ic { width:11px; height:13px; border-radius:2px; flex:none; }
+  .seg { display:flex; margin:12px 14px 4px; padding:3px; border-radius:9px; background:#f5f1ea; font-size:12px; }
+  .seg span { flex:1; text-align:center; padding:5px; color:#606060; }
+  .seg span.on { background:var(--clay); color:#fff; border-radius:7px; font-weight:600; }
+  .find { margin:10px 14px 14px; padding:12px; border:1px solid #ece8e1; border-radius:10px; }
+  .chip { display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(251,250,247,0.94); border:1px solid #e4ded4; font-size:12.5px; font-weight:500; color:#3a352f; box-shadow:0 2px 6px rgba(20,16,12,0.08); }
+</style>
+</head>
+<body>
+<!-- D12 · 44.27–46.40 s · "generate legal drafts" (+0.52 s into "and you can also")
+     Context change: a sand slab crosses (Vikram). The SAVED bail draft settles —
+     no typing, no streaming, no "generating". The thread hops from a blue
+     instruction-derived fact to a yellow missing field; the ten linked files
+     (one scenario note + nine labelled samples) sit forward at left and the
+     static Checks finding sits at right. -->
+<div class="stage" id="stage">
+  <div class="abs sand" id="slab" style="left:-160px; top:-40px; width:430px; height:1080px; clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%)"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="vignette"></div>
+
+  <div class="doc" id="draft" style="left:360px; top:92px; transform:scale(1.02) rotate(-1deg)">
+    <h2>BEFORE THE LEARNED MAGISTRATE HAVING JURISDICTION AT KOLKATA</h2>
+    <p class="c">Case No.: <span class="y">[To be confirmed]</span></p>
+    <h2>IN THE MATTER OF</h2>
+    <p>Vikram, son of <span class="y" id="y-name">[name to be confirmed]</span>, aged <span class="y">[age to be confirmed]</span>, residing at <span class="y">[address to be confirmed]</span>, presently in custody</p>
+    <p><b>…APPLICANT</b></p>
+    <h2>APPLICATION FOR RELEASE ON BAIL UNDER SECTION 478 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023, WITH AN URGENT PRAYER FOR PRODUCTION BEFORE THE MAGISTRATE</h2>
+    <h2 style="margin-top:22px">FACTS AS INSTRUCTED</h2>
+    <p>1. Vikram was arrested in Kolkata on <span class="b" id="b-date">28 September 2026</span> after a quarrel with his neighbour, Suresh.</p>
+    <p>2. <span class="b">Suresh alleges that Vikram slapped him once</span>. The instructions describe Suresh's cheek injury as minor.</p>
+  </div>
+
+  <div class="word" style="left:400px; top:745px; font-size:236px">Draft<em>.</em></div>
+  <div class="card" id="linked" style="left:40px; top:430px; width:270px; transform:scale(1.15)">
+    <h5>Linked Documents · 10</h5>
+    <div class="file"><i class="ic" style="background:#3b6fd1"></i>Vikram scenario facts.docx</div>
+    <div class="file"><i class="ic" style="background:#3b6fd1"></i>Attachment index sample.docx</div>
+    <div class="file"><i class="ic" style="background:#d65248"></i>Document register sample.pdf</div>
+    <div class="file"><i class="ic" style="background:#d65248"></i>Annexure checklist sample.pdf</div>
+    <div class="file"><i class="ic" style="background:#d65248"></i>Review notes sample.pdf</div>
+    <div class="file"><i class="ic" style="background:#d65248"></i>Source coverage sample.pdf</div>
+    <div class="file"><i class="ic" style="background:#8b5cf6"></i>Reference note sample.png</div>
+    <div class="file"><i class="ic" style="background:#8b5cf6"></i>Review checklist sample.png</div>
+    <div class="file"><i class="ic" style="background:#2e9b57"></i>Source register sample.xlsx</div>
+    <div class="file" style="padding-bottom:12px"><i class="ic" style="background:#2e9b57"></i>Review checklist sample.xlsx</div>
+  </div>
+
+  <div class="card" id="checks" style="left:1110px; top:250px; width:290px; transform:scale(1.1)">
+    <h5>Checks</h5>
+    <div class="seg"><span>BNS</span><span class="on">Compliance 4</span><span>Logic 1</span></div>
+    <div style="padding:6px 14px 0; font-size:22px; font-weight:600">61 <span style="font-size:12px; color:#858585; font-weight:400">/ 100 · 4 issues found</span></div>
+    <div class="find" id="finding"><div style="font-size:11.5px; color:#b2402c; font-weight:600; margin-bottom:6px">Must fix</div><div style="font-weight:600; margin-bottom:6px">Complete case details</div><div style="color:#3a352f; line-height:1.5">FIR number, police station, Applicant identity and address, and exact arrest time are still to be confirmed.</div></div>
+  </div>
+
+  <div class="abs" style="left:360px; top:40px; display:flex; gap:10px">
+    <span class="chip" style="background:#1c1714; color:#f6f1e8; border-color:#1c1714">Saved draft · Vikram bail application</span>
+  </div>
+  <div class="abs" style="left:1100px; top:740px; display:flex; flex-direction:column; align-items:flex-start; gap:10px">
+    <span class="chip"><span style="border-bottom:2px solid #4a78d6; background:#e9f0fc; padding:0 4px">Blue</span> from supplied instructions, not verified</span>
+    <span class="chip"><span style="border-bottom:2px dashed #d9a520; background:#fdf3cf; padding:0 4px">Yellow</span> still to be confirmed</span>
+  </div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread"/>
+    <g class="frame-mark" id="focal"></g>
+  </svg>
+  <div class="slate">D12 · 44.27–46.40 s · saved Vikram draft (separate context) · proposal</div>
+</div>
+<script>
+  const bd = Marks.rect('#b-date'), yn = Marks.rect('#y-name'), f = Marks.rect('#finding');
+  // Thread hops: blue fact → yellow field → Checks finding.
+  // Thread hops through the margins only: blue fact → left margin → yellow field → top margin → Checks.
+  const doc = Marks.rect('#draft'), mx = doc.left + 34, ty = yn.top - 14;
+  document.getElementById('thread').setAttribute('d',
+    `M${bd.left - 4} ${bd.bottom + 2} H ${mx + 14} Q ${mx} ${bd.bottom + 2}, ${mx} ${bd.bottom - 12} V ${yn.bottom + 14} Q ${mx} ${yn.bottom + 2}, ${mx + 14} ${yn.bottom + 2} H ${yn.left} ` +
+    `M${yn.right} ${yn.top + 4} Q ${yn.right + 10} ${ty}, ${yn.right + 30} ${ty} H ${doc.right - 40} C ${doc.right + 40} ${ty}, ${f.left - 60} ${f.top + 30}, ${f.left} ${f.top + 30}`);
+  document.getElementById('focal').innerHTML = `<path d="${Marks.corners('#y-name', 8, 14)}"/>`;
+</script>
+</body>
+</html>

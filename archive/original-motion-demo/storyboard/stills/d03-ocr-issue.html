@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S09a · OCR issue selected</title>
+<link rel="stylesheet" href="lib/stage.css">
+<style>
+  .ocr-head { position:absolute; display:flex; align-items:center; gap:10px; height:52px; padding:0 18px; background:#fff; border-bottom:1px solid #eeeae3; font-size:13px; color:#606060; }
+  .issues { position:absolute; width:340px; transform-origin:0 0; background:#fff; border:1px solid #e7e5e2; border-radius:16px; overflow:hidden; box-shadow:0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); }
+  .tabs { display:flex; gap:20px; padding:0 18px; height:46px; align-items:flex-end; border-bottom:1px solid #eeeae3; font-size:12.5px; color:#606060; }
+  .tabs span { padding-bottom:12px; }
+  .tabs span.on { color:#171717; font-weight:500; border-bottom:2px solid #171717; }
+  .issue { padding:14px 18px; border-bottom:1px solid #f0ede8; }
+  .issue .row { display:flex; justify-content:space-between; font-size:11px; color:#606060; margin-bottom:8px; }
+  .issue .row b { font-weight:500; color:#3a352f; }
+  .issue .row b::before { content:''; display:inline-block; width:6px; height:6px; border-radius:999px; background:#c9a59a; margin-right:6px; vertical-align:middle; }
+  .issue.active .row b::before { background:var(--clay); }
+  .ta { height:52px; padding:10px 12px; border:1px solid #e4ded4; border-radius:8px; background:#f7f5f1; font-size:13px; color:#171717; }
+  .issue.active .ta { border-color:#e0533b; background:#fff; box-shadow:0 0 0 1px #e0533b; }
+  .issue.active .ta u { text-decoration: underline wavy #d65248; text-underline-offset:3px; }
+  .acts { display:flex; align-items:center; gap:12px; margin-top:10px; font-size:12px; color:#606060; }
+  .save { padding:5px 12px; border-radius:6px; background:var(--clay); color:#fff; font-weight:500; }
+</style>
+</head>
+<body>
+<!-- D3 · 28.70–30.30 s · "unclear text highlight karta hai"
+     Context change: a char-stone slab sweeps across (Arora → separate scan).
+     The supplied Arif Jafar scan (raster = the source document) lies on the
+     stage; the saved OCR issue "brlies" (73% confidence) is selected and its
+     original PDF box is highlighted. Local replay of copied saved issues; not
+     a fresh OCR run or an accuracy claim. -->
+<div class="stage" id="stage">
+  <div class="abs char" id="slab-wipe" style="left:1040px; top:-40px; width:520px; height:1080px; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%)"></div>
+  <div class="light"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <!-- Scan page 2 at 1600 px wide; brlies box sits at (1261,1181)–(1392,1239) -->
+  <div class="abs" id="scan" style="left:-520px; top:-650px; width:1600px; height:2636px; background:#fff url(../assets/sc2051-page2.png) 0 0 / 1600px 2636px; box-shadow: 0 30px 80px rgba(40,24,10,0.30)">
+    <div class="abs" id="ocr-box" style="left:1261px; top:1181px; width:131px; height:58px; background:rgba(239,140,90,0.30); border:2px solid rgba(201,72,32,0.85); border-radius:3px"></div>
+  </div>
+  <div class="vignette"></div>
+
+  <div class="ocr-head" style="left:0; top:0; width:1080px">
+    <span>OCR review</span><span style="color:#c9c3b8">/</span><span style="color:#171717">SC-2051_ARIF_JAFAR_VS._UOI__ORS-1-10.pdf</span>
+    <span style="flex:1"></span><span style="font-size:12px"><span style="color:var(--clay)">●</span> 15 issues remaining</span>
+  </div>
+
+  <div class="issues" id="issues" style="left:1066px; top:150px; transform:scale(1.2)">
+    <div class="tabs"><span class="on">Issues</span><span>Extracted text</span></div>
+    <div class="issue"><div class="row"><b>Important</b><span>82% confidence</span></div><div class="ta">-Memas</div></div>
+    <div class="issue"><div class="row"><b>Important</b><span>85% confidence</span></div><div class="ta">PRAYERS</div></div>
+    <div class="issue active" id="issue-brlies"><div class="row"><b>Important</b><span>73% confidence</span></div><div class="ta"><u>brlies</u></div>
+      <div class="acts"><span class="save">Save</span><span>Cancel</span><span style="flex:1"></span><span>Skip</span></div></div>
+    <div class="issue"><div class="row"><b>Important</b><span>78% confidence</span></div><div class="ta">-Facts</div></div>
+  </div>
+
+  <div class="qual" style="left:1090px; top:96px">Separate example · Arif Jafar v. Union of India — supplied scan</div>
+
+  <svg class="abs" id="overlay" width="1440" height="1000" style="left:0;top:0" aria-hidden="true">
+    <path id="thread" class="thread"/>
+    <g id="focal" class="frame-mark"></g>
+  </svg>
+  <div class="slate">D3 · 28.70–30.30 s · OCR issue selected · proposal</div>
+</div>
+<script>
+  const bx0 = -520 + 1261, by0 = -650 + 1181, bx1 = bx0 + 131, by1 = by0 + 58, L = 18, P = 16;
+  document.getElementById('focal').innerHTML =
+    `<path d="M${bx0 - P} ${by0 - P + L}V${by0 - P}H${bx0 - P + L}M${bx1 + P - L} ${by0 - P}H${bx1 + P}V${by0 - P + L}M${bx1 + P} ${by1 + P - L}V${by1 + P}H${bx1 + P - L}M${bx0 - P + L} ${by1 + P}H${bx0 - P}V${by1 + P - L}"/>`;
+  const ta = document.querySelector('#issue-brlies .ta').getBoundingClientRect();
+  document.getElementById('thread').setAttribute('d',
+    `M${bx1 + 4} ${(by0 + by1) / 2} C ${bx1 + 140} ${(by0 + by1) / 2}, ${ta.left - 120} ${ta.top + ta.height / 2}, ${ta.left} ${ta.top + ta.height / 2}`);
+</script>
+</body>
+</html>

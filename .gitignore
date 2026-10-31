@@ -1,0 +1,15 @@
+node_modules/
+.venv*/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.cache/
+.snap*/
+.hyperframes/
+projects/*/inputs/private/
+projects/*/build/
+projects/*/work/

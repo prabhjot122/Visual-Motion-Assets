@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>LawVriksh web cut — section 10</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
+    :root { --clay: #c94820; }
+
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #1c1714; font-family: 'Figtree', sans-serif; color: #171717; }
+    * { box-sizing: border-box; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+    .abs { position: absolute; left: 0; top: 0; }
+
+    /* Footage (O1's framing): the clip is laid out 1770.37 × 1000 at x −18.52 */
+    #footage-world { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; transform-origin: 0 0; }
+    #lawyer { position: absolute; left: -18.52px; top: 0; width: 1770.37px; height: 1000px; }
+    #bezel-patch { position: absolute; left: 749px; top: 696px; width: 42px; height: 9px; border-radius: 3px; background: linear-gradient(#232222, #302f2f); filter: blur(0.7px); transform: rotate(-6deg); }
+
+    /* d14's paper, light and decorations (section 8's exit) */
+    #paper { background: #efebe3 url(assets/textures/paper.jpg) center / cover; overflow: hidden; }
+    #sweep { position: absolute; left: 0; top: -350px; width: 300px; height: 1700px; background: rgba(255, 230, 190, 0.9); filter: blur(40px); mix-blend-mode: soft-light; transform-origin: 50% 50%; }
+    #edge { position: absolute; left: 0; top: -350px; width: 180px; height: 1700px; background: rgba(255, 236, 205, 0.5); filter: blur(30px); mix-blend-mode: screen; transform-origin: 50% 50%; }
+    #mark { position: absolute; left: 530px; top: 100px; width: 380px; height: 369.6px; }
+    #wordmark { position: absolute; left: 0; top: 500px; width: 1440px; text-align: center; font-size: 176px; letter-spacing: -0.01em; color: #1c1714; }
+    #wordmark em { color: #a93a18; }
+    #bands { position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; transform: rotate(-24deg); }
+    #bands i { display: block; width: 90px; height: 100%; background: rgba(255, 226, 180, 0.9); }
+    #bands i:nth-child(even) { width: 130px; }
+    #vignette { background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); }
+    .clay { background-image: url(assets/textures/stone-clay.jpg); background-size: 600px; }
+    .sand { background-image: url(assets/textures/stone-sand.jpg); background-size: 600px; }
+    .wordmark { font-family: 'Instrument Serif', serif; line-height: 1; white-space: nowrap; }
+    .wordmark em { font-style: italic; }
+    .tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: #1c1714; color: #f6f1e8; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
+    .qual { position: absolute; left: 0; top: 0; padding: 4px 9px; border-radius: 999px; background: rgba(251,250,247,0.92); border: 1px solid #e0b9a6; font-size: 12px; font-weight: 500; color: #8d3515; box-shadow: 0 2px 6px rgba(20,16,12,0.08); white-space: nowrap; }
+
+    /* The Hearing Prep page (rebuilt from capture 13, 1440 × 900 = the laptop's 16 : 10 screen).
+       Accept, Regenerate and Sign off preparation are deliberately left off. */
+    #page { position: absolute; left: 0; top: 0; width: 1440px; height: 900px; transform-origin: 0 0; isolation: isolate; }
+    #page-bg { position: absolute; inset: 0; background: #fbfaf7; }
+    .chrome { position: absolute; }
+    #rail { left: 0; top: 0; width: 60px; height: 900px; border-right: 1px solid #ebe7e0; background: #f7f5f1; }
+    #rail i { position: absolute; left: 18px; width: 24px; height: 24px; border-radius: 7px; background: #e9e5de; }
+    #topbar { left: 60px; top: 0; width: 1380px; height: 48px; border-bottom: 1px solid #ebe7e0; display: flex; align-items: center; gap: 12px; padding: 0 20px 0 22px; font-size: 13px; color: #3a352f; background: #fff; }
+    #topbar .sp { flex: 1; }
+    .btn { height: 30px; padding: 0 12px; display: flex; align-items: center; gap: 6px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; font-size: 12.5px; font-weight: 500; color: #3a352f; }
+    .btn.warn { border-color: #e2a48f; color: #b2402c; background: #fdf4f1; }
+    #index { left: 92px; top: 92px; width: 210px; font-size: 13px; color: #3a352f; }
+    #index .h { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #3a352f; margin-bottom: 22px; }
+    #index div.r { display: flex; align-items: center; gap: 12px; height: 39px; }
+    #index div.r span { width: 24px; height: 24px; border-radius: 999px; border: 1px solid #ded9d0; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #6b6b6b; }
+    #index div.r.on span { background: #c94820; border-color: #c94820; color: #fff; font-weight: 700; }
+    #index div.r.on { font-weight: 600; color: #171717; }
+    #verdict { left: 340px; top: 400px; width: 760px; }
+    .eye { font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; color: #606060; }
+    .vbox { margin-top: 14px; border: 1px solid #e8b8aa; border-radius: 14px; overflow: hidden; background: #fff; }
+    .vbox .top { padding: 18px 22px; background: #f8e6e2; }
+    .vbox .cnt { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #ecd9d3; }
+    .vbox .cnt div { padding: 14px 18px; font-size: 12.5px; color: #3a352f; border-right: 1px solid #eee8e2; }
+    .vbox .cnt b { display: block; font-size: 20px; font-weight: 600; }
+    .vbox .foot { padding: 12px 18px; border-top: 1px solid #eee8e2; font-size: 12px; color: #606060; }
+    #docs { left: 1124px; top: 400px; width: 296px; font-size: 12px; line-height: 1.5; color: #606060; }
+    #docs .eye { margin-bottom: 8px; }
+    #grade { position: absolute; inset: 0; background: rgb(184, 187, 201); mix-blend-mode: multiply; opacity: 0; }
+    #glare { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.02) 45%, rgba(255,255,255,0) 60%); opacity: 0; }
+
+    /* The brief card and the review panel (d14), laid out at 1x */
+    #brief { position: absolute; left: 0; top: 0; width: 760px; transform-origin: 0 0; padding: 30px 34px 28px; background: #fff; border: 1px solid #e7e5e2; border-radius: 16px; }
+    .bt { margin: 6px 0 10px; font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: 44px; line-height: 1.05; letter-spacing: -0.01em; color: #171717; white-space: nowrap; }
+    .meta { display: flex; align-items: center; gap: 12px; }
+    .caseno { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: #3a352f; }
+    .attn { margin-left: auto; padding: 4px 9px; border-radius: 4px; background: #f6e3df; color: #b2402c; font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; }
+    .sub { margin-top: 4px; font-size: 12.5px; color: #606060; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #eeeae3; }
+    .k { font-size: 9.5px; font-weight: 600; letter-spacing: 0.1em; color: #6b6b6b; margin-bottom: 6px; }
+    .v { font-size: 13px; color: #171717; line-height: 1.4; }
+    #review { position: absolute; left: 0; top: 0; width: 300px; transform-origin: 0 0; padding: 18px; background: #fbfaf8; border: 1px solid #e7e5e2; border-radius: 16px; }
+    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0 14px; }
+    .tile { padding: 8px; border-radius: 8px; font-size: 11px; color: #3a352f; }
+    .tile b { display: block; font-size: 18px; font-weight: 600; }
+    .item { padding: 12px; border: 1px solid #e7e5e2; border-radius: 10px; background: #fff; font-size: 12.5px; line-height: 1.45; color: #171717; }
+  
+    /* Web cut: replaced by the caption stream and its transitions */
+    #film { overflow: hidden; }
+    #reelcam { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; transform-origin: 0 0; }
+  #captions { display: none !important; }
+  #lawyer { display: none !important; }
+  #film { overflow: visible; }
+  #paper { background: none; overflow: visible; isolation: isolate; }
+  #paper::before { content: ""; position: absolute; left: -400px; top: -600px; width: 2240px; height: 2200px; z-index: -1; background: #efebe3 url(assets/textures/paper.jpg) center / cover; }
+  #vignette { display: none; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="reel-s10" data-start="0" data-width="1080" data-height="1920" data-fps="30" data-duration="1.5">
+    <div id="reelcam"><div class="layer" id="film">
+    <div class="layer" id="footage-layer">
+      <div id="footage-world">
+        <video id="lawyer" class="clip" data-start="0" data-duration="0.6" data-media-start="10.9667" src="assets/footage/lawyer-office-v3.mp4" muted playsinline></video>
+        <div id="bezel-patch"></div>
+      </div>
+    </div>
+    <div class="layer" id="stage">
+      <div id="page" data-layout-allow-occlusion>
+        <div id="page-bg"></div>
+        <div class="chrome" id="rail"><i style="top:18px; background:#efe3dc"></i><i style="top:62px"></i><i style="top:104px"></i><i style="top:140px"></i><i style="top:176px"></i><i style="top:226px"></i><i style="top:262px"></i><i style="top:850px; border-radius:999px; background:#e2ddd5"></i></div>
+        <div class="chrome" id="topbar"><span style="color:#9a9a9a">‹ ›</span><span>Arora v. Meridian Estates Pvt. Ltd. ⌄</span><span style="color:#9a9a9a">/</span><span style="font-weight:600">Hearing Prep</span><span class="sp"></span><span class="btn">Export brief</span><span class="btn warn">⚠ Needs Review</span></div>
+        <div class="chrome" id="index"><div class="h">IN THIS BRIEF</div>
+          <div class="r on"><span>01</span>Basic info</div><div class="r"><span>02</span>Preparation verdict</div><div class="r"><span>03</span>Case snapshot</div><div class="r"><span>04</span>Relevant previous proc…</div><div class="r"><span>05</span>Preparation checklist</div><div class="r"><span>06</span>Main arguments</div><div class="r"><span>07</span>Weak points</div><div class="r"><span>08</span>Questions to prepare for</div><div class="r"><span>09</span>Sources</div>
+        </div>
+        <div class="chrome" id="verdict"><div class="eye">READINESS</div><div style="margin-top:6px; font-size:22px; font-weight:600">Preparation verdict</div>
+          <div class="vbox"><div class="top"><div class="eye" style="font-size:9.5px">PREPARATION STATUS</div><div style="margin-top:4px; font-size:18px; font-weight:600">Needs attention</div><div style="margin-top:4px; font-size:12.5px; color:#3a352f">0 required items must be resolved before the hearing.</div></div>
+            <div class="cnt"><div><b style="color:#b2402c">0</b>Blockers</div><div><b style="color:#82580f">1</b>To review</div><div style="border-right:0"><b style="color:#256b3b">0</b>Completed</div></div>
+            <div class="foot">Presentation fixture only. Verify the date and current court record before use.</div></div>
+        </div>
+        <div class="chrome" id="docs"><div class="eye">DOCUMENTS NEEDING ATTENTION</div>No confirmed compliance issues in the checked documents.<br><br>1 item is still open; the verdict stays “Partially complete” until it is resolved.</div>
+
+        <div id="brief">
+          <div class="eye">HEARING BRIEF</div>
+          <div class="bt">Arora v. Meridian Estates Pvt. Ltd.</div>
+          <div class="meta"><span class="caseno">ARB.P. 428/2026</span><span class="attn" id="attn">⚠ NEEDS ATTENTION</span></div>
+          <div class="sub">Demo listing — verify against court record · Petitioner</div>
+          <div class="grid">
+            <div><div class="k">HEARING DATE</div><div class="v">Wed, 28 Oct 2026</div></div>
+            <div><div class="k">COURT &amp; COURTROOM</div><div class="v">Delhi High Court</div></div>
+            <div><div class="k">CURRENT STAGE</div><div class="v">Demo listing — verify against court record</div></div>
+            <div><div class="k">LAST HEARING</div><div class="v">18 Jul 2026</div></div>
+          </div>
+        </div>
+        <div id="review">
+          <div class="eye">READINESS</div>
+          <div style="font-size:16px; font-weight:600; margin-top:4px">Preparation Review</div>
+          <div class="tiles">
+            <div class="tile" style="background:#f6e3df"><b style="color:#b2402c">0</b>Blockers</div>
+            <div class="tile" style="background:#f6ecd9"><b style="color:#82580f">1</b>Need review</div>
+            <div class="tile" style="background:#e3f2e6"><b style="color:#256b3b">0</b>Completed</div>
+          </div>
+          <div class="item" id="item"><div style="font-size:11px; color:#b2402c; margin-bottom:4px">To review</div>Reconcile the notice and order amounts before settling the position.</div>
+        </div>
+        <div id="grade" data-layout-allow-occlusion></div><div id="glare" data-layout-allow-occlusion></div>
+      </div>
+
+    </div>
+    <div class="layer" id="hand-layer"></div>
+    <div class="layer" id="paper">
+      <div id="bands"><i></i><i></i><i></i><i></i><i></i></div>
+      <img id="mark" src="assets/brand/lawvriksh-mark.png" alt="">
+      <div class="wordmark" id="wordmark">Law<em>Vriksh</em></div>
+      <div id="reeltag" style="position:absolute; left:0; top:712px; width:1440px; text-align:center; font-family:Figtree, sans-serif; font-weight:600; font-size:40px; letter-spacing:0.01em; color:#4a3b30; opacity:0">Built for Indian lawyers</div>
+      <svg class="layer" id="brand-ink" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <g id="halos" fill="none" stroke="#c4562e" stroke-width="1.6" opacity="0.6"></g>
+        <circle id="pulse" fill="none" stroke="#c4562e" stroke-width="1.6" r="0"/>
+        <path id="ground" fill="none" stroke="#c4562e" stroke-width="2.4"/>
+      </svg>
+      <div class="layer" id="vignette"></div>
+    </div>
+    <div class="layer" id="light-sweep"><div id="sweep"></div><div id="edge"></div></div>
+    </div>
+    </div>
+    <div class="layer" id="captions"></div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/shot.js';
+    window.__timelines['reel-s10'] = timeline;
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>LawVriksh web cut — section 8</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/web-newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
+    :root { --clay: #c94820; }
+
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #171717; }
+    * { box-sizing: border-box; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+    #light { overflow: hidden; }
+    #bands { position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; transform: rotate(-24deg); }
+    #bands i { display: block; width: 90px; height: 100%; background: rgba(255, 226, 180, 0.9); }
+    #bands i:nth-child(even) { width: 130px; }
+    #vignette { background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); }
+    #plate { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; background: url(assets/plates/insights-exit.png) 0 0 / 1440px 1000px; transform-origin: 720px 1000px; }
+    .abs { position: absolute; left: 0; top: 0; }
+    .clay { background-image: url(assets/textures/stone-clay.jpg); background-size: 600px; }
+    .sand { background-image: url(assets/textures/stone-sand.jpg); background-size: 600px; }
+    .wordmark { font-family: 'Instrument Serif', serif; line-height: 1; white-space: nowrap; }
+    .wordmark em { font-style: italic; }
+
+    /* the carried-over containers: section 7's viewer and Insights panel, morphing into d14's brief and review */
+    .shell { position: absolute; border: 1px solid #e7e5e2; }
+    #brief-shell { box-shadow: 0 22px 60px rgba(20,16,12,0.24), 0 3px 10px rgba(20,16,12,0.08); }
+    #review-shell { box-shadow: 0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); }
+
+    /* Hearing brief (d14 / capture 13), laid out at 1x then scaled */
+    .tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: #1c1714; color: #f6f1e8; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; transform-origin: 0 50%; }
+    #brief { position: absolute; left: 0; top: 0; width: 760px; transform-origin: 0 0; padding: 30px 34px 28px; }
+    .eye { font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; color: #606060; }
+    .bt { margin: 6px 0 10px; padding-right: 8px; overflow: hidden; font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: 44px; line-height: 1.05; letter-spacing: -0.01em; color: #171717; white-space: nowrap; }
+    .bt span { display: inline-block; }
+    .meta { display: flex; align-items: center; gap: 12px; }
+    .caseno { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: #3a352f; }
+    .attn { position: relative; margin-left: auto; padding: 4px 9px; border-radius: 4px; background: #f6e3df; color: #b2402c; font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; }
+    #attn-ring { position: absolute; inset: 0; border-radius: 4px; border: 1.5px solid #b2402c; }
+    .sub { margin-top: 4px; font-size: 12.5px; color: #606060; }
+    #rule { height: 1px; margin-top: 22px; background: #eeeae3; transform-origin: 0 50%; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-top: 18px; }
+    .k { font-size: 9.5px; font-weight: 600; letter-spacing: 0.1em; color: #6b6b6b; margin-bottom: 6px; }
+    .v { font-size: 13px; color: #171717; line-height: 1.4; }
+    .qual { position: absolute; left: 0; top: 0; padding: 4px 9px; border-radius: 999px; background: rgba(251,250,247,0.92); border: 1px solid #e0b9a6; font-size: 12px; font-weight: 500; color: #8d3515; box-shadow: 0 2px 6px rgba(20,16,12,0.08); white-space: nowrap; }
+
+    /* Readiness · Preparation Review */
+    #review { position: absolute; left: 0; top: 0; width: 300px; transform-origin: 0 0; padding: 18px; }
+    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0 14px; }
+    .tile { padding: 8px; border-radius: 8px; font-size: 11px; color: #3a352f; }
+    .tile b { display: block; font-size: 18px; font-weight: 600; transform-origin: 0 70%; }
+    .item { padding: 12px; border: 1px solid #e7e5e2; border-radius: 10px; background: #fff; font-size: 12.5px; line-height: 1.45; color: #171717; }
+  
+    /* Web cut: replaced by the caption stream and its transitions */
+    #film { overflow: hidden; }
+    #mark { display: none !important; } /* the brand closes the film only (user direction) */
+    #reelcam { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; transform-origin: 0 0; }
+  #captions { display: none !important; }
+  #lawyer { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="reel-s8" data-start="0" data-width="1080" data-height="1920" data-fps="30" data-duration="14.2">
+    <div id="reelcam"><div class="layer" id="film">
+    <div class="layer" id="light"><div id="bands"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="layer" id="stage">
+      <div class="abs sand" id="sand" style="left:-40px; top:760px; width:420px; height:420px; clip-path: path('M0 420 V140 A140 140 0 0 1 140 0 H420 V420 Z')"></div>
+      <div class="abs clay" id="block" style="left:1180px; top:-40px; width:300px; height:170px"></div>
+      <div class="abs wordmark" id="mark" style="left:auto; right:40px; top:36px; font-size:30px; color:#fbf4ec">Law<em>Vriksh</em></div>
+      <svg class="layer" id="guides" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+        <g filter="url(#pencil)" fill="none" stroke="#2b2522" stroke-width="1.4" opacity="0.6"><path id="g-h" d="M0 300 H1440"/><path id="g-v" d="M80 0 V1000"/></g>
+      </svg>
+
+      <div class="abs" id="label" style="left:80px; top:236px"><span class="tag">Hearing Prep</span></div>
+
+      <div class="shell" id="brief-shell"></div>
+      <div id="brief">
+        <div class="eye" data-set>HEARING BRIEF</div>
+        <div class="bt"><span id="title" data-layout-allow-occlusion>Arora v. Meridian Estates Pvt. Ltd.</span></div>
+        <div class="meta" data-set><span class="caseno">ARB.P. 428/2026</span><span class="attn" id="attn">⚠ NEEDS ATTENTION<i id="attn-ring"></i></span></div>
+        <div class="sub" data-set>Demo listing — verify against court record · Petitioner</div>
+        <div id="rule"></div>
+        <div class="grid">
+          <div data-set><div class="k">HEARING DATE</div><div class="v">Wed, 28 Oct 2026</div></div>
+          <div data-set><div class="k">COURT &amp; COURTROOM</div><div class="v">Delhi High Court</div></div>
+          <div data-set><div class="k">CURRENT STAGE</div><div class="v">Demo listing — verify against court record</div></div>
+          <div data-set><div class="k">LAST HEARING</div><div class="v">18 Jul 2026</div></div>
+        </div>
+      </div>
+      <div class="qual" id="qual">28 Oct 2026 is a presentation-only demo date — not a court listing</div>
+
+      <div class="shell" id="review-shell"></div>
+      <div id="review">
+        <div class="eye" data-rset>READINESS</div>
+        <div style="font-size:16px; font-weight:600; margin-top:4px" data-rset>Preparation Review</div>
+        <div class="tiles">
+          <div class="tile" data-tile style="background:#f6e3df"><b style="color:#b2402c">0</b>Blockers</div>
+          <div class="tile" data-tile style="background:#f6ecd9"><b style="color:#82580f">1</b>Need review</div>
+          <div class="tile" data-tile style="background:#e3f2e6"><b style="color:#256b3b">0</b>Completed</div>
+        </div>
+        <div class="item" id="item"><div style="font-size:11px; color:#b2402c; margin-bottom:4px">To review</div>Reconcile the notice and order amounts before settling the position.</div>
+      </div>
+
+      <svg class="layer" id="ink" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <path id="thread" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+        <path id="focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <div class="layer" id="plate-layer"><div id="plate"></div></div>
+    <div class="layer" id="vignette"></div>
+    </div>
+    </div>
+    <div class="layer" id="captions"></div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/shot.js';
+    window.__timelines['reel-s8'] = timeline;
+  </script>
+</body>
+</html>

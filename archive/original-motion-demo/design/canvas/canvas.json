@@ -1,0 +1,63 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-22T12:00:00Z" },
+  "title": "LawVriksh Reel — Style Frames",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1000,
+      "title": "A · Paper & stone (provisional)"
+    },
+    "FrameB.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 1000,
+      "title": "B · Light & glass (provisional)"
+    },
+    "DecisionLog.dc.html": { "x": 3040, "y": 0, "w": 760, "h": 1560, "title": "Decision log" },
+    "Combined.dc.html": {
+      "x": 0,
+      "y": -1500,
+      "w": 1440,
+      "h": 1000,
+      "title": "C · Combined, rebuilt Case Map (approved direction)"
+    },
+    "MotionStudy.dc.html": {
+      "x": 1520,
+      "y": -1500,
+      "w": 1440,
+      "h": 1080,
+      "title": "Motion study · conflict beat (4.3 s, press Play)",
+      "is_interactive": true
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "FrameB.dc.html",
+    "DecisionLog.dc.html",
+    "Combined.dc.html",
+    "MotionStudy.dc.html"
+  ],
+  "notes": {
+    "rowtitle": {
+      "x": 0,
+      "y": -260,
+      "text": "Round 2 — paper & stone / light & glass (screenshot-based)",
+      "kind": "title1",
+      "maxW": 3800
+    },
+    "round3": {
+      "x": 0,
+      "y": -1760,
+      "text": "Round 3 — approved frame C + conflict-beat motion study",
+      "kind": "title1",
+      "maxW": 2960
+    }
+  },
+  "designSystems": []
+}

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440, height=1000">
+  <title>LawVriksh graphics track — section 2, 24.80–33.13 s</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-500.woff2) format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); font-style: italic; }
+
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #1c1714; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+
+    /* Frame C stage: five window-light bands at -24deg, soft-light; vignette on top. */
+    #light { overflow: hidden; }
+    #bands { position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; transform: rotate(-24deg); }
+    #bands i { display: block; width: 90px; height: 100%; background: rgba(255, 226, 180, 0.9); }
+    #bands i:nth-child(even) { width: 130px; }
+    #vignette { background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); }
+
+    .clay { background-image: url(assets/textures/stone-clay.jpg); background-size: 600px; }
+    .char { background-image: url(assets/textures/stone-char.jpg); background-size: 600px; }
+    .sand { background-image: url(assets/textures/stone-sand.jpg); background-size: 600px; }
+    .halftone { background-image: url(assets/textures/halftone-ochre.jpg); background-size: 700px; }
+
+    /* The surface the P6 line opened (pilot exit pose). Not app UI. */
+    #surface { position: absolute; left: 160px; top: 150px; width: 1120px; height: 650px; border-radius: 0 0 18px 18px; background: #fbfaf7; border: 1px solid #e7e5e2; border-top: 0; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); }
+    #pipe { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; }
+
+    /* Processing gates: bevelled portals (Harvey H-C), stone faces, open centre. */
+    .gate { position: absolute; left: 0; top: 0; width: 150px; height: 150px; transform-origin: 75px 75px; }
+    .gate > i { position: absolute; inset: 0; display: block; }
+    .gate .ft { clip-path: polygon(0 0, 150px 0, 107px 43px, 43px 43px); filter: brightness(1.25); }
+    .gate .fr { clip-path: polygon(150px 0, 150px 150px, 107px 107px, 107px 43px); filter: brightness(0.82); }
+    .gate .fb { clip-path: polygon(0 150px, 150px 150px, 107px 107px, 43px 107px); filter: brightness(0.6); }
+    .gate .fl { clip-path: polygon(0 0, 43px 43px, 43px 107px, 0 150px); filter: brightness(1.02); }
+    .gate .rim { inset: -1px; border: 1px solid rgba(28,23,20,0.35); }
+    .gate .flash { inset: auto; left: 41px; top: 41px; width: 64px; height: 64px; border: 2.5px solid #c4562e; opacity: 0; } /* the stamp: a clay ring in the opening */
+    .glabel { position: absolute; left: 0; top: 0; width: 160px; text-align: center; font-family: 'Newsreader', serif; font-style: italic; font-size: 20px; color: #4a4038; }
+
+    /* Things on the line */
+    .obj { position: absolute; left: 0; top: 0; width: 240px; height: 150px; transform-origin: 120px 52px; }
+    .obj > div { position: absolute; left: 0; top: 0; width: 240px; height: 150px; display: none; }
+    .pdf img { position: absolute; left: 78px; top: 10px; width: 84px; height: 84px; filter: drop-shadow(0 8px 14px rgba(120,20,20,0.28)); }
+    .fname { position: absolute; left: 0; top: 98px; width: 240px; text-align: center; font-size: 12.5px; font-weight: 500; line-height: 1.32; color: #3a352f; }
+    .pg { position: absolute; width: 58px; height: 82px; background: #fff no-repeat 0 0 / 100% 100%; box-shadow: 0 1px 2px rgba(40,24,10,0.16), 0 8px 16px rgba(40,24,10,0.18); }
+    .cap { position: absolute; left: 0; top: 104px; width: 240px; text-align: center; font-family: 'Newsreader', serif; font-style: italic; font-size: 15px; color: #6a625a; }
+    .bars { position: absolute; left: 82px; top: 8px; width: 76px; height: 92px; background: #fbf8f2; box-shadow: 0 1px 2px rgba(40,24,10,0.14), 0 8px 16px rgba(40,24,10,0.16); }
+    .bars i { position: absolute; left: 9px; height: 4px; border-radius: 1px; background: #b3ab9f; }
+    .bars i.hit { background: #c94820; height: 5px; }
+    .p { position: absolute; left: 0; top: 0; display: block; }
+
+    /* Fact tags (approved d02 language) */
+    .fact { position: absolute; left: 0; top: 0; width: 206px; padding: 12px 14px 12px 18px; box-sizing: border-box; background: #fbf8f2; border: 1px solid #e4ddd1; box-shadow: 0 10px 24px rgba(40,24,10,0.16); transform-origin: 50% 0; }
+    .fact::before { content: ''; position: absolute; left: -7px; top: 22px; width: 10px; height: 10px; border-radius: 999px; border: 2px solid #2b2522; background: #efebe3; }
+    .fact.conflict::before { border-color: #c4562e; background: #c4562e; }
+    .fact .k { font-size: 12.5px; color: #6a625a; }
+    .fact .v { margin-top: 4px; font-family: 'Newsreader', serif; font-weight: 500; font-size: 23.5px; line-height: 1.1; letter-spacing: -0.01em; color: #1c1714; white-space: nowrap; }
+    .fact .src { display: inline-block; margin-top: 9px; padding: 2px 8px; border-radius: 999px; background: #f2efe9; font-size: 11px; font-weight: 500; color: #606060; }
+    .fact .wash { position: absolute; inset: -1px; background: rgba(201,72,32,0.30); border-bottom: 2px solid #c94820; } /* the lifted highlight */
+    .fact .body { position: relative; }
+
+    .wordmark { font-family: 'Instrument Serif', serif; line-height: 1; color: #1c1714; white-space: nowrap; }
+    .wordmark .v { font-style: italic; color: #a93a18; }
+
+    /* ---- D3–D4: separate OCR example (rebuilt as in d03/d04, from the OCR review styles) ---- */
+    :root { --clay: #c94820; --thread: #c4562e; --edge-path: #cf795d; }
+    #slab { position: absolute; left: 0; top: -40px; width: 1900px; height: 1080px; clip-path: polygon(114px 0, 100% 0, calc(100% - 80px) 100%, 0 100%); }
+    #scan { position: absolute; left: 0; top: 0; width: 1600px; height: 2636px; background: #fff url(assets/docs/sc2051-page2.png) 0 0 / 1600px 2636px; box-shadow: 0 30px 80px rgba(40,24,10,0.30); transform-origin: 0 0; }
+    #ocr-box { position: absolute; left: 1261px; top: 1181px; width: 131px; height: 58px; background: rgba(239,140,90,0.30); border: 2px solid rgba(201,72,32,0.85); border-radius: 3px; }
+    .ocr-head { position: absolute; left: 0; top: 0; width: 1080px; display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 18px; box-sizing: border-box; background: #fff; border-bottom: 1px solid #eeeae3; font-size: 13px; color: #606060; }
+    .issues { position: absolute; left: 0; top: 0; width: 340px; transform-origin: 0 0; background: #fff; border: 1px solid #e7e5e2; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); }
+    .tabs { display: flex; gap: 20px; padding: 0 18px; height: 46px; align-items: flex-end; border-bottom: 1px solid #eeeae3; font-size: 12.5px; color: #606060; }
+    .tabs span { padding-bottom: 12px; }
+    .tabs span.on { color: #171717; font-weight: 500; border-bottom: 2px solid #171717; }
+    .issue { padding: 14px 18px; border-bottom: 1px solid #f0ede8; }
+    .issue .row { display: flex; justify-content: space-between; font-size: 11px; color: #606060; margin-bottom: 8px; }
+    .issue .row b { font-weight: 500; color: #3a352f; }
+    .issue .row b::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #c9a59a; margin-right: 6px; vertical-align: middle; }
+    .issue.active .row b::before { background: var(--clay); }
+    .ta { height: 52px; padding: 10px 12px; box-sizing: border-box; border: 1px solid #e4ded4; border-radius: 8px; background: #f7f5f1; font-size: 13px; color: #171717; }
+    .issue.active .ta { border-color: #e0533b; background: #fff; box-shadow: 0 0 0 1px #e0533b; }
+    .ta u { text-decoration: none; }
+    .issue.active .ta u.bad { text-decoration: underline wavy #d65248; text-underline-offset: 3px; }
+    .acts { display: none; align-items: center; gap: 12px; margin-top: 10px; font-size: 12px; color: #606060; }
+    .issue.active .acts { display: flex; }
+    .save { padding: 5px 12px; border-radius: 6px; background: var(--clay); color: #fff; font-weight: 500; }
+    .editor { position: absolute; left: 0; top: 0; width: 620px; transform-origin: 0 0; background: #fff; border: 1px solid #e7e5e2; border-radius: 16px; overflow: hidden; box-shadow: 0 22px 60px rgba(20,16,12,0.24), 0 3px 10px rgba(20,16,12,0.08); }
+    .etb { display: flex; align-items: center; gap: 12px; margin: 12px 14px; padding: 8px 12px; border: 1px solid #eeeae3; border-radius: 10px; font-size: 11px; color: #858585; }
+    .etb b { font-weight: 600; color: #3a352f; }
+    .doc { padding: 6px 24px 22px; font-size: 13px; color: #171717; }
+    .doc table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 12.5px; }
+    .doc td { border: 1px solid #dcd8d0; padding: 9px 10px; vertical-align: top; line-height: 1.45; }
+    .doc td:first-child { width: 46px; } .doc td:nth-child(3), .doc td:nth-child(4) { width: 86px; }
+    .margin { margin: 16px 0 0; line-height: 1.6; font-size: 13px; }
+    .margin b { font-weight: 600; }
+    #word-parties { text-decoration: underline; text-decoration-color: #d65248; text-decoration-thickness: 1.5px; text-underline-offset: 3px; background: rgba(239,140,90,0.18); border-radius: 2px; padding: 0 1px; }
+    .qual { position: absolute; left: 0; top: 0; padding: 4px 9px; border-radius: 999px; background: rgba(251,250,247,0.92); border: 1px solid #e4ded4; font-size: 12px; font-weight: 500; color: #3a352f; box-shadow: 0 2px 6px rgba(20,16,12,0.08); white-space: nowrap; }
+
+    /* ---- D5: Case Map (values from case-map.css, as in the approved stills) ---- */
+    .hatch { background-image: url(assets/textures/hatch-sand.jpg); background-size: 520px; }
+    .cm-dots { background-color: #fbfaf7; background-image: radial-gradient(circle, #ddd8cf 1px, transparent 1px); background-size: 22px 22px; }
+    .win { position: absolute; left: 0; top: 0; border-radius: 18px; overflow: hidden; border: 1px solid #e7e5e2; background: #fbfaf7; box-shadow: 0 3px 10px rgba(20,16,12,0.08), 0 40px 90px rgba(40,24,10,0.28); }
+    .win-inner { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    .toolbar { position: absolute; left: 0; top: 0; height: 44px; padding: 0 12px; box-sizing: border-box; display: flex; align-items: center; gap: 8px; background: #fff; border-bottom: 1px solid #eeeae3; font-size: 12px; }
+    .seg { display: flex; padding: 2px; border-radius: 8px; background: #f5f1ea; }
+    .seg span { padding: 4px 11px; color: #606060; }
+    .seg span.on { border-radius: 6px; background: #fff; box-shadow: 0 1px 2px rgba(20,16,12,0.08); font-weight: 500; color: #171717; }
+    .tb-field { height: 28px; padding: 0 9px; box-sizing: border-box; display: flex; align-items: center; gap: 6px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; color: #858585; }
+    .tb-btn { height: 28px; padding: 0 10px; box-sizing: border-box; display: flex; align-items: center; gap: 5px; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; font-size: 12.5px; font-weight: 500; color: #3a352f; }
+    .tb-sq { width: 28px; height: 28px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 1px solid #e4ded4; border-radius: 8px; background: #fff; }
+    .crumbs { position: absolute; left: 12px; top: 10px; display: flex; align-items: center; gap: 2px; font-size: 11.5px; color: #606060; z-index: 3; }
+    .crumbs span { padding: 2px 6px; }
+    .world { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    .edges { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; }
+    .edge { fill: none; stroke: #d9d5cd; stroke-width: 1.25; }
+    .matter { position: absolute; width: 264px; height: 64px; padding: 0 14px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 2px; border: 1px solid #ecdcd0; border-radius: 9px; background: #fdf9f5; box-shadow: 0 2px 5px rgba(35,30,25,0.07); }
+    .matter .eyebrow { font-size: 9.5px; font-weight: 600; letter-spacing: 0.08em; color: var(--clay); }
+    .matter .name { font-size: 12.5px; font-weight: 600; color: #171717; }
+    .matter .case { font-size: 11px; color: #858585; }
+    .cat { position: absolute; width: 224px; height: 40px; padding: 0 12px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid #d9d6d0; border-radius: 9px; background: #fff; box-shadow: 0 2px 5px rgba(35,30,25,0.07); font-size: 12.5px; font-weight: 600; color: #171717; }
+    .cat.left { flex-direction: row-reverse; }
+    .count { display: inline-flex; align-items: center; justify-content: center; gap: 2px; min-width: 34px; height: 24px; padding: 2px 6px; box-sizing: border-box; border-radius: 999px; background: #f2efe9; color: #606060; font-size: 10.5px; font-weight: 600; }
+    .word { position: absolute; left: 0; top: 0; font-family: 'Newsreader', serif; font-weight: 400; line-height: 1; letter-spacing: -0.035em; color: #1c1714; white-space: nowrap; }
+    .word em { font-style: italic; color: #a93a18; }
+    .mask { position: absolute; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="section-2" data-start="0" data-width="1440" data-height="1000" data-fps="30" data-duration="8.3333">
+    <div class="layer" id="light"><div id="bands"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="layer" id="stage">
+      <div id="surface"></div>
+      <div id="pipe">
+        <svg class="layer" id="rail-layer" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true"><g id="rail-g" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"></g></svg>
+        <div class="layer" id="objects"></div>
+        <div class="layer" id="gates"></div>
+        <div class="layer" id="tags"></div>
+      </div>
+    </div>
+    <!-- D3–D4: the separate OCR example (Arif Jafar scan), carried in on a char slab -->
+    <div class="layer" id="ocr">
+      <div id="scan"><div id="ocr-box"></div></div>
+      <div class="ocr-head" id="ocr-head"><span>OCR review</span><span style="color:#c9c3b8">/</span><span style="color:#171717">SC-2051_ARIF_JAFAR_VS._UOI__ORS-1-10.pdf</span><span style="flex:1"></span><span style="font-size:12px"><span style="color:#c94820">●</span> 15 issues remaining</span></div>
+    </div>
+    <!-- D3–D4 front: the review UI sits above the parked slab (d03/d04); the slab covers it only while sweeping -->
+    <div class="layer" id="ocr-front">
+      <div class="issues" id="issues">
+        <div class="tabs"><span class="on">Issues</span><span>Extracted text</span></div>
+        <div class="issue"><div class="row"><b>Important</b><span>82% confidence</span></div><div class="ta">-Memas</div></div>
+        <div class="issue"><div class="row"><b>Important</b><span>85% confidence</span></div><div class="ta">PRAYERS</div></div>
+        <div class="issue" id="issue-brlies"><div class="row"><b>Important</b><span>73% confidence</span></div><div class="ta" id="ta-brlies"><u class="bad" id="ta-word">brlies</u></div>
+          <div class="acts"><span class="save" id="save">Save</span><span>Cancel</span><span style="flex:1"></span><span>Skip</span></div></div>
+        <div class="issue"><div class="row"><b>Important</b><span>78% confidence</span></div><div class="ta">-Facts</div></div>
+      </div>
+      <div class="editor" id="editor">
+        <div class="tabs"><span>Issues</span><span class="on">Extracted text</span></div>
+        <div class="etb"><b>B</b><b>H₂</b><span style="flex:1"></span><span id="saved">Saved</span><span>Restore OCR text</span></div>
+        <div class="doc">
+          <table>
+            <tr><td>5.</td><td>Note Sheet</td><td></td><td>NS1–</td></tr>
+            <tr><td>6.</td><td>Synopsis and List of Dates</td><td>B–I</td><td></td></tr>
+            <tr><td>7.</td><td>Writ Petition with Affidavit</td><td>1–38</td><td></td></tr>
+            <tr><td>8.</td><td>APPENDIX — Sections 109, 110, 120B, 292, 375, 376 &amp; 377 of Indian Penal Code</td><td>39–49</td><td></td></tr>
+          </table>
+          <p class="margin"><b>Handwritten margin note (OCR; review required):</b> -Memas <span id="word-parties">Parties</span> -Facts; -GROUNDS-; 86 PRAYERS</p>
+        </div>
+      </div>
+      <div class="qual" id="qual-a">Separate example · Arif Jafar v. Union of India — supplied scan</div>
+      <div class="qual" id="qual-b">Separate example · supplied Supreme Court scan · edited word keeps its source link</div>
+      <svg class="layer" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <path id="ocr-thread" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+        <path id="ocr-focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    </div>
+
+    <!-- D5: the Case Map, default collapsed (d05) -->
+    <div class="layer" id="map">
+      <div class="clay" id="stone-corner" style="position:absolute; left:0; top:0; width:260px; height:200px; border-radius:60px 0 0 0"></div>
+      <div class="char" id="stone-dot" style="position:absolute; left:0; top:0; width:44px; height:44px; border-radius:999px"></div>
+      <div class="hatch" id="stone-hatch" style="position:absolute; left:0; top:0; width:80px; height:600px"></div>
+      <svg class="layer" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <defs><filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter></defs>
+        <g filter="url(#pencil)" fill="none" stroke="#2b2522" stroke-width="1.4" opacity="0.6">
+          <path id="pl-1" pathLength="1" d="M0 300 H 1440"/><path id="pl-2" pathLength="1" d="M150 0 V 1000"/><path id="pl-3" pathLength="1" d="M0 980 L 1100 0"/>
+        </g>
+      </svg>
+      <div class="win" id="map-window" style="width:1360px; height:760px"><div class="win-inner" id="map-inner"></div></div>
+      <div class="mask" id="mapped-mask" style="left:40px; top:20px; width:1000px; height:290px"><div class="word" id="mapped" style="left:16px; top:20px; font-size:236px">Mapped<em>.</em></div></div>
+      <svg class="layer" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <path id="map-thread" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+        <circle id="map-thread-dot" r="0" fill="#c4562e"/>
+        <path id="map-focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+      <svg id="cursor" width="22" height="30" viewBox="0 0 22 30" style="position:absolute; left:0; top:0"><path d="M2 2 L2 24 L8 18 L12 28 L16 26 L12 16 L20 16 Z" fill="#171717" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
+
+    <!-- The char slab: carries the separate scan in (28.56) and out (30.80) -->
+    <div class="layer" id="slab-layer"><div class="char" id="slab"></div></div>
+
+    <svg class="layer" id="ink" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+      <path id="topline" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+      <path id="focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+    </svg>
+    <div class="layer" id="type"><div class="wordmark" id="bug" style="position:absolute; right:40px; top:36px; font-size:30px">Law<span class="v">Vriksh</span></div></div>
+    <div class="layer" id="vignette"></div>
+  </div>
+  <script src="assets/lib/casemap.js"></script>
+  <script type="module">
+    import { timeline } from './src/section2.js';
+    window.__timelines['section-2'] = timeline;
+  </script>
+</body>
+</html>

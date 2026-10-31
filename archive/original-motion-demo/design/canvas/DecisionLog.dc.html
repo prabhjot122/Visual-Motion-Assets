@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Decision log</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#8d3515}a:hover{color:#a93a18}
+</style>
+</helmet>
+<div style="width: 760px; min-height: 1560px; box-sizing: border-box; padding: 56px 56px 64px; background: #fbfaf7; font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif; color: #404040; font-size: 14.5px; line-height: 1.55; display: flex; flex-direction: column; gap: 30px">
+
+  <div style="display: flex; flex-direction: column; gap: 8px">
+    <div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8d3515">LawVriksh reel · design decisions</div>
+    <h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1; color: #171717">Decision log</h1>
+    <div style="font-size: 13px; color: #606060">Round 3 · 22 Oct 2026 · frame C approved as direction</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 16px; font-weight: 600; color: #171717">Established (from brief and Phase 3 handoff)</h2>
+    <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+      <li>Influencer narration and audio stay untouched; graphics match the 62.906667 s reel, no added runtime.</li>
+      <li>Three separate contexts: Arora (map, chronology, Ask, Hearing Prep), Vikram (saved bail draft), Arif Jafar scan (OCR). Never merged.</li>
+      <li>Arora amounts Rs. 2,30,00,000 (notice p2, Version A) vs Rs. 1,15,00,000 (order p1, Version B) stay unresolved. Verify fact is navigation to review, not approval.</li>
+      <li>Hearing Prep: visual-only, labelled, ~1.5–2 s, inside the 14.70–18.34 s window. Not locked.</li>
+      <li>Bookends: lawyer-office shot masks into brand space, returns at close. Placeholder only; no footage or prompt yet.</li>
+      <li>Brand: Figtree (UI/sans), Newsreader (editorial serif), Instrument Serif (wordmark), Geist Mono (labels); clay #c94820, ink #171717, paper #f5f1ea / #fbfaf7.</li>
+    </ul>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 16px; font-weight: 600; color: #171717">Round 3 · C · Combined — <span style="color: #2e7d46">approved direction</span></h2>
+    <div>A’s paper, collage slabs, pencil guides and 2 : 1 stone columns + B’s window-light bands, giant “Compare.”, bleeding window and pulled-forward panel. The Case Map window and Conflict panel are rebuilt in HTML from the real components (case-map.css, floating-review-panel.css, layout constants NODE_W 264 / COLUMN_GAP 76 / ROW_GAP 10), at 1× layout scaled 1.5× (map) and 1.35× (panel), so text stays sharp. Content is the real seeded state: amount conflict selected, both sources, unresolved.</div>
+    <h2 style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #171717">Motion study · conflict beat (draft, awaiting review)</h2>
+    <div>4.3 s, sized to cue window 33.18–37.52 s (ASR, unlocked); not yet synced to audio. Beats: 1 Stage 0–0.6 · 2 App 0.6–1.4 · 3 Select 1.4–2.2 · 4 Panel 2.2–3.3 · 5 Verify 3.3–4.3. UI state changes use the app’s 180 ms ease-out; camera and stage moves use slower cubic easing. All timings live in one renderVals() block for the HyperFrames/GSAP handoff. No approval shown; both amounts stay unresolved.</div>
+    <h2 style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #171717">Round 2 proposals (superseded by C)</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+      <div style="background: #f5f1ea; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <div style="font-weight: 600; color: #171717">A · Paper &amp; stone</div>
+        <div>Harvey-led. Textured paper, pencil grid, collage slabs bleeding off frame. Two stone columns in true 2 : 1 height (2.30 Cr vs 1.15 Cr) flanked by floating Version A/B source cards.</div>
+      </div>
+      <div style="background: #f5f1ea; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <div style="font-weight: 600; color: #171717">B · Light &amp; glass</div>
+        <div>Lovio-led. Blurred warm office plate (placeholder for the bookend footage), giant serif “Compare.”, real capture 03 in a glass rim bleeding off frame, Version A card pulled forward.</div>
+      </div>
+    </div>
+    <div>Brand tokens now govern product UI and the wordmark only; the stage around them is free to be cinematic.</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 16px; font-weight: 600; color: #171717">Discrepancies flagged</h2>
+    <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+      <li>Canvas: round-1 brief calls 1440×1000 provisional; project-brief.md and handoff.md call it confirmed. Frames built at 1440×1000 and labelled provisional until you confirm.</li>
+      <li>Captures are 1× DPR. Any crop above 1× (Frame B is 1.1×) softens UI text. A targeted 2× recapture of 01–03 is recommended before final push-ins.</li>
+      <li>Frame A rebuilds the source cards as HTML from the product's own text and tokens. Faithful content, but not pixel-identical to the app; needs your approval.</li>
+    </ul>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 16px; font-weight: 600; color: #171717">Open decisions</h2>
+    <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+      <li>Motion study scope and length for the conflict beat (cue 33.18–37.52 s, unlocked).</li>
+      <li>How the 464×832 portrait reel sits with the 1440×1000 canvas: full cutaways, side-by-side or inset. This sets safe areas and could change both frames.</li>
+      <li>Whether on-screen editorial lines are wanted, or whether they collide with any caption track.</li>
+      <li>Which Hearing Prep state (Basic info or Main arguments) carries the insert.</li>
+      <li>Lawyer shot spec, bookend lengths and footage prompt: after layout is approved.</li>
+    </ul>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 16px; font-weight: 600; color: #171717">Asset references</h2>
+    <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; line-height: 1.6">
+      <li>screenshots/01-case-map-conflicts-version-comparison.png (map-conflict-comparison)</li>
+      <li>screenshots/03-case-map-conflict-version-b.png (Frame B window); 02 uploaded, unused</li>
+      <li>Procedural textures (paper, clay/char/sand stone, hatch, halftone, office placeholder plate): generated in-session, not stock</li>
+      <li>public/landing/lawvriksh-mark.png · src/app/design-tokens.css</li>
+      <li>cue-sheet.json: conflict-comparison 33.18–36.58 s; verify-sources 36.68–37.52 s (ASR, unlocked)</li>
+    </ul>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 16px; font-weight: 600; color: #171717">Feedback and approvals</h2>
+    <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+      <li><strong style="color: #171717">Round 1 rejected</strong> (both frames): “looks like a website screen, not a motion graphic; brand tokens taken too seriously.”</li>
+      <li>Lessons: no header/footer chrome or mono label clutter; one idea per frame with strong scale contrast; texture, depth and light; elements bleed off frame; app tokens apply to the UI, not the whole stage.</li>
+      <li><strong style="color: #171717">Round 2:</strong> liked both A and B → combine them. The app screen must stay clearly visible.</li>
+      <li><strong style="color: #171717">Rejected:</strong> enlarged 1× screenshots (soft). <strong style="color: #171717">Approved approach:</strong> rebuild the UI from the frontend code so it renders crisply at any scale. This also removes the need for a 2× recapture.</li>
+      <li><strong style="color: #171717">Round 3: frame C approved</strong> as the visual direction (22 Oct 2026). Next: short motion study for the conflict beat; other feature scenes later follow the same stage + rebuilt-UI system.</li>
+      <li><strong style="color: #171717">Motion study:</strong> final 7% camera push trims ~10 px of the panel’s right edge and the top of “Compare.” at 4.3 s. Kept as is for now (user decision); revisit when timing is synced to the reel.</li>
+    </ul>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":760,"height":1560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

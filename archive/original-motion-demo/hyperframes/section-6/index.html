@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440, height=1000">
+  <title>LawVriksh graphics track — section 6, 44.27–46.40 s</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Figtree'; src: url(assets/fonts/figtree.woff2) format('woff2'); font-weight: 300 900; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400.woff2) format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-500.woff2) format('woff2'); font-weight: 500 700; }
+    @font-face { font-family: 'Newsreader'; src: url(assets/fonts/newsreader-400-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); }
+    @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); font-style: italic; }
+    :root { --clay: #c94820; }
+
+    html, body { margin: 0; width: 100%; height: 100%; background: #efebe3; }
+    #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #efebe3 url(assets/textures/paper.jpg) center / cover; font-family: 'Figtree', sans-serif; color: #171717; }
+    .layer { position: absolute; left: 0; top: 0; width: 1440px; height: 1000px; pointer-events: none; }
+    #light { overflow: hidden; }
+    #bands { position: absolute; left: -200px; top: -300px; width: 1900px; height: 1600px; display: flex; gap: 70px; padding-left: 520px; filter: blur(26px); mix-blend-mode: soft-light; transform: rotate(-24deg); }
+    #bands i { display: block; width: 90px; height: 100%; background: rgba(255, 226, 180, 0.9); }
+    #bands i:nth-child(even) { width: 130px; }
+    #vignette { background: radial-gradient(120% 90% at 70% 30%, rgba(255,236,210,0) 55%, rgba(70,45,25,0.16) 100%); }
+    .clay { background-image: url(assets/textures/stone-clay.jpg); background-size: 600px; }
+    .sand { background-image: url(assets/textures/stone-sand.jpg); background-size: 600px; }
+    .slab { position: absolute; left: 0; top: -40px; width: 1900px; height: 1080px; clip-path: polygon(114px 0, 100% 0, calc(100% - 80px) 100%, 0 100%); }
+
+    .word { position: absolute; left: 0; top: 0; font-family: 'Newsreader', serif; font-weight: 400; line-height: 1; letter-spacing: -0.035em; color: #1c1714; white-space: nowrap; }
+    .word em { font-style: italic; color: #a93a18; }
+    .mask { position: absolute; overflow: hidden; }
+    .wordmark { font-family: 'Instrument Serif', serif; line-height: 1; color: #1c1714; white-space: nowrap; }
+    .wordmark .v { font-style: italic; color: #a93a18; }
+
+    /* The bail application page (rebuilt from d12 and the saved Vikram scenario draft) */
+    #doc { position: absolute; left: 0; top: 0; width: 700px; box-sizing: border-box; padding: 56px 66px 40px; background: #fff; box-shadow: 0 2px 4px rgba(40,24,10,0.10), 0 40px 90px rgba(40,24,10,0.28); font-family: 'Newsreader', serif; color: #111; font-size: 15.5px; line-height: 1.72; transform-origin: 0 0; }
+    #doc h2 { margin: 0 0 14px; font-size: 17px; font-weight: 600; letter-spacing: 0.02em; line-height: 1.4; }
+    #doc p { margin: 0 0 12px; }
+    #doc .c { text-align: center; }
+    #doc .tok { opacity: 0; }
+    .y { padding: 0 4px; background: #fdf3cf; border: 1px solid #f2d98a; border-bottom: 1.5px dashed #d9a520; border-radius: 2px; display: inline-block; line-height: 1.35; transform-origin: 50% 60%; }
+    .b { background: #e9f0fc; border-bottom: 1.5px solid #4a78d6; }
+    .card { position: absolute; left: 0; top: 0; transform-origin: 0 0; background: #fff; border: 1px solid #e7e5e2; border-radius: 14px; box-shadow: 0 18px 48px rgba(20,16,12,0.22), 0 3px 10px rgba(20,16,12,0.08); font-size: 12.5px; color: #171717; }
+    .card h5 { margin: 0; padding: 12px 14px; font-size: 12.5px; font-weight: 600; border-bottom: 1px solid #eeeae3; }
+    .file { display: flex; align-items: center; gap: 9px; padding: 6px 14px; color: #3a352f; }
+    .ic { width: 11px; height: 13px; border-radius: 2px; flex: none; }
+    .seg { display: flex; margin: 12px 14px 4px; padding: 3px; border-radius: 9px; background: #f5f1ea; font-size: 12px; }
+    .seg span { flex: 1; text-align: center; padding: 5px; color: #606060; }
+    .seg span.on { background: var(--clay); color: #fff; border-radius: 7px; font-weight: 600; }
+    .find { margin: 10px 14px 14px; padding: 12px; border: 1px solid #ece8e1; border-radius: 10px; }
+    .chip { display: inline-block; padding: 4px 10px; border-radius: 999px; background: rgba(251,250,247,0.94); border: 1px solid #e4ded4; font-size: 12.5px; font-weight: 500; color: #3a352f; box-shadow: 0 2px 6px rgba(20,16,12,0.08); white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="section-6" data-start="0" data-width="1440" data-height="1000" data-fps="30" data-duration="2.1333">
+    <div class="layer" id="light"><div id="bands"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <!-- the sand slab from section 5 sweeps on and settles behind everything as d12's sand strip -->
+    <div class="layer" id="sand-layer"><div class="slab sand" id="sand"></div></div>
+    <div class="layer" id="stage">
+      <div class="chip" id="label" style="position:absolute; left:360px; top:40px; background:#1c1714; color:#f6f1e8; border-color:#1c1714">Vikram bail application · separate example</div>
+      <div id="doc">
+        <h2>BEFORE THE LEARNED MAGISTRATE HAVING JURISDICTION AT KOLKATA</h2>
+        <p class="c">Case No.: <span class="y">[To be confirmed]</span></p>
+        <h2>IN THE MATTER OF</h2>
+        <p>Vikram, son of <span class="y" id="y-name">[name to be confirmed]</span>, aged <span class="y">[age to be confirmed]</span>, residing at <span class="y">[address to be confirmed]</span>, presently in custody</p>
+        <p><b>…APPLICANT</b></p>
+        <h2>APPLICATION FOR RELEASE ON BAIL UNDER SECTION 478 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023, WITH AN URGENT PRAYER FOR PRODUCTION BEFORE THE MAGISTRATE</h2>
+        <h2 style="margin-top:22px">FACTS AS INSTRUCTED</h2>
+        <p>1. Vikram was arrested in Kolkata on <span class="b" id="b-date">28 September 2026</span> after a quarrel with his neighbour, Suresh.</p>
+        <p>2. <span class="b">Suresh alleges that Vikram slapped him once</span>. The instructions describe Suresh's cheek injury as minor.</p>
+      </div>
+      <div class="mask" id="draft-mask" style="left:392px; top:730px; width:700px; height:290px"><div class="word" id="draft-word" style="left:8px; top:15px; font-size:236px">Draft<em>.</em></div></div>
+      <div class="card" id="linked" style="width:270px">
+        <h5>Linked Documents · 10</h5>
+        <div class="file"><i class="ic" style="background:#3b6fd1"></i>Vikram scenario facts.docx</div>
+        <div class="file"><i class="ic" style="background:#3b6fd1"></i>Attachment index sample.docx</div>
+        <div class="file"><i class="ic" style="background:#d65248"></i>Document register sample.pdf</div>
+        <div class="file"><i class="ic" style="background:#d65248"></i>Annexure checklist sample.pdf</div>
+        <div class="file"><i class="ic" style="background:#d65248"></i>Review notes sample.pdf</div>
+        <div class="file"><i class="ic" style="background:#d65248"></i>Source coverage sample.pdf</div>
+        <div class="file"><i class="ic" style="background:#8b5cf6"></i>Reference note sample.png</div>
+        <div class="file"><i class="ic" style="background:#8b5cf6"></i>Review checklist sample.png</div>
+        <div class="file"><i class="ic" style="background:#2e9b57"></i>Source register sample.xlsx</div>
+        <div class="file" style="padding-bottom:12px"><i class="ic" style="background:#2e9b57"></i>Review checklist sample.xlsx</div>
+      </div>
+      <div class="card" id="checks" style="width:290px">
+        <h5>Checks</h5>
+        <div class="seg"><span>BNS</span><span class="on">Compliance 4</span><span>Logic 1</span></div>
+        <div style="padding:6px 14px 0; font-size:22px; font-weight:600"><span id="score">0</span> <span style="font-size:12px; color:#6b6b6b; font-weight:400">/ 100 · 4 issues found</span></div>
+        <div class="find" id="finding"><div style="font-size:11.5px; color:#b2402c; font-weight:600; margin-bottom:6px">Must fix</div><div style="font-weight:600; margin-bottom:6px">Complete case details</div><div style="color:#3a352f; line-height:1.5">FIR number, police station, Applicant identity and address, and exact arrest time are still to be confirmed.</div></div>
+      </div>
+      <div id="legend" style="position:absolute; left:1100px; top:740px; display:flex; flex-direction:column; align-items:flex-start; gap:10px">
+        <span class="chip"><span style="border-bottom:2px solid #4a78d6; background:#e9f0fc; padding:0 4px">Blue</span> from supplied instructions, not verified</span>
+        <span class="chip"><span style="border-bottom:2px dashed #d9a520; background:#fdf3cf; padding:0 4px">Yellow</span> still to be confirmed</span>
+      </div>
+      <svg class="layer" id="ink" width="1440" height="1000" viewBox="0 0 1440 1000" aria-hidden="true">
+        <path id="thread" fill="none" stroke="#c4562e" stroke-width="2.4" stroke-linecap="round"/>
+        <path id="focal" fill="none" stroke="#1c1714" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <div class="layer" id="type"><div class="wordmark" id="bug" style="position:absolute; right:40px; top:36px; font-size:30px">Law<span class="v">Vriksh</span></div></div>
+    <div class="layer" id="clay-layer"><div class="slab clay" id="clay"></div></div>
+    <div class="layer" id="vignette"></div>
+  </div>
+  <script type="module">
+    import { timeline } from './src/section6.js';
+    window.__timelines['section-6'] = timeline;
+  </script>
+</body>
+</html>

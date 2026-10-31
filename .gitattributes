@@ -1,0 +1,2 @@
+# Preserve imported bytes across platforms; asset-manifest uses exact SHA256.
+* -text

@@ -1,0 +1,54 @@
+{
+  "theme": "paper",
+  "caption_style": "ink-band",
+  "step": 3,
+  "steps": 3,
+  "kicker": "Check three",
+  "title_html": "Match the date your <b>draft gives.</b>",
+  "body_html": "Then the court, then the parties.",
+  "motif": "calendar",
+  "scene_index": 5,
+  "scene_total": 7,
+  "captions": [
+    {
+      "w": "Check",
+      "s": 0.3,
+      "e": 0.59
+    },
+    {
+      "w": "three.",
+      "s": 0.62,
+      "e": 0.91
+    },
+    {
+      "w": "Match",
+      "s": 0.94,
+      "e": 1.23
+    },
+    {
+      "w": "the",
+      "s": 1.26,
+      "e": 1.55
+    },
+    {
+      "w": "date",
+      "s": 1.58,
+      "e": 1.87
+    },
+    {
+      "w": "your",
+      "s": 1.9,
+      "e": 2.19
+    },
+    {
+      "w": "draft",
+      "s": 2.22,
+      "e": 2.51
+    },
+    {
+      "w": "gives.",
+      "s": 2.54,
+      "e": 2.83
+    }
+  ]
+}

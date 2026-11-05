@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Principle card</title>
+<meta name="lv:template" content="reel/principle">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="4.5">
+<meta name="lv:hold" content="3.4">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="paper">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<div class="motif" data-motif="courthouse" data-deco aria-hidden="true" style="left:90px;top:330px;width:620px;height:450px"></div>
+<section class="reel-content">
+  <div class="push"></div>
+  <p class="principle-no" data-slot="number" style="font-size:36px;font-weight:600;letter-spacing:.16em;color:var(--fg-muted);margin:0">Principle 04</p>
+  <div class="gap-s"></div>
+  <h1 class="statement xl" data-slot-html="title_html">Your judgment <b>stays yours.</b></h1>
+  <div class="gap-m"></div>
+  <p class="support" data-slot-html="body_html" data-optional>A tool can find and sort. Whether a case helps your client is your call.</p>
+</section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"paper","caption_style":"ink-band","number":"Principle 04","title_html":"Your judgment <b>stays yours.</b>","body_html":"A tool can find and sort. Whether a case helps your client is your call.","motif":"courthouse","scene_index":6,"scene_total":7,"captions":[{"w":"Your","s":0.9,"e":1.23},{"w":"judgment","s":1.26,"e":1.59},{"w":"stays","s":1.62,"e":1.95},{"w":"yours.","s":1.98,"e":2.31}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 4.5, hold: 3.4, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 4.5, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    var m = $('.motif'), p = LV.ease.outQuint(LV.prog(t, 0.2, 1.0)); m.style.opacity = p.toFixed(3); m.style.transform = 'translateY(' + ((1 - p) * 80).toFixed(2) + 'px)';
+    LV.reveal($('.principle-no'), t, 0.9, 0.5, 16); LV.wordsIn($('.statement'), t, 1.05, 0.09, 0.55); LV.reveal($('.support'), t, 2.0, 0.6, 16);
+  }});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Numbered step</title>
+<meta name="lv:template" content="reel/step">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="4.5">
+<meta name="lv:hold" content="3.4">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="paper">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content">
+  <div style="display:flex;align-items:center;gap:32px">
+    <span class="badge-num" data-slot="step">3</span>
+    <ol class="step-track" aria-label="Steps" style="display:flex;gap:28px;margin:0;padding:0;list-style:none"><li style="font-size:36px;font-weight:600;letter-spacing:.08em;padding-bottom:12px;position:relative;color:var(--fg-muted)">01</li><li style="font-size:36px;font-weight:600;letter-spacing:.08em;padding-bottom:12px;position:relative;color:var(--fg-muted)">02</li><li style="font-size:36px;font-weight:600;letter-spacing:.08em;padding-bottom:12px;position:relative;color:var(--accent)">03<span class="cur" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:4px;border-radius:2px;background:var(--thread);transform-origin:0 50%"></span></li></ol>
+  </div>
+  <div class="push"></div>
+  <p class="kicker" data-slot="kicker">Check three</p>
+  <div class="gap-s"></div>
+  <h1 class="statement l" data-slot-html="title_html">Match the date your <b>draft gives.</b></h1>
+  <div class="gap-m"></div>
+  <p class="support" data-slot-html="body_html" data-optional>Then the court, then the parties.</p>
+</section>
+<div class="motif" data-motif="calendar" data-deco aria-hidden="true" style="left:560px;top:470px;width:460px;height:380px"></div><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"paper","caption_style":"ink-band","step":3,"steps":3,"kicker":"Check three","title_html":"Match the date your <b>draft gives.</b>","body_html":"Then the court, then the parties.","motif":"calendar","scene_index":5,"scene_total":7,"captions":[{"w":"Check","s":0.3,"e":0.59},{"w":"three.","s":0.62,"e":0.91},{"w":"Match","s":0.94,"e":1.23},{"w":"the","s":1.26,"e":1.55},{"w":"date","s":1.58,"e":1.87},{"w":"your","s":1.9,"e":2.19},{"w":"draft","s":2.22,"e":2.51},{"w":"gives.","s":2.54,"e":2.83}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 4.5, hold: 3.4, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 4.5, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    var bs = LV.ease.settle(LV.prog(t, 0.1, 0.45)); $('.badge-num').style.transform = 'scale(' + bs.toFixed(4) + ')';
+    LV.reveal($('.step-track'), t, 0.3, 0.5, 12);
+    var cu = $('.cur'); if (cu) cu.style.transform = 'scaleX(' + LV.ease.inOut(LV.prog(t, 0.6, 0.4)).toFixed(4) + ')';
+    var m = $('.motif'), p = LV.ease.outQuint(LV.prog(t, 0.8, 0.8)); m.style.opacity = p.toFixed(3); m.style.transform = 'translateY(' + ((1 - p) * 60).toFixed(2) + 'px)';
+    LV.reveal($('.kicker'), t, 1.0, 0.5, 16); LV.reveal($('.statement'), t, 1.15, 0.6, 24); LV.reveal($('.support'), t, 1.6, 0.6, 16);
+  }});
+})();
+</script>
+</body>
+</html>

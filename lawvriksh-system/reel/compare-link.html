@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Two-card comparison with link line</title>
+<meta name="lv:template" content="reel/compare-link">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="5">
+<meta name="lv:hold" content="3.8">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="paper">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content">
+  <p class="kicker" data-slot="kicker">The paragraph, your sentence</p>
+  <div class="gap-s"></div>
+  <h1 class="statement l" data-slot-html="title_html">Say <b>no more</b> than it does.</h1>
+  <div class="push"></div>
+  <div class="card is-quiet ca" style="display:flex;flex-direction:column;gap:18px;padding:36px 40px"><span class="pill is-outline" style="align-self:flex-start" data-slot="a_label">The paragraph</span><p class="body" style="color:var(--fg-muted)" data-slot="a_text">Para [14]: notice was served on [date].</p></div>
+  <div class="link-line" data-deco aria-hidden="true"><span class="ln"></span><span class="n1"></span><span class="n2"></span></div>
+  <div class="card is-raised cb" style="display:flex;flex-direction:column;gap:18px;padding:36px 40px"><span class="pill is-accent" style="align-self:flex-start" data-slot="b_label">Your sentence</span><p class="body" data-slot="b_text">Notice was served on [date] (para [14]).</p></div>
+</section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"paper","caption_style":"ink-band","kicker":"The paragraph, your sentence","title_html":"Say <b>no more</b> than it does.","a_label":"The paragraph","a_text":"Para [14]: notice was served on [date].","b_label":"Your sentence","b_text":"Notice was served on [date] (para [14]).","scene_index":4,"scene_total":7,"captions":[{"w":"Your","s":0.3,"e":0.58},{"w":"sentence","s":0.6,"e":0.88},{"w":"should","s":0.9,"e":1.18},{"w":"say","s":1.2,"e":1.48},{"w":"no","s":1.5,"e":1.78},{"w":"more","s":1.8,"e":2.08},{"w":"than","s":2.1,"e":2.38},{"w":"the","s":2.4,"e":2.68},{"w":"paragraph.","s":2.7,"e":2.98}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 5, hold: 3.8, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 5, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    LV.reveal($('.kicker'), t, 0.05, 0.5, 16); LV.reveal($('.statement'), t, 0.15, 0.6, 24);
+    LV.reveal($('.ca'), t, 0.5, 0.6, 40);
+    var d = LV.ease.inOut(LV.prog(t, 1.2, 0.6)); $('.link-line').style.setProperty('--d', d.toFixed(4));
+    $('.link-line .n1').style.opacity = LV.prog(t, 1.15, 0.1).toFixed(3); $('.link-line .n2').style.opacity = LV.prog(t, 1.75, 0.1).toFixed(3);
+    LV.reveal($('.cb'), t, 1.7, 0.6, 40);
+  }});
+})();
+</script>
+</body>
+</html>

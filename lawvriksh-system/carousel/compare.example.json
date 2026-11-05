@@ -1,0 +1,13 @@
+{
+  "theme": "paper",
+  "kicker": "This, not that",
+  "title_html": "Cite the paragraph, <b>not the summary.</b>",
+  "not_label": "Not this",
+  "not_text": "“As held in the judgment, the delay was condoned.”",
+  "this_label": "This",
+  "this_text": "“Para [12]: the delay was condoned on [ground].”",
+  "counter": {
+    "index": 4,
+    "total": 8
+  }
+}

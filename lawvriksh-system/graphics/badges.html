@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh graphics — badges, dividers, pills and buttons</title>
+<meta name="lv:template" content="graphics/badges">
+<meta name="lv:size" content="1600x1800">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="components.css">
+<script src="../core/lv-runtime.js"></script>
+<style>
+.lv{width:1600px;height:1800px}
+.sheet{position:absolute;inset:60px 72px;z-index:2;display:flex;flex-direction:column;gap:40px}
+.grp{display:flex;flex-direction:column;gap:22px}
+.rw{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.cap{font-size:34px;font-weight:500;color:var(--fg-muted)}
+.divs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 56px;align-items:center}
+.divs > div{display:flex;flex-direction:column;gap:20px}
+</style>
+</head>
+<body>
+<main class="lv" data-format="sheet" data-theme="paper">
+<div class="sheet">
+  <div class="grp"><span class="kicker">Number and step badges</span>
+    <div class="rw">
+      <span class="b-num">1</span><span class="b-num is-outline">2</span><span class="b-num is-ink">3</span><span class="b-num is-square">4</span><span class="b-num is-square is-outline">5</span>
+      <span class="b-numeral">03</span>
+      <span class="b-step">Step 02</span>
+      <span class="b-counter"><b>03</b> / 08</span>
+    </div>
+  </div>
+  <div class="grp"><span class="kicker">Dividers and rules</span>
+    <div class="divs">
+      <div><span class="cap">hairline</span><div class="d-hair" data-deco></div></div>
+      <div><span class="cap">thread with node</span><div class="d-thread" data-deco></div></div>
+      <div><span class="cap">dotted thread</span><div class="d-dots" data-deco></div></div>
+      <div><span class="cap">double rule</span><div class="d-double" data-deco></div></div>
+      <div><span class="cap">short thread</span><div class="d-short" data-deco></div></div>
+      <div><span class="cap">labelled</span><div class="d-label">Part two</div></div>
+    </div>
+  </div>
+  <div class="grp"><span class="kicker">Pills</span>
+    <div class="rw">
+      <span class="pill">Source</span><span class="pill is-accent">Paragraph</span><span class="pill is-outline">Date checked</span>
+      <span class="p-status"><span class="t"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M7.5 15.5l5 5 10-11" fill="none" stroke="#f5f1ea" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Checked</span>
+      <span class="p-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg>[date]</span>
+      <span class="p-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9L12 4l8.5 5z"/><path d="M5 9v9M9.7 9v9M14.3 9v9M19 9v9M3 20.5h18"/></svg>[Court]</span>
+    </div>
+  </div>
+  <div class="grp"><span class="kicker">Buttons</span>
+    <div class="rw">
+      <span class="b-btn primary">Follow LawVriksh</span>
+      <span class="b-btn ink">Save this note</span>
+      <span class="b-btn ghost">Read the series</span>
+    </div>
+    <div class="rw">
+      <span class="b-btn soft pill">Practice note</span>
+      <span class="b-btn primary pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h10v17l-5-4-5 4z"/></svg>Save</span>
+      <span class="b-link">Link in bio</span>
+    </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

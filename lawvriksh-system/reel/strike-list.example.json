@@ -1,0 +1,61 @@
+{
+  "theme": "dark",
+  "caption_style": "ink-band",
+  "kicker": "Not a source",
+  "title_html": "What you <b>cannot cite.</b>",
+  "struck": [
+    "A headnote",
+    "A forwarded summary",
+    "An AI answer"
+  ],
+  "kept": "The judgment itself",
+  "scene_index": 3,
+  "scene_total": 7,
+  "captions": [
+    {
+      "w": "Not",
+      "s": 0.4,
+      "e": 0.77
+    },
+    {
+      "w": "a",
+      "s": 0.8,
+      "e": 1.17
+    },
+    {
+      "w": "headnote,",
+      "s": 1.2,
+      "e": 1.57
+    },
+    {
+      "w": "not",
+      "s": 1.6,
+      "e": 1.97
+    },
+    {
+      "w": "a",
+      "s": 2,
+      "e": 2.37
+    },
+    {
+      "w": "summary.",
+      "s": 2.4,
+      "e": 2.77
+    },
+    {
+      "w": "The",
+      "s": 2.8,
+      "e": 3.17
+    },
+    {
+      "w": "judgment",
+      "s": 3.2,
+      "e": 3.57
+    },
+    {
+      "w": "itself.",
+      "s": 3.6,
+      "e": 3.97
+    }
+  ]
+}

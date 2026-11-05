@@ -1,0 +1,14 @@
+{
+  "theme": "paper",
+  "kicker": "Advocates who shaped practice · No. [n]",
+  "image": "",
+  "image_alt": "",
+  "image_label": "Portrait — public-domain or licensed image",
+  "name": "[Advocate name]",
+  "era": "[Year]–[Year] · [Bar / city]",
+  "body_html": "One habit of practice we still use, and where it came from.",
+  "counter": {
+    "index": 1,
+    "total": 5
+  }
+}

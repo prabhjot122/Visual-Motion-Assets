@@ -1,0 +1,64 @@
+/* Product compositions — rebuilt as layered HTML/CSS/SVG from LawVriksh screens (1440x1000 CSS px).
+   Layout, labels and hierarchy follow the product; colours are mapped onto library tokens and the
+   typeface is LawVriksh Sans. Placeholder data only. Not for public use until the founder approves
+   the specific capability shown (see *.meta.json: requires_claim_approval). */
+.lv[data-format="product"]{width:1440px;height:1000px;background:var(--paper)}
+.lv[data-format="product"]::before{display:none}
+.app{position:absolute;inset:0;display:flex;gap:10px;padding:10px;font-size:13px;color:var(--ink)}
+.side{width:222px;flex:none;border-radius:12px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--ink-12);padding:14px 8px;display:flex;flex-direction:column;gap:2px}
+.side .brand{display:flex;align-items:center;gap:8px;padding:4px 8px 12px}
+.side .brand img{width:20px}
+.side .brand .wm{font-size:16px;font-weight:600;letter-spacing:-0.01em}
+.side .brand .wm span{color:var(--clay-dark)}
+.side .brand .beta{font-size:9px;font-weight:500;padding:2px 5px;border-radius:4px;background:var(--ink-08);color:var(--muted)}
+.side .newrow{display:flex;gap:8px;padding:0 0 12px}
+.side .new{flex:1;height:32px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--ink-12);display:flex;align-items:center;gap:8px;padding:0 10px;font-weight:500}
+.side .srch{width:32px;height:32px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--ink-12);display:grid;place-items:center}
+.nav{display:flex;align-items:center;gap:10px;height:28px;padding:0 10px;border-radius:7px;font-size:13px}
+.nav svg,.ico{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;color:var(--muted)}
+.nav.is-active{background:rgba(201,72,32,.10);font-weight:500}
+.nav.sub{padding-left:32px}
+.side .group{font-size:11.5px;color:var(--muted);padding:14px 10px 6px;border-top:1px solid var(--ink-08);margin-top:8px}
+.side .foot{margin-top:auto;display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;box-shadow:inset 0 0 0 1px var(--ink-12)}
+.side .av{width:28px;height:28px;border-radius:50%;background:var(--ink-08);display:grid;place-items:center;font-size:10.5px;font-weight:600}
+.main{flex:1;min-width:0;border-radius:12px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--ink-12);display:flex;flex-direction:column;overflow:hidden}
+.topbar{height:40px;display:flex;align-items:center;gap:10px;padding:0 12px;border-bottom:1px solid var(--ink-08)}
+.crumb{display:flex;align-items:center;gap:8px;color:var(--ink)}
+.crumb .sep{color:var(--muted)}
+.btn-s{height:28px;display:inline-flex;align-items:center;gap:6px;padding:0 11px;border-radius:7px;font-weight:500;box-shadow:inset 0 0 0 1px var(--ink-12);background:var(--surface)}
+.btn-s.is-clay{background:var(--clay-dark);color:var(--surface);box-shadow:none}
+.toolbar{height:44px;display:flex;align-items:center;gap:8px;padding:0 12px}
+.tabs{display:flex;padding:3px;border-radius:8px;background:var(--ink-08)}
+.tabs span{padding:4px 12px;border-radius:6px;color:var(--muted)}
+.tabs span.is-on{background:var(--surface);color:var(--ink);font-weight:500;box-shadow:0 1px 2px var(--ink-12)}
+.search{flex:1;max-width:380px;height:28px;border-radius:7px;box-shadow:inset 0 0 0 1px var(--ink-12);display:flex;align-items:center;gap:8px;padding:0 10px;color:var(--muted)}
+.live{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.live .ld{width:7px;height:7px;border-radius:50%;background:var(--thread)}
+.iconbtn{width:28px;height:28px;border-radius:7px;box-shadow:inset 0 0 0 1px var(--ink-12);display:grid;place-items:center}
+/* case map canvas */
+.mapc{position:relative;flex:1;background:radial-gradient(circle,rgba(23,23,23,.14) 1px,rgba(23,23,23,0) 1.4px) 0 0/22px 22px}
+.mapc .title{position:absolute;left:16px;top:10px;font-size:11.5px;font-weight:600}
+.node{position:absolute;height:36px;width:200px;border-radius:8px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--ink-12),0 1px 2px var(--ink-08);display:flex;align-items:center;gap:8px;padding:0 10px;font-size:12px;font-weight:600}
+.node .ct{display:inline-flex;align-items:center;gap:3px;height:20px;padding:0 7px;border-radius:999px;background:var(--ink-08);font-size:10px;font-weight:500;color:var(--muted)}
+.node.left{justify-content:space-between;flex-direction:row}
+.node.right{justify-content:space-between}
+.root{position:absolute;width:236px;padding:10px 12px;border-radius:8px;background:rgba(201,72,32,.05);box-shadow:inset 0 0 0 1px rgba(201,72,32,.22)}
+.root .k{font-size:9.5px;font-weight:600;letter-spacing:.12em;color:var(--clay-dark)}
+.root .n{font-size:12.5px;font-weight:600;margin-top:4px}
+.root .c{font-size:10.5px;color:var(--muted);margin-top:2px}
+.links{position:absolute;inset:0;width:100%;height:100%}
+/* chronology */
+.chron{flex:1;margin:0 12px 12px;border-radius:10px;box-shadow:inset 0 0 0 1px var(--ink-12);padding:22px 0 0;position:relative;overflow:hidden}
+.era{display:flex;align-items:center;gap:14px;margin:0 200px 18px;font-size:10.5px;font-weight:600;letter-spacing:.14em;color:var(--muted)}
+.era::after{content:"";flex:1;height:1px;background:var(--ink-12)}
+.ev{display:grid;grid-template-columns:150px 26px minmax(0,1fr);column-gap:12px;margin:0 200px;min-height:68px;position:relative}
+.ev .d{text-align:right;color:var(--ink);font-size:12px;padding-top:4px;font-variant-numeric:tabular-nums lining-nums}
+.ev .m{position:relative;display:flex;justify-content:center}
+.ev .m::after{content:"";position:absolute;top:26px;bottom:-4px;left:12px;width:2px;background:var(--ink-08)}
+.ev:last-child .m::after{display:none}
+.ev .dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--ink-12)}
+.ev .dot svg{width:13px;height:13px;fill:none;stroke:var(--muted);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ev .dot.is-review{background:rgba(201,72,32,.10);box-shadow:inset 0 0 0 1.5px rgba(201,72,32,.4)}
+.ev .dot.is-review svg{stroke:var(--clay-dark)}
+.ev .t{font-size:13px;font-weight:600;padding-top:3px}
+.ev .s{font-size:11.5px;color:var(--muted);margin-top:4px}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh carousel — Statement with pills</title>
+<meta name="lv:template" content="carousel/statement-pills">
+<meta name="lv:size" content="1080x1350">
+<meta name="lv:role" content="content">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="carousel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+</head>
+<body>
+<main class="lv" data-format="portrait" data-theme="paper" data-counter="6/8">
+<div class="motif" data-motif="notes" data-deco aria-hidden="true" style="left:700px;top:50px;width:340px;height:270px"></div>
+<section class="content">
+  <p class="kicker" data-slot="kicker">Then</p>
+  <div class="push"></div>
+  <h1 class="statement xl" data-slot-html="title_html">Write down <b>what you checked.</b></h1>
+  <div class="gap-m"></div>
+  <p class="support" data-slot-html="body_html" data-optional>One line per citation. It makes your own review visible.</p>
+  <div class="gap-l"></div>
+  <ul class="pills" data-slot-list="pills"><template><li class="pill" data-field="text"></li></template>
+<li class="pill">Source</li>
+<li class="pill is-accent">Paragraph</li>
+<li class="pill">Date checked</li></ul>
+  <div class="push"></div>
+</section>
+
+<div class="thread" aria-hidden="true"></div>
+<footer class="folio">
+  <span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span>
+  <span class="wordmark">Law<span>Vriksh</span></span>
+  <span class="counter" data-slot="counter">06 / 08</span>
+</footer>
+</main>
+</body>
+</html>

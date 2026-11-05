@@ -1,0 +1,10 @@
+{
+  "theme": "paper",
+  "kicker": "The paragraph, your sentence",
+  "title_html": "Say <b>no more</b> than the paragraph does.",
+  "a_label": "The paragraph",
+  "a_text": "Para [14]: the notice was served on [date].",
+  "b_label": "Your sentence",
+  "b_text": "Notice was served on [date] (para [14]).",
+  "series": "Field notes"
+}

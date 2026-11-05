@@ -1,0 +1,12 @@
+{
+  "theme": "paper",
+  "motif": "checked",
+  "kicker": "Before you file",
+  "title_html": "Three checks, <b>every citation.</b>",
+  "rows": [
+    "Found in an authorised source",
+    "Paragraph read and noted",
+    "Court, date and parties match"
+  ],
+  "series": "Field notes"
+}

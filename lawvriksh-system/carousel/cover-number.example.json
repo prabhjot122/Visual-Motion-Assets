@@ -1,0 +1,12 @@
+{
+  "theme": "paper",
+  "motif": "checked",
+  "kicker": "Before you file",
+  "numeral": "3",
+  "title_html": "checks for every citation a draft hands you.",
+  "body_html": "Source, paragraph, then court, date and parties.",
+  "counter": {
+    "index": 1,
+    "total": 8
+  }
+}

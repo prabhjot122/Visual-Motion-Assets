@@ -1,0 +1,13 @@
+{
+  "theme": "paper",
+  "motif": "courthouse",
+  "kicker": "Keep this",
+  "title_html": "Four lines per citation. <b>Every filing.</b>",
+  "body_html": "Source, paragraph, court, date and parties, then a note of what you checked.",
+  "button": "Follow LawVriksh",
+  "note": "A practice note for individual advocates, every week.",
+  "counter": {
+    "index": 7,
+    "total": 7
+  }
+}

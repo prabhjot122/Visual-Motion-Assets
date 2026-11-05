@@ -1,0 +1,15 @@
+{
+  "theme": "paper",
+  "kicker": "What this does not settle",
+  "title_html": "Real is not the same as <b>good law.</b>",
+  "body_html": "The checks show a citation exists and says what you wrote.",
+  "list_label": "Still yours to judge",
+  "rows": [
+    "Whether it has been overruled",
+    "Whether it applies to your facts"
+  ],
+  "counter": {
+    "index": 7,
+    "total": 8
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "theme": "paper",
+  "kicker": "Check two",
+  "title_html": "Read the paragraph <b>your point rests on.</b>",
+  "body_html": "Your sentence should say no more than that paragraph does.",
+  "counter": {
+    "index": 4,
+    "total": 8
+  }
+}

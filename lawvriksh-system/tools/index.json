@@ -1,0 +1,2797 @@
+[
+  {
+    "family": "carousel",
+    "id": "cover-stack",
+    "title": "Cover A — stacked statement",
+    "role": "cover / hook",
+    "desc": "Large statement high on the page, supporting line bottom left, stone cluster bottom right. The thread starts at the first node.",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "swipe",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/cover-stack.html"
+  },
+  {
+    "family": "carousel",
+    "id": "cover-document",
+    "title": "Cover B — document object",
+    "role": "cover / hook",
+    "desc": "A greeked page with one highlighted paragraph sits top right on a stone slab; the statement takes the lower half.",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/cover-document.html"
+  },
+  {
+    "family": "carousel",
+    "id": "cover-number",
+    "title": "Cover C — oversized numeral",
+    "role": "cover / hook",
+    "desc": "One large clay numeral states the count; three stones echo it. Use for “N habits / N checks” openers.",
+    "slots": [
+      "motif",
+      "kicker",
+      "numeral",
+      "title_html",
+      "body_html",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/cover-number.html"
+  },
+  {
+    "family": "carousel",
+    "id": "statement",
+    "title": "Statement",
+    "role": "content",
+    "desc": "Kicker, one statement, one muted supporting line. A small stone pair anchors the top right.",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/statement.html"
+  },
+  {
+    "family": "carousel",
+    "id": "statement-checks",
+    "title": "Statement with check rows",
+    "role": "content",
+    "desc": "Statement plus up to four check rows (clay circle, paper tick) and an optional closing line.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "body_html",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/statement-checks.html"
+  },
+  {
+    "family": "carousel",
+    "id": "statement-pills",
+    "title": "Statement with pills",
+    "role": "content",
+    "desc": "Statement, supporting line and a row of pills (ink, accent or outline).",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "pills",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/statement-pills.html"
+  },
+  {
+    "family": "carousel",
+    "id": "compare",
+    "title": "Comparison — this, not that",
+    "role": "content",
+    "desc": "Two stacked cards joined by a clay link line with a node (no arrowhead). The “not” card is quiet; the “this” card is raised.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "not_label",
+      "not_text",
+      "this_label",
+      "this_text",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/compare.html"
+  },
+  {
+    "family": "carousel",
+    "id": "step",
+    "title": "Numbered step",
+    "role": "content",
+    "desc": "Step badge, a step track (01 02 03) with the current step on the thread, statement and supporting line.",
+    "slots": [
+      "motif",
+      "step",
+      "steps",
+      "kicker",
+      "title_html",
+      "body_html",
+      "pills",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/step.html"
+  },
+  {
+    "family": "carousel",
+    "id": "definition",
+    "title": "Definition — what this does not settle",
+    "role": "content",
+    "desc": "A term and its plain definition, then a short list of what it does not settle, marked with thread dashes.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "list_label",
+      "rows",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/definition.html"
+  },
+  {
+    "family": "carousel",
+    "id": "checklist",
+    "title": "Checklist summary",
+    "role": "summary",
+    "desc": "Numbered summary of the whole carousel. Rows carry tabular numerals; a note closes it.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/checklist.html"
+  },
+  {
+    "family": "carousel",
+    "id": "closing-cta",
+    "title": "Closing / CTA",
+    "role": "closing",
+    "desc": "Closing statement, one line, a button and a note. The thread ends at the last node.",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/closing-cta.html"
+  },
+  {
+    "family": "carousel",
+    "id": "statement-document",
+    "title": "Statement with document",
+    "role": "content",
+    "desc": "Statement on top; a band of greeked pages below shows the idea (one highlighted paragraph). Pages are images: no text touches them.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/statement-document.html"
+  },
+  {
+    "family": "carousel",
+    "id": "advocate-cover",
+    "title": "Advocate series — cover",
+    "role": "series cover",
+    "desc": "Weekly series on past advocates. An empty labelled portrait frame (hatch-sand stone treatment) until a licensed image is supplied. No likeness ships in the template.",
+    "slots": [
+      "kicker",
+      "image",
+      "image_alt",
+      "image_label",
+      "name",
+      "era",
+      "body_html",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/advocate-cover.html"
+  },
+  {
+    "family": "carousel",
+    "id": "advocate-profile",
+    "title": "Advocate series — profile",
+    "role": "series content",
+    "desc": "Portrait slot, name and era, a “what they did” block of up to three rows, and a sources line.",
+    "slots": [
+      "image",
+      "image_alt",
+      "image_label",
+      "kicker",
+      "name",
+      "era",
+      "did_label",
+      "rows",
+      "sources",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/advocate-profile.html"
+  },
+  {
+    "family": "carousel",
+    "id": "li-doc-cover",
+    "title": "LinkedIn document — cover (PDF page 1)",
+    "role": "document cover",
+    "desc": "Reads as a proper first page in a PDF viewer: title, subtitle, contents, byline with mark and edition line.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "toc",
+      "edition",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/li-doc-cover.html"
+  },
+  {
+    "family": "carousel",
+    "id": "li-doc-closing",
+    "title": "LinkedIn document — closing",
+    "role": "document closing",
+    "desc": "Final PDF page: summary statement, one line, a button-styled action and a note. Stones close the document.",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "counter"
+    ],
+    "size": "1080x1350",
+    "file": "carousel/li-doc-closing.html"
+  },
+  {
+    "family": "static",
+    "id": "single-statement-ig",
+    "title": "Single statement · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "title_html",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/single-statement-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "single-statement-li",
+    "title": "Single statement · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "title_html",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/single-statement-li.html"
+  },
+  {
+    "family": "static",
+    "id": "statement-support-ig",
+    "title": "Statement with supporting line · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/statement-support-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "statement-support-li",
+    "title": "Statement with supporting line · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "body_html",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/statement-support-li.html"
+  },
+  {
+    "family": "static",
+    "id": "three-checks-ig",
+    "title": "Three-point checklist · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "rows",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/three-checks-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "three-checks-li",
+    "title": "Three-point checklist · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "title_html",
+      "rows",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/three-checks-li.html"
+  },
+  {
+    "family": "static",
+    "id": "comparison-ig",
+    "title": "Comparison · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "kicker",
+      "title_html",
+      "a_label",
+      "a_text",
+      "b_label",
+      "b_text",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/comparison-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "comparison-li",
+    "title": "Comparison · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "kicker",
+      "title_html",
+      "a_label",
+      "a_text",
+      "b_label",
+      "b_text",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/comparison-li.html"
+  },
+  {
+    "family": "static",
+    "id": "myth-check-ig",
+    "title": "Myth versus check · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "myth_label",
+      "myth",
+      "check_label",
+      "check_html",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/myth-check-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "myth-check-li",
+    "title": "Myth versus check · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "myth_label",
+      "myth",
+      "check_label",
+      "check_html",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/myth-check-li.html"
+  },
+  {
+    "family": "static",
+    "id": "callout-document-ig",
+    "title": "Callout with document · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "kicker",
+      "title_html",
+      "cite",
+      "callout",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/callout-document-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "callout-document-li",
+    "title": "Callout with document · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "kicker",
+      "title_html",
+      "cite",
+      "callout",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/callout-document-li.html"
+  },
+  {
+    "family": "static",
+    "id": "cta-card-ig",
+    "title": "CTA card · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/cta-card-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "cta-card-li",
+    "title": "CTA card · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/cta-card-li.html"
+  },
+  {
+    "family": "static",
+    "id": "big-number-ig",
+    "title": "Big number / keyword · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "number",
+      "unit",
+      "body_html",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/big-number-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "big-number-li",
+    "title": "Big number / keyword · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "number",
+      "unit",
+      "body_html",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/big-number-li.html"
+  },
+  {
+    "family": "static",
+    "id": "definition-card-ig",
+    "title": "Definition card · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "term",
+      "pos",
+      "body_html",
+      "not_label",
+      "not_text",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/definition-card-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "definition-card-li",
+    "title": "Definition card · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "kicker",
+      "term",
+      "pos",
+      "body_html",
+      "not_label",
+      "not_text",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/definition-card-li.html"
+  },
+  {
+    "family": "static",
+    "id": "principle-card-ig",
+    "title": "Principle card · Instagram",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "number",
+      "title_html",
+      "body_html",
+      "series"
+    ],
+    "size": "1080x1350",
+    "file": "static/principle-card-ig.html"
+  },
+  {
+    "family": "static",
+    "id": "principle-card-li",
+    "title": "Principle card · LinkedIn",
+    "role": "static",
+    "desc": "",
+    "slots": [
+      "motif",
+      "number",
+      "title_html",
+      "body_html",
+      "series"
+    ],
+    "size": "1200x1200",
+    "file": "static/principle-card-li.html"
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "hook",
+    "title": "Hook",
+    "role": "scene",
+    "desc": "Kicker fades up (0.1 s). Statement rises word by word (0.35 s, 0.09 s stagger). Case files settle up from below (1.0–1.8 s). Supporting line fades up (1.7 s).",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "motif",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/hook.html",
+    "duration": 4,
+    "checkTimes": [
+      3.2,
+      4
+    ],
+    "strip": [
+      0.15,
+      0.72,
+      1.44,
+      2.2,
+      3.2
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "title",
+    "title": "Kicker, title, supporting line",
+    "role": "scene",
+    "desc": "Kicker (0.1 s), statement word by word (0.3 s), a short thread draws under it (1.1–1.6 s), supporting line (1.4 s).",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/title.html",
+    "duration": 4,
+    "checkTimes": [
+      3,
+      4
+    ],
+    "strip": [
+      0.15,
+      0.72,
+      1.44,
+      2.2,
+      3
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "document-highlight",
+    "title": "Document highlight",
+    "role": "scene",
+    "desc": "Statement fades up (0.1 s). The page slides up (0.4–1.1 s). The highlight sweeps line by line across one paragraph (1.3–2.7 s); a clay margin mark grows beside it (2.6–3.0 s).",
+    "slots": [
+      "kicker",
+      "title_html",
+      "lines",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/document-highlight.html",
+    "duration": 5,
+    "checkTimes": [
+      3.8,
+      5
+    ],
+    "strip": [
+      0.15,
+      0.9,
+      1.8,
+      2.75,
+      3.8
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "strike-list",
+    "title": "Strike-out list",
+    "role": "scene",
+    "desc": "Title fades up. Items appear (0.5 s, 0.15 s stagger). A clay strike draws through each struck item in turn (1.3, 1.8, 2.3 s) and it dims. The kept item gains a thread dot and turns full strength (2.9 s).",
+    "slots": [
+      "kicker",
+      "title_html",
+      "struck",
+      "kept",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/strike-list.html",
+    "duration": 5,
+    "checkTimes": [
+      3.9,
+      5
+    ],
+    "strip": [
+      0.15,
+      0.9,
+      1.8,
+      2.75,
+      3.9
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "compare-link",
+    "title": "Two-card comparison with link line",
+    "role": "scene",
+    "desc": "Title fades up. The first card rises (0.5 s). A clay link line draws down between the cards with a node at each end, no arrowhead (1.2–1.8 s). The second card rises (1.7 s).",
+    "slots": [
+      "kicker",
+      "title_html",
+      "a_label",
+      "a_text",
+      "b_label",
+      "b_text",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/compare-link.html",
+    "duration": 5,
+    "checkTimes": [
+      3.8,
+      5
+    ],
+    "strip": [
+      0.15,
+      0.9,
+      1.8,
+      2.75,
+      3.8
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "check-rows",
+    "title": "Check rows, one by one",
+    "role": "scene",
+    "desc": "Title fades up. Each row rises 0.55 s after the last (from 1.0 s); its tick circle scales in 0.15 s after the row.",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/check-rows.html",
+    "duration": 5,
+    "checkTimes": [
+      3.9,
+      5
+    ],
+    "strip": [
+      0.15,
+      0.9,
+      1.8,
+      2.75,
+      3.9
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "step",
+    "title": "Numbered step",
+    "role": "scene",
+    "desc": "Badge scales in (0.1 s). Step track fades up; the current step’s thread underline draws (0.6–1.0 s). Calendar settles in (0.8 s). Kicker, statement and supporting line follow (1.0, 1.15, 1.6 s).",
+    "slots": [
+      "step",
+      "steps",
+      "kicker",
+      "title_html",
+      "body_html",
+      "motif",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/step.html",
+    "duration": 4.5,
+    "checkTimes": [
+      3.4,
+      4.5
+    ],
+    "strip": [
+      0.15,
+      0.81,
+      1.62,
+      2.48,
+      3.4
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "big-number",
+    "title": "Big number / keyword",
+    "role": "scene",
+    "desc": "The number counts up from zero in whole steps (0.3–1.3 s, eased). Unit fades in beside it (1.1 s). Supporting line (1.5 s). For a keyword, set number to text: it rises instead of counting.",
+    "slots": [
+      "kicker",
+      "number",
+      "unit",
+      "body_html",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/big-number.html",
+    "duration": 4,
+    "checkTimes": [
+      3,
+      4
+    ],
+    "strip": [
+      0.15,
+      0.72,
+      1.44,
+      2.2,
+      3
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "principle",
+    "title": "Principle card",
+    "role": "scene",
+    "desc": "The court facade rises into place (0.2–1.2 s). Principle number fades up (0.9 s); statement rises word by word (1.05 s); supporting line (2.0 s). No quotation marks: a principle, not a quote.",
+    "slots": [
+      "number",
+      "title_html",
+      "body_html",
+      "motif",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/principle.html",
+    "duration": 4.5,
+    "checkTimes": [
+      3.4,
+      4.5
+    ],
+    "strip": [
+      0.15,
+      0.81,
+      1.62,
+      2.48,
+      3.4
+    ]
+  },
+  {
+    "family": "reel",
+    "kind": "reel",
+    "id": "end-card",
+    "title": "End card",
+    "role": "scene",
+    "desc": "Mark scales in on its paper disc (0.1 s); wordmark fades (0.4 s); closing line rises word by word (0.6 s); button rises (1.5 s); note fades (1.9 s). The progress thread reaches its last node.",
+    "slots": [
+      "title_html",
+      "button",
+      "note",
+      "scene_index",
+      "scene_total",
+      "caption_style",
+      "captions"
+    ],
+    "size": "1080x1920",
+    "file": "reel/end-card.html",
+    "duration": 4.5,
+    "checkTimes": [
+      3.6,
+      4.5
+    ],
+    "strip": [
+      0.15,
+      0.81,
+      1.62,
+      2.48,
+      3.6
+    ]
+  },
+  {
+    "family": "transitions",
+    "kind": "reel",
+    "id": "transition-clay-wipe",
+    "title": "Clay wipe",
+    "role": "transition",
+    "desc": "A clay panel sweeps in from the left, covers the frame at the midpoint, and leaves to the right.",
+    "size": "1080x1920",
+    "file": "reel/transition-clay-wipe.html",
+    "themes": [
+      "dark"
+    ],
+    "duration": 3,
+    "checkTimes": [
+      0.6,
+      2.6
+    ],
+    "coverAt": 1.5,
+    "strip": [
+      1,
+      1.2,
+      1.35,
+      1.5,
+      1.65,
+      1.8,
+      2
+    ],
+    "skipChecks": []
+  },
+  {
+    "family": "transitions",
+    "kind": "reel",
+    "id": "transition-paper-fold",
+    "title": "Paper fold",
+    "role": "transition",
+    "desc": "Two paper leaves fold in from top and bottom on a centre crease, meet at the midpoint, and fold away.",
+    "size": "1080x1920",
+    "file": "reel/transition-paper-fold.html",
+    "themes": [
+      "dark"
+    ],
+    "duration": 3,
+    "checkTimes": [
+      0.6,
+      2.6
+    ],
+    "coverAt": 1.5,
+    "strip": [
+      1,
+      1.2,
+      1.35,
+      1.5,
+      1.65,
+      1.8,
+      2
+    ],
+    "skipChecks": []
+  },
+  {
+    "family": "transitions",
+    "kind": "reel",
+    "id": "transition-stone-slide",
+    "title": "Stone-block slide",
+    "role": "transition",
+    "desc": "Three stone slabs (sand, clay, char) slide up in a stagger, overlap to cover at the midpoint, and lift away.",
+    "size": "1080x1920",
+    "file": "reel/transition-stone-slide.html",
+    "themes": [
+      "dark"
+    ],
+    "duration": 3,
+    "checkTimes": [
+      0.6,
+      2.6
+    ],
+    "coverAt": 1.5,
+    "strip": [
+      1,
+      1.2,
+      1.35,
+      1.5,
+      1.65,
+      1.8,
+      2
+    ],
+    "skipChecks": []
+  },
+  {
+    "family": "transitions",
+    "kind": "reel",
+    "id": "transition-thread-draw",
+    "title": "Thread draw",
+    "role": "transition",
+    "desc": "A clay thread draws across the middle with a travelling node, thickens until it fills the frame at the midpoint, then thins away.",
+    "size": "1080x1920",
+    "file": "reel/transition-thread-draw.html",
+    "themes": [
+      "dark"
+    ],
+    "duration": 3,
+    "checkTimes": [
+      0.6,
+      2.6
+    ],
+    "coverAt": 1.5,
+    "strip": [
+      1,
+      1.2,
+      1.35,
+      1.5,
+      1.65,
+      1.8,
+      2
+    ],
+    "skipChecks": []
+  },
+  {
+    "family": "transitions",
+    "kind": "reel",
+    "id": "transition-ink-iris",
+    "title": "Ink iris from the node",
+    "role": "transition",
+    "desc": "Warm ink spreads from the progress thread’s first node to fill the frame, then recedes into the last node.",
+    "size": "1080x1920",
+    "file": "reel/transition-ink-iris.html",
+    "themes": [
+      "dark"
+    ],
+    "duration": 3,
+    "checkTimes": [
+      0.6,
+      2.6
+    ],
+    "coverAt": 1.5,
+    "strip": [
+      1,
+      1.2,
+      1.35,
+      1.5,
+      1.65,
+      1.8,
+      2
+    ],
+    "skipChecks": []
+  },
+  {
+    "family": "transitions",
+    "kind": "reel",
+    "id": "transition-ink-paper-flip",
+    "title": "Ink-to-paper flip",
+    "role": "transition",
+    "desc": "An ink leaf turns in from the right edge; at the midpoint it is face-on, then its paper side turns away to the left.",
+    "size": "1080x1920",
+    "file": "reel/transition-ink-paper-flip.html",
+    "themes": [
+      "dark"
+    ],
+    "duration": 3,
+    "checkTimes": [
+      0.6,
+      2.6
+    ],
+    "coverAt": 1.5,
+    "strip": [
+      1,
+      1.2,
+      1.35,
+      1.5,
+      1.65,
+      1.8,
+      2
+    ],
+    "skipChecks": []
+  },
+  {
+    "family": "captions",
+    "kind": "reel",
+    "id": "caption-ink-band",
+    "title": "Caption — ink-band",
+    "role": "caption style",
+    "desc": "Warm-ink bar, paper words; the spoken word sits on a dark-clay chip.",
+    "size": "1080x1920",
+    "file": "reel/caption-ink-band.html",
+    "checkTimes": [
+      1.35,
+      2.6
+    ],
+    "strip": [
+      0.5,
+      1.3,
+      2.1,
+      2.9
+    ]
+  },
+  {
+    "family": "captions",
+    "kind": "reel",
+    "id": "caption-paper-slip",
+    "title": "Caption — paper-slip",
+    "role": "caption style",
+    "desc": "Surface slip with a soft shadow; ink words; a thread underline marks the spoken word.",
+    "size": "1080x1920",
+    "file": "reel/caption-paper-slip.html",
+    "checkTimes": [
+      1.35,
+      2.6
+    ],
+    "strip": [
+      0.5,
+      1.3,
+      2.1,
+      2.9
+    ]
+  },
+  {
+    "family": "captions",
+    "kind": "reel",
+    "id": "caption-edge-word",
+    "title": "Caption — edge-word",
+    "role": "caption style",
+    "desc": "Rounded ink band; unspoken words a touch dimmer, the spoken word in edge clay.",
+    "size": "1080x1920",
+    "file": "reel/caption-edge-word.html",
+    "checkTimes": [
+      1.35,
+      2.6
+    ],
+    "strip": [
+      0.5,
+      1.3,
+      2.1,
+      2.9
+    ]
+  },
+  {
+    "family": "captions",
+    "kind": "reel",
+    "id": "caption-stack",
+    "title": "Caption — stack",
+    "role": "caption style",
+    "desc": "Two large words at a time on a surface card (72 px); the spoken word in dark clay.",
+    "size": "1080x1920",
+    "file": "reel/caption-stack.html",
+    "checkTimes": [
+      1.35,
+      2.6
+    ],
+    "strip": [
+      0.5,
+      1.3,
+      2.1,
+      2.9
+    ]
+  },
+  {
+    "family": "captions",
+    "kind": "reel",
+    "id": "caption-highlighter",
+    "title": "Caption — highlighter",
+    "role": "caption style",
+    "desc": "Surface card; the spoken word gets a clay highlighter sweep behind ink text.",
+    "size": "1080x1920",
+    "file": "reel/caption-highlighter.html",
+    "checkTimes": [
+      1.35,
+      2.6
+    ],
+    "strip": [
+      0.5,
+      1.3,
+      2.1,
+      2.9
+    ]
+  },
+  {
+    "family": "graphics",
+    "id": "documents-paper",
+    "title": "Document objects",
+    "size": "1804x1462",
+    "file": "graphics/documents-paper.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "documents-dark",
+    "title": "Document objects",
+    "size": "1804x1462",
+    "file": "graphics/documents-dark.html",
+    "themes": [
+      "dark"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "connections-paper",
+    "title": "Connection motifs — threads, link lines with dots, connector paths. No arrowheads.",
+    "size": "1704x892",
+    "file": "graphics/connections-paper.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "connections-dark",
+    "title": "Connection motifs — threads, link lines with dots, connector paths. No arrowheads.",
+    "size": "1704x892",
+    "file": "graphics/connections-dark.html",
+    "themes": [
+      "dark"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "compositions-paper",
+    "title": "Law-object compositions — cover decorations, corner accents, clusters",
+    "size": "1784x1222",
+    "file": "graphics/compositions-paper.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "compositions-dark",
+    "title": "Law-object compositions — cover decorations, corner accents, clusters",
+    "size": "1784x1222",
+    "file": "graphics/compositions-dark.html",
+    "themes": [
+      "dark"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "paper-light-paper",
+    "title": "Paper and light treatments (overlays, 1080×1350)",
+    "size": "1640x912",
+    "file": "graphics/paper-light-paper.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "paper-light-dark",
+    "title": "Paper and light treatments (overlays, 1080×1350)",
+    "size": "1640x912",
+    "file": "graphics/paper-light-dark.html",
+    "themes": [
+      "dark"
+    ],
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "icons",
+    "id": "icons-paper",
+    "title": "Icon set",
+    "size": "1688x1000",
+    "file": "icons/icons-paper.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "safeArea"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "icons",
+    "id": "icons-dark",
+    "title": "Icon set",
+    "size": "1688x1000",
+    "file": "icons/icons-dark.html",
+    "themes": [
+      "dark"
+    ],
+    "skipChecks": [
+      "safeArea"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "check-paper",
+    "group": "icons",
+    "file": "icons/check-paper.svg",
+    "title": "check",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cross-out-paper",
+    "group": "icons",
+    "file": "icons/cross-out-paper.svg",
+    "title": "cross-out",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "document-paper",
+    "group": "icons",
+    "file": "icons/document-paper.svg",
+    "title": "document",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "search-paper",
+    "group": "icons",
+    "file": "icons/search-paper.svg",
+    "title": "search",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "paragraph-paper",
+    "group": "icons",
+    "file": "icons/paragraph-paper.svg",
+    "title": "paragraph",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "calendar-paper",
+    "group": "icons",
+    "file": "icons/calendar-paper.svg",
+    "title": "calendar",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "court-paper",
+    "group": "icons",
+    "file": "icons/court-paper.svg",
+    "title": "court",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "clock-paper",
+    "group": "icons",
+    "file": "icons/clock-paper.svg",
+    "title": "clock",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "note-paper",
+    "group": "icons",
+    "file": "icons/note-paper.svg",
+    "title": "note",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "link-paper",
+    "group": "icons",
+    "file": "icons/link-paper.svg",
+    "title": "link",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "verify-paper",
+    "group": "icons",
+    "file": "icons/verify-paper.svg",
+    "title": "verify",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "list-paper",
+    "group": "icons",
+    "file": "icons/list-paper.svg",
+    "title": "list",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "compare-paper",
+    "group": "icons",
+    "file": "icons/compare-paper.svg",
+    "title": "compare",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folder-paper",
+    "group": "icons",
+    "file": "icons/folder-paper.svg",
+    "title": "folder",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "bookmark-paper",
+    "group": "icons",
+    "file": "icons/bookmark-paper.svg",
+    "title": "bookmark",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "highlight-paper",
+    "group": "icons",
+    "file": "icons/highlight-paper.svg",
+    "title": "highlight",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "section-mark-paper",
+    "group": "icons",
+    "file": "icons/section-mark-paper.svg",
+    "title": "section-mark",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "page-stack-paper",
+    "group": "icons",
+    "file": "icons/page-stack-paper.svg",
+    "title": "page-stack",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "timeline-paper",
+    "group": "icons",
+    "file": "icons/timeline-paper.svg",
+    "title": "timeline",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "pin-paper",
+    "group": "icons",
+    "file": "icons/pin-paper.svg",
+    "title": "pin",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "pen-paper",
+    "group": "icons",
+    "file": "icons/pen-paper.svg",
+    "title": "pen",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "read-paper",
+    "group": "icons",
+    "file": "icons/read-paper.svg",
+    "title": "read",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "tag-paper",
+    "group": "icons",
+    "file": "icons/tag-paper.svg",
+    "title": "tag",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "sort-paper",
+    "group": "icons",
+    "file": "icons/sort-paper.svg",
+    "title": "sort",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "filter-paper",
+    "group": "icons",
+    "file": "icons/filter-paper.svg",
+    "title": "filter",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "index-paper",
+    "group": "icons",
+    "file": "icons/index-paper.svg",
+    "title": "index",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "clip-paper",
+    "group": "icons",
+    "file": "icons/clip-paper.svg",
+    "title": "clip",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "hearing-paper",
+    "group": "icons",
+    "file": "icons/hearing-paper.svg",
+    "title": "hearing",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "check-dark",
+    "group": "icons",
+    "file": "icons/check-dark.svg",
+    "title": "check",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cross-out-dark",
+    "group": "icons",
+    "file": "icons/cross-out-dark.svg",
+    "title": "cross-out",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "document-dark",
+    "group": "icons",
+    "file": "icons/document-dark.svg",
+    "title": "document",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "search-dark",
+    "group": "icons",
+    "file": "icons/search-dark.svg",
+    "title": "search",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "paragraph-dark",
+    "group": "icons",
+    "file": "icons/paragraph-dark.svg",
+    "title": "paragraph",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "calendar-dark",
+    "group": "icons",
+    "file": "icons/calendar-dark.svg",
+    "title": "calendar",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "court-dark",
+    "group": "icons",
+    "file": "icons/court-dark.svg",
+    "title": "court",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "clock-dark",
+    "group": "icons",
+    "file": "icons/clock-dark.svg",
+    "title": "clock",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "note-dark",
+    "group": "icons",
+    "file": "icons/note-dark.svg",
+    "title": "note",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "link-dark",
+    "group": "icons",
+    "file": "icons/link-dark.svg",
+    "title": "link",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "verify-dark",
+    "group": "icons",
+    "file": "icons/verify-dark.svg",
+    "title": "verify",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "list-dark",
+    "group": "icons",
+    "file": "icons/list-dark.svg",
+    "title": "list",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "compare-dark",
+    "group": "icons",
+    "file": "icons/compare-dark.svg",
+    "title": "compare",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folder-dark",
+    "group": "icons",
+    "file": "icons/folder-dark.svg",
+    "title": "folder",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "bookmark-dark",
+    "group": "icons",
+    "file": "icons/bookmark-dark.svg",
+    "title": "bookmark",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "highlight-dark",
+    "group": "icons",
+    "file": "icons/highlight-dark.svg",
+    "title": "highlight",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "section-mark-dark",
+    "group": "icons",
+    "file": "icons/section-mark-dark.svg",
+    "title": "section-mark",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "page-stack-dark",
+    "group": "icons",
+    "file": "icons/page-stack-dark.svg",
+    "title": "page-stack",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "timeline-dark",
+    "group": "icons",
+    "file": "icons/timeline-dark.svg",
+    "title": "timeline",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "pin-dark",
+    "group": "icons",
+    "file": "icons/pin-dark.svg",
+    "title": "pin",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "pen-dark",
+    "group": "icons",
+    "file": "icons/pen-dark.svg",
+    "title": "pen",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "read-dark",
+    "group": "icons",
+    "file": "icons/read-dark.svg",
+    "title": "read",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "tag-dark",
+    "group": "icons",
+    "file": "icons/tag-dark.svg",
+    "title": "tag",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "sort-dark",
+    "group": "icons",
+    "file": "icons/sort-dark.svg",
+    "title": "sort",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "filter-dark",
+    "group": "icons",
+    "file": "icons/filter-dark.svg",
+    "title": "filter",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "index-dark",
+    "group": "icons",
+    "file": "icons/index-dark.svg",
+    "title": "index",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "clip-dark",
+    "group": "icons",
+    "file": "icons/clip-dark.svg",
+    "title": "clip",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "hearing-dark",
+    "group": "icons",
+    "file": "icons/hearing-dark.svg",
+    "title": "hearing",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "check-clay",
+    "group": "icons",
+    "file": "icons/check-clay.svg",
+    "title": "check",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cross-out-clay",
+    "group": "icons",
+    "file": "icons/cross-out-clay.svg",
+    "title": "cross-out",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "document-clay",
+    "group": "icons",
+    "file": "icons/document-clay.svg",
+    "title": "document",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "search-clay",
+    "group": "icons",
+    "file": "icons/search-clay.svg",
+    "title": "search",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "paragraph-clay",
+    "group": "icons",
+    "file": "icons/paragraph-clay.svg",
+    "title": "paragraph",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "calendar-clay",
+    "group": "icons",
+    "file": "icons/calendar-clay.svg",
+    "title": "calendar",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "court-clay",
+    "group": "icons",
+    "file": "icons/court-clay.svg",
+    "title": "court",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "clock-clay",
+    "group": "icons",
+    "file": "icons/clock-clay.svg",
+    "title": "clock",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "note-clay",
+    "group": "icons",
+    "file": "icons/note-clay.svg",
+    "title": "note",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "link-clay",
+    "group": "icons",
+    "file": "icons/link-clay.svg",
+    "title": "link",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "verify-clay",
+    "group": "icons",
+    "file": "icons/verify-clay.svg",
+    "title": "verify",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "list-clay",
+    "group": "icons",
+    "file": "icons/list-clay.svg",
+    "title": "list",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "compare-clay",
+    "group": "icons",
+    "file": "icons/compare-clay.svg",
+    "title": "compare",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folder-clay",
+    "group": "icons",
+    "file": "icons/folder-clay.svg",
+    "title": "folder",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "bookmark-clay",
+    "group": "icons",
+    "file": "icons/bookmark-clay.svg",
+    "title": "bookmark",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "highlight-clay",
+    "group": "icons",
+    "file": "icons/highlight-clay.svg",
+    "title": "highlight",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "section-mark-clay",
+    "group": "icons",
+    "file": "icons/section-mark-clay.svg",
+    "title": "section-mark",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "page-stack-clay",
+    "group": "icons",
+    "file": "icons/page-stack-clay.svg",
+    "title": "page-stack",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "timeline-clay",
+    "group": "icons",
+    "file": "icons/timeline-clay.svg",
+    "title": "timeline",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "pin-clay",
+    "group": "icons",
+    "file": "icons/pin-clay.svg",
+    "title": "pin",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "pen-clay",
+    "group": "icons",
+    "file": "icons/pen-clay.svg",
+    "title": "pen",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "read-clay",
+    "group": "icons",
+    "file": "icons/read-clay.svg",
+    "title": "read",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "tag-clay",
+    "group": "icons",
+    "file": "icons/tag-clay.svg",
+    "title": "tag",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "sort-clay",
+    "group": "icons",
+    "file": "icons/sort-clay.svg",
+    "title": "sort",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "filter-clay",
+    "group": "icons",
+    "file": "icons/filter-clay.svg",
+    "title": "filter",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "index-clay",
+    "group": "icons",
+    "file": "icons/index-clay.svg",
+    "title": "index",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "clip-clay",
+    "group": "icons",
+    "file": "icons/clip-clay.svg",
+    "title": "clip",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "hearing-clay",
+    "group": "icons",
+    "file": "icons/hearing-clay.svg",
+    "title": "hearing",
+    "theme": "clay"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "judgment-page-paper",
+    "group": "documents",
+    "file": "graphics/documents/judgment-page-paper.svg",
+    "title": "Judgment page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "draft-page-paper",
+    "group": "documents",
+    "file": "graphics/documents/draft-page-paper.svg",
+    "title": "Draft page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "filing-paper",
+    "group": "documents",
+    "file": "graphics/documents/filing-paper.svg",
+    "title": "Filing cover page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "notes-page-paper",
+    "group": "documents",
+    "file": "graphics/documents/notes-page-paper.svg",
+    "title": "Notes page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "highlighted-page-paper",
+    "group": "documents",
+    "file": "graphics/documents/highlighted-page-paper.svg",
+    "title": "Page with highlighted paragraph",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folded-page-paper",
+    "group": "documents",
+    "file": "graphics/documents/folded-page-paper.svg",
+    "title": "Page with folded corner",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "report-page-paper",
+    "group": "documents",
+    "file": "graphics/documents/report-page-paper.svg",
+    "title": "Law report page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "stacked-pages-paper",
+    "group": "documents",
+    "file": "graphics/documents/stacked-pages-paper.svg",
+    "title": "Stacked pages",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "stacked-files-paper",
+    "group": "documents",
+    "file": "graphics/documents/stacked-files-paper.svg",
+    "title": "Stacked case files",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "open-law-report-paper",
+    "group": "documents",
+    "file": "graphics/documents/open-law-report-paper.svg",
+    "title": "Open bound law report",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "bound-volumes-paper",
+    "group": "documents",
+    "file": "graphics/documents/bound-volumes-paper.svg",
+    "title": "Bound law report volumes",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "judgment-page-dark",
+    "group": "documents",
+    "file": "graphics/documents/judgment-page-dark.svg",
+    "title": "Judgment page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "draft-page-dark",
+    "group": "documents",
+    "file": "graphics/documents/draft-page-dark.svg",
+    "title": "Draft page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "filing-dark",
+    "group": "documents",
+    "file": "graphics/documents/filing-dark.svg",
+    "title": "Filing cover page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "notes-page-dark",
+    "group": "documents",
+    "file": "graphics/documents/notes-page-dark.svg",
+    "title": "Notes page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "highlighted-page-dark",
+    "group": "documents",
+    "file": "graphics/documents/highlighted-page-dark.svg",
+    "title": "Page with highlighted paragraph",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folded-page-dark",
+    "group": "documents",
+    "file": "graphics/documents/folded-page-dark.svg",
+    "title": "Page with folded corner",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "report-page-dark",
+    "group": "documents",
+    "file": "graphics/documents/report-page-dark.svg",
+    "title": "Law report page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "stacked-pages-dark",
+    "group": "documents",
+    "file": "graphics/documents/stacked-pages-dark.svg",
+    "title": "Stacked pages",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "stacked-files-dark",
+    "group": "documents",
+    "file": "graphics/documents/stacked-files-dark.svg",
+    "title": "Stacked case files",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "open-law-report-dark",
+    "group": "documents",
+    "file": "graphics/documents/open-law-report-dark.svg",
+    "title": "Open bound law report",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "bound-volumes-dark",
+    "group": "documents",
+    "file": "graphics/documents/bound-volumes-dark.svg",
+    "title": "Bound law report volumes",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "straight-paper",
+    "group": "connections",
+    "file": "graphics/connections/straight-paper.svg",
+    "title": "Straight link with end nodes",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "dotted-nodes-paper",
+    "group": "connections",
+    "file": "graphics/connections/dotted-nodes-paper.svg",
+    "title": "Thread with stations",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "elbow-paper",
+    "group": "connections",
+    "file": "graphics/connections/elbow-paper.svg",
+    "title": "Rounded elbow connector",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "s-curve-paper",
+    "group": "connections",
+    "file": "graphics/connections/s-curve-paper.svg",
+    "title": "S-curve thread",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "dashed-paper",
+    "group": "connections",
+    "file": "graphics/connections/dashed-paper.svg",
+    "title": "Dashed pending link",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "branch-two-paper",
+    "group": "connections",
+    "file": "graphics/connections/branch-two-paper.svg",
+    "title": "One to two branch",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "branch-three-paper",
+    "group": "connections",
+    "file": "graphics/connections/branch-three-paper.svg",
+    "title": "One to three tree",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "converge-paper",
+    "group": "connections",
+    "file": "graphics/connections/converge-paper.svg",
+    "title": "Three into one",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "timeline-paper",
+    "group": "connections",
+    "file": "graphics/connections/timeline-paper.svg",
+    "title": "Timeline with dated nodes",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "braid-paper",
+    "group": "connections",
+    "file": "graphics/connections/braid-paper.svg",
+    "title": "Two threads braided",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "loop-back-paper",
+    "group": "connections",
+    "file": "graphics/connections/loop-back-paper.svg",
+    "title": "Loop back to source",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "straight-dark",
+    "group": "connections",
+    "file": "graphics/connections/straight-dark.svg",
+    "title": "Straight link with end nodes",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "dotted-nodes-dark",
+    "group": "connections",
+    "file": "graphics/connections/dotted-nodes-dark.svg",
+    "title": "Thread with stations",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "elbow-dark",
+    "group": "connections",
+    "file": "graphics/connections/elbow-dark.svg",
+    "title": "Rounded elbow connector",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "s-curve-dark",
+    "group": "connections",
+    "file": "graphics/connections/s-curve-dark.svg",
+    "title": "S-curve thread",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "dashed-dark",
+    "group": "connections",
+    "file": "graphics/connections/dashed-dark.svg",
+    "title": "Dashed pending link",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "branch-two-dark",
+    "group": "connections",
+    "file": "graphics/connections/branch-two-dark.svg",
+    "title": "One to two branch",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "branch-three-dark",
+    "group": "connections",
+    "file": "graphics/connections/branch-three-dark.svg",
+    "title": "One to three tree",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "converge-dark",
+    "group": "connections",
+    "file": "graphics/connections/converge-dark.svg",
+    "title": "Three into one",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "timeline-dark",
+    "group": "connections",
+    "file": "graphics/connections/timeline-dark.svg",
+    "title": "Timeline with dated nodes",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "braid-dark",
+    "group": "connections",
+    "file": "graphics/connections/braid-dark.svg",
+    "title": "Two threads braided",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "loop-back-dark",
+    "group": "connections",
+    "file": "graphics/connections/loop-back-dark.svg",
+    "title": "Loop back to source",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cover-shelf-and-court-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/cover-shelf-and-court-paper.svg",
+    "title": "Cover: law reports beside a court facade",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cover-desk-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/cover-desk-paper.svg",
+    "title": "Cover: judgment, notes and files on a desk",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cover-reading-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/cover-reading-paper.svg",
+    "title": "Cover: open report with a ticked page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "corner-top-right-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/corner-top-right-paper.svg",
+    "title": "Corner accent: open report",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "corner-bottom-right-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/corner-bottom-right-paper.svg",
+    "title": "Corner accent: case files",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "corner-top-left-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/corner-top-left-paper.svg",
+    "title": "Corner accent: note slip",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cluster-dates-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/cluster-dates-paper.svg",
+    "title": "Cluster: calendar and register",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cluster-compare-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/cluster-compare-paper.svg",
+    "title": "Cluster: two pages and a thread",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cluster-source-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/cluster-source-paper.svg",
+    "title": "Cluster: volumes with a judgment page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "small-court-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/small-court-paper.svg",
+    "title": "Small accent: court facade",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "small-check-paper",
+    "group": "compositions",
+    "file": "graphics/compositions/small-check-paper.svg",
+    "title": "Small accent: ticked page",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cover-shelf-and-court-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/cover-shelf-and-court-dark.svg",
+    "title": "Cover: law reports beside a court facade",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cover-desk-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/cover-desk-dark.svg",
+    "title": "Cover: judgment, notes and files on a desk",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cover-reading-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/cover-reading-dark.svg",
+    "title": "Cover: open report with a ticked page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "corner-top-right-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/corner-top-right-dark.svg",
+    "title": "Corner accent: open report",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "corner-bottom-right-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/corner-bottom-right-dark.svg",
+    "title": "Corner accent: case files",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "corner-top-left-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/corner-top-left-dark.svg",
+    "title": "Corner accent: note slip",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cluster-dates-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/cluster-dates-dark.svg",
+    "title": "Cluster: calendar and register",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cluster-compare-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/cluster-compare-dark.svg",
+    "title": "Cluster: two pages and a thread",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "cluster-source-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/cluster-source-dark.svg",
+    "title": "Cluster: volumes with a judgment page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "small-court-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/small-court-dark.svg",
+    "title": "Small accent: court facade",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "small-check-dark",
+    "group": "compositions",
+    "file": "graphics/compositions/small-check-dark.svg",
+    "title": "Small accent: ticked page",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-light-two-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-light-two-paper.svg",
+    "title": "Window light, two bands",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-light-three-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-light-three-paper.svg",
+    "title": "Window light, three narrow bands",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-light-wide-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-light-wide-paper.svg",
+    "title": "Window light, one wide wash",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-mullion-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-mullion-paper.svg",
+    "title": "Window light with mullion shadows",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "vignette-soft-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/vignette-soft-paper.svg",
+    "title": "Soft vignette",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "vignette-corner-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/vignette-corner-paper.svg",
+    "title": "Corner vignette, bottom right",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "torn-edge-top-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/torn-edge-top-paper.svg",
+    "title": "Torn paper edge, top",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "torn-edge-bottom-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/torn-edge-bottom-paper.svg",
+    "title": "Torn paper edge, bottom",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folded-corner-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/folded-corner-paper.svg",
+    "title": "Folded corner, top right",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "centre-crease-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/centre-crease-paper.svg",
+    "title": "Centre fold crease",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "paper-stack-edge-paper",
+    "group": "paper-light",
+    "file": "graphics/paper-light/paper-stack-edge-paper.svg",
+    "title": "Paper stack edge, bottom",
+    "theme": "paper"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-light-two-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-light-two-dark.svg",
+    "title": "Window light, two bands",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-light-three-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-light-three-dark.svg",
+    "title": "Window light, three narrow bands",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-light-wide-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-light-wide-dark.svg",
+    "title": "Window light, one wide wash",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "window-mullion-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/window-mullion-dark.svg",
+    "title": "Window light with mullion shadows",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "vignette-soft-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/vignette-soft-dark.svg",
+    "title": "Soft vignette",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "vignette-corner-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/vignette-corner-dark.svg",
+    "title": "Corner vignette, bottom right",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "torn-edge-top-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/torn-edge-top-dark.svg",
+    "title": "Torn paper edge, top",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "torn-edge-bottom-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/torn-edge-bottom-dark.svg",
+    "title": "Torn paper edge, bottom",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "folded-corner-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/folded-corner-dark.svg",
+    "title": "Folded corner, top right",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "centre-crease-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/centre-crease-dark.svg",
+    "title": "Centre fold crease",
+    "theme": "dark"
+  },
+  {
+    "family": "graphics-svg",
+    "id": "paper-stack-edge-dark",
+    "group": "paper-light",
+    "file": "graphics/paper-light/paper-stack-edge-dark.svg",
+    "title": "Paper stack edge, bottom",
+    "theme": "dark"
+  },
+  {
+    "family": "product",
+    "id": "case-mapping",
+    "title": "Case Mapping (placeholder data)",
+    "role": "product UI",
+    "size": "1440x1000",
+    "file": "product/case-mapping.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "minSize",
+      "safeArea"
+    ],
+    "requires_claim_approval": true
+  },
+  {
+    "family": "product",
+    "id": "chronology",
+    "title": "Chronology (placeholder data)",
+    "role": "product UI",
+    "size": "1440x1000",
+    "file": "product/chronology.html",
+    "themes": [
+      "paper"
+    ],
+    "skipChecks": [
+      "minSize",
+      "safeArea"
+    ],
+    "requires_claim_approval": true
+  },
+  {
+    "family": "graphics",
+    "id": "law-objects",
+    "title": "Law objects",
+    "size": "1800x1500",
+    "file": "graphics/law-objects.html",
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "role": "gallery"
+  },
+  {
+    "family": "graphics",
+    "id": "citations",
+    "title": "Citation and evidence motifs",
+    "size": "1600x1700",
+    "file": "graphics/citations.html",
+    "skipChecks": [
+      "safeArea"
+    ],
+    "role": "component sheet"
+  },
+  {
+    "family": "graphics",
+    "id": "badges",
+    "title": "Badges, dividers, pills and buttons",
+    "size": "1600x1800",
+    "file": "graphics/badges.html",
+    "skipChecks": [
+      "safeArea"
+    ],
+    "role": "component sheet"
+  }
+]

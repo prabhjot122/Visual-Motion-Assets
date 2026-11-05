@@ -1,0 +1,15 @@
+{
+  "feature": "Chronology",
+  "requires_claim_approval": true,
+  "status": "proposed",
+  "public_use": "not permitted until the founder approves the specific capability shown",
+  "placeholder_data_only": true,
+  "separate_feature": "Chronology only. Case Mapping, Fact Review and Chronology are separate features and are never merged into one view.",
+  "source_evidence": "D:/lv-frontend/motion-demo/screenshots/11-chronology-expanded-corpus.png (local product capture, 1440x1000, light theme; layout and labels followed, not redesigned)",
+  "deviations": [
+    "Typeface set to LawVriksh Sans (product wordmark rendered as mark + sans wordmark).",
+    "Colours mapped to library tokens; the product’s green status dot and green source glyphs are shown in thread/muted tokens.",
+    "Credits/plan panel omitted (pricing is not part of this composition)."
+  ],
+  "text_size_note": "UI text is at product scale (11–16 CSS px at 1440 wide). Crop and enlarge so rendered text is at least 34 px on a 1080-wide frame, or use it as a non-reading visual."
+}

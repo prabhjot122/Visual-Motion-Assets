@@ -1,0 +1,68 @@
+/* Carousel family layouts — 1080x1350 (Instagram carousel, LinkedIn document) */
+.content{bottom:200px}
+.content > .kicker{max-width:720px}
+.gap-s{height:28px;flex:none}.gap-m{height:44px;flex:none}.gap-l{height:72px;flex:none}
+.push{flex:1 1 0}
+
+/* cover A: statement high, stones bottom right, support bottom left */
+.cover-stack .statement{margin-top:56px}
+.cover-stack .support{max-width:540px}
+.cover-stack .swipe{font-size:var(--small);font-weight:600;letter-spacing:.16em;color:var(--fg)}
+
+/* cover B: document object top right, statement below */
+.doc-object{position:absolute;z-index:1;left:560px;top:84px;width:430px;transform:rotate(3deg);transform-origin:50% 50%}
+.doc-object svg{width:100%;height:auto;display:block}
+.cover-doc .content > .kicker{max-width:400px}
+
+/* cover C: oversized numeral */
+.cover-number .numeral{font-size:400px;line-height:1;font-weight:600;letter-spacing:-0.06em;color:var(--accent);margin:0}
+
+/* step */
+.step-head{display:flex;align-items:center;gap:32px}
+.step-track{display:flex;gap:28px;margin:0;padding:0;list-style:none}
+.step-track li{font-size:var(--small);font-weight:600;letter-spacing:.08em;color:var(--fg-muted);padding-bottom:12px;box-shadow:inset 0 -3px 0 var(--rule);font-variant-numeric:tabular-nums lining-nums}
+.step-track li.is-current{color:var(--accent);box-shadow:inset 0 -3px 0 var(--thread)}
+
+/* compare */
+.compare{display:flex;flex-direction:column;gap:0}
+.compare .card{padding:34px 40px;display:flex;flex-direction:column;gap:18px}
+.compare .card .pill{align-self:flex-start;padding:14px 24px}
+.compare .card .body{font-size:38px}
+.compare .is-not .body{color:var(--fg-muted)}
+.link-v{position:relative;height:72px;margin-left:96px;width:24px}
+.link-v::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:4px;border-radius:2px;background:var(--thread)}
+.link-v::after{content:"";position:absolute;left:3px;top:24px;width:18px;height:18px;border-radius:50%;background:var(--thread);box-shadow:0 0 0 6px var(--paper)}
+.lv[data-theme="dark"] .link-v::after{background:var(--edge);box-shadow:0 0 0 6px var(--ink-warm)}
+
+/* definition */
+.def-term{display:flex;align-items:baseline;gap:20px}
+.def-list .row{background:transparent;box-shadow:none;padding:0 0 0 0;gap:24px}
+.def-list .row .dash{flex:none;width:40px;height:4px;border-radius:2px;background:var(--thread);margin-top:2px}
+
+/* numbered checklist */
+.numlist .row{padding:22px 26px}
+.numlist .n{flex:none;width:72px;font-size:40px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums lining-nums;letter-spacing:-0.01em}
+
+/* statement + document */
+.stmt-doc .docband{position:relative;height:420px;margin:0 -72px}
+.stmt-doc .docband .d{position:absolute;top:0}
+.stmt-doc .docband svg{display:block;height:420px;width:auto}
+
+/* advocate series */
+.adv-cover .portrait{width:936px;height:560px;flex:none}
+.adv-profile .top{display:flex;gap:40px;align-items:flex-end}
+.adv-profile .portrait{width:340px;height:420px;flex:none}
+.adv-profile .who{display:flex;flex-direction:column;gap:18px;min-width:0}
+.era{font-size:var(--small);font-weight:500;letter-spacing:.04em;color:var(--fg-muted);font-variant-numeric:tabular-nums lining-nums}
+.did .row{padding:20px 26px}
+.did .row .txt{font-size:36px}
+.sources{font-size:var(--small);line-height:1.35;color:var(--fg-muted)}
+.sources b{font-weight:600;color:var(--fg)}
+
+/* LinkedIn document cover */
+.li-cover .toc{display:flex;flex-direction:column;gap:0;margin:0;padding:0;list-style:none;border-top:2px solid var(--rule)}
+.li-cover .toc li{display:flex;gap:28px;align-items:baseline;padding:22px 0;border-bottom:2px solid var(--rule);font-size:38px;line-height:1.2}
+.li-cover .toc .n{flex:none;width:64px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums lining-nums}
+.li-cover .byline{display:flex;gap:18px;align-items:center;font-size:var(--small);color:var(--fg-muted)}
+.li-cover .byline .mark{width:64px;height:64px}
+.li-cover .byline .mark img{width:58px}

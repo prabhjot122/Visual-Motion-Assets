@@ -1,0 +1,11 @@
+{
+  "theme": "paper",
+  "motif": "reports",
+  "kicker": "Plain terms",
+  "term": "Authorised source",
+  "pos": "noun",
+  "body_html": "Where a judgment is published by the court or an official reporter, and can be read in full.",
+  "not_label": "Does not settle",
+  "not_text": "Whether the case is still good law.",
+  "series": "Field notes"
+}

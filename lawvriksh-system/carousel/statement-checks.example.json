@@ -1,0 +1,15 @@
+{
+  "theme": "paper",
+  "kicker": "Check three",
+  "title_html": "Match the <b>court, date and parties.</b>",
+  "rows": [
+    "The court is the one your draft names.",
+    "The date is the date your draft gives.",
+    "The parties match your draft."
+  ],
+  "body_html": "Any mismatch: <b>stop and recheck.</b>",
+  "counter": {
+    "index": 5,
+    "total": 8
+  }
+}

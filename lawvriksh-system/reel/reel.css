@@ -1,0 +1,91 @@
+/* Reel / YouTube Shorts scenes — 1080x1920, 30 fps.
+   Platform UI zones: no text in the top 200 px or the bottom 380 px (y > 1540).
+   Text zone: y 300–1330. Caption band: y 1372–1520. Progress + counter: y 210–290. */
+.lv[data-format="reel"]{--statement:100px;--support:44px;--body:42px;--kicker:36px;--small:36px}
+.reel-content{position:absolute;z-index:2;left:var(--safe-x);right:var(--safe-x);top:330px;height:1000px;display:flex;flex-direction:column}
+.gap-s{height:28px;flex:none}.gap-m{height:48px;flex:none}.gap-l{height:80px;flex:none}
+.push{flex:1 1 0}
+.w{display:inline-block;will-change:transform}
+
+/* progress thread + counter (y 210–290) */
+.reel-top{position:absolute;z-index:2;left:var(--safe-x);right:var(--safe-x);top:206px;height:44px;display:flex;align-items:center;gap:16px}
+.reel-top .wordmark{font-size:36px}
+.reel-top .counter{font-size:36px}
+.reel-progress{position:absolute;z-index:1;left:var(--safe-x);right:var(--safe-x);top:280px;height:4px;border-radius:2px;background:var(--rule);--f:0}
+.reel-progress::before{content:"";position:absolute;left:0;top:0;bottom:0;width:calc(var(--f) * 100%);border-radius:2px;background:var(--thread)}
+.reel-progress::after{content:"";position:absolute;top:-8px;left:calc(var(--f) * 100%);width:20px;height:20px;margin-left:-10px;border-radius:50%;background:var(--thread);box-shadow:0 0 0 6px var(--paper)}
+.lv[data-theme="dark"] .reel-progress::after{background:var(--edge);box-shadow:0 0 0 6px var(--ink-warm)}
+
+/* ---------- caption styles (band y 1372–1520) ---------- */
+.cap{position:absolute;z-index:4;left:var(--safe-x);right:var(--safe-x);top:1372px;height:148px;display:flex;align-items:center;justify-content:center}
+.cap .cap-line{font-size:54px;line-height:1.15;font-weight:600;letter-spacing:-0.01em;text-align:center;white-space:nowrap}
+.cap .cw{display:inline-block;border-radius:10px;padding:0 6px}
+/* 1 ink band: warm ink bar, paper words, current word on a dark-clay chip */
+.cap.ink-band .cap-line{background:var(--ink-warm);color:var(--paper);padding:22px 30px;border-radius:20px;box-shadow:0 0 0 2px rgba(245,241,234,.14)}
+.cap.ink-band .cw.is-now{background:var(--clay-dark);color:var(--surface)}
+/* 2 paper slip: surface slip, ink words, thread underline on the current word */
+.cap.paper-slip .cap-line{background:var(--surface);color:var(--ink);padding:22px 30px;border-radius:20px;box-shadow:0 0 0 2px rgba(23,23,23,.16),12px 18px 36px rgba(23,23,23,.24)}
+.cap.paper-slip .cw{box-shadow:inset 0 -7px 0 rgba(196,86,46,0)}
+.cap.paper-slip .cw.is-now{box-shadow:inset 0 -7px 0 var(--thread);border-radius:0}
+/* 3 edge word: ink band, words dim until spoken, current word in edge clay */
+.cap.edge-word .cap-line{background:var(--ink-warm);color:var(--paper);padding:22px 30px;border-radius:999px;box-shadow:0 0 0 2px rgba(245,241,234,.14)}
+.cap.edge-word .cw{color:var(--paper-82)}
+.cap.edge-word .cw.is-past{color:var(--paper)}
+.cap.edge-word .cw.is-now{color:var(--edge)}
+/* 4 stack: two big words at a time on a surface card, current word in dark clay */
+.cap.stack .cap-line{background:var(--surface);color:var(--ink);font-size:72px;letter-spacing:-0.025em;padding:14px 36px;border-radius:22px;box-shadow:0 0 0 2px rgba(23,23,23,.14),12px 18px 36px rgba(23,23,23,.22)}
+.cap.stack .cw.is-now{color:var(--clay-dark)}
+/* 5 highlighter: surface card, current word swept with a clay highlighter */
+.cap.highlighter .cap-line{background:var(--surface);color:var(--ink);padding:22px 30px;border-radius:20px;box-shadow:0 0 0 2px rgba(23,23,23,.16)}
+.cap.highlighter .cw.is-now{background:rgba(201,72,32,.26)}
+
+/* ---------- scene parts ---------- */
+.scene-doc{position:absolute;z-index:1;border-radius:10px;background:var(--surface);box-shadow:var(--shadow-card);padding:56px 56px}
+.lv[data-theme="dark"] .scene-doc{box-shadow:0 0 0 1.5px rgba(245,241,234,.1)}
+.scene-doc .ln{position:relative;height:14px;border-radius:7px;background:rgba(23,23,23,.16);margin:0 0 26px}
+.scene-doc .ln.h{background:rgba(23,23,23,.32);height:16px}
+.scene-doc .ln.hl::before{content:"";position:absolute;left:-10px;top:-12px;bottom:-12px;width:calc((100% + 20px) * var(--hl,0));border-radius:6px;background:rgba(201,72,32,.28)}
+.scene-doc .gap{height:20px}
+.scene-doc .mm{position:absolute;left:24px;width:6px;border-radius:3px;background:var(--clay);transform-origin:50% 0}
+
+.strike{position:relative;display:inline}
+.strike .bar{position:absolute;left:-6px;right:-6px;top:52%;height:6px;border-radius:3px;background:var(--clay);transform-origin:0 50%;transform:scaleX(var(--s,0))}
+.lv[data-theme="dark"] .strike .bar{background:var(--edge)}
+.slist{display:flex;flex-direction:column;gap:30px;margin:0;padding:0;list-style:none}
+.slist li{display:flex;align-items:center;gap:26px;font-size:48px;line-height:1.2;font-weight:500}
+.slist li .dot{flex:none;width:18px;height:18px;border-radius:50%;background:var(--rule)}
+.slist li.is-out{color:var(--fg-muted)}
+.slist li.is-keep .dot{background:var(--thread)}
+
+.link-line{position:relative;width:4px;margin-left:110px;height:120px}
+.link-line .ln{position:absolute;left:0;top:0;width:4px;height:100%;border-radius:2px;background:var(--thread);transform-origin:50% 0;transform:scaleY(var(--d,0))}
+.link-line .n1,.link-line .n2{position:absolute;left:-9px;width:22px;height:22px;border-radius:50%;background:var(--thread)}
+.link-line .n1{top:-11px}.link-line .n2{bottom:-11px}
+
+.bigword{font-size:340px;line-height:1;font-weight:600;letter-spacing:-0.06em;color:var(--accent);margin:0;font-variant-numeric:tabular-nums lining-nums}
+.endmark{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;background:var(--surface);box-shadow:var(--shadow-card)}
+.endmark img{width:96px}
+.end-word{font-size:56px;font-weight:500;letter-spacing:-0.02em}
+.end-word span{color:var(--clay-dark)}
+.lv[data-theme="dark"] .end-word span{color:var(--edge)}
+
+/* transition overlays (cover the full frame at p = .5) */
+.tw{position:absolute;inset:0;z-index:9;overflow:hidden;visibility:hidden}
+.tw-panel{position:absolute;inset:0;background:var(--clay)}
+.tw-top,.tw-bot{position:absolute;left:0;right:0;height:961px;background:var(--paper) var(--tex-paper) center/cover}
+.tw-top{top:0;transform-origin:50% 0}
+.tw-bot{bottom:0;transform-origin:50% 100%}
+.tw-crease{position:absolute;left:0;right:0;top:952px;height:16px;background:linear-gradient(rgba(23,23,23,0),rgba(23,23,23,.14),rgba(23,23,23,0))}
+.tw-slab{position:absolute;left:-20px;right:-20px;height:720px;background-size:cover;background-position:center;box-shadow:0 -18px 40px rgba(23,23,23,.3)}
+.tw-slab.s1{top:-20px;background-image:var(--tex-stone-sand)}
+.tw-slab.s2{top:600px;background-image:var(--tex-stone-clay)}
+.tw-slab.s3{top:1220px;background-image:var(--tex-stone-char)}
+.tw-thread{position:absolute;left:0;top:957px;height:6px;width:0;background:var(--thread)}
+.tw-node{position:absolute;top:949px;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--thread)}
+.tw-ink{position:absolute;inset:0;background:var(--ink-warm)}
+.tw-leaf{position:absolute;inset:0}
+.tw-leaf.is-ink{background:var(--ink-warm)}
+.tw-leaf.is-paper{background:linear-gradient(90deg,rgba(23,23,23,0) 0 92%,rgba(23,23,23,.10)),var(--paper) var(--tex-paper) center/cover;box-shadow:24px 0 48px rgba(23,23,23,.28)}
+.tw-leaf.is-ink{box-shadow:-24px 0 48px rgba(23,23,23,.4)}
+.tw-shade{position:absolute;inset:0;background:rgba(23,23,23,.6);opacity:0;z-index:-1}
+.scene-a,.scene-b{position:absolute;inset:0}

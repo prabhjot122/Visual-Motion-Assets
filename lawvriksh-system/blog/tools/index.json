@@ -1,0 +1,4567 @@
+[
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "statement-only",
+    "fmt": "og",
+    "id": "statement-only-og",
+    "title": "Statement only · og",
+    "desc": "Typographic headline across the full width, a thread with a node above it, one support line.",
+    "size": "1200x630",
+    "file": "thumbnails/statement-only-og.html",
+    "schema": "thumbnails/statement-only.schema.json",
+    "example": "thumbnails/statement-only.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "statement-only",
+    "fmt": "sq",
+    "id": "statement-only-sq",
+    "title": "Statement only · sq",
+    "desc": "Typographic headline across the full width, a thread with a node above it, one support line.",
+    "size": "1080x1080",
+    "file": "thumbnails/statement-only-sq.html",
+    "schema": "thumbnails/statement-only.schema.json",
+    "example": "thumbnails/statement-only.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "statement-only",
+    "fmt": "pt",
+    "id": "statement-only-pt",
+    "title": "Statement only · pt",
+    "desc": "Typographic headline across the full width, a thread with a node above it, one support line.",
+    "size": "1080x1350",
+    "file": "thumbnails/statement-only-pt.html",
+    "schema": "thumbnails/statement-only.schema.json",
+    "example": "thumbnails/statement-only.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "statement-object",
+    "fmt": "og",
+    "id": "statement-object-og",
+    "title": "Statement with a law object · og",
+    "desc": "Headline on the left; a law object on the right chosen to match the idea.",
+    "size": "1200x630",
+    "file": "thumbnails/statement-object-og.html",
+    "schema": "thumbnails/statement-object.schema.json",
+    "example": "thumbnails/statement-object.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "motif",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "statement-object",
+    "fmt": "sq",
+    "id": "statement-object-sq",
+    "title": "Statement with a law object · sq",
+    "desc": "Headline on the left; a law object on the right chosen to match the idea.",
+    "size": "1080x1080",
+    "file": "thumbnails/statement-object-sq.html",
+    "schema": "thumbnails/statement-object.schema.json",
+    "example": "thumbnails/statement-object.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "motif",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "statement-object",
+    "fmt": "pt",
+    "id": "statement-object-pt",
+    "title": "Statement with a law object · pt",
+    "desc": "Headline on the left; a law object on the right chosen to match the idea.",
+    "size": "1080x1350",
+    "file": "thumbnails/statement-object-pt.html",
+    "schema": "thumbnails/statement-object.schema.json",
+    "example": "thumbnails/statement-object.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "motif",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "how-to",
+    "fmt": "og",
+    "id": "how-to-og",
+    "title": "How to, with a step count · og",
+    "desc": "A large clay numeral states the number of steps; the headline carries the task.",
+    "size": "1200x630",
+    "file": "thumbnails/how-to-og.html",
+    "schema": "thumbnails/how-to.schema.json",
+    "example": "thumbnails/how-to.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "count",
+      "count_label",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "how-to",
+    "fmt": "sq",
+    "id": "how-to-sq",
+    "title": "How to, with a step count · sq",
+    "desc": "A large clay numeral states the number of steps; the headline carries the task.",
+    "size": "1080x1080",
+    "file": "thumbnails/how-to-sq.html",
+    "schema": "thumbnails/how-to.schema.json",
+    "example": "thumbnails/how-to.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "count",
+      "count_label",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "how-to",
+    "fmt": "pt",
+    "id": "how-to-pt",
+    "title": "How to, with a step count · pt",
+    "desc": "A large clay numeral states the number of steps; the headline carries the task.",
+    "size": "1080x1350",
+    "file": "thumbnails/how-to-pt.html",
+    "schema": "thumbnails/how-to.schema.json",
+    "example": "thumbnails/how-to.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "count",
+      "count_label",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "question",
+    "fmt": "og",
+    "id": "question-og",
+    "title": "Question headline · og",
+    "desc": "A question as the headline, a large clay question mark, and a one-line promise of the short answer.",
+    "size": "1200x630",
+    "file": "thumbnails/question-og.html",
+    "schema": "thumbnails/question.schema.json",
+    "example": "thumbnails/question.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "question",
+    "fmt": "sq",
+    "id": "question-sq",
+    "title": "Question headline · sq",
+    "desc": "A question as the headline, a large clay question mark, and a one-line promise of the short answer.",
+    "size": "1080x1080",
+    "file": "thumbnails/question-sq.html",
+    "schema": "thumbnails/question.schema.json",
+    "example": "thumbnails/question.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "question",
+    "fmt": "pt",
+    "id": "question-pt",
+    "title": "Question headline · pt",
+    "desc": "A question as the headline, a large clay question mark, and a one-line promise of the short answer.",
+    "size": "1080x1350",
+    "file": "thumbnails/question-pt.html",
+    "schema": "thumbnails/question.schema.json",
+    "example": "thumbnails/question.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "body_html",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "does-not-settle",
+    "fmt": "og",
+    "id": "does-not-settle-og",
+    "title": "What this does not settle · og",
+    "desc": "Headline plus a short “still yours to judge” list marked with thread dashes.",
+    "size": "1200x630",
+    "file": "thumbnails/does-not-settle-og.html",
+    "schema": "thumbnails/does-not-settle.schema.json",
+    "example": "thumbnails/does-not-settle.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "list_label",
+      "rows",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "does-not-settle",
+    "fmt": "sq",
+    "id": "does-not-settle-sq",
+    "title": "What this does not settle · sq",
+    "desc": "Headline plus a short “still yours to judge” list marked with thread dashes.",
+    "size": "1080x1080",
+    "file": "thumbnails/does-not-settle-sq.html",
+    "schema": "thumbnails/does-not-settle.schema.json",
+    "example": "thumbnails/does-not-settle.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "list_label",
+      "rows",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "does-not-settle",
+    "fmt": "pt",
+    "id": "does-not-settle-pt",
+    "title": "What this does not settle · pt",
+    "desc": "Headline plus a short “still yours to judge” list marked with thread dashes.",
+    "size": "1080x1350",
+    "file": "thumbnails/does-not-settle-pt.html",
+    "schema": "thumbnails/does-not-settle.schema.json",
+    "example": "thumbnails/does-not-settle.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "list_label",
+      "rows",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "comparison",
+    "fmt": "og",
+    "id": "comparison-og",
+    "title": "This, not that · og",
+    "desc": "Headline with two cards joined by a clay link line (no arrowhead): the quiet “not this”, the raised “this”.",
+    "size": "1200x630",
+    "file": "thumbnails/comparison-og.html",
+    "schema": "thumbnails/comparison.schema.json",
+    "example": "thumbnails/comparison.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "not_label",
+      "not_text",
+      "this_label",
+      "this_text",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "comparison",
+    "fmt": "sq",
+    "id": "comparison-sq",
+    "title": "This, not that · sq",
+    "desc": "Headline with two cards joined by a clay link line (no arrowhead): the quiet “not this”, the raised “this”.",
+    "size": "1080x1080",
+    "file": "thumbnails/comparison-sq.html",
+    "schema": "thumbnails/comparison.schema.json",
+    "example": "thumbnails/comparison.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "not_label",
+      "not_text",
+      "this_label",
+      "this_text",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "comparison",
+    "fmt": "pt",
+    "id": "comparison-pt",
+    "title": "This, not that · pt",
+    "desc": "Headline with two cards joined by a clay link line (no arrowhead): the quiet “not this”, the raised “this”.",
+    "size": "1080x1350",
+    "file": "thumbnails/comparison-pt.html",
+    "schema": "thumbnails/comparison.schema.json",
+    "example": "thumbnails/comparison.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "not_label",
+      "not_text",
+      "this_label",
+      "this_text",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "checklist-teaser",
+    "fmt": "og",
+    "id": "checklist-teaser-og",
+    "title": "Checklist teaser · og",
+    "desc": "Headline and the first three checks as tick rows, with a quiet line pointing to the rest.",
+    "size": "1200x630",
+    "file": "thumbnails/checklist-teaser-og.html",
+    "schema": "thumbnails/checklist-teaser.schema.json",
+    "example": "thumbnails/checklist-teaser.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "teaser_more",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "checklist-teaser",
+    "fmt": "sq",
+    "id": "checklist-teaser-sq",
+    "title": "Checklist teaser · sq",
+    "desc": "Headline and the first three checks as tick rows, with a quiet line pointing to the rest.",
+    "size": "1080x1080",
+    "file": "thumbnails/checklist-teaser-sq.html",
+    "schema": "thumbnails/checklist-teaser.schema.json",
+    "example": "thumbnails/checklist-teaser.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "teaser_more",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "checklist-teaser",
+    "fmt": "pt",
+    "id": "checklist-teaser-pt",
+    "title": "Checklist teaser · pt",
+    "desc": "Headline and the first three checks as tick rows, with a quiet line pointing to the rest.",
+    "size": "1080x1350",
+    "file": "thumbnails/checklist-teaser-pt.html",
+    "schema": "thumbnails/checklist-teaser.schema.json",
+    "example": "thumbnails/checklist-teaser.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "teaser_more",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "series-edition",
+    "fmt": "og",
+    "id": "series-edition-og",
+    "title": "Series edition · og",
+    "desc": "Series label, a large edition number and a date line beside the headline (“Practice note No. [n]”).",
+    "size": "1200x630",
+    "file": "thumbnails/series-edition-og.html",
+    "schema": "thumbnails/series-edition.schema.json",
+    "example": "thumbnails/series-edition.example.json",
+    "slots": [
+      "series_label",
+      "edition_no",
+      "title_html",
+      "date_line",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "series-edition",
+    "fmt": "sq",
+    "id": "series-edition-sq",
+    "title": "Series edition · sq",
+    "desc": "Series label, a large edition number and a date line beside the headline (“Practice note No. [n]”).",
+    "size": "1080x1080",
+    "file": "thumbnails/series-edition-sq.html",
+    "schema": "thumbnails/series-edition.schema.json",
+    "example": "thumbnails/series-edition.example.json",
+    "slots": [
+      "series_label",
+      "edition_no",
+      "title_html",
+      "date_line",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "series-edition",
+    "fmt": "pt",
+    "id": "series-edition-pt",
+    "title": "Series edition · pt",
+    "desc": "Series label, a large edition number and a date line beside the headline (“Practice note No. [n]”).",
+    "size": "1080x1350",
+    "file": "thumbnails/series-edition-pt.html",
+    "schema": "thumbnails/series-edition.schema.json",
+    "example": "thumbnails/series-edition.example.json",
+    "slots": [
+      "series_label",
+      "edition_no",
+      "title_html",
+      "date_line",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "advocate-profile",
+    "fmt": "og",
+    "id": "advocate-profile-og",
+    "title": "Past-advocate profile · og",
+    "desc": "Empty labelled portrait frame (hatch-sand), headline, name and era. No likeness ships in the template.",
+    "size": "1200x630",
+    "file": "thumbnails/advocate-profile-og.html",
+    "schema": "thumbnails/advocate-profile.schema.json",
+    "example": "thumbnails/advocate-profile.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "name",
+      "era",
+      "image",
+      "image_alt",
+      "image_label",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "advocate-profile",
+    "fmt": "sq",
+    "id": "advocate-profile-sq",
+    "title": "Past-advocate profile · sq",
+    "desc": "Empty labelled portrait frame (hatch-sand), headline, name and era. No likeness ships in the template.",
+    "size": "1080x1080",
+    "file": "thumbnails/advocate-profile-sq.html",
+    "schema": "thumbnails/advocate-profile.schema.json",
+    "example": "thumbnails/advocate-profile.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "name",
+      "era",
+      "image",
+      "image_alt",
+      "image_label",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "advocate-profile",
+    "fmt": "pt",
+    "id": "advocate-profile-pt",
+    "title": "Past-advocate profile · pt",
+    "desc": "Empty labelled portrait frame (hatch-sand), headline, name and era. No likeness ships in the template.",
+    "size": "1080x1350",
+    "file": "thumbnails/advocate-profile-pt.html",
+    "schema": "thumbnails/advocate-profile.schema.json",
+    "example": "thumbnails/advocate-profile.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "name",
+      "era",
+      "image",
+      "image_alt",
+      "image_label",
+      "meta"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "case-explained",
+    "fmt": "og",
+    "id": "case-explained-og",
+    "title": "Case explained · og",
+    "desc": "Court, date and topic only, as placeholders, beside an open report. No invented case.",
+    "size": "1200x630",
+    "file": "thumbnails/case-explained-og.html",
+    "schema": "thumbnails/case-explained.schema.json",
+    "example": "thumbnails/case-explained.example.json",
+    "slots": [
+      "court",
+      "date",
+      "topic"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "case-explained",
+    "fmt": "sq",
+    "id": "case-explained-sq",
+    "title": "Case explained · sq",
+    "desc": "Court, date and topic only, as placeholders, beside an open report. No invented case.",
+    "size": "1080x1080",
+    "file": "thumbnails/case-explained-sq.html",
+    "schema": "thumbnails/case-explained.schema.json",
+    "example": "thumbnails/case-explained.example.json",
+    "slots": [
+      "court",
+      "date",
+      "topic"
+    ]
+  },
+  {
+    "family": "thumbnails",
+    "kind": "thumbnail",
+    "group": "case-explained",
+    "fmt": "pt",
+    "id": "case-explained-pt",
+    "title": "Case explained · pt",
+    "desc": "Court, date and topic only, as placeholders, beside an open report. No invented case.",
+    "size": "1080x1350",
+    "file": "thumbnails/case-explained-pt.html",
+    "schema": "thumbnails/case-explained.schema.json",
+    "example": "thumbnails/case-explained.example.json",
+    "slots": [
+      "court",
+      "date",
+      "topic"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-01-horizontal-badges-1200",
+    "variant": "process-steps-01-horizontal-badges",
+    "title": "Process steps 1 — horizontal-badges · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-01-horizontal-badges-1200.html",
+    "schema": "graphics/process-steps-01-horizontal-badges.schema.json",
+    "example": "graphics/process-steps-01-horizontal-badges.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-01-horizontal-badges-720",
+    "variant": "process-steps-01-horizontal-badges",
+    "title": "Process steps 1 — horizontal-badges · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-01-horizontal-badges-720.html",
+    "schema": "graphics/process-steps-01-horizontal-badges.schema.json",
+    "example": "graphics/process-steps-01-horizontal-badges.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-02-horizontal-cards-1200",
+    "variant": "process-steps-02-horizontal-cards",
+    "title": "Process steps 2 — horizontal-cards · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-02-horizontal-cards-1200.html",
+    "schema": "graphics/process-steps-02-horizontal-cards.schema.json",
+    "example": "graphics/process-steps-02-horizontal-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-02-horizontal-cards-720",
+    "variant": "process-steps-02-horizontal-cards",
+    "title": "Process steps 2 — horizontal-cards · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-02-horizontal-cards-720.html",
+    "schema": "graphics/process-steps-02-horizontal-cards.schema.json",
+    "example": "graphics/process-steps-02-horizontal-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-03-horizontal-rules-1200",
+    "variant": "process-steps-03-horizontal-rules",
+    "title": "Process steps 3 — horizontal-rules · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-03-horizontal-rules-1200.html",
+    "schema": "graphics/process-steps-03-horizontal-rules.schema.json",
+    "example": "graphics/process-steps-03-horizontal-rules.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-03-horizontal-rules-720",
+    "variant": "process-steps-03-horizontal-rules",
+    "title": "Process steps 3 — horizontal-rules · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-03-horizontal-rules-720.html",
+    "schema": "graphics/process-steps-03-horizontal-rules.schema.json",
+    "example": "graphics/process-steps-03-horizontal-rules.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-04-vertical-thread-1200",
+    "variant": "process-steps-04-vertical-thread",
+    "title": "Process steps 4 — vertical-thread · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-04-vertical-thread-1200.html",
+    "schema": "graphics/process-steps-04-vertical-thread.schema.json",
+    "example": "graphics/process-steps-04-vertical-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-04-vertical-thread-720",
+    "variant": "process-steps-04-vertical-thread",
+    "title": "Process steps 4 — vertical-thread · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-04-vertical-thread-720.html",
+    "schema": "graphics/process-steps-04-vertical-thread.schema.json",
+    "example": "graphics/process-steps-04-vertical-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-05-vertical-cards-1200",
+    "variant": "process-steps-05-vertical-cards",
+    "title": "Process steps 5 — vertical-cards · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-05-vertical-cards-1200.html",
+    "schema": "graphics/process-steps-05-vertical-cards.schema.json",
+    "example": "graphics/process-steps-05-vertical-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-05-vertical-cards-720",
+    "variant": "process-steps-05-vertical-cards",
+    "title": "Process steps 5 — vertical-cards · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-05-vertical-cards-720.html",
+    "schema": "graphics/process-steps-05-vertical-cards.schema.json",
+    "example": "graphics/process-steps-05-vertical-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-06-vertical-list-1200",
+    "variant": "process-steps-06-vertical-list",
+    "title": "Process steps 6 — vertical-list · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-06-vertical-list-1200.html",
+    "schema": "graphics/process-steps-06-vertical-list.schema.json",
+    "example": "graphics/process-steps-06-vertical-list.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-06-vertical-list-720",
+    "variant": "process-steps-06-vertical-list",
+    "title": "Process steps 6 — vertical-list · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-06-vertical-list-720.html",
+    "schema": "graphics/process-steps-06-vertical-list.schema.json",
+    "example": "graphics/process-steps-06-vertical-list.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-07-horizontal-stones-1200",
+    "variant": "process-steps-07-horizontal-stones",
+    "title": "Process steps 7 — horizontal-stones · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-07-horizontal-stones-1200.html",
+    "schema": "graphics/process-steps-07-horizontal-stones.schema.json",
+    "example": "graphics/process-steps-07-horizontal-stones.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-07-horizontal-stones-720",
+    "variant": "process-steps-07-horizontal-stones",
+    "title": "Process steps 7 — horizontal-stones · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-07-horizontal-stones-720.html",
+    "schema": "graphics/process-steps-07-horizontal-stones.schema.json",
+    "example": "graphics/process-steps-07-horizontal-stones.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-08-grid-cards-1200",
+    "variant": "process-steps-08-grid-cards",
+    "title": "Process steps 8 — grid-cards · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-08-grid-cards-1200.html",
+    "schema": "graphics/process-steps-08-grid-cards.schema.json",
+    "example": "graphics/process-steps-08-grid-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-08-grid-cards-720",
+    "variant": "process-steps-08-grid-cards",
+    "title": "Process steps 8 — grid-cards · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-08-grid-cards-720.html",
+    "schema": "graphics/process-steps-08-grid-cards.schema.json",
+    "example": "graphics/process-steps-08-grid-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-09-vertical-rail-1200",
+    "variant": "process-steps-09-vertical-rail",
+    "title": "Process steps 9 — vertical-rail · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-09-vertical-rail-1200.html",
+    "schema": "graphics/process-steps-09-vertical-rail.schema.json",
+    "example": "graphics/process-steps-09-vertical-rail.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-09-vertical-rail-720",
+    "variant": "process-steps-09-vertical-rail",
+    "title": "Process steps 9 — vertical-rail · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-09-vertical-rail-720.html",
+    "schema": "graphics/process-steps-09-vertical-rail.schema.json",
+    "example": "graphics/process-steps-09-vertical-rail.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 1200,
+    "id": "process-steps-10-horizontal-underline-1200",
+    "variant": "process-steps-10-horizontal-underline",
+    "title": "Process steps 10 — horizontal-underline · 1200",
+    "size": "1200x600",
+    "file": "graphics/process-steps-10-horizontal-underline-1200.html",
+    "schema": "graphics/process-steps-10-horizontal-underline.schema.json",
+    "example": "graphics/process-steps-10-horizontal-underline.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "process-steps",
+    "groupTitle": "Process steps",
+    "width": 720,
+    "id": "process-steps-10-horizontal-underline-720",
+    "variant": "process-steps-10-horizontal-underline",
+    "title": "Process steps 10 — horizontal-underline · 720",
+    "size": "720x600",
+    "file": "graphics/process-steps-10-horizontal-underline-720.html",
+    "schema": "graphics/process-steps-10-horizontal-underline.schema.json",
+    "example": "graphics/process-steps-10-horizontal-underline.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "steps"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-01-card-rows-1200",
+    "variant": "checklist-cards-01-card-rows",
+    "title": "Checklist card 1 — card-rows · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-01-card-rows-1200.html",
+    "schema": "graphics/checklist-cards-01-card-rows.schema.json",
+    "example": "graphics/checklist-cards-01-card-rows.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-01-card-rows-720",
+    "variant": "checklist-cards-01-card-rows",
+    "title": "Checklist card 1 — card-rows · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-01-card-rows-720.html",
+    "schema": "graphics/checklist-cards-01-card-rows.schema.json",
+    "example": "graphics/checklist-cards-01-card-rows.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-02-before-you-file-1200",
+    "variant": "checklist-cards-02-before-you-file",
+    "title": "Checklist card 2 — before-you-file · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-02-before-you-file-1200.html",
+    "schema": "graphics/checklist-cards-02-before-you-file.schema.json",
+    "example": "graphics/checklist-cards-02-before-you-file.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-02-before-you-file-720",
+    "variant": "checklist-cards-02-before-you-file",
+    "title": "Checklist card 2 — before-you-file · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-02-before-you-file-720.html",
+    "schema": "graphics/checklist-cards-02-before-you-file.schema.json",
+    "example": "graphics/checklist-cards-02-before-you-file.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-03-two-column-1200",
+    "variant": "checklist-cards-03-two-column",
+    "title": "Checklist card 3 — two-column · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-03-two-column-1200.html",
+    "schema": "graphics/checklist-cards-03-two-column.schema.json",
+    "example": "graphics/checklist-cards-03-two-column.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-03-two-column-720",
+    "variant": "checklist-cards-03-two-column",
+    "title": "Checklist card 3 — two-column · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-03-two-column-720.html",
+    "schema": "graphics/checklist-cards-03-two-column.schema.json",
+    "example": "graphics/checklist-cards-03-two-column.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-04-ruled-square-1200",
+    "variant": "checklist-cards-04-ruled-square",
+    "title": "Checklist card 4 — ruled-square · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-04-ruled-square-1200.html",
+    "schema": "graphics/checklist-cards-04-ruled-square.schema.json",
+    "example": "graphics/checklist-cards-04-ruled-square.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-04-ruled-square-720",
+    "variant": "checklist-cards-04-ruled-square",
+    "title": "Checklist card 4 — ruled-square · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-04-ruled-square-720.html",
+    "schema": "graphics/checklist-cards-04-ruled-square.schema.json",
+    "example": "graphics/checklist-cards-04-ruled-square.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-05-numbered-rows-1200",
+    "variant": "checklist-cards-05-numbered-rows",
+    "title": "Checklist card 5 — numbered-rows · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-05-numbered-rows-1200.html",
+    "schema": "graphics/checklist-cards-05-numbered-rows.schema.json",
+    "example": "graphics/checklist-cards-05-numbered-rows.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-05-numbered-rows-720",
+    "variant": "checklist-cards-05-numbered-rows",
+    "title": "Checklist card 5 — numbered-rows · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-05-numbered-rows-720.html",
+    "schema": "graphics/checklist-cards-05-numbered-rows.schema.json",
+    "example": "graphics/checklist-cards-05-numbered-rows.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-06-pill-checks-1200",
+    "variant": "checklist-cards-06-pill-checks",
+    "title": "Checklist card 6 — pill-checks · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-06-pill-checks-1200.html",
+    "schema": "graphics/checklist-cards-06-pill-checks.schema.json",
+    "example": "graphics/checklist-cards-06-pill-checks.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-06-pill-checks-720",
+    "variant": "checklist-cards-06-pill-checks",
+    "title": "Checklist card 6 — pill-checks · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-06-pill-checks-720.html",
+    "schema": "graphics/checklist-cards-06-pill-checks.schema.json",
+    "example": "graphics/checklist-cards-06-pill-checks.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-07-thread-spine-1200",
+    "variant": "checklist-cards-07-thread-spine",
+    "title": "Checklist card 7 — thread-spine · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-07-thread-spine-1200.html",
+    "schema": "graphics/checklist-cards-07-thread-spine.schema.json",
+    "example": "graphics/checklist-cards-07-thread-spine.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-07-thread-spine-720",
+    "variant": "checklist-cards-07-thread-spine",
+    "title": "Checklist card 7 — thread-spine · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-07-thread-spine-720.html",
+    "schema": "graphics/checklist-cards-07-thread-spine.schema.json",
+    "example": "graphics/checklist-cards-07-thread-spine.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-08-ink-card-1200",
+    "variant": "checklist-cards-08-ink-card",
+    "title": "Checklist card 8 — ink-card · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-08-ink-card-1200.html",
+    "schema": "graphics/checklist-cards-08-ink-card.schema.json",
+    "example": "graphics/checklist-cards-08-ink-card.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-08-ink-card-720",
+    "variant": "checklist-cards-08-ink-card",
+    "title": "Checklist card 8 — ink-card · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-08-ink-card-720.html",
+    "schema": "graphics/checklist-cards-08-ink-card.schema.json",
+    "example": "graphics/checklist-cards-08-ink-card.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-09-list-and-note-1200",
+    "variant": "checklist-cards-09-list-and-note",
+    "title": "Checklist card 9 — list-and-note · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-09-list-and-note-1200.html",
+    "schema": "graphics/checklist-cards-09-list-and-note.schema.json",
+    "example": "graphics/checklist-cards-09-list-and-note.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-09-list-and-note-720",
+    "variant": "checklist-cards-09-list-and-note",
+    "title": "Checklist card 9 — list-and-note · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-09-list-and-note-720.html",
+    "schema": "graphics/checklist-cards-09-list-and-note.schema.json",
+    "example": "graphics/checklist-cards-09-list-and-note.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 1200,
+    "id": "checklist-cards-10-inline-compact-1200",
+    "variant": "checklist-cards-10-inline-compact",
+    "title": "Checklist card 10 — inline-compact · 1200",
+    "size": "1200x600",
+    "file": "graphics/checklist-cards-10-inline-compact-1200.html",
+    "schema": "graphics/checklist-cards-10-inline-compact.schema.json",
+    "example": "graphics/checklist-cards-10-inline-compact.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "checklist-cards",
+    "groupTitle": "Checklist cards",
+    "width": 720,
+    "id": "checklist-cards-10-inline-compact-720",
+    "variant": "checklist-cards-10-inline-compact",
+    "title": "Checklist card 10 — inline-compact · 720",
+    "size": "720x600",
+    "file": "graphics/checklist-cards-10-inline-compact-720.html",
+    "schema": "graphics/checklist-cards-10-inline-compact.schema.json",
+    "example": "graphics/checklist-cards-10-inline-compact.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "rows",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-01-side-by-side-link-1200",
+    "variant": "comparison-01-side-by-side-link",
+    "title": "Comparison 1 — side-by-side-link · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-01-side-by-side-link-1200.html",
+    "schema": "graphics/comparison-01-side-by-side-link.schema.json",
+    "example": "graphics/comparison-01-side-by-side-link.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-01-side-by-side-link-720",
+    "variant": "comparison-01-side-by-side-link",
+    "title": "Comparison 1 — side-by-side-link · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-01-side-by-side-link-720.html",
+    "schema": "graphics/comparison-01-side-by-side-link.schema.json",
+    "example": "graphics/comparison-01-side-by-side-link.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-02-stacked-link-1200",
+    "variant": "comparison-02-stacked-link",
+    "title": "Comparison 2 — stacked-link · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-02-stacked-link-1200.html",
+    "schema": "graphics/comparison-02-stacked-link.schema.json",
+    "example": "graphics/comparison-02-stacked-link.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-02-stacked-link-720",
+    "variant": "comparison-02-stacked-link",
+    "title": "Comparison 2 — stacked-link · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-02-stacked-link-720.html",
+    "schema": "graphics/comparison-02-stacked-link.schema.json",
+    "example": "graphics/comparison-02-stacked-link.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-03-split-panel-1200",
+    "variant": "comparison-03-split-panel",
+    "title": "Comparison 3 — split-panel · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-03-split-panel-1200.html",
+    "schema": "graphics/comparison-03-split-panel.schema.json",
+    "example": "graphics/comparison-03-split-panel.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-03-split-panel-720",
+    "variant": "comparison-03-split-panel",
+    "title": "Comparison 3 — split-panel · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-03-split-panel-720.html",
+    "schema": "graphics/comparison-03-split-panel.schema.json",
+    "example": "graphics/comparison-03-split-panel.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-04-struck-left-1200",
+    "variant": "comparison-04-struck-left",
+    "title": "Comparison 4 — struck-left · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-04-struck-left-1200.html",
+    "schema": "graphics/comparison-04-struck-left.schema.json",
+    "example": "graphics/comparison-04-struck-left.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-04-struck-left-720",
+    "variant": "comparison-04-struck-left",
+    "title": "Comparison 4 — struck-left · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-04-struck-left-720.html",
+    "schema": "graphics/comparison-04-struck-left.schema.json",
+    "example": "graphics/comparison-04-struck-left.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-05-paragraph-and-sentence-1200",
+    "variant": "comparison-05-paragraph-and-sentence",
+    "title": "Comparison 5 — paragraph-and-sentence · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-05-paragraph-and-sentence-1200.html",
+    "schema": "graphics/comparison-05-paragraph-and-sentence.schema.json",
+    "example": "graphics/comparison-05-paragraph-and-sentence.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-05-paragraph-and-sentence-720",
+    "variant": "comparison-05-paragraph-and-sentence",
+    "title": "Comparison 5 — paragraph-and-sentence · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-05-paragraph-and-sentence-720.html",
+    "schema": "graphics/comparison-05-paragraph-and-sentence.schema.json",
+    "example": "graphics/comparison-05-paragraph-and-sentence.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "left_text",
+      "right_label",
+      "right_text"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-06-table-plain-1200",
+    "variant": "comparison-06-table-plain",
+    "title": "Comparison 6 — table-plain · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-06-table-plain-1200.html",
+    "schema": "graphics/comparison-06-table-plain.schema.json",
+    "example": "graphics/comparison-06-table-plain.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-06-table-plain-720",
+    "variant": "comparison-06-table-plain",
+    "title": "Comparison 6 — table-plain · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-06-table-plain-720.html",
+    "schema": "graphics/comparison-06-table-plain.schema.json",
+    "example": "graphics/comparison-06-table-plain.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-07-table-banded-1200",
+    "variant": "comparison-07-table-banded",
+    "title": "Comparison 7 — table-banded · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-07-table-banded-1200.html",
+    "schema": "graphics/comparison-07-table-banded.schema.json",
+    "example": "graphics/comparison-07-table-banded.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-07-table-banded-720",
+    "variant": "comparison-07-table-banded",
+    "title": "Comparison 7 — table-banded · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-07-table-banded-720.html",
+    "schema": "graphics/comparison-07-table-banded.schema.json",
+    "example": "graphics/comparison-07-table-banded.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-08-table-marks-1200",
+    "variant": "comparison-08-table-marks",
+    "title": "Comparison 8 — table-marks · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-08-table-marks-1200.html",
+    "schema": "graphics/comparison-08-table-marks.schema.json",
+    "example": "graphics/comparison-08-table-marks.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-08-table-marks-720",
+    "variant": "comparison-08-table-marks",
+    "title": "Comparison 8 — table-marks · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-08-table-marks-720.html",
+    "schema": "graphics/comparison-08-table-marks.schema.json",
+    "example": "graphics/comparison-08-table-marks.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-09-row-cards-1200",
+    "variant": "comparison-09-row-cards",
+    "title": "Comparison 9 — row-cards · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-09-row-cards-1200.html",
+    "schema": "graphics/comparison-09-row-cards.schema.json",
+    "example": "graphics/comparison-09-row-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-09-row-cards-720",
+    "variant": "comparison-09-row-cards",
+    "title": "Comparison 9 — row-cards · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-09-row-cards-720.html",
+    "schema": "graphics/comparison-09-row-cards.schema.json",
+    "example": "graphics/comparison-09-row-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 1200,
+    "id": "comparison-10-table-compact-1200",
+    "variant": "comparison-10-table-compact",
+    "title": "Comparison 10 — table-compact · 1200",
+    "size": "1200x600",
+    "file": "graphics/comparison-10-table-compact-1200.html",
+    "schema": "graphics/comparison-10-table-compact.schema.json",
+    "example": "graphics/comparison-10-table-compact.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "comparison",
+    "groupTitle": "Comparison",
+    "width": 720,
+    "id": "comparison-10-table-compact-720",
+    "variant": "comparison-10-table-compact",
+    "title": "Comparison 10 — table-compact · 720",
+    "size": "720x600",
+    "file": "graphics/comparison-10-table-compact-720.html",
+    "schema": "graphics/comparison-10-table-compact.schema.json",
+    "example": "graphics/comparison-10-table-compact.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "left_label",
+      "right_label",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-01-vertical-thread-1200",
+    "variant": "timeline-01-vertical-thread",
+    "title": "Timeline 1 — vertical-thread · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-01-vertical-thread-1200.html",
+    "schema": "graphics/timeline-01-vertical-thread.schema.json",
+    "example": "graphics/timeline-01-vertical-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-01-vertical-thread-720",
+    "variant": "timeline-01-vertical-thread",
+    "title": "Timeline 1 — vertical-thread · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-01-vertical-thread-720.html",
+    "schema": "graphics/timeline-01-vertical-thread.schema.json",
+    "example": "graphics/timeline-01-vertical-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-02-vertical-cards-1200",
+    "variant": "timeline-02-vertical-cards",
+    "title": "Timeline 2 — vertical-cards · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-02-vertical-cards-1200.html",
+    "schema": "graphics/timeline-02-vertical-cards.schema.json",
+    "example": "graphics/timeline-02-vertical-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-02-vertical-cards-720",
+    "variant": "timeline-02-vertical-cards",
+    "title": "Timeline 2 — vertical-cards · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-02-vertical-cards-720.html",
+    "schema": "graphics/timeline-02-vertical-cards.schema.json",
+    "example": "graphics/timeline-02-vertical-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-03-horizontal-thread-1200",
+    "variant": "timeline-03-horizontal-thread",
+    "title": "Timeline 3 — horizontal-thread · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-03-horizontal-thread-1200.html",
+    "schema": "graphics/timeline-03-horizontal-thread.schema.json",
+    "example": "graphics/timeline-03-horizontal-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-03-horizontal-thread-720",
+    "variant": "timeline-03-horizontal-thread",
+    "title": "Timeline 3 — horizontal-thread · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-03-horizontal-thread-720.html",
+    "schema": "graphics/timeline-03-horizontal-thread.schema.json",
+    "example": "graphics/timeline-03-horizontal-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-04-horizontal-cards-1200",
+    "variant": "timeline-04-horizontal-cards",
+    "title": "Timeline 4 — horizontal-cards · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-04-horizontal-cards-1200.html",
+    "schema": "graphics/timeline-04-horizontal-cards.schema.json",
+    "example": "graphics/timeline-04-horizontal-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-04-horizontal-cards-720",
+    "variant": "timeline-04-horizontal-cards",
+    "title": "Timeline 4 — horizontal-cards · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-04-horizontal-cards-720.html",
+    "schema": "graphics/timeline-04-horizontal-cards.schema.json",
+    "example": "graphics/timeline-04-horizontal-cards.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-05-dated-list-1200",
+    "variant": "timeline-05-dated-list",
+    "title": "Timeline 5 — dated-list · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-05-dated-list-1200.html",
+    "schema": "graphics/timeline-05-dated-list.schema.json",
+    "example": "graphics/timeline-05-dated-list.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-05-dated-list-720",
+    "variant": "timeline-05-dated-list",
+    "title": "Timeline 5 — dated-list · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-05-dated-list-720.html",
+    "schema": "graphics/timeline-05-dated-list.schema.json",
+    "example": "graphics/timeline-05-dated-list.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-06-pending-last-1200",
+    "variant": "timeline-06-pending-last",
+    "title": "Timeline 6 — pending-last · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-06-pending-last-1200.html",
+    "schema": "graphics/timeline-06-pending-last.schema.json",
+    "example": "graphics/timeline-06-pending-last.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-06-pending-last-720",
+    "variant": "timeline-06-pending-last",
+    "title": "Timeline 6 — pending-last · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-06-pending-last-720.html",
+    "schema": "graphics/timeline-06-pending-last.schema.json",
+    "example": "graphics/timeline-06-pending-last.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-07-stepped-1200",
+    "variant": "timeline-07-stepped",
+    "title": "Timeline 7 — stepped · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-07-stepped-1200.html",
+    "schema": "graphics/timeline-07-stepped.schema.json",
+    "example": "graphics/timeline-07-stepped.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-07-stepped-720",
+    "variant": "timeline-07-stepped",
+    "title": "Timeline 7 — stepped · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-07-stepped-720.html",
+    "schema": "graphics/timeline-07-stepped.schema.json",
+    "example": "graphics/timeline-07-stepped.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-08-date-chips-1200",
+    "variant": "timeline-08-date-chips",
+    "title": "Timeline 8 — date-chips · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-08-date-chips-1200.html",
+    "schema": "graphics/timeline-08-date-chips.schema.json",
+    "example": "graphics/timeline-08-date-chips.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-08-date-chips-720",
+    "variant": "timeline-08-date-chips",
+    "title": "Timeline 8 — date-chips · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-08-date-chips-720.html",
+    "schema": "graphics/timeline-08-date-chips.schema.json",
+    "example": "graphics/timeline-08-date-chips.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-09-milestone-grid-1200",
+    "variant": "timeline-09-milestone-grid",
+    "title": "Timeline 9 — milestone-grid · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-09-milestone-grid-1200.html",
+    "schema": "graphics/timeline-09-milestone-grid.schema.json",
+    "example": "graphics/timeline-09-milestone-grid.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-09-milestone-grid-720",
+    "variant": "timeline-09-milestone-grid",
+    "title": "Timeline 9 — milestone-grid · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-09-milestone-grid-720.html",
+    "schema": "graphics/timeline-09-milestone-grid.schema.json",
+    "example": "graphics/timeline-09-milestone-grid.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 1200,
+    "id": "timeline-10-compact-thread-1200",
+    "variant": "timeline-10-compact-thread",
+    "title": "Timeline 10 — compact-thread · 1200",
+    "size": "1200x600",
+    "file": "graphics/timeline-10-compact-thread-1200.html",
+    "schema": "graphics/timeline-10-compact-thread.schema.json",
+    "example": "graphics/timeline-10-compact-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "timeline",
+    "groupTitle": "Timeline",
+    "width": 720,
+    "id": "timeline-10-compact-thread-720",
+    "variant": "timeline-10-compact-thread",
+    "title": "Timeline 10 — compact-thread · 720",
+    "size": "720x600",
+    "file": "graphics/timeline-10-compact-thread-720.html",
+    "schema": "graphics/timeline-10-compact-thread.schema.json",
+    "example": "graphics/timeline-10-compact-thread.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "events"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-01-page-and-note-1200",
+    "variant": "document-callouts-01-page-and-note",
+    "title": "Document callout 1 — page-and-note · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-01-page-and-note-1200.html",
+    "schema": "graphics/document-callouts-01-page-and-note.schema.json",
+    "example": "graphics/document-callouts-01-page-and-note.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-01-page-and-note-720",
+    "variant": "document-callouts-01-page-and-note",
+    "title": "Document callout 1 — page-and-note · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-01-page-and-note-720.html",
+    "schema": "graphics/document-callouts-01-page-and-note.schema.json",
+    "example": "graphics/document-callouts-01-page-and-note.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-02-draft-vs-source-1200",
+    "variant": "document-callouts-02-draft-vs-source",
+    "title": "Document callout 2 — draft-vs-source · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-02-draft-vs-source-1200.html",
+    "schema": "graphics/document-callouts-02-draft-vs-source.schema.json",
+    "example": "graphics/document-callouts-02-draft-vs-source.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "draft_label",
+      "source_label",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-02-draft-vs-source-720",
+    "variant": "document-callouts-02-draft-vs-source",
+    "title": "Document callout 2 — draft-vs-source · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-02-draft-vs-source-720.html",
+    "schema": "graphics/document-callouts-02-draft-vs-source.schema.json",
+    "example": "graphics/document-callouts-02-draft-vs-source.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "draft_label",
+      "source_label",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-03-margin-and-chip-1200",
+    "variant": "document-callouts-03-margin-and-chip",
+    "title": "Document callout 3 — margin-and-chip · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-03-margin-and-chip-1200.html",
+    "schema": "graphics/document-callouts-03-margin-and-chip.schema.json",
+    "example": "graphics/document-callouts-03-margin-and-chip.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-03-margin-and-chip-720",
+    "variant": "document-callouts-03-margin-and-chip",
+    "title": "Document callout 3 — margin-and-chip · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-03-margin-and-chip-720.html",
+    "schema": "graphics/document-callouts-03-margin-and-chip.schema.json",
+    "example": "graphics/document-callouts-03-margin-and-chip.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-04-stacked-pages-1200",
+    "variant": "document-callouts-04-stacked-pages",
+    "title": "Document callout 4 — stacked-pages · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-04-stacked-pages-1200.html",
+    "schema": "graphics/document-callouts-04-stacked-pages.schema.json",
+    "example": "graphics/document-callouts-04-stacked-pages.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-04-stacked-pages-720",
+    "variant": "document-callouts-04-stacked-pages",
+    "title": "Document callout 4 — stacked-pages · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-04-stacked-pages-720.html",
+    "schema": "graphics/document-callouts-04-stacked-pages.schema.json",
+    "example": "graphics/document-callouts-04-stacked-pages.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-05-connected-note-1200",
+    "variant": "document-callouts-05-connected-note",
+    "title": "Document callout 5 — connected-note · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-05-connected-note-1200.html",
+    "schema": "graphics/document-callouts-05-connected-note.schema.json",
+    "example": "graphics/document-callouts-05-connected-note.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-05-connected-note-720",
+    "variant": "document-callouts-05-connected-note",
+    "title": "Document callout 5 — connected-note · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-05-connected-note-720.html",
+    "schema": "graphics/document-callouts-05-connected-note.schema.json",
+    "example": "graphics/document-callouts-05-connected-note.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-06-open-report-1200",
+    "variant": "document-callouts-06-open-report",
+    "title": "Document callout 6 — open-report · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-06-open-report-1200.html",
+    "schema": "graphics/document-callouts-06-open-report.schema.json",
+    "example": "graphics/document-callouts-06-open-report.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-06-open-report-720",
+    "variant": "document-callouts-06-open-report",
+    "title": "Document callout 6 — open-report · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-06-open-report-720.html",
+    "schema": "graphics/document-callouts-06-open-report.schema.json",
+    "example": "graphics/document-callouts-06-open-report.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-07-numbered-pins-1200",
+    "variant": "document-callouts-07-numbered-pins",
+    "title": "Document callout 7 — numbered-pins · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-07-numbered-pins-1200.html",
+    "schema": "graphics/document-callouts-07-numbered-pins.schema.json",
+    "example": "graphics/document-callouts-07-numbered-pins.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout",
+      "pins"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-07-numbered-pins-720",
+    "variant": "document-callouts-07-numbered-pins",
+    "title": "Document callout 7 — numbered-pins · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-07-numbered-pins-720.html",
+    "schema": "graphics/document-callouts-07-numbered-pins.schema.json",
+    "example": "graphics/document-callouts-07-numbered-pins.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout",
+      "pins"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-08-draft-vs-source-verdict-1200",
+    "variant": "document-callouts-08-draft-vs-source-verdict",
+    "title": "Document callout 8 — draft-vs-source-verdict · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-08-draft-vs-source-verdict-1200.html",
+    "schema": "graphics/document-callouts-08-draft-vs-source-verdict.schema.json",
+    "example": "graphics/document-callouts-08-draft-vs-source-verdict.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "draft_label",
+      "source_label",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-08-draft-vs-source-verdict-720",
+    "variant": "document-callouts-08-draft-vs-source-verdict",
+    "title": "Document callout 8 — draft-vs-source-verdict · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-08-draft-vs-source-verdict-720.html",
+    "schema": "graphics/document-callouts-08-draft-vs-source-verdict.schema.json",
+    "example": "graphics/document-callouts-08-draft-vs-source-verdict.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "draft_label",
+      "source_label",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-09-filing-page-1200",
+    "variant": "document-callouts-09-filing-page",
+    "title": "Document callout 9 — filing-page · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-09-filing-page-1200.html",
+    "schema": "graphics/document-callouts-09-filing-page.schema.json",
+    "example": "graphics/document-callouts-09-filing-page.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-09-filing-page-720",
+    "variant": "document-callouts-09-filing-page",
+    "title": "Document callout 9 — filing-page · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-09-filing-page-720.html",
+    "schema": "graphics/document-callouts-09-filing-page.schema.json",
+    "example": "graphics/document-callouts-09-filing-page.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 1200,
+    "id": "document-callouts-10-page-and-source-line-1200",
+    "variant": "document-callouts-10-page-and-source-line",
+    "title": "Document callout 10 — page-and-source-line · 1200",
+    "size": "1200x600",
+    "file": "graphics/document-callouts-10-page-and-source-line-1200.html",
+    "schema": "graphics/document-callouts-10-page-and-source-line.schema.json",
+    "example": "graphics/document-callouts-10-page-and-source-line.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "document-callouts",
+    "groupTitle": "Document callouts",
+    "width": 720,
+    "id": "document-callouts-10-page-and-source-line-720",
+    "variant": "document-callouts-10-page-and-source-line",
+    "title": "Document callout 10 — page-and-source-line · 720",
+    "size": "720x600",
+    "file": "graphics/document-callouts-10-page-and-source-line-720.html",
+    "schema": "graphics/document-callouts-10-page-and-source-line.schema.json",
+    "example": "graphics/document-callouts-10-page-and-source-line.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "pinpoint",
+      "callout"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-01-card-1200",
+    "variant": "definition-boxes-01-card",
+    "title": "Definition box 1 — card · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-01-card-1200.html",
+    "schema": "graphics/definition-boxes-01-card.schema.json",
+    "example": "graphics/definition-boxes-01-card.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-01-card-720",
+    "variant": "definition-boxes-01-card",
+    "title": "Definition box 1 — card · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-01-card-720.html",
+    "schema": "graphics/definition-boxes-01-card.schema.json",
+    "example": "graphics/definition-boxes-01-card.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-02-term-column-1200",
+    "variant": "definition-boxes-02-term-column",
+    "title": "Definition box 2 — term-column · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-02-term-column-1200.html",
+    "schema": "graphics/definition-boxes-02-term-column.schema.json",
+    "example": "graphics/definition-boxes-02-term-column.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-02-term-column-720",
+    "variant": "definition-boxes-02-term-column",
+    "title": "Definition box 2 — term-column · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-02-term-column-720.html",
+    "schema": "graphics/definition-boxes-02-term-column.schema.json",
+    "example": "graphics/definition-boxes-02-term-column.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-03-thread-underline-1200",
+    "variant": "definition-boxes-03-thread-underline",
+    "title": "Definition box 3 — thread-underline · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-03-thread-underline-1200.html",
+    "schema": "graphics/definition-boxes-03-thread-underline.schema.json",
+    "example": "graphics/definition-boxes-03-thread-underline.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-03-thread-underline-720",
+    "variant": "definition-boxes-03-thread-underline",
+    "title": "Definition box 3 — thread-underline · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-03-thread-underline-720.html",
+    "schema": "graphics/definition-boxes-03-thread-underline.schema.json",
+    "example": "graphics/definition-boxes-03-thread-underline.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-04-dictionary-1200",
+    "variant": "definition-boxes-04-dictionary",
+    "title": "Definition box 4 — dictionary · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-04-dictionary-1200.html",
+    "schema": "graphics/definition-boxes-04-dictionary.schema.json",
+    "example": "graphics/definition-boxes-04-dictionary.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-04-dictionary-720",
+    "variant": "definition-boxes-04-dictionary",
+    "title": "Definition box 4 — dictionary · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-04-dictionary-720.html",
+    "schema": "graphics/definition-boxes-04-dictionary.schema.json",
+    "example": "graphics/definition-boxes-04-dictionary.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-05-chip-term-1200",
+    "variant": "definition-boxes-05-chip-term",
+    "title": "Definition box 5 — chip-term · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-05-chip-term-1200.html",
+    "schema": "graphics/definition-boxes-05-chip-term.schema.json",
+    "example": "graphics/definition-boxes-05-chip-term.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-05-chip-term-720",
+    "variant": "definition-boxes-05-chip-term",
+    "title": "Definition box 5 — chip-term · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-05-chip-term-720.html",
+    "schema": "graphics/definition-boxes-05-chip-term.schema.json",
+    "example": "graphics/definition-boxes-05-chip-term.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-06-with-object-1200",
+    "variant": "definition-boxes-06-with-object",
+    "title": "Definition box 6 — with-object · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-06-with-object-1200.html",
+    "schema": "graphics/definition-boxes-06-with-object.schema.json",
+    "example": "graphics/definition-boxes-06-with-object.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-06-with-object-720",
+    "variant": "definition-boxes-06-with-object",
+    "title": "Definition box 6 — with-object · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-06-with-object-720.html",
+    "schema": "graphics/definition-boxes-06-with-object.schema.json",
+    "example": "graphics/definition-boxes-06-with-object.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-07-not-to-be-confused-1200",
+    "variant": "definition-boxes-07-not-to-be-confused",
+    "title": "Definition box 7 — not-to-be-confused · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-07-not-to-be-confused-1200.html",
+    "schema": "graphics/definition-boxes-07-not-to-be-confused.schema.json",
+    "example": "graphics/definition-boxes-07-not-to-be-confused.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-07-not-to-be-confused-720",
+    "variant": "definition-boxes-07-not-to-be-confused",
+    "title": "Definition box 7 — not-to-be-confused · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-07-not-to-be-confused-720.html",
+    "schema": "graphics/definition-boxes-07-not-to-be-confused.schema.json",
+    "example": "graphics/definition-boxes-07-not-to-be-confused.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-08-inline-1200",
+    "variant": "definition-boxes-08-inline",
+    "title": "Definition box 8 — inline · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-08-inline-1200.html",
+    "schema": "graphics/definition-boxes-08-inline.schema.json",
+    "example": "graphics/definition-boxes-08-inline.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-08-inline-720",
+    "variant": "definition-boxes-08-inline",
+    "title": "Definition box 8 — inline · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-08-inline-720.html",
+    "schema": "graphics/definition-boxes-08-inline.schema.json",
+    "example": "graphics/definition-boxes-08-inline.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-09-ink-card-1200",
+    "variant": "definition-boxes-09-ink-card",
+    "title": "Definition box 9 — ink-card · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-09-ink-card-1200.html",
+    "schema": "graphics/definition-boxes-09-ink-card.schema.json",
+    "example": "graphics/definition-boxes-09-ink-card.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-09-ink-card-720",
+    "variant": "definition-boxes-09-ink-card",
+    "title": "Definition box 9 — ink-card · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-09-ink-card-720.html",
+    "schema": "graphics/definition-boxes-09-ink-card.schema.json",
+    "example": "graphics/definition-boxes-09-ink-card.example.json",
+    "slots": [
+      "label",
+      "term",
+      "pos",
+      "meaning_html",
+      "note_label",
+      "note"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 1200,
+    "id": "definition-boxes-10-two-terms-1200",
+    "variant": "definition-boxes-10-two-terms",
+    "title": "Definition box 10 — two-terms · 1200",
+    "size": "1200x600",
+    "file": "graphics/definition-boxes-10-two-terms-1200.html",
+    "schema": "graphics/definition-boxes-10-two-terms.schema.json",
+    "example": "graphics/definition-boxes-10-two-terms.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "terms"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "definition-boxes",
+    "groupTitle": "Definition and key-term boxes",
+    "width": 720,
+    "id": "definition-boxes-10-two-terms-720",
+    "variant": "definition-boxes-10-two-terms",
+    "title": "Definition box 10 — two-terms · 720",
+    "size": "720x600",
+    "file": "graphics/definition-boxes-10-two-terms-720.html",
+    "schema": "graphics/definition-boxes-10-two-terms.schema.json",
+    "example": "graphics/definition-boxes-10-two-terms.example.json",
+    "slots": [
+      "kicker",
+      "title_html",
+      "terms"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-01-note-bar-1200",
+    "variant": "callout-boxes-01-note-bar",
+    "title": "Callout box 1 — note-bar · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-01-note-bar-1200.html",
+    "schema": "graphics/callout-boxes-01-note-bar.schema.json",
+    "example": "graphics/callout-boxes-01-note-bar.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-01-note-bar-720",
+    "variant": "callout-boxes-01-note-bar",
+    "title": "Callout box 1 — note-bar · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-01-note-bar-720.html",
+    "schema": "graphics/callout-boxes-01-note-bar.schema.json",
+    "example": "graphics/callout-boxes-01-note-bar.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-02-note-icon-1200",
+    "variant": "callout-boxes-02-note-icon",
+    "title": "Callout box 2 — note-icon · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-02-note-icon-1200.html",
+    "schema": "graphics/callout-boxes-02-note-icon.schema.json",
+    "example": "graphics/callout-boxes-02-note-icon.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-02-note-icon-720",
+    "variant": "callout-boxes-02-note-icon",
+    "title": "Callout box 2 — note-icon · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-02-note-icon-720.html",
+    "schema": "graphics/callout-boxes-02-note-icon.schema.json",
+    "example": "graphics/callout-boxes-02-note-icon.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-03-caution-1200",
+    "variant": "callout-boxes-03-caution",
+    "title": "Callout box 3 — caution · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-03-caution-1200.html",
+    "schema": "graphics/callout-boxes-03-caution.schema.json",
+    "example": "graphics/callout-boxes-03-caution.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-03-caution-720",
+    "variant": "callout-boxes-03-caution",
+    "title": "Callout box 3 — caution · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-03-caution-720.html",
+    "schema": "graphics/callout-boxes-03-caution.schema.json",
+    "example": "graphics/callout-boxes-03-caution.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-04-does-not-settle-1200",
+    "variant": "callout-boxes-04-does-not-settle",
+    "title": "Callout box 4 — does-not-settle · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-04-does-not-settle-1200.html",
+    "schema": "graphics/callout-boxes-04-does-not-settle.schema.json",
+    "example": "graphics/callout-boxes-04-does-not-settle.example.json",
+    "slots": [
+      "label",
+      "body_html",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-04-does-not-settle-720",
+    "variant": "callout-boxes-04-does-not-settle",
+    "title": "Callout box 4 — does-not-settle · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-04-does-not-settle-720.html",
+    "schema": "graphics/callout-boxes-04-does-not-settle.schema.json",
+    "example": "graphics/callout-boxes-04-does-not-settle.example.json",
+    "slots": [
+      "label",
+      "body_html",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-05-outlined-1200",
+    "variant": "callout-boxes-05-outlined",
+    "title": "Callout box 5 — outlined · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-05-outlined-1200.html",
+    "schema": "graphics/callout-boxes-05-outlined.schema.json",
+    "example": "graphics/callout-boxes-05-outlined.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-05-outlined-720",
+    "variant": "callout-boxes-05-outlined",
+    "title": "Callout box 5 — outlined · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-05-outlined-720.html",
+    "schema": "graphics/callout-boxes-05-outlined.schema.json",
+    "example": "graphics/callout-boxes-05-outlined.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-06-ink-card-1200",
+    "variant": "callout-boxes-06-ink-card",
+    "title": "Callout box 6 — ink-card · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-06-ink-card-1200.html",
+    "schema": "graphics/callout-boxes-06-ink-card.schema.json",
+    "example": "graphics/callout-boxes-06-ink-card.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-06-ink-card-720",
+    "variant": "callout-boxes-06-ink-card",
+    "title": "Callout box 6 — ink-card · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-06-ink-card-720.html",
+    "schema": "graphics/callout-boxes-06-ink-card.schema.json",
+    "example": "graphics/callout-boxes-06-ink-card.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-07-thread-dot-1200",
+    "variant": "callout-boxes-07-thread-dot",
+    "title": "Callout box 7 — thread-dot · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-07-thread-dot-1200.html",
+    "schema": "graphics/callout-boxes-07-thread-dot.schema.json",
+    "example": "graphics/callout-boxes-07-thread-dot.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-07-thread-dot-720",
+    "variant": "callout-boxes-07-thread-dot",
+    "title": "Callout box 7 — thread-dot · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-07-thread-dot-720.html",
+    "schema": "graphics/callout-boxes-07-thread-dot.schema.json",
+    "example": "graphics/callout-boxes-07-thread-dot.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-08-tab-label-1200",
+    "variant": "callout-boxes-08-tab-label",
+    "title": "Callout box 8 — tab-label · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-08-tab-label-1200.html",
+    "schema": "graphics/callout-boxes-08-tab-label.schema.json",
+    "example": "graphics/callout-boxes-08-tab-label.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-08-tab-label-720",
+    "variant": "callout-boxes-08-tab-label",
+    "title": "Callout box 8 — tab-label · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-08-tab-label-720.html",
+    "schema": "graphics/callout-boxes-08-tab-label.schema.json",
+    "example": "graphics/callout-boxes-08-tab-label.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-09-icon-column-1200",
+    "variant": "callout-boxes-09-icon-column",
+    "title": "Callout box 9 — icon-column · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-09-icon-column-1200.html",
+    "schema": "graphics/callout-boxes-09-icon-column.schema.json",
+    "example": "graphics/callout-boxes-09-icon-column.example.json",
+    "slots": [
+      "label",
+      "body_html",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-09-icon-column-720",
+    "variant": "callout-boxes-09-icon-column",
+    "title": "Callout box 9 — icon-column · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-09-icon-column-720.html",
+    "schema": "graphics/callout-boxes-09-icon-column.schema.json",
+    "example": "graphics/callout-boxes-09-icon-column.example.json",
+    "slots": [
+      "label",
+      "body_html",
+      "rows"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 1200,
+    "id": "callout-boxes-10-hatch-strip-1200",
+    "variant": "callout-boxes-10-hatch-strip",
+    "title": "Callout box 10 — hatch-strip · 1200",
+    "size": "1200x600",
+    "file": "graphics/callout-boxes-10-hatch-strip-1200.html",
+    "schema": "graphics/callout-boxes-10-hatch-strip.schema.json",
+    "example": "graphics/callout-boxes-10-hatch-strip.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "callout-boxes",
+    "groupTitle": "Callout and note boxes",
+    "width": 720,
+    "id": "callout-boxes-10-hatch-strip-720",
+    "variant": "callout-boxes-10-hatch-strip",
+    "title": "Callout box 10 — hatch-strip · 720",
+    "size": "720x600",
+    "file": "graphics/callout-boxes-10-hatch-strip-720.html",
+    "schema": "graphics/callout-boxes-10-hatch-strip.schema.json",
+    "example": "graphics/callout-boxes-10-hatch-strip.example.json",
+    "slots": [
+      "label",
+      "body_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-01-clay-bar-1200",
+    "variant": "pull-statements-01-clay-bar",
+    "title": "Pull statement 1 — clay-bar · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-01-clay-bar-1200.html",
+    "schema": "graphics/pull-statements-01-clay-bar.schema.json",
+    "example": "graphics/pull-statements-01-clay-bar.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-01-clay-bar-720",
+    "variant": "pull-statements-01-clay-bar",
+    "title": "Pull statement 1 — clay-bar · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-01-clay-bar-720.html",
+    "schema": "graphics/pull-statements-01-clay-bar.schema.json",
+    "example": "graphics/pull-statements-01-clay-bar.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-02-between-threads-1200",
+    "variant": "pull-statements-02-between-threads",
+    "title": "Pull statement 2 — between-threads · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-02-between-threads-1200.html",
+    "schema": "graphics/pull-statements-02-between-threads.schema.json",
+    "example": "graphics/pull-statements-02-between-threads.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-02-between-threads-720",
+    "variant": "pull-statements-02-between-threads",
+    "title": "Pull statement 2 — between-threads · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-02-between-threads-720.html",
+    "schema": "graphics/pull-statements-02-between-threads.schema.json",
+    "example": "graphics/pull-statements-02-between-threads.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-03-plain-large-1200",
+    "variant": "pull-statements-03-plain-large",
+    "title": "Pull statement 3 — plain-large · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-03-plain-large-1200.html",
+    "schema": "graphics/pull-statements-03-plain-large.schema.json",
+    "example": "graphics/pull-statements-03-plain-large.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-03-plain-large-720",
+    "variant": "pull-statements-03-plain-large",
+    "title": "Pull statement 3 — plain-large · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-03-plain-large-720.html",
+    "schema": "graphics/pull-statements-03-plain-large.schema.json",
+    "example": "graphics/pull-statements-03-plain-large.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-04-ink-card-1200",
+    "variant": "pull-statements-04-ink-card",
+    "title": "Pull statement 4 — ink-card · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-04-ink-card-1200.html",
+    "schema": "graphics/pull-statements-04-ink-card.schema.json",
+    "example": "graphics/pull-statements-04-ink-card.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-04-ink-card-720",
+    "variant": "pull-statements-04-ink-card",
+    "title": "Pull statement 4 — ink-card · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-04-ink-card-720.html",
+    "schema": "graphics/pull-statements-04-ink-card.schema.json",
+    "example": "graphics/pull-statements-04-ink-card.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-05-card-with-node-1200",
+    "variant": "pull-statements-05-card-with-node",
+    "title": "Pull statement 5 — card-with-node · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-05-card-with-node-1200.html",
+    "schema": "graphics/pull-statements-05-card-with-node.schema.json",
+    "example": "graphics/pull-statements-05-card-with-node.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-05-card-with-node-720",
+    "variant": "pull-statements-05-card-with-node",
+    "title": "Pull statement 5 — card-with-node · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-05-card-with-node-720.html",
+    "schema": "graphics/pull-statements-05-card-with-node.schema.json",
+    "example": "graphics/pull-statements-05-card-with-node.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-06-with-object-1200",
+    "variant": "pull-statements-06-with-object",
+    "title": "Pull statement 6 — with-object · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-06-with-object-1200.html",
+    "schema": "graphics/pull-statements-06-with-object.schema.json",
+    "example": "graphics/pull-statements-06-with-object.example.json",
+    "slots": [
+      "kicker",
+      "statement_html",
+      "motif"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-06-with-object-720",
+    "variant": "pull-statements-06-with-object",
+    "title": "Pull statement 6 — with-object · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-06-with-object-720.html",
+    "schema": "graphics/pull-statements-06-with-object.schema.json",
+    "example": "graphics/pull-statements-06-with-object.example.json",
+    "slots": [
+      "kicker",
+      "statement_html",
+      "motif"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-07-underlined-phrase-1200",
+    "variant": "pull-statements-07-underlined-phrase",
+    "title": "Pull statement 7 — underlined-phrase · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-07-underlined-phrase-1200.html",
+    "schema": "graphics/pull-statements-07-underlined-phrase.schema.json",
+    "example": "graphics/pull-statements-07-underlined-phrase.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-07-underlined-phrase-720",
+    "variant": "pull-statements-07-underlined-phrase",
+    "title": "Pull statement 7 — underlined-phrase · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-07-underlined-phrase-720.html",
+    "schema": "graphics/pull-statements-07-underlined-phrase.schema.json",
+    "example": "graphics/pull-statements-07-underlined-phrase.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-08-paragraph-mark-1200",
+    "variant": "pull-statements-08-paragraph-mark",
+    "title": "Pull statement 8 — paragraph-mark · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-08-paragraph-mark-1200.html",
+    "schema": "graphics/pull-statements-08-paragraph-mark.schema.json",
+    "example": "graphics/pull-statements-08-paragraph-mark.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-08-paragraph-mark-720",
+    "variant": "pull-statements-08-paragraph-mark",
+    "title": "Pull statement 8 — paragraph-mark · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-08-paragraph-mark-720.html",
+    "schema": "graphics/pull-statements-08-paragraph-mark.schema.json",
+    "example": "graphics/pull-statements-08-paragraph-mark.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-09-thread-top-1200",
+    "variant": "pull-statements-09-thread-top",
+    "title": "Pull statement 9 — thread-top · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-09-thread-top-1200.html",
+    "schema": "graphics/pull-statements-09-thread-top.schema.json",
+    "example": "graphics/pull-statements-09-thread-top.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-09-thread-top-720",
+    "variant": "pull-statements-09-thread-top",
+    "title": "Pull statement 9 — thread-top · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-09-thread-top-720.html",
+    "schema": "graphics/pull-statements-09-thread-top.schema.json",
+    "example": "graphics/pull-statements-09-thread-top.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 1200,
+    "id": "pull-statements-10-minimal-1200",
+    "variant": "pull-statements-10-minimal",
+    "title": "Pull statement 10 — minimal · 1200",
+    "size": "1200x600",
+    "file": "graphics/pull-statements-10-minimal-1200.html",
+    "schema": "graphics/pull-statements-10-minimal.schema.json",
+    "example": "graphics/pull-statements-10-minimal.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "pull-statements",
+    "groupTitle": "Pull statements",
+    "width": 720,
+    "id": "pull-statements-10-minimal-720",
+    "variant": "pull-statements-10-minimal",
+    "title": "Pull statement 10 — minimal · 720",
+    "size": "720x600",
+    "file": "graphics/pull-statements-10-minimal-720.html",
+    "schema": "graphics/pull-statements-10-minimal.schema.json",
+    "example": "graphics/pull-statements-10-minimal.example.json",
+    "slots": [
+      "kicker",
+      "statement_html"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-01-inline-dots-1200",
+    "variant": "source-lines-01-inline-dots",
+    "title": "Source line 1 — inline-dots · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-01-inline-dots-1200.html",
+    "schema": "graphics/source-lines-01-inline-dots.schema.json",
+    "example": "graphics/source-lines-01-inline-dots.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-01-inline-dots-720",
+    "variant": "source-lines-01-inline-dots",
+    "title": "Source line 1 — inline-dots · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-01-inline-dots-720.html",
+    "schema": "graphics/source-lines-01-inline-dots.schema.json",
+    "example": "graphics/source-lines-01-inline-dots.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-02-chips-1200",
+    "variant": "source-lines-02-chips",
+    "title": "Source line 2 — chips · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-02-chips-1200.html",
+    "schema": "graphics/source-lines-02-chips.schema.json",
+    "example": "graphics/source-lines-02-chips.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-02-chips-720",
+    "variant": "source-lines-02-chips",
+    "title": "Source line 2 — chips · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-02-chips-720.html",
+    "schema": "graphics/source-lines-02-chips.schema.json",
+    "example": "graphics/source-lines-02-chips.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-03-label-value-1200",
+    "variant": "source-lines-03-label-value",
+    "title": "Source line 3 — label-value · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-03-label-value-1200.html",
+    "schema": "graphics/source-lines-03-label-value.schema.json",
+    "example": "graphics/source-lines-03-label-value.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-03-label-value-720",
+    "variant": "source-lines-03-label-value",
+    "title": "Source line 3 — label-value · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-03-label-value-720.html",
+    "schema": "graphics/source-lines-03-label-value.schema.json",
+    "example": "graphics/source-lines-03-label-value.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-04-four-columns-1200",
+    "variant": "source-lines-04-four-columns",
+    "title": "Source line 4 — four-columns · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-04-four-columns-1200.html",
+    "schema": "graphics/source-lines-04-four-columns.schema.json",
+    "example": "graphics/source-lines-04-four-columns.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-04-four-columns-720",
+    "variant": "source-lines-04-four-columns",
+    "title": "Source line 4 — four-columns · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-04-four-columns-720.html",
+    "schema": "graphics/source-lines-04-four-columns.schema.json",
+    "example": "graphics/source-lines-04-four-columns.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-05-pinpoint-chip-1200",
+    "variant": "source-lines-05-pinpoint-chip",
+    "title": "Source line 5 — pinpoint-chip · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-05-pinpoint-chip-1200.html",
+    "schema": "graphics/source-lines-05-pinpoint-chip.schema.json",
+    "example": "graphics/source-lines-05-pinpoint-chip.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-05-pinpoint-chip-720",
+    "variant": "source-lines-05-pinpoint-chip",
+    "title": "Source line 5 — pinpoint-chip · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-05-pinpoint-chip-720.html",
+    "schema": "graphics/source-lines-05-pinpoint-chip.schema.json",
+    "example": "graphics/source-lines-05-pinpoint-chip.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-06-table-row-1200",
+    "variant": "source-lines-06-table-row",
+    "title": "Source line 6 — table-row · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-06-table-row-1200.html",
+    "schema": "graphics/source-lines-06-table-row.schema.json",
+    "example": "graphics/source-lines-06-table-row.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-06-table-row-720",
+    "variant": "source-lines-06-table-row",
+    "title": "Source line 6 — table-row · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-06-table-row-720.html",
+    "schema": "graphics/source-lines-06-table-row.schema.json",
+    "example": "graphics/source-lines-06-table-row.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-07-numbered-source-1200",
+    "variant": "source-lines-07-numbered-source",
+    "title": "Source line 7 — numbered-source · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-07-numbered-source-1200.html",
+    "schema": "graphics/source-lines-07-numbered-source.schema.json",
+    "example": "graphics/source-lines-07-numbered-source.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-07-numbered-source-720",
+    "variant": "source-lines-07-numbered-source",
+    "title": "Source line 7 — numbered-source · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-07-numbered-source-720.html",
+    "schema": "graphics/source-lines-07-numbered-source.schema.json",
+    "example": "graphics/source-lines-07-numbered-source.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-08-two-sources-1200",
+    "variant": "source-lines-08-two-sources",
+    "title": "Source line 8 — two-sources · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-08-two-sources-1200.html",
+    "schema": "graphics/source-lines-08-two-sources.schema.json",
+    "example": "graphics/source-lines-08-two-sources.example.json",
+    "slots": [
+      "sources"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-08-two-sources-720",
+    "variant": "source-lines-08-two-sources",
+    "title": "Source line 8 — two-sources · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-08-two-sources-720.html",
+    "schema": "graphics/source-lines-08-two-sources.schema.json",
+    "example": "graphics/source-lines-08-two-sources.example.json",
+    "slots": [
+      "sources"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-09-mark-bar-1200",
+    "variant": "source-lines-09-mark-bar",
+    "title": "Source line 9 — mark-bar · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-09-mark-bar-1200.html",
+    "schema": "graphics/source-lines-09-mark-bar.schema.json",
+    "example": "graphics/source-lines-09-mark-bar.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-09-mark-bar-720",
+    "variant": "source-lines-09-mark-bar",
+    "title": "Source line 9 — mark-bar · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-09-mark-bar-720.html",
+    "schema": "graphics/source-lines-09-mark-bar.schema.json",
+    "example": "graphics/source-lines-09-mark-bar.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 1200,
+    "id": "source-lines-10-tag-line-1200",
+    "variant": "source-lines-10-tag-line",
+    "title": "Source line 10 — tag-line · 1200",
+    "size": "1200x600",
+    "file": "graphics/source-lines-10-tag-line-1200.html",
+    "schema": "graphics/source-lines-10-tag-line.schema.json",
+    "example": "graphics/source-lines-10-tag-line.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "source-lines",
+    "groupTitle": "Source and citation lines",
+    "width": 720,
+    "id": "source-lines-10-tag-line-720",
+    "variant": "source-lines-10-tag-line",
+    "title": "Source line 10 — tag-line · 720",
+    "size": "720x600",
+    "file": "graphics/source-lines-10-tag-line-720.html",
+    "schema": "graphics/source-lines-10-tag-line.schema.json",
+    "example": "graphics/source-lines-10-tag-line.example.json",
+    "slots": [
+      "court",
+      "date",
+      "parties",
+      "para"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-01-thread-nodes-1200",
+    "variant": "dividers-cta-01-thread-nodes",
+    "title": "Divider 1 — thread-nodes · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-01-thread-nodes-1200.html",
+    "schema": "graphics/dividers-cta-01-thread-nodes.schema.json",
+    "example": "graphics/dividers-cta-01-thread-nodes.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-01-thread-nodes-720",
+    "variant": "dividers-cta-01-thread-nodes",
+    "title": "Divider 1 — thread-nodes · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-01-thread-nodes-720.html",
+    "schema": "graphics/dividers-cta-01-thread-nodes.schema.json",
+    "example": "graphics/dividers-cta-01-thread-nodes.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-02-numbered-section-1200",
+    "variant": "dividers-cta-02-numbered-section",
+    "title": "Divider 2 — numbered-section · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-02-numbered-section-1200.html",
+    "schema": "graphics/dividers-cta-02-numbered-section.schema.json",
+    "example": "graphics/dividers-cta-02-numbered-section.example.json",
+    "slots": [
+      "label",
+      "number"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-02-numbered-section-720",
+    "variant": "dividers-cta-02-numbered-section",
+    "title": "Divider 2 — numbered-section · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-02-numbered-section-720.html",
+    "schema": "graphics/dividers-cta-02-numbered-section.schema.json",
+    "example": "graphics/dividers-cta-02-numbered-section.example.json",
+    "slots": [
+      "label",
+      "number"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-03-with-icon-1200",
+    "variant": "dividers-cta-03-with-icon",
+    "title": "Divider 3 — with-icon · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-03-with-icon-1200.html",
+    "schema": "graphics/dividers-cta-03-with-icon.schema.json",
+    "example": "graphics/dividers-cta-03-with-icon.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-03-with-icon-720",
+    "variant": "dividers-cta-03-with-icon",
+    "title": "Divider 3 — with-icon · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-03-with-icon-720.html",
+    "schema": "graphics/dividers-cta-03-with-icon.schema.json",
+    "example": "graphics/dividers-cta-03-with-icon.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-04-dotted-thread-1200",
+    "variant": "dividers-cta-04-dotted-thread",
+    "title": "Divider 4 — dotted-thread · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-04-dotted-thread-1200.html",
+    "schema": "graphics/dividers-cta-04-dotted-thread.schema.json",
+    "example": "graphics/dividers-cta-04-dotted-thread.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-04-dotted-thread-720",
+    "variant": "dividers-cta-04-dotted-thread",
+    "title": "Divider 4 — dotted-thread · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-04-dotted-thread-720.html",
+    "schema": "graphics/dividers-cta-04-dotted-thread.schema.json",
+    "example": "graphics/dividers-cta-04-dotted-thread.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-05-short-thread-1200",
+    "variant": "dividers-cta-05-short-thread",
+    "title": "Divider 5 — short-thread · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-05-short-thread-1200.html",
+    "schema": "graphics/dividers-cta-05-short-thread.schema.json",
+    "example": "graphics/dividers-cta-05-short-thread.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-05-short-thread-720",
+    "variant": "dividers-cta-05-short-thread",
+    "title": "Divider 5 — short-thread · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-05-short-thread-720.html",
+    "schema": "graphics/dividers-cta-05-short-thread.schema.json",
+    "example": "graphics/dividers-cta-05-short-thread.example.json",
+    "slots": [
+      "label"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-06-ink-card-1200",
+    "variant": "dividers-cta-06-ink-card",
+    "title": "CTA block 6 — ink-card · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-06-ink-card-1200.html",
+    "schema": "graphics/dividers-cta-06-ink-card.schema.json",
+    "example": "graphics/dividers-cta-06-ink-card.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-06-ink-card-720",
+    "variant": "dividers-cta-06-ink-card",
+    "title": "CTA block 6 — ink-card · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-06-ink-card-720.html",
+    "schema": "graphics/dividers-cta-06-ink-card.schema.json",
+    "example": "graphics/dividers-cta-06-ink-card.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-07-with-object-1200",
+    "variant": "dividers-cta-07-with-object",
+    "title": "CTA block 7 — with-object · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-07-with-object-1200.html",
+    "schema": "graphics/dividers-cta-07-with-object.schema.json",
+    "example": "graphics/dividers-cta-07-with-object.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-07-with-object-720",
+    "variant": "dividers-cta-07-with-object",
+    "title": "CTA block 7 — with-object · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-07-with-object-720.html",
+    "schema": "graphics/dividers-cta-07-with-object.schema.json",
+    "example": "graphics/dividers-cta-07-with-object.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-08-inline-row-1200",
+    "variant": "dividers-cta-08-inline-row",
+    "title": "CTA block 8 — inline-row · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-08-inline-row-1200.html",
+    "schema": "graphics/dividers-cta-08-inline-row.schema.json",
+    "example": "graphics/dividers-cta-08-inline-row.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-08-inline-row-720",
+    "variant": "dividers-cta-08-inline-row",
+    "title": "CTA block 8 — inline-row · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-08-inline-row-720.html",
+    "schema": "graphics/dividers-cta-08-inline-row.schema.json",
+    "example": "graphics/dividers-cta-08-inline-row.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-09-stacked-card-1200",
+    "variant": "dividers-cta-09-stacked-card",
+    "title": "CTA block 9 — stacked-card · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-09-stacked-card-1200.html",
+    "schema": "graphics/dividers-cta-09-stacked-card.schema.json",
+    "example": "graphics/dividers-cta-09-stacked-card.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-09-stacked-card-720",
+    "variant": "dividers-cta-09-stacked-card",
+    "title": "CTA block 9 — stacked-card · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-09-stacked-card-720.html",
+    "schema": "graphics/dividers-cta-09-stacked-card.schema.json",
+    "example": "graphics/dividers-cta-09-stacked-card.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 1200,
+    "id": "dividers-cta-10-series-follow-1200",
+    "variant": "dividers-cta-10-series-follow",
+    "title": "CTA block 10 — series-follow · 1200",
+    "size": "1200x600",
+    "file": "graphics/dividers-cta-10-series-follow-1200.html",
+    "schema": "graphics/dividers-cta-10-series-follow.schema.json",
+    "example": "graphics/dividers-cta-10-series-follow.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "graphics",
+    "kind": "graphic",
+    "group": "dividers-cta",
+    "groupTitle": "Section dividers and CTA blocks",
+    "width": 720,
+    "id": "dividers-cta-10-series-follow-720",
+    "variant": "dividers-cta-10-series-follow",
+    "title": "CTA block 10 — series-follow · 720",
+    "size": "720x600",
+    "file": "graphics/dividers-cta-10-series-follow-720.html",
+    "schema": "graphics/dividers-cta-10-series-follow.schema.json",
+    "example": "graphics/dividers-cta-10-series-follow.example.json",
+    "slots": [
+      "title_html",
+      "body_html",
+      "button",
+      "note",
+      "link"
+    ]
+  },
+  {
+    "family": "article",
+    "kind": "article",
+    "group": "article",
+    "id": "article",
+    "title": "Article page",
+    "size": "1280x900",
+    "file": "article/article.html",
+    "schema": "article/article.schema.json",
+    "example": "article/article.example.json",
+    "skipChecks": [
+      "safeArea",
+      "minSize"
+    ],
+    "slots": [
+      "kicker",
+      "title_html",
+      "dek",
+      "author",
+      "date",
+      "reading_time",
+      "contents",
+      "body_md",
+      "cta_title_html",
+      "cta_body_html",
+      "cta_button",
+      "cta_note",
+      "cta_link"
+    ]
+  }
+]

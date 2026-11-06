@@ -1,0 +1,11 @@
+{
+  "theme": "paper",
+  "motif": "open-book",
+  "kicker": "Why check",
+  "title_html": "A citation can <b>look right</b> and still not be.",
+  "body_html": "A first draft may cite a case that reads well but does not exist, or does not say what the draft says.",
+  "counter": {
+    "index": 2,
+    "total": 8
+  }
+}

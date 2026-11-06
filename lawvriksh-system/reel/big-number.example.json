@@ -1,0 +1,57 @@
+{
+  "theme": "dark",
+  "caption_style": "ink-band",
+  "kicker": "One habit",
+  "number": "4",
+  "unit": "lines per citation",
+  "body_html": "Source, paragraph, court-date-parties, and what you checked.",
+  "scene_index": 6,
+  "scene_total": 7,
+  "captions": [
+    {
+      "w": "Four",
+      "s": 0.3,
+      "e": 0.59
+    },
+    {
+      "w": "lines",
+      "s": 0.62,
+      "e": 0.91
+    },
+    {
+      "w": "per",
+      "s": 0.94,
+      "e": 1.23
+    },
+    {
+      "w": "citation.",
+      "s": 1.26,
+      "e": 1.55
+    },
+    {
+      "w": "That",
+      "s": 1.58,
+      "e": 1.87
+    },
+    {
+      "w": "is",
+      "s": 1.9,
+      "e": 2.19
+    },
+    {
+      "w": "the",
+      "s": 2.22,
+      "e": 2.51
+    },
+    {
+      "w": "whole",
+      "s": 2.54,
+      "e": 2.83
+    },
+    {
+      "w": "habit.",
+      "s": 2.86,
+      "e": 3.15
+    }
+  ]
+}

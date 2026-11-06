@@ -1,0 +1,13 @@
+{
+  "theme": "paper",
+  "motif": "reports",
+  "kicker": "Next week",
+  "title_html": "Prepare your case with <b>facts you can check.</b>",
+  "body_html": "One practice note for individual advocates, every week.",
+  "button": "Follow for the next note",
+  "note": "Save this carousel for your next filing.",
+  "counter": {
+    "index": 8,
+    "total": 8
+  }
+}

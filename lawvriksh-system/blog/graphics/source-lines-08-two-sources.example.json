@@ -1,0 +1,17 @@
+{
+  "theme": "paper",
+  "sources": [
+    {
+      "court": "[Court]",
+      "date": "[date]",
+      "parties": "[Party] v [Party]",
+      "para": "[para]"
+    },
+    {
+      "court": "[Court]",
+      "date": "[date]",
+      "parties": "[Party] v [Party]",
+      "para": "[para]"
+    }
+  ]
+}

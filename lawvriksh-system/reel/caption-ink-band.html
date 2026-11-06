@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Caption style — ink-band</title>
+<meta name="lv:template" content="reel/caption-ink-band">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="4">
+<meta name="lv:hold" content="3">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="dark">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content">
+  <div class="push"></div>
+  <p class="kicker" data-slot="kicker">Check one</p>
+  <div class="gap-s"></div>
+  <h1 class="statement xl" data-slot-html="title_html">Find the judgment in an <b>authorised source.</b></h1>
+  <div class="gap-m"></div>
+  <div class="ttl-thread" data-deco aria-hidden="true" style="height:6px;width:240px;border-radius:3px;background:var(--thread);transform-origin:0 50%"></div>
+  <div class="gap-m"></div>
+  <p class="support" data-slot-html="body_html" data-optional>If you cannot find it there, it is not ready to file.</p>
+  <div class="push"></div>
+</section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"dark","kicker":"Check one","title_html":"Find the judgment in an <b>authorised source.</b>","body_html":"If you cannot find it there, it is not ready to file.","scene_index":2,"scene_total":7,"captions":[{"w":"Find","s":0.2,"e":0.48},{"w":"the","s":0.5,"e":0.78},{"w":"judgment","s":0.8,"e":1.08},{"w":"in","s":1.1,"e":1.38},{"w":"an","s":1.4,"e":1.68},{"w":"authorised","s":1.7,"e":1.98},{"w":"source","s":2,"e":2.28},{"w":"before","s":2.3,"e":2.58},{"w":"you","s":2.6,"e":2.88},{"w":"file.","s":2.9,"e":3.18}],"caption_style":"ink-band"};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 4, hold: 3, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 4, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    LV.reveal($('.kicker'), t, 0.1, 0.5, 20);
+    LV.wordsIn($('.statement'), t, 0.3, 0.08, 0.55);
+    $('.ttl-thread').style.transform = 'scaleX(' + LV.ease.inOut(LV.prog(t, 1.1, 0.5)).toFixed(4) + ')';
+    LV.reveal($('.support'), t, 1.4, 0.6, 20);
+  }});
+})();
+</script>
+</body>
+</html>

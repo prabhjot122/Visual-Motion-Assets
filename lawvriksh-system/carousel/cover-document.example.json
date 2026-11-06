@@ -1,0 +1,11 @@
+{
+  "theme": "paper",
+  "motif": "judgment",
+  "kicker": "Field note",
+  "title_html": "Read the paragraph, <b>not the headnote.</b>",
+  "body_html": "What a judgment says is in its paragraphs. Everything else is somebody’s summary.",
+  "counter": {
+    "index": 1,
+    "total": 6
+  }
+}

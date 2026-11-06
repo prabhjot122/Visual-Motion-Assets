@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Big number / keyword</title>
+<meta name="lv:template" content="reel/big-number">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="4">
+<meta name="lv:hold" content="3">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="dark">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content">
+  <p class="kicker" data-slot="kicker">One habit</p>
+  <div class="push"></div>
+  <p class="bigword" data-slot="number">4</p>
+  <p class="unit" data-slot="unit" style="font-size:72px;line-height:1.05;font-weight:600;letter-spacing:-0.03em;margin:0">lines per citation</p>
+  <div class="gap-m"></div>
+  <p class="support" data-slot-html="body_html" data-optional>Source, paragraph, court-date-parties, and what you checked.</p>
+  <div class="push"></div>
+</section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"dark","caption_style":"ink-band","kicker":"One habit","number":"4","unit":"lines per citation","body_html":"Source, paragraph, court-date-parties, and what you checked.","scene_index":6,"scene_total":7,"captions":[{"w":"Four","s":0.3,"e":0.59},{"w":"lines","s":0.62,"e":0.91},{"w":"per","s":0.94,"e":1.23},{"w":"citation.","s":1.26,"e":1.55},{"w":"That","s":1.58,"e":1.87},{"w":"is","s":1.9,"e":2.19},{"w":"the","s":2.22,"e":2.51},{"w":"whole","s":2.54,"e":2.83},{"w":"habit.","s":2.86,"e":3.15}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if ('number' in d) { $('.bigword').__v = null; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 4, hold: 3, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 4, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    LV.reveal($('.kicker'), t, 0.05, 0.5, 16);
+    var n = $('.bigword'); if (!n.__v) n.__v = n.textContent.trim();
+    var target = parseFloat(n.__v), p = LV.ease.out(LV.prog(t, 0.3, 1.0));
+    if (!isNaN(target) && /^\d+$/.test(n.__v)) { n.textContent = String(Math.round(target * p)); n.style.opacity = LV.prog(t, 0.25, 0.15).toFixed(3); }
+    else LV.reveal(n, t, 0.3, 0.7, 60);
+    LV.reveal($('.unit'), t, 1.1, 0.5, 20); LV.reveal($('.support'), t, 1.5, 0.6, 16);
+  }});
+})();
+</script>
+</body>
+</html>

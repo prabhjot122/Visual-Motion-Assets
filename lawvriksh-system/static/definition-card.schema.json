@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/static/definition-card.schema.json",
+  "title": "Definition card",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper grain or solid warm ink"
+    },
+    "motif": {
+      "enum": [
+        "reports",
+        "files",
+        "checked",
+        "open-book",
+        "courthouse",
+        "calendar",
+        "notes",
+        "compare",
+        "judgment",
+        "register"
+      ],
+      "description": "Law object drawn from the library materials; pick the one that matches the idea of the page."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "Uppercase tracked kicker, clay (edge on dark). Keep under ~28 characters."
+    },
+    "term": {
+      "type": "string",
+      "maxLength": 28
+    },
+    "pos": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "body_html": {
+      "type": "string",
+      "maxLength": 180,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Muted supporting line. Optional <b> emphasis."
+    },
+    "not_label": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "not_text": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "series": {
+      "type": "string",
+      "maxLength": 24,
+      "description": "Right side of the footer, e.g. the series name."
+    }
+  },
+  "required": [
+    "motif",
+    "kicker",
+    "term",
+    "pos",
+    "not_label",
+    "not_text"
+  ]
+}

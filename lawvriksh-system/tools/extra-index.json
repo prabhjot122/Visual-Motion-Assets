@@ -1,0 +1,5 @@
+[
+ {"family":"graphics","id":"law-objects","title":"Law objects","size":"1800x1500","file":"graphics/law-objects.html","skipChecks":["safeArea","minSize"],"role":"gallery"},
+ {"family":"graphics","id":"citations","title":"Citation and evidence motifs","size":"1600x1700","file":"graphics/citations.html","skipChecks":["safeArea"],"role":"component sheet"},
+ {"family":"graphics","id":"badges","title":"Badges, dividers, pills and buttons","size":"1600x1800","file":"graphics/badges.html","skipChecks":["safeArea"],"role":"component sheet"}
+]

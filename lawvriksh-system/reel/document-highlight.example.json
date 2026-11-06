@@ -1,0 +1,46 @@
+{
+  "theme": "paper",
+  "caption_style": "ink-band",
+  "kicker": "Check two",
+  "title_html": "Read the paragraph <b>your point rests on.</b>",
+  "pinpoint": "Para [n]",
+  "scene_index": 3,
+  "scene_total": 7,
+  "captions": [
+    {
+      "w": "Read",
+      "s": 0.3,
+      "e": 0.61
+    },
+    {
+      "w": "the",
+      "s": 0.64,
+      "e": 0.95
+    },
+    {
+      "w": "paragraph",
+      "s": 0.98,
+      "e": 1.29
+    },
+    {
+      "w": "your",
+      "s": 1.32,
+      "e": 1.63
+    },
+    {
+      "w": "point",
+      "s": 1.66,
+      "e": 1.97
+    },
+    {
+      "w": "rests",
+      "s": 2,
+      "e": 2.31
+    },
+    {
+      "w": "on.",
+      "s": 2.34,
+      "e": 2.65
+    }
+  ]
+}

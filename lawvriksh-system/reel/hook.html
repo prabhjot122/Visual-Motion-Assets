@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Hook</title>
+<meta name="lv:template" content="reel/hook">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="4">
+<meta name="lv:hold" content="3.2">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="paper">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content">
+  <p class="kicker" data-slot="kicker">For practising advocates</p>
+  <div class="gap-m"></div>
+  <h1 class="statement xl" data-slot-html="title_html">Three checks before a citation goes into a <b>filing.</b></h1>
+  <div class="push"></div>
+  <div style="max-width:470px"><p class="support" data-slot-html="body_html" data-optional>A short routine for any citation a draft gave you.</p></div>
+</section>
+<div class="motif" data-motif="files" data-deco aria-hidden="true" style="left:560px;top:900px;width:480px;height:440px"></div><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"paper","caption_style":"ink-band","kicker":"For practising advocates","title_html":"Three checks before a citation goes into a <b>filing.</b>","body_html":"A short routine for any citation a draft gave you.","motif":"files","scene_index":1,"scene_total":7,"captions":[{"w":"Three","s":0.4,"e":0.71},{"w":"checks","s":0.74,"e":1.05},{"w":"before","s":1.08,"e":1.39},{"w":"a","s":1.42,"e":1.73},{"w":"citation","s":1.76,"e":2.07},{"w":"goes","s":2.1,"e":2.41},{"w":"into","s":2.44,"e":2.75},{"w":"a","s":2.78,"e":3.09},{"w":"filing.","s":3.12,"e":3.43}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 4, hold: 3.2, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 4, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    LV.reveal($('.kicker'), t, 0.1, 0.5, 20);
+    LV.wordsIn($('.statement'), t, 0.35, 0.09, 0.55);
+    var m = $('.motif'), p = LV.ease.outQuint(LV.prog(t, 1.0, 0.8)); m.style.opacity = p.toFixed(3); m.style.transform = 'translateY(' + ((1 - p) * 90).toFixed(2) + 'px)';
+    LV.reveal($('.support'), t, 1.7, 0.6, 20);
+  }});
+})();
+</script>
+</body>
+</html>

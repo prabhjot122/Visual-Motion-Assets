@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh graphics — citation and evidence motifs</title>
+<meta name="lv:template" content="graphics/citations">
+<meta name="lv:size" content="1600x1700">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="components.css">
+<script src="../core/lv-runtime.js"></script>
+<style>
+.lv{width:1600px;height:1700px}
+.sheet{position:absolute;inset:60px 72px;z-index:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;row-gap:44px;align-content:start}
+.sheet h2{grid-column:1/-1;margin:0;display:flex;gap:24px;align-items:baseline}
+.item{display:flex;flex-direction:column;gap:16px;min-width:0}
+.item .cap{font-size:34px;font-weight:500;color:var(--fg-muted)}
+.item .demo{font-size:38px;line-height:1.5;font-weight:400}
+.rw{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<main class="lv" data-format="sheet" data-theme="paper">
+<div class="sheet">
+  <h2><span class="kicker">Citation and evidence</span><span class="label" style="color:var(--fg-muted)">chips, highlights, margin marks, paragraph markers</span></h2>
+  <div class="item"><span class="cap">01 chip</span><div class="rw"><span class="cite">[1]</span><span class="cite">[2]</span><span class="cite">[12]</span></div></div>
+  <div class="item"><span class="cap">02 chip, solid</span><div class="rw"><span class="cite is-solid">[1]</span><span class="cite is-solid">[2]</span></div></div>
+  <div class="item"><span class="cap">03 chip, outline</span><div class="rw"><span class="cite is-outline">[1]</span><span class="cite is-outline">[3]</span></div></div>
+  <div class="item"><span class="cap">04 chip with pinpoint</span><div class="rw"><span class="cite">[1] <span class="lbl">Para [12]</span></span></div></div>
+  <div class="item"><span class="cap">05 chip in a sentence</span><p class="demo" style="margin:0">Notice was served on [date] <span class="cite">[1]</span></p></div>
+  <div class="item"><span class="cap">06 highlight</span><p class="demo" style="margin:0">The court held that <span class="hl">the delay was explained.</span></p></div>
+  <div class="item"><span class="cap">07 underline thread</span><p class="demo" style="margin:0">Read <span class="hl-under">the paragraph itself</span>, not the note.</p></div>
+  <div class="item"><span class="cap">08 boxed phrase</span><p class="demo" style="margin:0">Match the <span class="hl-box">court and date</span> first.</p></div>
+  <div class="item"><span class="cap">09 margin mark</span><p class="demo margin-block" style="margin:0">The paragraph your sentence rests on.</p></div>
+  <div class="item"><span class="cap">10 margin dot</span><p class="demo margin-dot" style="margin:0">One point, one paragraph.</p></div>
+  <div class="item"><span class="cap">11 paragraph marker</span><div class="rw"><span class="para-mark"><span class="sym">¶</span>12</span><span class="para-mark"><span class="sym">¶</span>[n]</span></div></div>
+  <div class="item"><span class="cap">12 section marker</span><div class="rw"><span class="para-mark"><span class="sym">§</span>[n]</span><span class="para-mark"><span class="sym">§</span>[n]([n])</span></div></div>
+  <div class="item"><span class="cap">13 pinpoint line</span><p class="pinpoint" style="margin:0"><b>[Source]</b>, para [12], p. [4]</p></div>
+  <div class="item"><span class="cap">14 source line</span><div class="source-line"><span>[Authorised source]</span><span class="sep" aria-hidden="true"></span><span>checked [date]</span></div></div>
+  <div class="item"><span class="cap">15 margin note card</span><div class="note-card"><span class="k">Margin note</span><span>Para [12] read in full on [date].</span></div></div>
+  <div class="item"><span class="cap">16 strong highlight</span><p class="demo" style="margin:0">Cite <span class="hl-strong">the paragraph</span>.</p></div>
+</div>
+</main>
+</body>
+</html>

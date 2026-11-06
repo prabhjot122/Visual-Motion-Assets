@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh carousel — Comparison — this, not that</title>
+<meta name="lv:template" content="carousel/compare">
+<meta name="lv:size" content="1080x1350">
+<meta name="lv:role" content="content">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="carousel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+</head>
+<body>
+<main class="lv" data-format="portrait" data-theme="paper" data-counter="4/8">
+<section class="content">
+  <p class="kicker" data-slot="kicker">This, not that</p>
+  <div class="gap-m"></div>
+  <h1 class="statement s" data-slot-html="title_html">Cite the paragraph, <b>not the summary.</b></h1>
+  <div class="push"></div>
+  <div class="compare">
+    <div class="card is-not"><span class="pill is-outline" data-slot="not_label">Not this</span><p class="body" data-slot="not_text">“As held in the judgment, the delay was condoned.”</p></div>
+    <div class="link-v" data-deco aria-hidden="true"></div>
+    <div class="card is-raised is-this"><span class="pill is-accent" data-slot="this_label">This</span><p class="body" data-slot="this_text">“Para [12]: the delay was condoned on [ground].”</p></div>
+  </div>
+</section>
+
+<div class="thread" aria-hidden="true"></div>
+<footer class="folio">
+  <span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span>
+  <span class="wordmark">Law<span>Vriksh</span></span>
+  <span class="counter" data-slot="counter">04 / 08</span>
+</footer>
+</main>
+</body>
+</html>

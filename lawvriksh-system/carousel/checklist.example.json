@@ -1,0 +1,16 @@
+{
+  "theme": "paper",
+  "kicker": "Save this",
+  "title_html": "Every citation, <b>every time.</b>",
+  "rows": [
+    "Find it in an authorised source",
+    "Read the paragraph it rests on",
+    "Match court, date and parties",
+    "Note what you checked"
+  ],
+  "note": "Four lines. About a minute per citation.",
+  "counter": {
+    "index": 8,
+    "total": 9
+  }
+}

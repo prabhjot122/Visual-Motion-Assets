@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/static/single-statement.schema.json",
+  "title": "Single statement",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper grain or solid warm ink"
+    },
+    "motif": {
+      "enum": [
+        "reports",
+        "files",
+        "checked",
+        "open-book",
+        "courthouse",
+        "calendar",
+        "notes",
+        "compare",
+        "judgment",
+        "register"
+      ],
+      "description": "Law object drawn from the library materials; pick the one that matches the idea of the page."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 110,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Statement. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "series": {
+      "type": "string",
+      "maxLength": 24,
+      "description": "Right side of the footer, e.g. the series name."
+    }
+  },
+  "required": [
+    "motif",
+    "title_html"
+  ]
+}

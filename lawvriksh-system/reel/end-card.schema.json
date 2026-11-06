@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/reel/end-card.schema.json",
+  "title": "End card",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper grain or solid warm ink"
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 110,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Statement. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "button": {
+      "type": "string",
+      "maxLength": 28
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 90
+    },
+    "scene_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "scene_total": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "caption_style": {
+      "enum": [
+        "ink-band",
+        "paper-slip",
+        "edge-word",
+        "stack",
+        "highlighter"
+      ]
+    },
+    "captions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "w": {
+            "type": "string"
+          },
+          "s": {
+            "type": "number"
+          },
+          "e": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "w",
+          "s",
+          "e"
+        ]
+      },
+      "description": "Word timings in seconds from the voiceover; the current word is highlighted."
+    }
+  },
+  "required": [
+    "title_html",
+    "button"
+  ]
+}

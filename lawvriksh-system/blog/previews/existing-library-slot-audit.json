@@ -1,0 +1,244 @@
+[
+ {
+  "file": "carousel/cover-stack.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/cover-document.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/cover-number.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/statement.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/statement-checks.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/statement-pills.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/compare.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/step.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/definition.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/checklist.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/closing-cta.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/statement-document.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/advocate-cover.html",
+  "problems": [
+   {
+    "slot": "body_html",
+    "issue": "value does not appear",
+    "value": "QQM9xbodyht"
+   },
+   {
+    "slot": "body_html",
+    "issue": "value does not appear",
+    "value": "QQM9xbodyhtB"
+   }
+  ]
+ },
+ {
+  "file": "carousel/advocate-profile.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/li-doc-cover.html",
+  "problems": []
+ },
+ {
+  "file": "carousel/li-doc-closing.html",
+  "problems": []
+ },
+ {
+  "file": "static/single-statement-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/single-statement-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/statement-support-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/statement-support-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/three-checks-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/three-checks-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/comparison-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/comparison-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/myth-check-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/myth-check-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/callout-document-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/callout-document-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/cta-card-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/cta-card-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/big-number-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/big-number-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/definition-card-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/definition-card-li.html",
+  "problems": []
+ },
+ {
+  "file": "static/principle-card-ig.html",
+  "problems": []
+ },
+ {
+  "file": "static/principle-card-li.html",
+  "problems": []
+ },
+ {
+  "file": "reel/hook.html",
+  "problems": []
+ },
+ {
+  "file": "reel/title.html",
+  "problems": []
+ },
+ {
+  "file": "reel/document-highlight.html",
+  "problems": [
+   {
+    "slot": "lines",
+    "issue": "value does not appear",
+    "value": "5"
+   }
+  ]
+ },
+ {
+  "file": "reel/strike-list.html",
+  "problems": [
+   {
+    "slot": "struck",
+    "issue": "value does not appear",
+    "value": "QXG3xstruck"
+   },
+   {
+    "slot": "struck",
+    "issue": "value does not appear",
+    "value": "QXG3xstruck1"
+   },
+   {
+    "slot": "struck",
+    "issue": "value does not appear",
+    "value": "QXG3xstruck2"
+   },
+   {
+    "issue": "example text still visible after fill",
+    "value": "A headnote"
+   },
+   {
+    "issue": "example text still visible after fill",
+    "value": "A forwarded summary"
+   },
+   {
+    "issue": "example text still visible after fill",
+    "value": "An AI answer"
+   }
+  ]
+ },
+ {
+  "file": "reel/compare-link.html",
+  "problems": []
+ },
+ {
+  "file": "reel/check-rows.html",
+  "problems": []
+ },
+ {
+  "file": "reel/step.html",
+  "problems": [
+   {
+    "slot": "steps",
+    "issue": "step count does not render",
+    "want": 5,
+    "got": 3
+   }
+  ]
+ },
+ {
+  "file": "reel/big-number.html",
+  "problems": [
+   {
+    "slot": "number",
+    "issue": "value does not appear",
+    "value": "Q13K"
+   }
+  ]
+ },
+ {
+  "file": "reel/principle.html",
+  "problems": []
+ },
+ {
+  "file": "reel/end-card.html",
+  "problems": []
+ }
+]

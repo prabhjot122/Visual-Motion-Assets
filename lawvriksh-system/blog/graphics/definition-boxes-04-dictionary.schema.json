@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/definition-boxes-04-dictionary.schema.json",
+  "title": "Definition box 4 — dictionary",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "label": {
+      "type": "string",
+      "maxLength": 28
+    },
+    "term": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "pos": {
+      "type": "string",
+      "maxLength": 16
+    },
+    "meaning_html": {
+      "type": "string",
+      "maxLength": 160,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$"
+    },
+    "note_label": {
+      "type": "string",
+      "maxLength": 28
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 110
+    }
+  },
+  "required": []
+}

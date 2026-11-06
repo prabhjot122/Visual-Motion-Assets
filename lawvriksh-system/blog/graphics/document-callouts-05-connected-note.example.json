@@ -1,0 +1,7 @@
+{
+  "theme": "paper",
+  "kicker": "Pinpoint it",
+  "title_html": "Mark the paragraph, <b>then cite it</b>",
+  "pinpoint": "[Court], [date], para [n]",
+  "callout": "Note the paragraph number beside the authority in your draft."
+}

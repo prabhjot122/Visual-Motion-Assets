@@ -1,0 +1,23 @@
+{
+  "theme": "paper",
+  "motif": "notes",
+  "kicker": "Then",
+  "title_html": "Write down <b>what you checked.</b>",
+  "body_html": "One line per citation. It makes your own review visible.",
+  "pills": [
+    {
+      "text": "Source"
+    },
+    {
+      "text": "Paragraph",
+      "variant": "accent"
+    },
+    {
+      "text": "Date checked"
+    }
+  ],
+  "counter": {
+    "index": 6,
+    "total": 8
+  }
+}

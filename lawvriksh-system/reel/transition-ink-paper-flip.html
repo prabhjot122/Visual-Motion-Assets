@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh transition — Ink-to-paper flip</title>
+<meta name="lv:template" content="reel/transition-ink-paper-flip">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="3">
+<meta name="lv:transition" content="ink-paper-flip: 1.0–2.0 s, cover at 1.5 s">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="dark">
+<div class="scene-a" data-theme-local="dark" style="background:var(--ink-warm);--fg:var(--paper);--fg-muted:var(--paper-74);--accent:var(--edge);--kicker-c:var(--edge);color:var(--paper)">
+  <section class="reel-content"><div class="push"></div><p class="kicker">Check one</p><div class="gap-s"></div><h1 class="statement xl">Find the judgment in an <b>authorised source.</b></h1><div class="push"></div></section>
+</div>
+<div class="scene-b" style="background:var(--paper) var(--tex-paper) center/cover;--fg:var(--ink);--fg-muted:var(--muted);--accent:var(--clay-dark);--kicker-c:var(--clay-dark);color:var(--ink)">
+  <section class="reel-content"><div class="push"></div><p class="kicker">Check two</p><div class="gap-s"></div><h1 class="statement xl">Read the paragraph <b>your point rests on.</b></h1><div class="push"></div></section>
+</div>
+<div class="tw" aria-hidden="true"><div class="tw-shade"></div><div class="tw-leaf"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), a = root.querySelector('.scene-a'), b = root.querySelector('.scene-b'), ov = root.querySelector('.tw');
+  var T0 = 1.0, TD = 1.0;  // transition window: 1.0–2.0 s, full cover at 1.5 s
+  LV.scene({duration: 3, hold: 0.6, render: function(t){
+    var p = LV.clamp((t - T0) / TD, 0, 1);
+    a.style.display = p < 0.5 ? '' : 'none'; b.style.display = p < 0.5 ? 'none' : '';
+    LV.transitions['ink-paper-flip'](ov, p);
+  }});
+  window.__transition = {name: 'ink-paper-flip', start: T0, duration: TD, midpoint: T0 + TD / 2};
+})();
+</script>
+</body>
+</html>

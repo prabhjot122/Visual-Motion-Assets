@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/definition-boxes-10-two-terms.schema.json",
+  "title": "Definition box 10 — two-terms",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "terms": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "maxLength": 28
+          },
+          "meaning": {
+            "type": "string",
+            "maxLength": 90
+          }
+        },
+        "required": [
+          "term",
+          "meaning"
+        ]
+      }
+    }
+  },
+  "required": []
+}

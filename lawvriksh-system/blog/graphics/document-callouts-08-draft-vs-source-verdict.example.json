@@ -1,0 +1,8 @@
+{
+  "theme": "paper",
+  "kicker": "Side by side",
+  "title_html": "Your sentence, <b>its source</b>",
+  "draft_label": "Your draft",
+  "source_label": "The source paragraph",
+  "callout": "Your sentence should say no more than the paragraph does."
+}

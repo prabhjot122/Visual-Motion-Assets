@@ -1,0 +1,19 @@
+{
+  "theme": "paper",
+  "motif": "reports",
+  "step": 1,
+  "steps": 3,
+  "kicker": "Check one",
+  "title_html": "Find the judgment in an <b>authorised source.</b>",
+  "body_html": "If you cannot find it there, it is not ready to file.",
+  "pills": [
+    {
+      "text": "Authorised source",
+      "variant": "outline"
+    }
+  ],
+  "counter": {
+    "index": 3,
+    "total": 8
+  }
+}

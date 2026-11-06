@@ -1,0 +1,17 @@
+{
+  "theme": "paper",
+  "kicker": "Practice note",
+  "title_html": "Verify before you file: <b>a citation routine.</b>",
+  "body_html": "For individual advocates who use AI tools for first drafts.",
+  "toc": [
+    "Find it in an authorised source",
+    "Read the paragraph",
+    "Match court, date and parties",
+    "Write down what you checked"
+  ],
+  "edition": "LawVriksh field notes · [Month Year]",
+  "counter": {
+    "index": 1,
+    "total": 7
+  }
+}

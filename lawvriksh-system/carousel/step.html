@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh carousel — Numbered step</title>
+<meta name="lv:template" content="carousel/step">
+<meta name="lv:size" content="1080x1350">
+<meta name="lv:role" content="content">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="carousel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+</head>
+<body>
+<main class="lv" data-format="portrait" data-theme="paper" data-counter="3/8">
+<section class="content">
+  <div class="step-head">
+    <span class="badge-num" data-slot="step">1</span>
+    <ol class="step-track" aria-label="Steps"><li class="is-current">01</li><li>02</li><li>03</li></ol>
+  </div>
+  <div class="push"></div>
+  <p class="kicker" data-slot="kicker">Check one</p>
+  <div class="gap-s"></div>
+  <h1 class="statement l" data-slot-html="title_html">Find the judgment in an <b>authorised source.</b></h1>
+  <div class="gap-m"></div>
+  <p class="support" data-slot-html="body_html" data-optional>If you cannot find it there, it is not ready to file.</p>
+  <div class="gap-m"></div>
+  <ul class="pills" data-slot-list="pills"><template><li class="pill" data-field="text"></li></template>
+<li class="pill is-outline">Authorised source</li></ul>
+</section>
+<div class="motif" data-motif="reports" data-deco aria-hidden="true" style="left:620px;top:240px;width:420px;height:300px"></div>
+
+<div class="thread" aria-hidden="true"></div>
+<footer class="folio">
+  <span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span>
+  <span class="wordmark">Law<span>Vriksh</span></span>
+  <span class="counter" data-slot="counter">03 / 08</span>
+</footer>
+</main>
+<script>
+window.__lvAfterFill=function(d){if(!('step' in d)&&!('steps' in d))return;var tr=document.querySelector('.step-track');var n=d.steps||tr.children.length,s=d.step||1;tr.innerHTML='';for(var i=1;i<=n;i++){var li=document.createElement('li');li.textContent=String(i).padStart(2,'0');if(i===s)li.className='is-current';tr.appendChild(li);}};
+</script>
+</body>
+</html>

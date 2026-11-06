@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — End card</title>
+<meta name="lv:template" content="reel/end-card">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="4.5">
+<meta name="lv:hold" content="3.6">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="dark">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content" style="align-items:flex-start">
+  <div class="push"></div>
+  <div class="endmark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></div>
+  <div class="gap-s"></div>
+  <p class="end-word">Law<span>Vriksh</span></p>
+  <div class="gap-l"></div>
+  <h1 class="statement l" data-slot-html="title_html">Prepare your case with <b>facts you can check.</b></h1>
+  <div class="gap-l"></div>
+  <span class="btn" data-slot="button">Follow for the next note</span>
+  <div class="gap-s"></div>
+  <p class="note" data-slot="note" data-optional>One practice note for advocates, every week.</p>
+  <div class="push"></div>
+</section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"dark","caption_style":"ink-band","title_html":"Prepare your case with <b>facts you can check.</b>","button":"Follow for the next note","note":"One practice note for advocates, every week.","scene_index":7,"scene_total":7,"captions":[{"w":"Follow","s":1.4,"e":1.71},{"w":"for","s":1.74,"e":2.05},{"w":"the","s":2.08,"e":2.39},{"w":"next","s":2.42,"e":2.73},{"w":"note.","s":2.76,"e":3.07}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 4.5, hold: 3.6, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 4.5, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    var s = LV.ease.settle(LV.prog(t, 0.1, 0.5)); $('.endmark').style.transform = 'scale(' + s.toFixed(4) + ')'; $('.endmark').style.opacity = LV.prog(t, 0.1, 0.2).toFixed(3);
+    LV.reveal($('.end-word'), t, 0.4, 0.5, 12); LV.wordsIn($('.statement'), t, 0.6, 0.08, 0.55);
+    LV.reveal($('.btn'), t, 1.5, 0.6, 24); LV.reveal($('.note'), t, 1.9, 0.6, 12);
+  }});
+})();
+</script>
+</body>
+</html>

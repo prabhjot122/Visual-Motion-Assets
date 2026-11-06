@@ -1,0 +1,57 @@
+{
+  "theme": "paper",
+  "caption_style": "ink-band",
+  "kicker": "For practising advocates",
+  "title_html": "Three checks before a citation goes into a <b>filing.</b>",
+  "body_html": "A short routine for any citation a draft gave you.",
+  "motif": "files",
+  "scene_index": 1,
+  "scene_total": 7,
+  "captions": [
+    {
+      "w": "Three",
+      "s": 0.4,
+      "e": 0.71
+    },
+    {
+      "w": "checks",
+      "s": 0.74,
+      "e": 1.05
+    },
+    {
+      "w": "before",
+      "s": 1.08,
+      "e": 1.39
+    },
+    {
+      "w": "a",
+      "s": 1.42,
+      "e": 1.73
+    },
+    {
+      "w": "citation",
+      "s": 1.76,
+      "e": 2.07
+    },
+    {
+      "w": "goes",
+      "s": 2.1,
+      "e": 2.41
+    },
+    {
+      "w": "into",
+      "s": 2.44,
+      "e": 2.75
+    },
+    {
+      "w": "a",
+      "s": 2.78,
+      "e": 3.09
+    },
+    {
+      "w": "filing.",
+      "s": 3.12,
+      "e": 3.43
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "theme": "paper",
+  "kicker": "Practice note",
+  "title_html": "How to check an <b>AI-assisted citation</b> before you file",
+  "dek": "A short routine for individual advocates: find it, read it, match it, note it.",
+  "author": "LawVriksh",
+  "date": "[date]",
+  "reading_time": "[n] min read",
+  "body_md": "## Why the check matters\n\nA citation can read well and still not be the citation you need. A draft may name a case that does not exist, or one that does not say what the sentence says. The routine below takes about a minute per citation.[^1]\n\n::: note\nThis is placeholder text for the layout. Replace every [bracketed] item with the real matter, court and date.\n:::\n\n## Five checks, in order\n\n::: figure\n../previews/graphics/process-steps-04-vertical-thread-720-{theme}.png | The five checks as a numbered sequence | Figure 1. The order matters: source first, judgment last.\n:::\n\n1. **Find it** in an authorised source, not in the draft.\n2. **Read the paragraph** your point rests on.\n3. **Match** the court, date and parties.\n4. **Note** what you checked, one line per citation.\n5. **Decide** whether it helps your client.\n\n### Read the paragraph, not the headnote\n\n::: term Headnote\nA short summary written for readers. It is not the court's own words.\n:::\n\nYour sentence should say no more than the paragraph does. Compare the two before you rely on it:\n\n::: source\n[Court] | [date] | [Party] v [Party] | para [para]\n:::\n\n| Not this | This |\n|---|---|\n| Cite the headnote | Cite the paragraph |\n| Trust the tool's citation | Find it in an authorised source |\n| Assume the date | Match the date on the page |\n\n::: pull\nA citation that reads well is not yet a citation you have checked.\n:::\n\n::: caution Before you file\nIf any one of court, date or parties does not match, stop and recheck before the citation goes into the filing.\n:::\n\n::: settle\nA matching citation shows that it exists and says what you wrote. Whether it is still good law, and whether it fits your facts, stays your judgment.\n:::\n\n## A short checklist\n\n::: checklist\n- Found in an authorised source\n- Paragraph read and noted [1]\n- Court, date and parties match\n- Written down, one line each\n:::\n\n---\n\n[^1]: [Source], [date]. Placeholder source line: replace with the real source.\n",
+  "cta_title_html": "One practice note, <b>every week</b>",
+  "cta_body_html": "Short, checkable habits for individual advocates.",
+  "cta_button": "Follow LawVriksh",
+  "cta_note": "Save this for your next filing.",
+  "cta_link": "lawvriksh.com/[tracked-path]"
+}

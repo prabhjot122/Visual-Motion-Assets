@@ -1,0 +1,36 @@
+{
+  "theme": "dark",
+  "caption_style": "ink-band",
+  "title_html": "Prepare your case with <b>facts you can check.</b>",
+  "button": "Follow for the next note",
+  "note": "One practice note for advocates, every week.",
+  "scene_index": 7,
+  "scene_total": 7,
+  "captions": [
+    {
+      "w": "Follow",
+      "s": 1.4,
+      "e": 1.71
+    },
+    {
+      "w": "for",
+      "s": 1.74,
+      "e": 2.05
+    },
+    {
+      "w": "the",
+      "s": 2.08,
+      "e": 2.39
+    },
+    {
+      "w": "next",
+      "s": 2.42,
+      "e": 2.73
+    },
+    {
+      "w": "note.",
+      "s": 2.76,
+      "e": 3.07
+    }
+  ]
+}

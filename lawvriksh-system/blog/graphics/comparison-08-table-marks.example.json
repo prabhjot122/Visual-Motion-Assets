@@ -1,0 +1,25 @@
+{
+  "theme": "paper",
+  "kicker": "Habits",
+  "title_html": "From summary to <b>source</b>",
+  "left_label": "Not this",
+  "right_label": "This",
+  "rows": [
+    {
+      "left": "Cite the headnote",
+      "right": "Cite the paragraph"
+    },
+    {
+      "left": "Trust the tool’s citation",
+      "right": "Find it in an authorised source"
+    },
+    {
+      "left": "Assume the date",
+      "right": "Match the date on the page"
+    },
+    {
+      "left": "Remember the parties",
+      "right": "Copy them from the report"
+    }
+  ]
+}

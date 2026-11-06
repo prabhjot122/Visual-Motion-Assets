@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LawVriksh reel — Strike-out list</title>
+<meta name="lv:template" content="reel/strike-list">
+<meta name="lv:size" content="1080x1920">
+<meta name="lv:fps" content="30">
+<meta name="lv:duration" content="5">
+<meta name="lv:hold" content="3.9">
+<link rel="stylesheet" href="../core/lv.css">
+<link rel="stylesheet" href="reel.css">
+<script src="../core/lv-runtime.js"></script>
+<script src="../core/lv-objects.js"></script>
+<script src="../core/lv-motion.js"></script>
+</head>
+<body>
+<main class="lv" data-format="reel" data-theme="dark">
+<div class="reel-top"><span class="mark"><img src="../../brand/logos/lawvriksh-mark.png" alt="LawVriksh"></span><span class="wordmark">Law<span>Vriksh</span></span><span class="counter" data-slot="reel_counter">02 / 07</span></div>
+<div class="reel-progress" data-deco aria-hidden="true"></div>
+<section class="reel-content">
+  <p class="kicker" data-slot="kicker">Not a source</p>
+  <div class="gap-s"></div>
+  <h1 class="statement l" data-slot-html="title_html">What you <b>cannot cite.</b></h1>
+  <div class="push"></div>
+  <div style="display:flex;flex-direction:column;gap:30px">
+    <ul class="slist" data-slot-list="struck"><template><li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text"></span><span class="bar" aria-hidden="true"></span></span></li></template>
+    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">A headnote</span><span class="bar" aria-hidden="true"></span></span></li>
+    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">A forwarded summary</span><span class="bar" aria-hidden="true"></span></span></li>
+    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">An AI answer</span><span class="bar" aria-hidden="true"></span></span></li>
+    </ul>
+    <ul class="slist"><li class="is-keep"><span class="dot" aria-hidden="true"></span><span data-slot="kept">The judgment itself</span></li></ul>
+  </div>
+  <div class="push"></div>
+</section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
+  var D = {"theme":"dark","caption_style":"ink-band","kicker":"Not a source","title_html":"What you <b>cannot cite.</b>","struck":["A headnote","A forwarded summary","An AI answer"],"kept":"The judgment itself","scene_index":3,"scene_total":7,"captions":[{"w":"Not","s":0.4,"e":0.77},{"w":"a","s":0.8,"e":1.17},{"w":"headnote,","s":1.2,"e":1.57},{"w":"not","s":1.6,"e":1.97},{"w":"a","s":2,"e":2.37},{"w":"summary.","s":2.4,"e":2.77},{"w":"The","s":2.8,"e":3.17},{"w":"judgment","s":3.2,"e":3.57},{"w":"itself.","s":3.6,"e":3.97}]};
+  var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
+  window.__lvAfterFill = function(d){
+    if (d.captions) CAP = d.captions;
+    if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
+    if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+  };
+  LV.scene({duration: 5, hold: 3.9, render: function(t){
+    window.__lastT = t;
+    LV.progress(root, t, 5, IDX, TOT);
+    LV.captions($('[data-cap]'), CAP, t);
+    LV.reveal($('.kicker'), t, 0.05, 0.5, 16); LV.reveal($('.statement'), t, 0.15, 0.6, 24);
+    $$('.slist li').forEach(function(li, i){ LV.reveal(li, t, 0.5 + i * 0.15, 0.5, 24); });
+    $$('.slist .is-struck').forEach(function(li, i){ var s = LV.ease.inOut(LV.prog(t, 1.3 + i * 0.5, 0.4)); li.querySelector('.bar').style.setProperty('--s', s.toFixed(4)); li.classList.toggle('is-out', s > 0.6); });
+    var keep = $('.is-keep'), kp = LV.prog(t, 2.9, 0.3); keep.style.color = kp > 0.5 ? 'var(--accent)' : ''; keep.style.fontWeight = '600';
+  }});
+})();
+</script>
+</body>
+</html>

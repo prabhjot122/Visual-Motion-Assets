@@ -1,0 +1,20 @@
+{
+  "theme": "paper",
+  "image": "",
+  "image_alt": "",
+  "image_label": "Portrait slot",
+  "kicker": "Who they were",
+  "name": "[Advocate name]",
+  "era": "[Year]–[Year] · [Court]",
+  "did_label": "What they did",
+  "rows": [
+    "[First documented contribution]",
+    "[A practice habit they are known for]",
+    "[Why it still matters to advocates]"
+  ],
+  "sources": "[Source 1]; [Source 2]",
+  "counter": {
+    "index": 2,
+    "total": 5
+  }
+}

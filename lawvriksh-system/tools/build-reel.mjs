@@ -10,7 +10,7 @@ const top = `
 <div class="reel-progress" data-deco aria-hidden="true"></div>`;
 const cap = style => `<div class="cap ${style}" data-cap aria-live="off"><div class="cap-line"></div></div>`;
 
-function scenePage({id, title, theme = 'dark', body, duration, hold, render, ex, capStyle = 'ink-band', strip}){
+function scenePage({id, title, theme = 'dark', body, duration, hold, render, ex, capStyle = 'ink-band', strip, afterFill = ''}){
   const script = `
 (function(){
   var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
@@ -20,7 +20,7 @@ function scenePage({id, title, theme = 'dark', body, duration, hold, render, ex,
     if (d.captions) CAP = d.captions;
     if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
     if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
-    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
+${afterFill ? afterFill.trim().split('\n').map(l => '    ' + l).join('\n') + '\n' : ''}    if (window.__renderAt) window.__renderAt(window.__lastT || 0);
   };
   LV.scene({duration: ${duration}, hold: ${hold}, render: function(t){
     window.__lastT = t;
@@ -86,15 +86,17 @@ LV.reveal($('.support'), t, 1.4, 0.6, 20);`
 {
   id: 'document-highlight', title: 'Document highlight', duration: 5, hold: 3.8, theme: 'paper',
   motion: 'Statement fades up (0.1 s). The page slides up (0.4–1.1 s). The highlight sweeps line by line across one paragraph (1.3–2.7 s); a clay margin mark grows beside it (2.6–3.0 s).',
-  props: {kicker: P.kicker, title_html: P.title_html, lines: {type: 'integer', minimum: 2, maximum: 5, description: 'Highlighted lines'}},
-  ex: {kicker: 'Check two', title_html: 'Read the paragraph <b>your point rests on.</b>', lines: 4, scene_index: 3, scene_total: 7, captions: timed('Read the paragraph your point rests on.', 0.3)},
+  props: {kicker: P.kicker, title_html: P.title_html, pinpoint: S({maxLength: 24, description: 'Pinpoint chip shown above the page, e.g. “Para [n]”.'})},
+  ex: {kicker: 'Check two', title_html: 'Read the paragraph <b>your point rests on.</b>', pinpoint: 'Para [n]', scene_index: 3, scene_total: 7, captions: timed('Read the paragraph your point rests on.', 0.3)},
   body: e => `
 <section class="reel-content">
   ${k(e.kicker)}
   <div class="gap-s"></div>
   ${t(e.title_html, 'l')}
+  <div class="gap-s"></div>
+  <span class="pill is-accent pin" data-slot="pinpoint" style="align-self:flex-start">${esc(e.pinpoint)}</span>
 </section>
-<div class="scene-doc" data-deco aria-hidden="true" style="left:120px;top:780px;width:840px;height:560px">
+<div class="scene-doc" data-deco aria-hidden="true" style="left:120px;top:800px;width:840px;height:560px">
   <div class="ln h" style="width:40%"></div><div class="gap"></div>
   <div class="ln" style="width:96%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:58%"></div><div class="gap"></div>
   <div class="ln hl" style="width:97%"></div><div class="ln hl" style="width:94%"></div><div class="ln hl" style="width:96%"></div><div class="ln hl" style="width:62%"></div><div class="gap"></div>
@@ -102,7 +104,7 @@ LV.reveal($('.support'), t, 1.4, 0.6, 20);`
   <div class="mm" style="top:236px;height:166px"></div>
 </div>`,
   render: `
-LV.reveal($('.kicker'), t, 0.1, 0.5, 16); LV.reveal($('.statement'), t, 0.2, 0.6, 24);
+LV.reveal($('.kicker'), t, 0.1, 0.5, 16); LV.reveal($('.statement'), t, 0.2, 0.6, 24); LV.reveal($('.pin'), t, 0.5, 0.5, 12);
 var d = $('.scene-doc'), p = LV.ease.outQuint(LV.prog(t, 0.4, 0.7)); d.style.opacity = p.toFixed(3); d.style.transform = 'translateY(' + ((1 - p) * 120).toFixed(2) + 'px)';
 $$('.ln.hl').forEach(function(l, i){ l.style.setProperty('--hl', LV.ease.inOut(LV.prog(t, 1.3 + i * 0.35, 0.4)).toFixed(4)); });
 $('.mm').style.transform = 'scaleY(' + LV.ease.out(LV.prog(t, 2.6, 0.4)).toFixed(4) + ')';`
@@ -118,10 +120,12 @@ $('.mm').style.transform = 'scaleY(' + LV.ease.out(LV.prog(t, 2.6, 0.4)).toFixed
   <div class="gap-s"></div>
   ${t(e.title_html, 'l')}
   <div class="push"></div>
-  <ul class="slist">
-    ${e.struck.map(s => `<li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike">${esc(s)}<span class="bar" aria-hidden="true"></span></span></li>`).join('\n    ')}
-    <li class="is-keep"><span class="dot" aria-hidden="true"></span><span data-slot="kept">${esc(e.kept)}</span></li>
-  </ul>
+  <div style="display:flex;flex-direction:column;gap:30px">
+    <ul class="slist" data-slot-list="struck"><template><li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text"></span><span class="bar" aria-hidden="true"></span></span></li></template>
+    ${e.struck.map(s => `<li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">${esc(s)}</span><span class="bar" aria-hidden="true"></span></span></li>`).join('\n    ')}
+    </ul>
+    <ul class="slist"><li class="is-keep"><span class="dot" aria-hidden="true"></span><span data-slot="kept">${esc(e.kept)}</span></li></ul>
+  </div>
   <div class="push"></div>
 </section>`,
   render: `
@@ -195,7 +199,19 @@ var bs = LV.ease.settle(LV.prog(t, 0.1, 0.45)); $('.badge-num').style.transform 
 LV.reveal($('.step-track'), t, 0.3, 0.5, 12);
 var cu = $('.cur'); if (cu) cu.style.transform = 'scaleX(' + LV.ease.inOut(LV.prog(t, 0.6, 0.4)).toFixed(4) + ')';
 var m = $('.motif'), p = LV.ease.outQuint(LV.prog(t, 0.8, 0.8)); m.style.opacity = p.toFixed(3); m.style.transform = 'translateY(' + ((1 - p) * 60).toFixed(2) + 'px)';
-LV.reveal($('.kicker'), t, 1.0, 0.5, 16); LV.reveal($('.statement'), t, 1.15, 0.6, 24); LV.reveal($('.support'), t, 1.6, 0.6, 16);`
+LV.reveal($('.kicker'), t, 1.0, 0.5, 16); LV.reveal($('.statement'), t, 1.15, 0.6, 24); LV.reveal($('.support'), t, 1.6, 0.6, 16);`,
+  afterFill: `
+if ('step' in d || 'steps' in d) {
+  var tr = $('.step-track'), cnt = +d.steps || tr.children.length, cur = +(d.step || $('[data-slot="step"]').textContent) || 1;
+  tr.innerHTML = '';
+  for (var i = 1; i <= cnt; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('style', 'font-size:36px;font-weight:600;letter-spacing:.08em;padding-bottom:12px;position:relative;color:' + (i === cur ? 'var(--accent)' : 'var(--fg-muted)'));
+    li.textContent = String(i).padStart(2, '0');
+    if (i === cur) { var c2 = document.createElement('span'); c2.className = 'cur'; c2.setAttribute('aria-hidden', 'true'); c2.setAttribute('style', 'position:absolute;left:0;right:0;bottom:0;height:4px;border-radius:2px;background:var(--thread);transform-origin:0 50%'); li.appendChild(c2); }
+    tr.appendChild(li);
+  }
+}`
 },
 {
   id: 'big-number', title: 'Big number / keyword', duration: 4, hold: 3.0,
@@ -218,7 +234,8 @@ var n = $('.bigword'); if (!n.__v) n.__v = n.textContent.trim();
 var target = parseFloat(n.__v), p = LV.ease.out(LV.prog(t, 0.3, 1.0));
 if (!isNaN(target) && /^\\d+$/.test(n.__v)) { n.textContent = String(Math.round(target * p)); n.style.opacity = LV.prog(t, 0.25, 0.15).toFixed(3); }
 else LV.reveal(n, t, 0.3, 0.7, 60);
-LV.reveal($('.unit'), t, 1.1, 0.5, 20); LV.reveal($('.support'), t, 1.5, 0.6, 16);`
+LV.reveal($('.unit'), t, 1.1, 0.5, 20); LV.reveal($('.support'), t, 1.5, 0.6, 16);`,
+  afterFill: `if ('number' in d) { $('.bigword').__v = null; }`
 },
 {
   id: 'principle', title: 'Principle card', duration: 4.5, hold: 3.4, theme: 'paper',

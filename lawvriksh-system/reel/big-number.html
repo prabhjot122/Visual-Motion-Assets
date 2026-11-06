@@ -37,6 +37,7 @@
     if (d.captions) CAP = d.captions;
     if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
     if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if ('number' in d) { $('.bigword').__v = null; }
     if (window.__renderAt) window.__renderAt(window.__lastT || 0);
   };
   LV.scene({duration: 4, hold: 3, render: function(t){

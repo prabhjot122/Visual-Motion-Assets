@@ -22,8 +22,10 @@
   <p class="kicker" data-slot="kicker">Check two</p>
   <div class="gap-s"></div>
   <h1 class="statement l" data-slot-html="title_html">Read the paragraph <b>your point rests on.</b></h1>
+  <div class="gap-s"></div>
+  <span class="pill is-accent pin" data-slot="pinpoint" style="align-self:flex-start">Para [n]</span>
 </section>
-<div class="scene-doc" data-deco aria-hidden="true" style="left:120px;top:780px;width:840px;height:560px">
+<div class="scene-doc" data-deco aria-hidden="true" style="left:120px;top:800px;width:840px;height:560px">
   <div class="ln h" style="width:40%"></div><div class="gap"></div>
   <div class="ln" style="width:96%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:58%"></div><div class="gap"></div>
   <div class="ln hl" style="width:97%"></div><div class="ln hl" style="width:94%"></div><div class="ln hl" style="width:96%"></div><div class="ln hl" style="width:62%"></div><div class="gap"></div>
@@ -34,7 +36,7 @@
 <script>
 (function(){
   var root = document.querySelector('.lv'), $ = function(s){ return root.querySelector(s); }, $$ = function(s){ return [].slice.call(root.querySelectorAll(s)); };
-  var D = {"theme":"paper","caption_style":"ink-band","kicker":"Check two","title_html":"Read the paragraph <b>your point rests on.</b>","lines":4,"scene_index":3,"scene_total":7,"captions":[{"w":"Read","s":0.3,"e":0.61},{"w":"the","s":0.64,"e":0.95},{"w":"paragraph","s":0.98,"e":1.29},{"w":"your","s":1.32,"e":1.63},{"w":"point","s":1.66,"e":1.97},{"w":"rests","s":2,"e":2.31},{"w":"on.","s":2.34,"e":2.65}]};
+  var D = {"theme":"paper","caption_style":"ink-band","kicker":"Check two","title_html":"Read the paragraph <b>your point rests on.</b>","pinpoint":"Para [n]","scene_index":3,"scene_total":7,"captions":[{"w":"Read","s":0.3,"e":0.61},{"w":"the","s":0.64,"e":0.95},{"w":"paragraph","s":0.98,"e":1.29},{"w":"your","s":1.32,"e":1.63},{"w":"point","s":1.66,"e":1.97},{"w":"rests","s":2,"e":2.31},{"w":"on.","s":2.34,"e":2.65}]};
   var CAP = D.captions || [], IDX = D.scene_index || 1, TOT = D.scene_total || 1;
   window.__lvAfterFill = function(d){
     if (d.captions) CAP = d.captions;
@@ -46,7 +48,7 @@
     window.__lastT = t;
     LV.progress(root, t, 5, IDX, TOT);
     LV.captions($('[data-cap]'), CAP, t);
-    LV.reveal($('.kicker'), t, 0.1, 0.5, 16); LV.reveal($('.statement'), t, 0.2, 0.6, 24);
+    LV.reveal($('.kicker'), t, 0.1, 0.5, 16); LV.reveal($('.statement'), t, 0.2, 0.6, 24); LV.reveal($('.pin'), t, 0.5, 0.5, 12);
     var d = $('.scene-doc'), p = LV.ease.outQuint(LV.prog(t, 0.4, 0.7)); d.style.opacity = p.toFixed(3); d.style.transform = 'translateY(' + ((1 - p) * 120).toFixed(2) + 'px)';
     $$('.ln.hl').forEach(function(l, i){ l.style.setProperty('--hl', LV.ease.inOut(LV.prog(t, 1.3 + i * 0.35, 0.4)).toFixed(4)); });
     $('.mm').style.transform = 'scaleY(' + LV.ease.out(LV.prog(t, 2.6, 0.4)).toFixed(4) + ')';

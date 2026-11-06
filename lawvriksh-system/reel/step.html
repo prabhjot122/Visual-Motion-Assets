@@ -41,6 +41,17 @@
     if (d.captions) CAP = d.captions;
     if (d.scene_index) IDX = d.scene_index; if (d.scene_total) TOT = d.scene_total;
     if (d.caption_style) { var c = $('[data-cap]'); c.className = 'cap ' + d.caption_style; }
+    if ('step' in d || 'steps' in d) {
+      var tr = $('.step-track'), cnt = +d.steps || tr.children.length, cur = +(d.step || $('[data-slot="step"]').textContent) || 1;
+      tr.innerHTML = '';
+      for (var i = 1; i <= cnt; i++) {
+        var li = document.createElement('li');
+        li.setAttribute('style', 'font-size:36px;font-weight:600;letter-spacing:.08em;padding-bottom:12px;position:relative;color:' + (i === cur ? 'var(--accent)' : 'var(--fg-muted)'));
+        li.textContent = String(i).padStart(2, '0');
+        if (i === cur) { var c2 = document.createElement('span'); c2.className = 'cur'; c2.setAttribute('aria-hidden', 'true'); c2.setAttribute('style', 'position:absolute;left:0;right:0;bottom:0;height:4px;border-radius:2px;background:var(--thread);transform-origin:0 50%'); li.appendChild(c2); }
+        tr.appendChild(li);
+      }
+    }
     if (window.__renderAt) window.__renderAt(window.__lastT || 0);
   };
   LV.scene({duration: 4.5, hold: 3.4, render: function(t){

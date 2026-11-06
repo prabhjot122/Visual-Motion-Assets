@@ -683,7 +683,7 @@
     "slots": [
       "kicker",
       "title_html",
-      "lines",
+      "pinpoint",
       "scene_index",
       "scene_total",
       "caption_style",

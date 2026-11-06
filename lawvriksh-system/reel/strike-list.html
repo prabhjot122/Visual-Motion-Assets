@@ -23,12 +23,14 @@
   <div class="gap-s"></div>
   <h1 class="statement l" data-slot-html="title_html">What you <b>cannot cite.</b></h1>
   <div class="push"></div>
-  <ul class="slist">
-    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike">A headnote<span class="bar" aria-hidden="true"></span></span></li>
-    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike">A forwarded summary<span class="bar" aria-hidden="true"></span></span></li>
-    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike">An AI answer<span class="bar" aria-hidden="true"></span></span></li>
-    <li class="is-keep"><span class="dot" aria-hidden="true"></span><span data-slot="kept">The judgment itself</span></li>
-  </ul>
+  <div style="display:flex;flex-direction:column;gap:30px">
+    <ul class="slist" data-slot-list="struck"><template><li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text"></span><span class="bar" aria-hidden="true"></span></span></li></template>
+    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">A headnote</span><span class="bar" aria-hidden="true"></span></span></li>
+    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">A forwarded summary</span><span class="bar" aria-hidden="true"></span></span></li>
+    <li class="is-struck"><span class="dot" aria-hidden="true"></span><span class="strike"><span data-field="text">An AI answer</span><span class="bar" aria-hidden="true"></span></span></li>
+    </ul>
+    <ul class="slist"><li class="is-keep"><span class="dot" aria-hidden="true"></span><span data-slot="kept">The judgment itself</span></li></ul>
+  </div>
   <div class="push"></div>
 </section><div class="cap ink-band" data-cap aria-live="off"><div class="cap-line"></div></div>
 </main>

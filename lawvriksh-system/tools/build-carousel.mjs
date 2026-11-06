@@ -255,6 +255,8 @@ ${folio('04 / 08')}`
   <h1 class="statement m" data-slot="name">${esc(e.name)}</h1>
   <div class="gap-s"></div>
   <p class="era" data-slot="era">${esc(e.era)}</p>
+  <div class="gap-s"></div>
+  ${b(e.body_html)}
 </section>
 ${folio('01 / 05')}`
 },

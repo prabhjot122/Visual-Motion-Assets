@@ -3,7 +3,7 @@
   "caption_style": "ink-band",
   "kicker": "Check two",
   "title_html": "Read the paragraph <b>your point rests on.</b>",
-  "lines": 4,
+  "pinpoint": "Para [n]",
   "scene_index": 3,
   "scene_total": 7,
   "captions": [

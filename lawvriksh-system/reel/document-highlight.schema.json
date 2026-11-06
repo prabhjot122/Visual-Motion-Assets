@@ -24,11 +24,10 @@
       "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
       "description": "Statement. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
     },
-    "lines": {
-      "type": "integer",
-      "minimum": 2,
-      "maximum": 5,
-      "description": "Highlighted lines"
+    "pinpoint": {
+      "type": "string",
+      "maxLength": 24,
+      "description": "Pinpoint chip shown above the page, e.g. “Para [n]”."
     },
     "scene_index": {
       "type": "integer",
@@ -74,6 +73,6 @@
   "required": [
     "kicker",
     "title_html",
-    "lines"
+    "pinpoint"
   ]
 }

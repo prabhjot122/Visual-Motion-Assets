@@ -18,6 +18,7 @@
   "minFont": 34,
   "minContrast": 5.54,
   "weights": [
+   "400",
    "500",
    "600"
   ],
@@ -45,6 +46,7 @@
   "minFont": 34,
   "minContrast": 5.64,
   "weights": [
+   "400",
    "500",
    "600"
   ],

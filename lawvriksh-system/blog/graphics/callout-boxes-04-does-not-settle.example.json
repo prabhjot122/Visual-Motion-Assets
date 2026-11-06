@@ -1,0 +1,9 @@
+{
+  "theme": "paper",
+  "label": "What this does not settle",
+  "body_html": "The checks show a citation exists and says what you wrote.",
+  "rows": [
+    "Whether it has been overruled",
+    "Whether it fits your facts"
+  ]
+}

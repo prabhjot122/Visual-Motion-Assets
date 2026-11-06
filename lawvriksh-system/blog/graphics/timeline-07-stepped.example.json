@@ -1,0 +1,27 @@
+{
+  "theme": "paper",
+  "kicker": "Sequence",
+  "title_html": "What happened, <b>in order</b>",
+  "events": [
+    {
+      "date": "[date]",
+      "title": "[First event]",
+      "text": "Recorded in [source]."
+    },
+    {
+      "date": "[date]",
+      "title": "[Second event]",
+      "text": "Recorded in [source]."
+    },
+    {
+      "date": "[date]",
+      "title": "[Third event]",
+      "text": "Recorded in [source]."
+    },
+    {
+      "date": "[date]",
+      "title": "[Fourth event]",
+      "text": "Recorded in [source]."
+    }
+  ]
+}

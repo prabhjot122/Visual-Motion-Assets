@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/thumbnails/comparison.schema.json",
+  "title": "This, not that",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "not_label": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "not_text": {
+      "type": "string",
+      "maxLength": 48
+    },
+    "this_label": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "this_text": {
+      "type": "string",
+      "maxLength": 48
+    },
+    "meta": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "Right side of the footer, e.g. “[n] min read”."
+    }
+  },
+  "required": [
+    "kicker",
+    "title_html",
+    "not_label",
+    "not_text",
+    "this_label",
+    "this_text"
+  ]
+}

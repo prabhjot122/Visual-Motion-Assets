@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/thumbnails/series-edition.schema.json",
+  "title": "Series edition",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "series_label": {
+      "type": "string",
+      "maxLength": 24
+    },
+    "edition_no": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "date_line": {
+      "type": "string",
+      "maxLength": 24
+    },
+    "meta": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "Right side of the footer, e.g. “[n] min read”."
+    }
+  },
+  "required": [
+    "series_label",
+    "edition_no",
+    "title_html",
+    "date_line"
+  ]
+}

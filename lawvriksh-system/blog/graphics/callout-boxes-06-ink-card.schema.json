@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/callout-boxes-06-ink-card.schema.json",
+  "title": "Callout box 6 — ink-card",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "label": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "body_html": {
+      "type": "string",
+      "maxLength": 150,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$"
+    }
+  },
+  "required": []
+}

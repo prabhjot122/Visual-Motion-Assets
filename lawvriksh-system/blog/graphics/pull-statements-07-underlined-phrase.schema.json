@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/pull-statements-07-underlined-phrase.schema.json",
+  "title": "Pull statement 7 — underlined-phrase",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "statement_html": {
+      "type": "string",
+      "maxLength": 120,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "One sentence from the article. No quotation marks; never attributed to a person."
+    }
+  },
+  "required": []
+}

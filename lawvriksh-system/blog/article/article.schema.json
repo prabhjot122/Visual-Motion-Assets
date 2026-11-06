@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/article/article.schema.json",
+  "title": "Article page",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 100,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Article title. Emphasis with <b>…</b>."
+    },
+    "dek": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "author": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "date": {
+      "type": "string",
+      "maxLength": 24
+    },
+    "reading_time": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "contents": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "maxLength": 60
+      },
+      "description": "Optional. When omitted the contents list is built from the H2 headings."
+    },
+    "body_md": {
+      "type": "string",
+      "description": "The article body as Markdown. Raw HTML is never passed through. Components: ::: note | caution | settle | term | pull | steps | checklist | cta | figure | source (see README)."
+    },
+    "cta_title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "cta_body_html": {
+      "type": "string",
+      "maxLength": 120,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Muted supporting line. Optional <b> emphasis."
+    },
+    "cta_button": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "cta_note": {
+      "type": "string",
+      "maxLength": 90
+    },
+    "cta_link": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Tracked link; shown as link text and used as href."
+    }
+  },
+  "required": [
+    "title_html",
+    "body_md"
+  ]
+}

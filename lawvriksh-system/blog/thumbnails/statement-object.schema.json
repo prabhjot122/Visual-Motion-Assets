@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/thumbnails/statement-object.schema.json",
+  "title": "Statement with a law object",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "body_html": {
+      "type": "string",
+      "maxLength": 120,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Muted supporting line. Optional <b> emphasis."
+    },
+    "motif": {
+      "enum": [
+        "reports",
+        "files",
+        "checked",
+        "open-book",
+        "courthouse",
+        "calendar",
+        "notes",
+        "compare",
+        "judgment",
+        "register"
+      ],
+      "description": "Law object from core/lv-objects.js; pick the one that matches the idea."
+    },
+    "meta": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "Right side of the footer, e.g. “[n] min read”."
+    }
+  },
+  "required": [
+    "kicker",
+    "title_html",
+    "motif"
+  ]
+}

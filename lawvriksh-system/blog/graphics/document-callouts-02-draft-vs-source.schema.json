@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/document-callouts-02-draft-vs-source.schema.json",
+  "title": "Document callout 2 — draft-vs-source",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "draft_label": {
+      "type": "string",
+      "maxLength": 28
+    },
+    "source_label": {
+      "type": "string",
+      "maxLength": 28
+    },
+    "callout": {
+      "type": "string",
+      "maxLength": 120
+    }
+  },
+  "required": []
+}

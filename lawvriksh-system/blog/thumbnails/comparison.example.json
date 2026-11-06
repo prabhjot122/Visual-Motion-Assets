@@ -1,0 +1,10 @@
+{
+  "theme": "paper",
+  "kicker": "This, not that",
+  "title_html": "Cite the paragraph, <b>not the summary.</b>",
+  "not_label": "Not this",
+  "not_text": "The judgment says the delay was condoned.",
+  "this_label": "This",
+  "this_text": "Para [12]: the delay was condoned on [ground].",
+  "meta": "[n] min read"
+}

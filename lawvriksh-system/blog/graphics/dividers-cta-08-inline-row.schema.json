@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/dividers-cta-08-inline-row.schema.json",
+  "title": "CTA block 8 — inline-row",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "body_html": {
+      "type": "string",
+      "maxLength": 120,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Muted supporting line. Optional <b> emphasis."
+    },
+    "button": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 90
+    },
+    "link": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "Tracked link: shown as the link text and set as the button/link href (use a full URL or a path)."
+    }
+  },
+  "required": []
+}

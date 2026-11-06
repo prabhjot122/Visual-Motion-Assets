@@ -1,0 +1,15 @@
+{
+  "theme": "paper",
+  "kicker": "Two terms",
+  "title_html": "Words that <b>sound alike</b>",
+  "terms": [
+    {
+      "term": "Headnote",
+      "meaning": "A short summary written for readers. It is not the court’s words."
+    },
+    {
+      "term": "Paragraph",
+      "meaning": "The numbered text of the judgment itself."
+    }
+  ]
+}

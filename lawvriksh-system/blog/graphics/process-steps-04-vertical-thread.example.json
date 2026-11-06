@@ -1,0 +1,23 @@
+{
+  "theme": "paper",
+  "kicker": "Before you file",
+  "title_html": "Four checks, <b>in this order</b>",
+  "steps": [
+    {
+      "title": "Find it",
+      "text": "In an authorised source."
+    },
+    {
+      "title": "Read it",
+      "text": "The paragraph your point rests on."
+    },
+    {
+      "title": "Match it",
+      "text": "Court, date and parties."
+    },
+    {
+      "title": "Note it",
+      "text": "One line per citation."
+    }
+  ]
+}

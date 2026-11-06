@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lawvriksh-system/blog/graphics/comparison-02-stacked-link.schema.json",
+  "title": "Comparison 2 — stacked-link",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "enum": [
+        "paper",
+        "dark"
+      ],
+      "default": "paper",
+      "description": "Ground: paper or solid warm ink."
+    },
+    "kicker": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Uppercase tracked kicker (clay; edge on dark)."
+    },
+    "title_html": {
+      "type": "string",
+      "maxLength": 90,
+      "pattern": "^(?!.*<(?!/?b>|br ?/?>)).*$",
+      "description": "Headline. Emphasis with <b>…</b> (clay), at most two phrases. Only <b> and <br> are allowed; never <i>."
+    },
+    "left_label": {
+      "type": "string",
+      "maxLength": 22
+    },
+    "left_text": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "right_label": {
+      "type": "string",
+      "maxLength": 22
+    },
+    "right_text": {
+      "type": "string",
+      "maxLength": 80
+    }
+  },
+  "required": []
+}

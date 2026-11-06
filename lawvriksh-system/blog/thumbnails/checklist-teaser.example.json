@@ -1,0 +1,12 @@
+{
+  "theme": "paper",
+  "kicker": "Before you file",
+  "title_html": "The <b>five checks</b> for any citation",
+  "rows": [
+    "Found in an authorised source",
+    "Paragraph read and noted",
+    "Court, date and parties match"
+  ],
+  "teaser_more": "Two more checks inside",
+  "meta": "[n] min read"
+}

@@ -1,0 +1,12 @@
+{
+  "theme": "paper",
+  "kicker": "Before you file",
+  "title_html": "Four checks for <b>every citation</b>",
+  "rows": [
+    "Found in an authorised source",
+    "Paragraph read and noted",
+    "Court, date and parties match",
+    "Written down, one line each"
+  ],
+  "note": "About a minute per citation."
+}
